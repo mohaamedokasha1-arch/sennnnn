@@ -1,0 +1,26 @@
+{
+  "name": "cinemana",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "سينمانا — منصة عربية لاكتشاف الأفلام والمسلسلات (محتوى ثابت، بدون أي API خارجي)",
+  "scripts": {
+    "validate": "node lib/validate.mjs",
+    "test:content": "node lib/test-validation.mjs",
+    "test:logic": "node lib/test-logic.mjs",
+    "test": "npm run validate && npm run test:content && npm run test:logic",
+    "dev": "next dev",
+    "prebuild": "node lib/validate.mjs",
+    "build": "next build",
+    "preview": "node tools/serve-static.mjs 4000 out",
+    "clean": "rm -rf .next out"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
+    "marked": "^15.0.0",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

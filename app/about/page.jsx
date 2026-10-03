@@ -1,0 +1,81 @@
+import Link from 'next/link';
+import siteConfig from '@/site.config.mjs';
+import { t } from '@/lib/i18n.mjs';
+import { buildMetadata } from '@/lib/seo.mjs';
+import { siteStats } from '@/lib/content.mjs';
+import { Breadcrumbs, SectionHeader, Notice, Stat } from '@/components/ui.jsx';
+
+export const metadata = buildMetadata({
+  title: 'من نحن',
+  description: `تعرّف على ${siteConfig.siteName}: منصة عربية لاكتشاف الأفلام والمسلسلات — معلومات منظّمة ومراجعات أصلية، بدون استضافة محتوى وبدون روابط غير رسمية.`,
+  path: '/about/',
+});
+
+export const dynamic = 'force-static';
+
+export default function AboutPage() {
+  const stats = siteStats();
+
+  return (
+    <div className="container">
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'من نحن' }]} />
+      <div className="mt-4">
+        <SectionHeader kicker="تعرّف علينا" title={`من نحن — ${siteConfig.siteName}`} sub={siteConfig.slogan} />
+      </div>
+
+      <div className="legal prose">
+        <h2>ما هي سينمانا؟</h2>
+        <p>
+          {siteConfig.siteName} منصة عربية لاكتشاف الأفلام والمسلسلات. هدفها مساعدتك على الوصول إلى العمل المناسب
+          بسرعة: قصة واضحة، تصنيفات، طاقم عمل، مراجعة تحريرية، وروابط رسمية للمشاهدة عند توفرها. نحن
+          <strong> لسنا موقع مشاهدة أو تحميل</strong>، ولا نستضيف أي فيلم أو حلقة على خوادمنا.
+        </p>
+
+        <h2>ما الذي نمتنع عنه عمدًا؟</h2>
+        <ul>
+          <li>لا نستضيف أفلامًا أو مسلسلات، ولا نوفر روابط تحميل أو مشاهدة غير رسمية.</li>
+          <li>لا ننشر تقييمات أو أعداد مشاهدات أو إحصاءات لم نتحقق منها فعليًا.</li>
+          <li>لا ننسخ مقالات أو مراجعات أو صورًا محمية بحقوق نشر.</li>
+          <li>لا نضمّن تريلرات إلا إذا كانت رسمية ومسموحًا بتضمينها من القناة الناشرة.</li>
+          <li>لا نستخدم أي واجهة برمجية (API) خارجية لجلب بيانات الأفلام أو الصور أو التقييمات.</li>
+        </ul>
+
+        <h2>كيف تُبنى المكتبة؟</h2>
+        <p>
+          تُضاف كل الأعمال يدويًا في ملفات محتوى داخل المشروع، وتُراجع قبل النشر. البناء يتحقق من صحة البيانات
+          ويرفض النشر عند وجود حقل إلزامي ناقص أو معرّف مكرر أو رابط مشاهدة على نطاق غير معتمد.
+        </p>
+
+        <div className="stat-row mt-4">
+          <Stat value={stats.works} label="عمل منشور" />
+          <Stat value={stats.reviews} label="مراجعة تحريرية" />
+          <Stat value={stats.lists} label="قائمة ترشيحات" />
+          <Stat value={stats.people} label="شخص مسجّل" />
+        </div>
+
+        <h2>حدود النسخة الحالية</h2>
+        <p>
+          هذه النسخة الأولى: لا تسجيل مستخدمين، ولا تعليقات، ولا لوحة تحكم، ولا تقييمات مستخدمين (لأنها تحتاج
+          تخزينًا يبقى بين الزيارات). المفضلة تُحفظ في متصفحك فقط. يمكنك معرفة المزيد في{' '}
+          <Link href="/privacy/">سياسة الخصوصية</Link>.
+        </p>
+
+        {stats.hasDemo ? (
+          <Notice variant="demo">
+            <strong>{t('site.demoBannerTitle')}</strong>
+            <p className="small" style={{ marginBottom: 0 }}>
+              {t('site.demoBannerBody')}
+            </p>
+          </Notice>
+        ) : null}
+
+        <h2>تواصل معنا</h2>
+        <p>
+          للاستفسارات: <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a> — أو استخدم{' '}
+          <Link href="/contact/">صفحة اتصل بنا</Link>. لطلبات حقوق الملكية، اقرأ{' '}
+          <Link href="/ip-rights/">صفحة حقوق الملكية وإزالة المحتوى</Link>.
+        </p>
+      </div>
+    </div>
+  );
+}

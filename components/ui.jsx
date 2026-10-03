@@ -1,0 +1,103 @@
+import Link from 'next/link';
+import siteConfig from '@/site.config.mjs';
+import { t } from '@/lib/i18n.mjs';
+import { IconAlert, IconArrow, IconInfo } from './Icons.jsx';
+
+/* ------------------------------ رأس قسم ------------------------------ */
+export function SectionHeader({ kicker, title, sub, href, linkLabel, id }) {
+  return (
+    <div className="section-head">
+      <div>
+        {kicker ? <p className="section-kicker">{kicker}</p> : null}
+        <h2 className="section-title" id={id}>
+          {title}
+        </h2>
+        {sub ? <p className="section-sub">{sub}</p> : null}
+      </div>
+      {href ? (
+        <Link href={href} className="section-link">
+          {linkLabel ?? t('home.browseAll')}
+          <IconArrow width={16} height={16} className="flip" />
+        </Link>
+      ) : null}
+    </div>
+  );
+}
+
+/* ------------------------------ حالة فراغ ------------------------------ */
+export function EmptyState({ icon = '🎬', title, body, actions = [], hint }) {
+  return (
+    <div className="empty">
+      <div className="empty-icon" aria-hidden="true">
+        {icon}
+      </div>
+      <h3>{title}</h3>
+      {body ? <p>{body}</p> : null}
+      {hint ? <p className="small">{hint}</p> : null}
+      {actions.length ? (
+        <div className="empty-actions">
+          {actions.map((a) => (
+            <Link key={a.href} href={a.href} className={a.primary ? 'btn btn-primary' : 'btn btn-ghost'}>
+              {a.label}
+            </Link>
+          ))}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
+/* ------------------------------ مساحة إعلانية فارغة ------------------------------ */
+/**
+ * مساحة إعلانية *فارغة* جاهزة للاستخدام لاحقًا — لا يوجد أي كود إعلان فعلي.
+ * لا تُعرض إطلاقًا على الصفحات القليلة المحتوى (القرار عند الصفحة نفسها).
+ * لتفعيلها مستقبلًا: أضف كود الشبكة الإعلانية داخل هذا المكوّن فقط، بعد قبول حسابك
+ * والالتزام بسياسات الناشر (شرط: محتوى أصلي كافٍ + صفحات سياسات جاهزة — وهي جاهزة هنا).
+ */
+export function AdSlot({ position = 'mid', hidden = false }) {
+  if (!siteConfig.features.adSlots || hidden) return null;
+  return (
+    <aside className="ad-slot" aria-label={t('ad.label')} data-position={position}>
+      <strong>{t('ad.label')}</strong>
+      <span>{t('ad.note')}</span>
+    </aside>
+  );
+}
+
+/* ------------------------------ تنبيهات ------------------------------ */
+export function Notice({ children, variant = 'info', icon = true }) {
+  return (
+    <div className={`notice${variant === 'demo' ? ' notice-demo' : ''}`} role="note">
+      {icon ? (
+        <span className="notice-icon" aria-hidden="true">
+          {variant === 'demo' ? <IconAlert width={18} height={18} /> : <IconInfo width={18} height={18} />}
+        </span>
+      ) : null}
+      <div>{children}</div>
+    </div>
+  );
+}
+
+/* ------------------------------ مسار التنقل ------------------------------ */
+export function Breadcrumbs({ items = [] }) {
+  return (
+    <nav className="crumbs" aria-label="مسار التنقل">
+      {items.map((it, i) => (
+        <span key={`${it.url}-${i}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+          {i > 0 ? <span className="sep" aria-hidden="true">/</span> : null}
+          {it.url && i < items.length - 1 ? <Link href={it.url}>{it.name}</Link> : <span aria-current="page">{it.name}</span>}
+        </span>
+      ))}
+    </nav>
+  );
+}
+
+/* ------------------------------ إحصاء ------------------------------ */
+export function Stat({ value, label }) {
+  return (
+    <div className="stat">
+      <b>{value}</b>
+      <span>{label}</span>
+    </div>
+  );
+}
