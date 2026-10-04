@@ -15,8 +15,8 @@ headingEn: "A Minecraft Movie Squared (2027)"
 seoDescription: "كل ما تريد معرفته عن الجزء الثاني من A Minecraft Movie: جاك بلاك وجيسون موموا يعودان وكيرستن دانست بدور أليكس، إخراج جاريد هيس، العرض 23 يوليو 2027."
 seoDescriptionEn: "Everything about A Minecraft Movie Squared (2027): Jack Black and Jason Momoa return with Kirsten Dunst as Alex, directed by Jared Hess, in theaters July 23."
 poster: "/posters/a-minecraft-movie-squared.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم ماينكرافت: الفيلم 2 (2027)"
-posterAltEn: "Original design poster for A Minecraft Movie Squared (2027)"
+posterAlt: "البوستر التشويقي الرسمي لفيلم ماينكرافت: الفيلم 2 (2027) — شعار الفيلم داخل إطار من مكعبات بكسلية"
+posterAltEn: "Official teaser poster for A Minecraft Movie Squared (2027) — film logo framed by pixel blocks"
 addedAt: 2026-10-04
 featured: false
 directors: [jared-hess]
@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Jared Hess**, who returns to co-write; Warner Bros. Pictures / Mojang / Legendary; sequel to the 2025 worldwide hit.
   * Officially unveiled with its title during Mojang Live; **theatrical release:** July 23, 2027 (US; July 21 in France). No official Egypt release date announced yet.
   * Cast: Jack Black (Steve), Jason Momoa (Garrett), Danielle Brooks, Sebastian Hansen, Emma Myers, **Kirsten Dunst as Alex**, Matt Berry in a secret role.
-  * Filming began around April 2026 in New Zealand. Runtime and age rating not officially announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Filming began around April 2026 in New Zealand. Runtime and age rating not officially announced. No official trailer embed added yet. The poster shown is the official teaser poster released by the studio.
 ---
 
 ### قراءة أولية في المشروع

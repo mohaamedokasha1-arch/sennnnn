@@ -26,8 +26,9 @@ import math
 import os
 import random
 import sys
+import zlib
 
-from PIL import Image, ImageDraw, ImageFilter
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
 W, H = 600, 900
 
@@ -240,11 +241,23 @@ STYLES = {"warm": style_warm, "cold": style_cold, "amber": style_amber, "olive":
 
 def build(slug, style="warm", out_dir="public/posters"):
     pal = PALETTES.get(style, PALETTES["warm"])
+    # تنويع مميز لكل عمل: بذرة مشتقة من المعرّف حتى لا يتطابق بوستر عملين مختلفين
+    seed = zlib.crc32(slug.encode("utf-8")) & 0xFFFFFFFF
+    rnd = random.Random(seed)
     img = vgradient((W, H), pal["bg"], tuple(max(0, c - 12) for c in pal["bg"]))
     img = STYLES.get(style, style_warm)(img, pal)
     img = img.filter(ImageFilter.GaussianBlur(0.6))
     img = vignette(img, 0.6)
-    img = add_noise(img, 8)
+    # تقريب/قصّ ببذرة العمل: تكوين مختلف قليلًا لكل بوستر
+    zoom = rnd.uniform(1.0, 1.16)
+    cw, ch = int(W / zoom), int(H / zoom)
+    ox = rnd.randint(0, W - cw)
+    oy = rnd.randint(0, H - ch)
+    img = img.crop((ox, oy, ox + cw, oy + ch)).resize((W, H), Image.LANCZOS)
+    img = ImageEnhance.Brightness(img).enhance(rnd.uniform(0.90, 1.10))
+    img = ImageEnhance.Color(img).enhance(rnd.uniform(0.80, 1.20))
+    img = ImageEnhance.Contrast(img).enhance(rnd.uniform(0.92, 1.08))
+    img = add_noise(img, 8, seed=seed % 10000)
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, f"{slug}.jpg")
     img.save(path, "JPEG", quality=84, optimize=True, progressive=True)

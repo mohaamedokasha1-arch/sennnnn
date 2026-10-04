@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **James Gunn**; DC Studios / **Warner Bros. Pictures**; sequel to Superman (2025).
   * **Theatrical release:** July 9, 2027. No official Egypt release date announced yet.
   * Confirmed returning: David Corenswet (Superman) and Nicholas Hoult (Lex Luthor).
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

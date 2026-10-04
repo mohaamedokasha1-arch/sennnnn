@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Bob Persichetti** and **Justin K. Thompson**; written by Dave Callaham, Phil Lord and Christopher Miller; Sony Pictures Animation / Marvel Entertainment / Lord Miller / Arad Productions; distributed by **Sony Pictures Releasing**.
   * **Theatrical release:** June 18, 2027 (US; moved up a week from June 25). No official Egypt release date announced yet.
   * Voices: Shameik Moore (Miles), Hailee Steinfeld (Gwen), Brian Tyree Henry, Luna Lauren Velez, Jake Johnson, Jason Schwartzman, Oscar Isaac.
-  * Concludes the trilogy begun with Into the Spider-Verse (2018) and Across the Spider-Verse (2023). Runtime and age rating not officially announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Concludes the trilogy begun with Into the Spider-Verse (2018) and Across the Spider-Verse (2023). Runtime and age rating not officially announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

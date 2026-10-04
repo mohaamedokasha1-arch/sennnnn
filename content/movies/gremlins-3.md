@@ -31,7 +31,7 @@ notesEn: >-
 
   * Directed by **Chris Columbus** (writer of the 1984 original); co-written with Hannah Marks (Zach Lipovsky & Adam B. Stein previously attached); produced by David Katzenberg with **Steven Spielberg** executive producing; Amblin Entertainment / **Warner Bros. Pictures**.
   * **Theatrical release:** October 6, 2028 (moved from November 19, 2027; confirmed with the studio's 10-second Gizmo teaser in September 2026). No official Egypt release date announced yet.
-  * Cast not yet officially announced. Runtime and age rating not announced. No official trailer embed added yet — the teaser circulates via studio press; will be linked once the official Warner Bros. upload is verified. Poster is an original design artwork created for this site.
+  * Cast not yet officially announced. Runtime and age rating not announced. No official trailer embed added yet — the teaser circulates via studio press; will be linked once the official Warner Bros. upload is verified. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

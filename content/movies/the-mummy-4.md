@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Radio Silence** (Matt Bettinelli-Olpin & Tyler Gillett — Scream, Ready or Not); written by David Coggeshall; **Universal Pictures**; sequel to The Mummy (1999), The Mummy Returns (2001) and The Mummy: Tomb of the Dragon Emperor (2008).
   * **Theatrical release:** October 15, 2027 (moved up from May 19, 2028). No official Egypt release date announced yet.
   * Confirmed returning: Brendan Fraser (Rick) and Rachel Weisz (Evy).
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع
