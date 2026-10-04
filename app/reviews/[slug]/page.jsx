@@ -6,7 +6,7 @@ import { getReviews, getReview } from '@/lib/content.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { readingTime, formatDate } from '@/lib/format.mjs';
 import { Breadcrumbs, Notice, AdSlot } from '@/components/ui.jsx';
-import JsonLd, { DemoBadge } from '@/components/JsonLd.jsx';
+import JsonLd from '@/components/JsonLd.jsx';
 import ShareRow from '@/components/ShareRow.jsx';
 
 export const dynamic = 'force-static';
@@ -53,7 +53,6 @@ export default async function ReviewPage({ params }) {
       <article className="legal" style={{ maxWidth: 820, marginTop: 18 }}>
         <div className="chips mb-2">
           <span className="chip chip-static chip-type">{t('site.editorialNote')}</span>
-          {review.demo ? <DemoBadge /> : null}
         </div>
 
         <h1>{review.title}</h1>

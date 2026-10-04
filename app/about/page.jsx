@@ -3,7 +3,7 @@ import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata } from '@/lib/seo.mjs';
 import { siteStats } from '@/lib/content.mjs';
-import { Breadcrumbs, SectionHeader, Notice, Stat } from '@/components/ui.jsx';
+import { Breadcrumbs, SectionHeader, Stat } from '@/components/ui.jsx';
 
 export const metadata = buildMetadata({
   title: 'من نحن',
@@ -53,21 +53,12 @@ export default function AboutPage() {
           <Stat value={stats.people} label="شخص مسجّل" />
         </div>
 
-        <h2>حدود النسخة الحالية</h2>
+        <h2>ما هو متاح الآن</h2>
         <p>
-          هذه النسخة الأولى: لا تسجيل مستخدمين، ولا تعليقات، ولا لوحة تحكم، ولا تقييمات مستخدمين (لأنها تحتاج
-          تخزينًا يبقى بين الزيارات). المفضلة تُحفظ في متصفحك فقط. يمكنك معرفة المزيد في{' '}
+          تصفّح المكتبة كاملة، وابحث بالعربية أو بالاسم الأصلي، واحفظ ما تحب في قائمة <Link href="/favorites/">المفضلة</Link>{' '}
+          على جهازك. لا تسجيل مستخدمين ولا تعليقات ولا تقييمات مستخدمين. يمكنك معرفة المزيد في{' '}
           <Link href="/privacy/">سياسة الخصوصية</Link>.
         </p>
-
-        {stats.hasDemo ? (
-          <Notice variant="demo">
-            <strong>{t('site.demoBannerTitle')}</strong>
-            <p className="small" style={{ marginBottom: 0 }}>
-              {t('site.demoBannerBody')}
-            </p>
-          </Notice>
-        ) : null}
 
         <h2>تواصل معنا</h2>
         <p>

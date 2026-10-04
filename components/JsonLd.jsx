@@ -1,5 +1,3 @@
-import { t } from '@/lib/i18n.mjs';
-
 /**
  * مكوّن عرض البيانات المنظمة (JSON-LD).
  * ⚠️ قاعدة صارمة: لا نُدرج أي Schema لبيانات غير موثّقة، ولا أي تقييمات مجمّعة.
@@ -14,15 +12,6 @@ export default function JsonLd({ data }) {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />
       ))}
     </>
-  );
-}
-
-/** شارة «بيانات تجريبية» تظهر على كل عمل/مراجعة/قائمة موسومة demo: true */
-export function DemoBadge({ compact = false }) {
-  return (
-    <span className="badge badge-demo" title={t('site.demoBadge') + ' — بيانات خيالية لأغراض العرض والتطوير'}>
-      {compact ? 'تجريبي' : t('site.demoBadge')}
-    </span>
   );
 }
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
-import { IconAlert, IconArrow, IconInfo } from './Icons.jsx';
+import { IconArrow, IconInfo } from './Icons.jsx';
 
 /* ------------------------------ رأس قسم ------------------------------ */
 export function SectionHeader({ kicker, title, sub, href, linkLabel, id }) {
@@ -65,12 +65,12 @@ export function AdSlot({ position = 'mid', hidden = false }) {
 }
 
 /* ------------------------------ تنبيهات ------------------------------ */
-export function Notice({ children, variant = 'info', icon = true }) {
+export function Notice({ children, icon = true }) {
   return (
-    <div className={`notice${variant === 'demo' ? ' notice-demo' : ''}`} role="note">
+    <div className="notice" role="note">
       {icon ? (
         <span className="notice-icon" aria-hidden="true">
-          {variant === 'demo' ? <IconAlert width={18} height={18} /> : <IconInfo width={18} height={18} />}
+          <IconInfo width={18} height={18} />
         </span>
       ) : null}
       <div>{children}</div>

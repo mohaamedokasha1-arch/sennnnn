@@ -198,7 +198,6 @@ export default function SearchResults({ latest = [], genres = [] }) {
                       author: r.author,
                       date: r.date,
                       excerpt: snippet(r.excerpt, q, 160),
-                      demo: r.demo,
                       work: null,
                     }}
                   />

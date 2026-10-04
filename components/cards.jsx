@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { t, genreLabel, genreUrl, typeLabel } from '@/lib/i18n.mjs';
 import { formatDate } from '@/lib/format.mjs';
-import { DemoBadge, PosterFallback } from './JsonLd.jsx';
+import { PosterFallback } from './JsonLd.jsx';
 import WorkCard from './WorkCard.jsx';
 import { IconList, IconStar, IconArrow } from './Icons.jsx';
 
@@ -28,7 +28,6 @@ export function ReviewCard({ review }) {
           </span>
         ) : null}
         <span className="muted small">{t('reviews.ratingLabel')}</span>
-        {review.demo ? <DemoBadge compact /> : null}
       </div>
       <h3 style={{ margin: 0, fontSize: '1.05rem' }}>
         <Link href={review.url}>{review.title}</Link>
@@ -65,7 +64,6 @@ export function ListCard({ list }) {
           <IconList width={14} height={14} />
           {t('lists.itemsCount', { n: list.items.length })}
         </span>
-        {list.demo ? <DemoBadge compact /> : null}
       </div>
       <h3 style={{ margin: 0, fontSize: '1.05rem' }}>
         <Link href={list.url}>{list.title}</Link>

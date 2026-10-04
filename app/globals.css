@@ -220,7 +220,6 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-hover); }
   padding: 3px 9px; border-radius: 999px; letter-spacing: 0.01em;
 }
 .badge-accent { background: var(--accent-soft); color: var(--accent-hover); }
-.badge-demo { background: rgba(255, 196, 92, 0.14); color: #ffcf7a; }
 
 /* -------------------------------- الأقسام -------------------------------- */
 .section { margin-block: clamp(32px, 4vw, 56px); }
@@ -430,7 +429,6 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-hover); }
   background: var(--accent-soft); border: 1px solid var(--accent-ring);
   border-radius: var(--radius); padding: 12px 14px; font-size: 0.88rem; color: var(--text);
 }
-.notice-demo { background: rgba(255, 196, 92, 0.1); border-color: rgba(255, 196, 92, 0.3); }
 .notice-icon { flex-shrink: 0; }
 
 /* -------------------------------- التذييل -------------------------------- */

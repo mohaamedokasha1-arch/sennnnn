@@ -6,7 +6,7 @@ import { getPeople, getPerson } from '@/lib/content.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { Breadcrumbs, EmptyState, AdSlot } from '@/components/ui.jsx';
 import { WorkGrid } from '@/components/cards.jsx';
-import JsonLd, { DemoBadge } from '@/components/JsonLd.jsx';
+import JsonLd from '@/components/JsonLd.jsx';
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
@@ -57,7 +57,6 @@ export default async function PersonPage({ params }) {
               {person.works.length ? ` · ${person.works.length} عمل في الموقع` : ''}
             </p>
           </div>
-          {person.demo ? <DemoBadge /> : null}
         </div>
 
         {person.bio ? (

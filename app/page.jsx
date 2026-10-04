@@ -88,17 +88,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {stats.hasDemo ? (
-        <div className="mt-4">
-          <Notice variant="demo">
-            <strong>{t('site.demoBannerTitle')}</strong>
-            <p className="small" style={{ marginBottom: 0 }}>
-              {t('site.demoBannerBody')}
-            </p>
-          </Notice>
-        </div>
-      ) : null}
-
       {/* مساحة إعلانية واحدة أعلى المحتوى (فارغة حاليًا) — لا تلامس المحتوى ولا تزاحمه */}
       <AdSlot position="top" hidden={stats.works < 6} />
 
