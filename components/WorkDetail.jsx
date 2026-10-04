@@ -147,7 +147,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
                   {t('work.releaseDateEG', null, locale)}: {formatDate(work.releaseDateEG, locale)}
                 </span>
               ) : null}
-              {work.runtime ? (
+              {work.runtime && (work.kind === 'series' || work.runtimeConfirmed) ? (
                 <span className="chip chip-static">
                   {work.kind === 'series'
                     ? isEn
@@ -155,6 +155,8 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
                       : `${formatRuntime(work.runtime, locale)} للحلقة`
                     : formatRuntime(work.runtime, locale)}
                 </span>
+              ) : work.kind === 'movie' ? (
+                <span className="chip chip-static">{t('work.runtimeTBA', null, locale)}</span>
               ) : null}
               {work.ageRating ? (
                 <span className="chip chip-static">
@@ -227,7 +229,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
                     </dd>
                   </div>
                 ) : null}
-                {work.runtime ? (
+                {work.runtime && (work.kind === 'series' || work.runtimeConfirmed) ? (
                   <div className="meta-item">
                     <dt>{t('work.runtime', null, locale)}</dt>
                     <dd>{formatRuntime(work.runtime, locale)}</dd>
