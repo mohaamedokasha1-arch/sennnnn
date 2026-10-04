@@ -9,8 +9,9 @@ language: es
 status: ended
 runtime: 48
 seasons: []
-poster: "/posters/money-heist.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل بيت من ورق (La casa de papel) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل بيت من ورق (La casa de papel) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "بيت من ورق (La casa de papel) 2017 | بيانات المواسم غير مكتملة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل بيت من ورق (La casa de papel): بيانات المواسم غير مكتملة، العرض 2017، الحالة: منتهٍ، المنصة: نتفليكس. عقل مدبّر يُدعى «البروفيسور» يجمع ثمانية لصوص بأسماء مدن، ليدخلوا دار سكّ العملة الإسبانية ويطبعوا مليارات اليوروهات من الداخل. سرقة القرن بخطط متقنة…"

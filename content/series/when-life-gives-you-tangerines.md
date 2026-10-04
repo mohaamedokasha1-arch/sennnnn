@@ -11,8 +11,9 @@ seasons:
   - number: 1
     episodes: 16
     year: 2025
-poster: "/posters/when-life-gives-you-tangerines.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل حين تهبك الحياة يوسفي (When Life Gives You Tangerines) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل حين تهبك الحياة يوسفي (When Life Gives You Tangerines) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "حين تهبك الحياة يوسفي (When Life Gives You Tangerines) 2025 | 1 موسم · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل حين تهبك الحياة يوسفي (When Life Gives You Tangerines): 1 موسم · 16 حلقة، العرض 2025، الحالة: منتهٍ، المنصة: نتفليكس. قصة حب تمتد خمسين عامًا بين آ سون المتمرّدة وغوان شيك الصامت، تبدأ في جزيرة جيجو في الستينيات وتتابعها ابنتهما. دراما عائلية هادئة عن الفقر والعمل…"

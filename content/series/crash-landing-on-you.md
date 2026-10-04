@@ -11,8 +11,9 @@ seasons:
   - number: 1
     episodes: 16
     year: 2019
-poster: "/posters/crash-landing-on-you.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل الهبوط الاضطراري للحب (Crash Landing on You) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل الهبوط الاضطراري للحب (Crash Landing on You) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "الهبوط الاضطراري للحب (Crash Landing on You) 2019 | 1 موسم · 16 حلقة · tvN / نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل الهبوط الاضطراري للحب (Crash Landing on You): 1 موسم · 16 حلقة، العرض 2019، الحالة: منتهٍ، المنصة: tvN / نتفليكس. وريثة كورية جنوبية تسقط بطائرتها الشراعية داخل كوريا الشمالية بسبب عاصفة، فيخفيها ضابط في الجيش الشمالي. رومانسية مستحيلة بين نظامين، بجرعة كوميديا…"

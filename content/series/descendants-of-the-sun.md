@@ -11,8 +11,9 @@ seasons:
   - number: 1
     episodes: 16
     year: 2016
-poster: "/posters/descendants-of-the-sun.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل أحفاد الشمس (Descendants of the Sun) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل أحفاد الشمس (Descendants of the Sun) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "أحفاد الشمس (Descendants of the Sun) 2016 | 1 موسم · 16 حلقة · KBS2"
 seoDescription: "كل ما تريد معرفته عن مسلسل أحفاد الشمس (Descendants of the Sun): 1 موسم · 16 حلقة، العرض 2016، الحالة: منتهٍ، المنصة: KBS2. ضابط في القوات الخاصة وطبيبة جراحة يقعان في حبّ يصعب استمراره: هو ينفّذ أوامر قد تقتله، وهي تنقذ الأرواح. يلتقيان مجددًا في مهمة إنسانية بمنطقة حرب،…"

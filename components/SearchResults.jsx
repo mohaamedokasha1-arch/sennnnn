@@ -8,6 +8,7 @@ import { highlightParts, matchTokens, scoreItem, snippet } from '@/lib/highlight
 import { EmptyState } from './ui.jsx';
 import { WorkGrid, ReviewCard, PersonCard } from './cards.jsx';
 import SearchForm from './SearchForm.jsx';
+import PosterImage from './PosterImage.jsx';
 
 /**
  * ============================================================================
@@ -140,13 +141,15 @@ export default function SearchResults({ latest = [], genres = [] }) {
                   <article className="card" key={r.id}>
                     <div className="card-media">
                       <Link href={r.url} tabIndex={-1} aria-hidden="true">
-                        {r.poster ? (
-                          <img src={r.poster} alt={`بوستر ${r.title}`} width={600} height={900} loading="lazy" />
-                        ) : (
-                          <span className="poster-fallback">
-                            <span>{r.title}</span>
-                          </span>
-                        )}
+                        <PosterImage
+                          src={r.poster}
+                          title={r.title}
+                          year={r.year}
+                          alt={`بوستر ${r.title}`}
+                          width={600}
+                          height={900}
+                          loading="lazy"
+                        />
                       </Link>
                       <div className="card-badges">
                         <span className="chip chip-static chip-type">{r.typeLabel}</span>

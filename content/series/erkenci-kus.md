@@ -11,8 +11,9 @@ seasons:
   - number: 1
     episodes: 51
     year: 2018
-poster: "/posters/erkenci-kus.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل الطائر المبكر (Erkenci Ku) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل الطائر المبكر (Erkenci Ku) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "الطائر المبكر (Erkenci Ku) 2018 | 1 موسم · 51 حلقة · Star TV"
 seoDescription: "كل ما تريد معرفته عن مسلسل الطائر المبكر (Erkenci Ku): 1 موسم · 51 حلقة، العرض 2018، الحالة: منتهٍ، المنصة: Star TV. سانم الشابة الحالمة تعمل في وكالة إعلانات لإنقاذ والدها من ضيق الحال، فتلتقي جان المصوّر المغامر العائد من رحلاته. كوميديا رومانسية خفيفة عن الطموح…"

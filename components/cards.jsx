@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { t, genreLabel, genreUrl, typeLabel } from '@/lib/i18n.mjs';
 import { formatDate } from '@/lib/format.mjs';
-import { PosterFallback } from './JsonLd.jsx';
+import PosterImage from './PosterImage.jsx';
 import WorkCard from './WorkCard.jsx';
 import { IconList, IconStar, IconArrow } from './Icons.jsx';
 
@@ -75,11 +75,15 @@ export function ListCard({ list }) {
         {list.items.slice(0, 5).map((it) => (
           <Link key={it.ref} href={it.work.url} aria-label={it.work.title}>
             <span className="card-media" style={{ aspectRatio: '2/3', display: 'block' }}>
-              {it.work.hasPoster ? (
-                <img src={it.work.poster} alt="" width={156} height={234} loading="lazy" />
-              ) : (
-                <PosterFallback title={it.work.title} />
-              )}
+              <PosterImage
+                src={it.work.hasPoster ? it.work.poster : null}
+                title={it.work.title}
+                year={it.work.year}
+                alt=""
+                width={156}
+                height={234}
+                loading="lazy"
+              />
             </span>
           </Link>
         ))}
@@ -128,7 +132,15 @@ export function GenreCard({ genre }) {
         {genre.sample.slice(0, 4).map((w) => (
           <Link key={`${w.kind}:${w.slug}`} href={w.url} aria-label={w.title}>
             <span className="card-media" style={{ aspectRatio: '2/3', display: 'block' }}>
-              {w.hasPoster ? <img src={w.poster} alt="" width={128} height={192} loading="lazy" /> : <PosterFallback title={w.title} />}
+              <PosterImage
+                src={w.hasPoster ? w.poster : null}
+                title={w.title}
+                year={w.year}
+                alt=""
+                width={128}
+                height={192}
+                loading="lazy"
+              />
             </span>
           </Link>
         ))}

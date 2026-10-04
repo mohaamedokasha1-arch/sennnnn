@@ -12,8 +12,9 @@ seasons:
   - number: 1
     episodes: 30
     year: 2025
-poster: "/posters/taht-sabeh-ard.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل تحت سابع أرض (Under Seven Grounds) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل تحت سابع أرض (Under Seven Grounds) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "تحت سابع أرض (Under Seven Grounds) 2025 | 1 موسم · 30 حلقة · MBC دراما / الجديد / رؤيا / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل تحت سابع أرض (Under Seven Grounds): 1 موسم · 30 حلقة، العرض 2025، الحالة: منتهٍ، المنصة: MBC دراما / الجديد / رؤيا / شاهد. موسى ضابط تحقيق جنائي يستغل منصبه للابتزاز والمكاسب غير المشروعة، حتى يكتشف تورّط شقيقيه في تزوير العملة، فيجد نفسه محاصرًا بين من يبتزّهم ومن…"

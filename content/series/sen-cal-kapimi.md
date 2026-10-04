@@ -8,8 +8,9 @@ country: TR
 language: tr
 status: ended
 seasons: []
-poster: "/posters/sen-cal-kapimi.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل أنت اطرق بابي (Sen Çal Kap) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل أنت اطرق بابي (Sen Çal Kap) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "أنت اطرق بابي (Sen Çal Kap) 2020 | بيانات المواسم غير مكتملة · FOX"
 seoDescription: "كل ما تريد معرفته عن مسلسل أنت اطرق بابي (Sen Çal Kap): بيانات المواسم غير مكتملة، العرض 2020، الحالة: منتهٍ، المنصة: FOX. طالبة تفقد منحتها بسبب رجل أعمال صارم، فتقتحم مكتبه مطالبة بحقها، فيعرض عليها عقد خطوبة صوري مقابل استعادة دراستها. من اتفاق تجاري إلى حب حقيقي:…"

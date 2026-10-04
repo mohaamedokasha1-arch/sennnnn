@@ -7,6 +7,7 @@ import { renderMarkdown } from '@/lib/markdown.mjs';
 import { formatDate } from '@/lib/format.mjs';
 import { Breadcrumbs, Notice } from '@/components/ui.jsx';
 import JsonLd from '@/components/JsonLd.jsx';
+import PosterImage from '@/components/PosterImage.jsx';
 import ShareRow from '@/components/ShareRow.jsx';
 
 
@@ -88,18 +89,18 @@ export default async function ListPage({ params }) {
                   <span className="badge badge-accent" style={{ minWidth: 34, justifyContent: 'center' }}>
                     {i + 1}
                   </span>
-                  {it.work.hasPoster ? (
-                    <Link href={it.work.url} aria-hidden="true" tabIndex={-1}>
-                      <img
-                        src={it.work.poster}
-                        alt={`بوستر ${it.work.title}`}
-                        width={78}
-                        height={117}
-                        loading="lazy"
-                        style={{ borderRadius: 8, border: '1px solid var(--border)' }}
-                      />
-                    </Link>
-                  ) : null}
+                  <Link href={it.work.url} aria-hidden="true" tabIndex={-1}>
+                    <PosterImage
+                      src={it.work.hasPoster ? it.work.poster : null}
+                      title={it.work.title}
+                      year={it.work.year}
+                      alt={`بوستر ${it.work.title}`}
+                      width={78}
+                      height={117}
+                      loading="lazy"
+                      style={{ width: 78, height: 117, objectFit: 'cover', borderRadius: 8, border: '1px solid var(--border)', flexShrink: 0 }}
+                    />
+                  </Link>
                   <div style={{ flex: 1, minWidth: 200 }}>
                     <h3 style={{ margin: '0 0 4px', fontSize: '1.05rem' }}>
                       <Link href={it.work.url}>

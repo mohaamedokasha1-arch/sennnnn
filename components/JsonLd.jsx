@@ -15,13 +15,24 @@ export default function JsonLd({ data }) {
   );
 }
 
-/** بديل تصميمي أنيق عند غياب صورة البوستر — لا نعرض صورة مكسورة أبدًا */
-export function PosterFallback({ title, year }) {
+/** بديل مؤقت صريح عند غياب البوستر أو فشل تحميله؛ لا يوحي بأنه العمل الفني الرسمي. */
+export function PosterFallback({ title, year, locale = 'ar', className = '', style }) {
+  const temporaryLabel = locale === 'en'
+    ? 'Temporary image — not the official poster'
+    : 'صورة مؤقتة — ليست البوستر الرسمي';
+  const label = `${title}${year ? ` (${year})` : ''} — ${temporaryLabel}`;
+
   return (
-    <div className="poster-fallback" role="img" aria-label={`لا تتوفر صورة بوستر لـ ${title}`}>
+    <div
+      className={['poster-fallback', className].filter(Boolean).join(' ')}
+      role="img"
+      aria-label={label}
+      style={style}
+    >
       <span>
         {title}
         {year ? <small>{year}</small> : null}
+        <small className="poster-fallback-status">{temporaryLabel}</small>
       </span>
     </div>
   );

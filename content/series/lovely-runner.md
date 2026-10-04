@@ -11,8 +11,9 @@ seasons:
   - number: 1
     episodes: 16
     year: 2024
-poster: "/posters/lovely-runner.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل لوفلي رانر (Lovely Runner) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل لوفلي رانر (Lovely Runner) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "لوفلي رانر (Lovely Runner) 2024 | 1 موسم · 16 حلقة · tvN"
 seoDescription: "كل ما تريد معرفته عن مسلسل لوفلي رانر (Lovely Runner): 1 موسم · 16 حلقة، العرض 2024، الحالة: منتهٍ، المنصة: tvN. معجبة تفقد نجمها المفضل فتعود بالزمن خمسة عشر عامًا إلى أيام المدرسة، وتحاول إنقاذه من مصيره. رومانسية خيالية عن القدر والذاكرة والحب الذي يستحق…"

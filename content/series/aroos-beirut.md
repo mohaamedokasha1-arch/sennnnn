@@ -8,8 +8,9 @@ country: LB
 language: ar
 status: ended
 seasons: []
-poster: "/posters/aroos-beirut.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل عروس بيروت (Aroos Beirut) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل عروس بيروت (Aroos Beirut) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "عروس بيروت (Aroos Beirut) 2019 | بيانات المواسم غير مكتملة · MBC4 / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل عروس بيروت (Aroos Beirut): بيانات المواسم غير مكتملة، العرض 2019، الحالة: منتهٍ، المنصة: MBC4 / شاهد. قصة حب بين شاب من عائلة بيروتية عريقة وطاهية شابة من بيئة متواضعة، تواجه رفض الأم وسلطة التقاليد. دراما رومانسية اجتماعية لبنانية-سورية بنَفَس تركي…"

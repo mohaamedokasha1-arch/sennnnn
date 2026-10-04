@@ -18,8 +18,9 @@ seasons:
   - number: 3
     episodes: 8
     year: 2025
-poster: "/posters/the-white-lotus.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل اللوتس الأبيض (The White Lotus) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل اللوتس الأبيض (The White Lotus) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "اللوتس الأبيض (The White Lotus) 2021–مستمر | 3 مواسم · 21 حلقة · HBO / HBO Max"
 seoDescription: "كل ما تريد معرفته عن مسلسل اللوتس الأبيض (The White Lotus): 3 مواسم · 21 حلقة، العرض 2021–مستمر، الحالة: مستمر، المنصة: HBO / HBO Max. في كل موسم فندق فاخر في وجهة سياحية مختلفة، ونزلاء أثرياء وموظفون محليون، وجثة تُفتتح بها الحكاية. سخرية اجتماعية حادة عن المال والطبقة والرغبة،…"

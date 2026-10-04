@@ -18,8 +18,9 @@ seasons:
   - number: 3
     episodes: 10
     year: 2026
-poster: "/posters/the-night-agent.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل عميل الليل (The Night Agent) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل عميل الليل (The Night Agent) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "عميل الليل (The Night Agent) 2023–مستمر | 3 مواسم · 30 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل عميل الليل (The Night Agent): 3 مواسم · 30 حلقة، العرض 2023–مستمر، الحالة: مستمر، المنصة: نتفليكس. عميل في مكتب التحقيقات الفيدرالي يعمل على خط طوارئ لا يرنّ أبدًا في قبو البيت الأبيض، حتى يرنّ في ليلة واحدة فتتغيّر حياته: مؤامرة سياسية، خيانة…"

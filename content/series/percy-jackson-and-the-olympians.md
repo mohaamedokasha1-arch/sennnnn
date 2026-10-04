@@ -15,8 +15,9 @@ seasons:
   - number: 2
     episodes: 8
     year: 2025
-poster: "/posters/percy-jackson-and-the-olympians.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل بيرسي جاكسون والآلهة الأولمبية (Percy Jackson and the Olympians) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل بيرسي جاكسون والآلهة الأولمبية (Percy Jackson and the Olympians) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "بيرسي جاكسون والآلهة الأولمبية (Percy Jackson and the Olympians) 2023–مستمر | 2 موسمان · 16 حلقة · ديزني+"
 seoDescription: "كل ما تريد معرفته عن مسلسل بيرسي جاكسون والآلهة الأولمبية (Percy Jackson and the Olympians): 2 موسمان · 16 حلقة، العرض 2023–مستمر، الحالة: مستمر، المنصة: ديزني+. يكتشف الفتى بيرسي جاكسون أنه ابن إله يوناني، فيدخل عالم الآلهة والوحوش، ويُكلَّف بمهمة لاستعادة ما سُرق من الأوليمب قبل أن تنفجر حرب بينها. مقتبس من…"

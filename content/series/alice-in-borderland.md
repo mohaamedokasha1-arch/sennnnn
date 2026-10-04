@@ -17,8 +17,9 @@ seasons:
   - number: 3
     episodes: 6
     year: 2025
-poster: "/posters/alice-in-borderland.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل أليس في بلاد الحدود (Alice in Borderland) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل أليس في بلاد الحدود (Alice in Borderland) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "أليس في بلاد الحدود (Alice in Borderland) 2020–2025 | 3 مواسم · 22 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل أليس في بلاد الحدود (Alice in Borderland): 3 مواسم · 22 حلقة، العرض 2020–2025، الحالة: غير مؤكدة، المنصة: نتفليكس. شاب مهووس بالألعاب يجد نفسه في طوكيو خالية من البشر، حيث تفرض «الألعاب» على الناجين اللعب للبقاء أحياء. مغامرة نفسية عن الموت والمعنى ومن يستحق…"

@@ -11,8 +11,9 @@ seasons:
   - number: 1
     episodes: 16
     year: 2020
-poster: "/posters/itaewon-class.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل إتايون كلاس (Itaewon Class) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل إتايون كلاس (Itaewon Class) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "إتايون كلاس (Itaewon Class) 2020 | 1 موسم · 16 حلقة · JTBC / نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل إتايون كلاس (Itaewon Class): 1 موسم · 16 حلقة، العرض 2020، الحالة: منتهٍ، المنصة: JTBC / نتفليكس. شاب يخرج من السجن بعد مقتل والده بسبب ابن إمبراطور مطاعم، فيفتح حانة صغيرة في حي إتايون ليهدم تلك الإمبراطورية خطوة خطوة. قصة طموح وانتقام عادل…"

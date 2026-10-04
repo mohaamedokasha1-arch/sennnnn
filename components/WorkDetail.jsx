@@ -4,7 +4,8 @@ import { formatRuntime, formatDate } from '@/lib/format.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { workJsonLd, reviewJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
 import { similarWorks, getReviewForWork } from '@/lib/content.mjs';
-import { PosterFallback, default as JsonLd } from './JsonLd.jsx';
+import { default as JsonLd } from './JsonLd.jsx';
+import PosterImage from './PosterImage.jsx';
 import { Breadcrumbs } from './ui.jsx';
 import { AdSlot } from './Ads.jsx';
 import { Star, WatchLinks, SeasonsBlock, PersonChips } from './WorkDetailParts.jsx';
@@ -91,19 +92,19 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
       <article className="mt-4">
         <header className="detail-head">
           <div className="detail-poster" style={work.hasPoster ? { aspectRatio: 'auto' } : undefined}>
-            {work.hasPoster ? (
-              <img
-                src={work.poster}
-                alt={posterAlt}
-                width={640}
-                height={800}
-                fetchPriority="high"
-                decoding="async"
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            ) : (
-              <PosterFallback title={isEn ? work.titleOriginal || work.title : work.title} year={work.year} />
-            )}
+            <PosterImage
+              src={work.hasPoster ? work.poster : null}
+              title={isEn ? work.titleOriginal || work.title : work.title}
+              year={work.year}
+              alt={posterAlt}
+              width={640}
+              height={800}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              locale={locale}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
           </div>
 
           <div>

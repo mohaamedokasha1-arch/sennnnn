@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { t } from '@/lib/i18n.mjs';
 import { highlightParts, matchTokens, scoreItem } from '@/lib/highlight.mjs';
 import { IconSearch } from './Icons.jsx';
+import PosterImage from './PosterImage.jsx';
 
 /**
  * بحث فوري في الشريط العلوي — يعمل بالكامل في المتصفح على ملف الفهرس الثابت
@@ -132,11 +133,17 @@ export default function HeaderSearch() {
                 onMouseEnter={() => setActive(i)}
                 onClick={() => setOpen(false)}
               >
-                {r.poster ? (
-                  <img className="suggest-thumb" src={r.poster} alt="" width={42} height={62} loading="lazy" />
-                ) : (
-                  <span className="suggest-thumb" aria-hidden="true" />
-                )}
+                <PosterImage
+                  compact
+                  className="suggest-thumb"
+                  src={r.poster}
+                  title={r.title}
+                  year={r.year}
+                  alt=""
+                  width={42}
+                  height={62}
+                  loading="lazy"
+                />
                 <span>
                   <span className="suggest-title">
                     {highlightParts(r.title, query).map((p, k) =>
