@@ -107,6 +107,14 @@ for (const url of sitemapUrls) {
   assert.ok(metaContent(html, 'description')?.trim(), `Missing meta description: ${url}`);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, `Expected exactly one H1: ${url}`);
   assert.doesNotMatch(metaContent(html, 'robots') ?? '', /noindex/i, `Noindex page appears in sitemap: ${url}`);
+  // وسم إثبات الملكية لدى Google Search Console (يُقرأ من site.config.mjs ويجب أن يكون في <head>)
+  if (siteConfig.googleSiteVerification) {
+    assert.equal(
+      metaContent(html, 'google-site-verification'),
+      siteConfig.googleSiteVerification,
+      `Missing or mismatched google-site-verification meta tag: ${url}`
+    );
+  }
 }
 
 /* ---- Canonical and reciprocal hreflang for all bilingual movie pairs ---- */
