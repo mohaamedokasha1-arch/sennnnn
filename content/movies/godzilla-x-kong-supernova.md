@@ -15,8 +15,8 @@ headingEn: "Godzilla x Kong: Supernova (2027)"
 seoDescription: "كل ما تريد معرفته عن Godzilla x Kong: Supernova: سادس أفلام المونسترفيرس، إخراج غرانت سبوتور، كايتلين ديفر ودان ستيفنز، ليخندري ووارنر، العرض 26 مارس 2027."
 seoDescriptionEn: "Everything about Godzilla x Kong: Supernova (2027): the sixth MonsterVerse film, directed by Grant Sputore, starring Kaitlyn Dever and Dan Stevens, from Legendary and Warner Bros., in theaters March 26."
 poster: "/posters/godzilla-x-kong-supernova.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم غودزيلا ضد كونغ: المستعر الأعظم (2027)"
-posterAltEn: "Original design poster for Godzilla x Kong: Supernova (2027)"
+posterAlt: "البوستر الرسمي بعنوان فيلم غودزيلا ضد كونغ: المستعر الأعظم (2027)"
+posterAltEn: "Official title poster for Godzilla x Kong: Supernova (2027)"
 addedAt: 2026-10-04
 featured: false
 directors: [grant-sputore]

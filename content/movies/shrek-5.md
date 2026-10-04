@@ -15,8 +15,8 @@ headingEn: "Shrek 5 (2027)"
 seoDescription: "كل ما تريد معرفته عن Shrek 5: عودة مايك مايرز وإيدي ميرفي وكاميرون دياز مع انضمام زيندايا بدور فيليشيا، إخراج والت دورن وكونراد فيرنون، العرض 30 يونيو 2027."
 seoDescriptionEn: "Everything about Shrek 5 (2027): Mike Myers, Eddie Murphy and Cameron Diaz return with Zendaya joining as Felicia, directed by Walt Dohrn and Conrad Vernon, in theaters June 30."
 poster: "/posters/shrek-5.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم شريك 5 (2027)"
-posterAltEn: "Original design poster for Shrek 5 (2027)"
+posterAlt: "البوستر التشويقي الرسمي لفيلم شريك 5 (2027): الرقم 5 بأذني شريك"
+posterAltEn: "Official teaser poster for Shrek 5 (2027) with the ogre-eared number 5"
 addedAt: 2026-10-04
 featured: false
 directors: []

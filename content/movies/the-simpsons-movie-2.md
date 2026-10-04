@@ -15,8 +15,8 @@ headingEn: "The Simpsons Movie 2 (2027)"
 seoDescription: "كل ما نعرفه عن The Simpsons Movie 2: التتمة المنتظرة منذ 2007 من 20th Century Studios، الإعلان بـ«هومر عاد للثواني»، العرض 3 سبتمبر 2027."
 seoDescriptionEn: "Everything about The Simpsons Movie 2 (2027): the long-awaited sequel to 2007's hit from 20th Century Studios — \"Homer's coming back for seconds\" — in theaters September 3."
 poster: "/posters/the-simpsons-movie-2.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم عائلة سيمبسون: الفيلم 2 (2027)"
-posterAltEn: "Original design poster for The Simpsons Movie 2 (2027)"
+posterAlt: "البوستر التشويقي الرسمي لفيلم عائلة سيمبسون: الفيلم 2 (2027): هومر يحمل علم موعد العرض"
+posterAltEn: "Official teaser poster for The Simpsons Movie 2 (2027) with Homer holding the release-date flag"
 addedAt: 2026-10-04
 featured: false
 directors: []

@@ -15,8 +15,8 @@ headingEn: "Spider-Man: Beyond the Spider-Verse (2027)"
 seoDescription: "كل ما تريد معرفته عن فيلم Spider-Man: Beyond the Spider-Verse: خاتمة ثلاثية Spider-Verse من سوني، أصوات شاميك مور وهيلي ستاينفيلد، إخراج بوب بيرسيشيتي وجاستن ك. طومسون، العرض 18 يونيو 2027."
 seoDescriptionEn: "Everything about Spider-Man: Beyond the Spider-Verse (2027): the finale of Sony's Spider-Verse trilogy, voiced by Shameik Moore and Hailee Steinfeld, directed by Bob Persichetti and Justin K. Thompson, in theaters June 18."
 poster: "/posters/beyond-the-spider-verse.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم الرجل العنكبوت: ما وراء عالم العناكب (2027)"
-posterAltEn: "Original design poster for Spider-Man: Beyond the Spider-Verse (2027)"
+posterAlt: "البوستر الرسمي لفيلم الرجل العنكبوت: ما وراء عالم العناكب (2027): قبضات فريق العناكب المتحدة"
+posterAltEn: "Official poster for Spider-Man: Beyond the Spider-Verse (2027) with the spider-team's joined fists"
 addedAt: 2026-10-04
 featured: false
 directors: []

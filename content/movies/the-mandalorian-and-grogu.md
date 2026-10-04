@@ -20,8 +20,8 @@ headingEn: "Star Wars: The Mandalorian and Grogu (2026)"
 seoDescription: "كل ما تريد معرفته عن The Mandalorian and Grogu: أول فيلم Star Wars سينمائي منذ 2019، بيدرو باسكال وسيغورني ويفر، إخراج جون فافرو، مدة العرض 132 دقيقة، العرض 22 مايو 2026، والتريلر الرسمي."
 seoDescriptionEn: "Everything about The Mandalorian and Grogu (2026): the first theatrical Star Wars film since 2019, with Pedro Pascal and Sigourney Weaver, directed by Jon Favreau, 132 minutes, released May 22, with the official trailer."
 poster: "/posters/the-mandalorian-and-grogu.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم الماندالوري وغروغو (2026)"
-posterAltEn: "Original design poster for The Mandalorian and Grogu (2026)"
+posterAlt: "البوستر الرسمي لفيلم حرب النجوم: الماندالوري وغروغو (2026): الماندالوري يحمل غروغو على ظهره"
+posterAltEn: "Official poster for Star Wars: The Mandalorian and Grogu (2026) with the Mandalorian carrying Grogu on his back"
 addedAt: 2026-10-04
 featured: false
 directors: [jon-favreau]

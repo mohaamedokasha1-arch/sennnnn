@@ -14,8 +14,8 @@ headingEn: "The Florist (2026)"
 seoDescription: "تفاصيل فيلم The Florist (بائع الزهور): بائع زهور هادئ يخفي ماضي قاتل محترف، دنيس كويد وجان رينو، إخراج بابك نجفي، طرح دولي ابتداءً من 24 سبتمبر 2026."
 seoDescriptionEn: "Details of The Florist (2026): a quiet horticulturalist hiding a lethal assassin past, Dennis Quaid and Jean Reno, directed by Babak Najafi, releasing internationally from September 24, 2026."
 poster: "/posters/the-florist-2026.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم بائع الزهور The Florist (2026)"
-posterAltEn: "Original design poster for The Florist (2026)"
+posterAlt: "البوستر الرسمي لفيلم بائع الزهور (2026): واجهة متجر الزهور"
+posterAltEn: "Official poster for The Florist (2026) showing the flower shop window"
 addedAt: 2026-10-04
 featured: false
 directors: []

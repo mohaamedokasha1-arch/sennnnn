@@ -15,8 +15,8 @@ headingEn: "The Lord of the Rings: The Hunt for Gollum (2027)"
 seoDescription: "كل ما تريد معرفته عن The Hunt for Gollum: عودة إلى الأرض الوسطى مع آندي سيركيس مخرجًا وبطلًا، وإيان ماكيلين غاندالف، مطاردة أراغورن لغولوم بين The Hobbit وFellowship، العرض 17 ديسمبر 2027."
 seoDescriptionEn: "Everything about The Hunt for Gollum (2027): Andy Serkis directs and stars in a return to Middle-earth with Ian McKellen's Gandalf, following Aragorn's hunt for Gollum, in theaters December 17."
 poster: "/posters/the-hunt-for-gollum.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم سيد الخواتم: مطاردة غولوم (2027)"
-posterAltEn: "Original design poster for The Lord of the Rings: The Hunt for Gollum (2027)"
+posterAlt: "البوستر الرسمي لفيلم سيد الخواتم: مطاردة غولوم (2027) مع أسماء طاقم التمثيل"
+posterAltEn: "Official cast poster for The Lord of the Rings: The Hunt for Gollum (2027)"
 addedAt: 2026-10-04
 featured: false
 directors: [andy-serkis]
