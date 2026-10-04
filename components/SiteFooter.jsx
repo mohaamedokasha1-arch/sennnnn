@@ -98,7 +98,6 @@ export default function SiteFooter() {
           <span>
             © {year} {siteConfig.siteName} — {t('footer.rights')}
           </span>
-          <span>صُنع بـ Next.js · موقع ثابت بدون قاعدة بيانات</span>
         </div>
       </div>
     </footer>
