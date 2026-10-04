@@ -18,9 +18,10 @@ seasons:
   - number: 3
     episodes: 10
     year: 2017
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل ناركوس (Narcos) — ليست البوستر الرسمي"
+poster: "/posters/narcos.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «ناركوس» (2015) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Narcos (2015) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "ناركوس (Narcos) 2015–2017 | 3 مواسم · 30 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل ناركوس (Narcos): 3 مواسم · 30 حلقة، العرض 2015–2017، الحالة: منتهٍ، المنصة: نتفليكس. صعود بابلو إسكوبار من مهرّب صغير إلى أخطر رجل في كولومبيا، ومطاردة إدارة مكافحة المخدرات له. دراما جريمة مبنية على وقائع موثّقة، تُروى بلغتين وبإيقاع…"

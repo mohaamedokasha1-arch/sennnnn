@@ -11,9 +11,10 @@ seasons:
   - number: 1
     episodes: 20
     year: 2018
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل قلعة السماء (SKY) — ليست البوستر الرسمي"
+poster: "/posters/sky-castle.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «قلعة السماء» (2018) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for SKY Castle (2018) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "قلعة السماء (SKY) 2018 | 1 موسم · 20 حلقة · JTBC"
 seoDescription: "كل ما تريد معرفته عن مسلسل قلعة السماء (SKY): 1 موسم · 20 حلقة، العرض 2018، الحالة: منتهٍ، المنصة: JTBC. في مجمع سكني فخم تسكنه عائلات النخبة، تتحوّل حياة الأبناء إلى سباق محموم نحو جامعات القمة، وتُدفع الأكاذيب والجرائم ثمنًا للقبول. نقد اجتماعي لاذع…"

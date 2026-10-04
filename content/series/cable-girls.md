@@ -24,9 +24,10 @@ seasons:
   - number: 5
     episodes: 10
     year: 2020
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل فتيات الكابل (Las chicas del cable) — ليست البوستر الرسمي"
+poster: "/posters/cable-girls.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «فتيات الكابل» (2017) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Las chicas del cable (2017) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "فتيات الكابل (Las chicas del cable) 2017–2020 | 5 مواسم · 42 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل فتيات الكابل (Las chicas del cable): 5 مواسم · 42 حلقة، العرض 2017–2020، الحالة: منتهٍ، المنصة: نتفليكس. مدريد في عشرينيات القرن الماضي: أربع نساء يعملن في شركة الهاتف الوطنية، فيجدن في السنترال نافذة على أسرار المدينة وعلى حيواتهن. دراما نسوية عن العمل…"

@@ -17,7 +17,16 @@
   ```bash
   python3 lib/make-poster.py my-movie --style cold
   ```
-  الأنماط المتاحة: `warm` (دافئ/أزقة) · `cold` (بارد/خيال علمي) · `amber` (عنبري/ليلي) · `olive` (أخضر داكن/أرشيف).
+  الأنماط المتاحة: `warm` (دافئ/أزقة) · `cold` (بارد/خيال علمي) · `amber` (عنبري/ليلي) · `olive` (أخضر داكن/أرشيف) ·
+  `noir` · `teal` · `rose` · `sand` · `crimson` · `ink` (زخارف بطاقات المسلسلات).
+- **الخيار الثالث — غلاف تصميمي أصلي من إنتاج الموقع** (يُستخدم حين لا يوجد بوستر مرخّص، لكننا نريد عملًا بصريًا حقيقيًا بدل مربع فارغ):
+  ```bash
+  python3 lib/make-poster.py my-series --style noir --title "My Series" --year 2024 --kicker "TV SERIES"
+  ```
+  ثم في ملف العمل: `poster: "/posters/my-series.jpg"` + `posterDesign: true`، مع `posterAlt` يصرّح بأنه
+  «غلاف تصميمي أصلي … ليس البوستر الرسمي» (سكربت التحقق يرفض أي غلاف تصميمي بلا هذا التصريح).
+  البطاقة وصفحة العمل تعرضان وسم «غلاف تصميمي أصلي» تلقائيًا.
+  لإعادة توليد أغلفة كل المسلسلات دفعة واحدة: `npm run posters:series` (يتطلب Pillow).
 
 **الخطوة 2 — انسخ القالب**
 انسخ الملف `content/_templates/movie-template.md` إلى المجلد `content/movies/`

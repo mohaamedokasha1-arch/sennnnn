@@ -14,9 +14,10 @@ seasons:
   - number: 2
     episodes: 35
     year: 2025
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل المدينة البعيدة (Uzak) — ليست البوستر الرسمي"
+poster: "/posters/uzak-sehir.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «المدينة البعيدة» (2024) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Uzak Şehir (2024) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "المدينة البعيدة (Uzak) 2024–مستمر | 2 موسمان · 63 حلقة · Kanal D"
 seoDescription: "كل ما تريد معرفته عن مسلسل المدينة البعيدة (Uzak): 2 موسمان · 63 حلقة، العرض 2024–مستمر، الحالة: مستمر، المنصة: Kanal D. آليا تعود من كندا إلى ماردين لتنفيذ وصية زوجها الراحل، فتجد نفسها في مواجهة عائلة زوجها المتنفّذة وفي قلب أرض لا تعرف قوانينها. دراما عائلية مشحونة…"

@@ -14,9 +14,10 @@ seasons:
   - number: 2
     episodes: 6
     year: 2020
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل المملكة (Kingdom) — ليست البوستر الرسمي"
+poster: "/posters/kingdom.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «المملكة» (2019) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Kingdom (2019) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "المملكة (Kingdom) 2019–2020 | 2 موسمان · 12 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل المملكة (Kingdom): 2 موسمان · 12 حلقة، العرض 2019–2020، الحالة: غير مؤكدة، المنصة: نتفليكس. في عهد جوسون، يذهب ولي العهد للتحقيق في وباء غامض يضرب البلاد، فيكتشف أن الموتى لا يبقون موتى. رعب تاريخي يمزج السياسة والوباء والتنانير…"

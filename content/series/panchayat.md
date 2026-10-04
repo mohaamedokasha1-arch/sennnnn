@@ -21,9 +21,10 @@ seasons:
   - number: 4
     episodes: 8
     year: 2025
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل بانتشايات (Panchayat) — ليست البوستر الرسمي"
+poster: "/posters/panchayat.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «بانتشايات» (2020) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Panchayat (2020) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "بانتشايات (Panchayat) 2020–مستمر | 4 مواسم · 32 حلقة · برايم فيديو"
 seoDescription: "كل ما تريد معرفته عن مسلسل بانتشايات (Panchayat): 4 مواسم · 32 حلقة، العرض 2020–مستمر، الحالة: مستمر، المنصة: برايم فيديو. شاب من المدينة يقبل وظيفة سكرتير مجلس قرية في أوتار براديش بعد تعثّر مسيرته، فيجد نفسه وسط سياسة محلية بسيطة وظريفة. كوميديا هادئة عن الريف الهندي…"

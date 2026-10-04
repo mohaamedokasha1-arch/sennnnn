@@ -8,9 +8,10 @@ country: KW
 language: ar
 status: ended
 seasons: []
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل أم هارون (Umm Haroun) — ليست البوستر الرسمي"
+poster: "/posters/umm-haroun.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «أم هارون» (2020) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Umm Haroun (2020) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "أم هارون (Umm Haroun) 2020 | بيانات المواسم غير مكتملة · MBC1 / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل أم هارون (Umm Haroun): بيانات المواسم غير مكتملة، العرض 2020، الحالة: منتهٍ، المنصة: MBC1 / شاهد. في أربعينيات القرن الماضي بالخليج، قابلة يهودية تعيش بين جيرانها المسلمين والمسيحيين، وتواجه أسئلة الهوية والانتماء في مجتمع متعدد. دراما تاريخية…"

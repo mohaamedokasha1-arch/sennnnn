@@ -19,6 +19,7 @@ export default function WorkCard({ work, priority = false, showGenres = true, no
     genres,
     hasPoster,
     poster,
+    posterDesign,
     seriesStatus,
   } = work;
 
@@ -57,6 +58,11 @@ export default function WorkCard({ work, priority = false, showGenres = true, no
 
         <div className="card-scrim">
           {year ? <span className="chip chip-static">{year}</span> : null}
+          {posterDesign ? (
+            <span className="chip chip-static" data-poster-design="true" title={t('work.posterDesignNote')}>
+              {t('work.posterDesignBadge')}
+            </span>
+          ) : null}
         </div>
       </div>
 

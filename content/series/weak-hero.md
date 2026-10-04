@@ -13,9 +13,10 @@ seasons:
   - number: 2
     episodes: 8
     year: 2025
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل البطل الضعيف (Weak Hero Class) — ليست البوستر الرسمي"
+poster: "/posters/weak-hero.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «البطل الضعيف» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Weak Hero Class (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "البطل الضعيف (Weak Hero Class) 2022–2025 | 2 موسمان · 16 حلقة · Wavve (الجزء الأول) ثم نتفليكس (الجزء الثاني)"
 seoDescription: "كل ما تريد معرفته عن مسلسل البطل الضعيف (Weak Hero Class): 2 موسمان · 16 حلقة، العرض 2022–2025، الحالة: غير مؤكدة، المنصة: Wavve (الجزء الأول) ثم نتفليكس (الجزء الثاني). طالب متفوق نحيل الجسد يواجه عنف المدرسة بالعقل والخطط بدل القوة الجسدية، فيكتشف أن التسلسل الهرمي للعنف أعمق من الصفوف. دراما مدرسية قاسية عن التنمّر…"

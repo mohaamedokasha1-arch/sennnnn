@@ -12,7 +12,14 @@
  كيف تستخدمه؟
    python3 lib/make-poster.py <slug> [--style warm|cold|amber|olive] [--out public/posters]
    مثال:
-   python3 lib/make-poster.py my-new-movie --style cold
+     python3 lib/make-poster.py my-new-movie --style cold
+
+   بطاقات المسلسلات تستخدم لوحات/زخارف إضافية مع طباعة العنوان:
+     python3 lib/make-poster.py my-series --style noir --title "My Series" --year 2024 \
+         --kicker "TV SERIES" --out public/posters
+   الأنماط: warm · cold · amber · olive · noir · teal · rose · sand · crimson · ink
+   الزخارف (motif): rings · triad · bars · dunes · grid · frame · halo
+   يتطلب: Pillow (python3 -m pip install pillow) وخطوط IBMPlexSansArabic في tools/fonts.
 
  ملاحظات:
    - الناتج 600×900 (نسبة 2:3) بجودة مناسبة للويب (عادة 60–150KB).
@@ -28,7 +35,7 @@ import random
 import sys
 import zlib
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 W, H = 600, 900
 
@@ -37,6 +44,13 @@ PALETTES = {
     "cold": {"bg": (12, 18, 26), "glow": (120, 176, 214), "accent": (198, 226, 244), "cool": (22, 34, 46)},
     "amber": {"bg": (18, 16, 24), "glow": (232, 164, 72), "accent": (250, 214, 150), "cool": (30, 40, 66)},
     "olive": {"bg": (20, 22, 18), "glow": (168, 176, 108), "accent": (226, 224, 178), "cool": (40, 44, 36)},
+    # لوحات إضافية تُستخدم لبوسترات المسلسلات (تصميم أصلي للموقع)
+    "noir": {"bg": (10, 11, 14), "glow": (196, 206, 224), "accent": (226, 176, 96), "cool": (18, 22, 30)},
+    "teal": {"bg": (8, 20, 24), "glow": (86, 198, 190), "accent": (176, 240, 232), "cool": (12, 34, 40)},
+    "rose": {"bg": (26, 14, 22), "glow": (226, 128, 146), "accent": (250, 196, 206), "cool": (36, 18, 34)},
+    "sand": {"bg": (26, 20, 12), "glow": (222, 176, 108), "accent": (244, 220, 172), "cool": (44, 32, 18)},
+    "crimson": {"bg": (18, 8, 10), "glow": (196, 62, 62), "accent": (240, 170, 156), "cool": (30, 10, 14)},
+    "ink": {"bg": (12, 14, 22), "glow": (104, 122, 178), "accent": (196, 208, 240), "cool": (16, 20, 34)},
 }
 
 
@@ -236,28 +250,230 @@ def style_olive(img, pal):
     return img
 
 
-STYLES = {"warm": style_warm, "cold": style_cold, "amber": style_amber, "olive": style_olive}
+# ----------------------- زخارف هندسية للبوسترات التصميمية -----------------------
+
+def style_motif(img, pal, motif="rings", seed=1):
+    """زخارف مجردة بسيطة تُرسم خلف العنوان (تُستخدم لبطاقات المسلسلات)."""
+    rnd = random.Random(seed)
+    glow = Image.new("L", img.size, 0)
+    gd = ImageDraw.Draw(glow)
+
+    if motif == "rings":
+        for i, r in enumerate((300, 236, 176, 118, 62)):
+            gd.ellipse([W // 2 - r, 320 - r, W // 2 + r, 320 + r], outline=190 - i * 26, width=9)
+        img = composite_glow(img, Image.new("RGB", img.size, pal["glow"]), glow.filter(ImageFilter.GaussianBlur(9)), 0.72)
+        d = ImageDraw.Draw(img, "RGBA")
+        for i, r in enumerate((300, 236, 176, 118, 62)):
+            d.ellipse([W // 2 - r, 320 - r, W // 2 + r, 320 + r], outline=pal["accent"] + (70 - i * 10,), width=2)
+    elif motif == "triad":
+        d0 = ImageDraw.Draw(img, "RGBA")
+        for i, s in enumerate((250, 190, 130)):
+            alpha = 130 - i * 34
+            d0.polygon(
+                [(W // 2, 150 + i * 40), (W // 2 - s, 150 + i * 40 + int(s * 1.6)), (W // 2 + s, 150 + i * 40 + int(s * 1.6))],
+                outline=pal["accent"] + (alpha,),
+                width=3,
+            )
+        gd.polygon([(W // 2, 190), (W // 2 - 150, 470), (W // 2 + 150, 470)], fill=150)
+        img = composite_glow(img, Image.new("RGB", img.size, pal["glow"]), glow.filter(ImageFilter.GaussianBlur(46)), 0.6)
+    elif motif == "bars":
+        d0 = ImageDraw.Draw(img, "RGBA")
+        for x in range(30, W - 30, 34):
+            h = rnd.randint(120, 470)
+            d0.rectangle([x, 640 - h, x + 12, 640], fill=pal["cool"] + (200,))
+            d0.line([(x, 640 - h), (x + 12, 640 - h)], fill=pal["accent"] + (150,), width=2)
+        gd.rectangle([0, 640, W, 660], fill=120)
+        img = composite_glow(img, Image.new("RGB", img.size, pal["glow"]), glow.filter(ImageFilter.GaussianBlur(30)), 0.5)
+    elif motif == "dunes":
+        d0 = ImageDraw.Draw(img, "RGBA")
+        for i, base in enumerate((470, 560, 650, 730)):
+            shade = 22 + i * 9
+            pts = [(0, H)]
+            for x in range(0, W + 1, 25):
+                y = base + int(math.sin((x / W) * math.pi * (1.4 + i * 0.5) + i) * (34 - i * 5))
+                pts.append((x, y))
+            pts.append((W, H))
+            d0.polygon(pts, fill=(shade + 12, shade + 6, max(0, shade - 6), 255))
+        gd.ellipse([400, 130, 520, 250], fill=200)
+        img = composite_glow(img, Image.new("RGB", img.size, pal["glow"]), glow.filter(ImageFilter.GaussianBlur(26)), 0.85)
+    elif motif == "grid":
+        d0 = ImageDraw.Draw(img, "RGBA")
+        for i in range(11):
+            y = 300 + i * 26 + i * i
+            if y > H:
+                break
+            d0.line([(0, y), (W, y)], fill=pal["accent"] + (52 + i * 8,), width=1)
+        for i in range(-10, 11):
+            d0.line([(W // 2, 320), (W // 2 + i * 130, H)], fill=pal["accent"] + (34,), width=1)
+        gd.ellipse([W // 2 - 190, 150, W // 2 + 190, 330], fill=140)
+        img = composite_glow(img, Image.new("RGB", img.size, pal["glow"]), glow.filter(ImageFilter.GaussianBlur(40)), 0.66)
+    elif motif == "frame":
+        d0 = ImageDraw.Draw(img, "RGBA")
+        d0.rectangle([44, 44, W - 44, H - 44], outline=pal["accent"] + (120,), width=2)
+        d0.rectangle([62, 62, W - 62, H - 62], outline=pal["cool"] + (220,), width=1)
+        for k in range(26):
+            y = 90 + k * 26
+            d0.line([(90 + (k % 5) * 14, y), (90 + (k % 5) * 14 + 60, y)], fill=pal["glow"] + (26,), width=8)
+        gd.ellipse([-120, 240, 320, 700], fill=90)
+        img = composite_glow(img, Image.new("RGB", img.size, pal["glow"]), glow.filter(ImageFilter.GaussianBlur(70)), 0.55)
+    else:  # "halo"
+        gd.ellipse([W // 2 - 150, 240, W // 2 + 150, 540], fill=190)
+        img = composite_glow(img, Image.new("RGB", img.size, pal["glow"]), glow.filter(ImageFilter.GaussianBlur(64)), 0.9)
+        d0 = ImageDraw.Draw(img, "RGBA")
+        d0.ellipse([W // 2 - 150, 240, W // 2 + 150, 540], outline=pal["accent"] + (150,), width=3)
+    return img
 
 
-def build(slug, style="warm", out_dir="public/posters"):
+MOTIFS = ("rings", "triad", "bars", "dunes", "grid", "frame", "halo")
+
+
+def make_motif_style(style_name):
+    def _style(img, pal, seed=1, motif=None):
+        return style_motif(img, pal, motif or MOTIFS[seed % len(MOTIFS)], seed)
+
+    return _style
+
+
+# ------------------------------ طباعة العنوان ------------------------------
+
+FONTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "tools", "fonts")
+
+
+def load_font(name, size):
+    """يحمّل خط IBM Plex Sans Arabic المرفق بالمستودع (يغطي الحروف اللاتينية أيضًا)."""
+    for candidate in (os.path.join(FONTS_DIR, name), name):
+        if os.path.exists(candidate) or name.endswith(".ttf"):
+            try:
+                return ImageFont.truetype(candidate, size)
+            except OSError:
+                continue
+    return ImageFont.load_default()
+
+
+def track(text, gap=3):
+    """تباعد أحرف صناعي للعناوين الصغيرة (بدلًا من letter-spacing غير المدعوم في PIL)."""
+    return (" " * gap).join(list(text))
+
+
+def wrap_words(draw, text, font, max_width):
+    words, lines, current = text.split(), [], ""
+    for word in words:
+        trial = f"{current} {word}".strip()
+        if draw.textlength(trial, font=font) <= max_width or not current:
+            current = trial
+        else:
+            lines.append(current)
+            current = word
+    if current:
+        lines.append(current)
+    return lines
+
+
+def render_text(img, title=None, year=None, kicker=None, note=None):
+    """طبقة العنوان أسفل البوستر: تُستخدم فقط في البطاقات التصميمية الأصلية."""
+    if not (title or kicker or note):
+        return img
+    d = ImageDraw.Draw(img, "RGBA")
+
+    scrim = Image.new("L", img.size, 0)
+    sd = ImageDraw.Draw(scrim)
+    for y in range(H - 430, H):
+        t = (y - (H - 430)) / 430
+        sd.line([(0, y), (W, y)], fill=int(235 * t**1.5))
+    scrim = scrim.filter(ImageFilter.GaussianBlur(18))
+    img = Image.composite(Image.new("RGB", img.size, (7, 9, 12)), img, scrim)
+    d = ImageDraw.Draw(img, "RGBA")
+
+    left, right = 52, W - 52
+    y_note = H - 54
+    if note:
+        f_note = load_font("IBMPlexSansArabic-Regular.ttf", 15)
+        d.multiline_text((left, y_note), note, font=f_note, fill=(176, 186, 202, 235), spacing=5)
+        note_height = 0
+        for line in note.split("\n"):
+            note_height += d.textbbox((0, 0), line, font=f_note)[3] + 5
+    else:
+        note_height = 0
+
+    y = H - 78 - note_height
+    d.rectangle([left, y, left + 78, y + 4], fill=(236, 198, 128, 235))
+    y -= 30
+
+    f_meta = load_font("IBMPlexSansArabic-SemiBold.ttf", 20)
+    meta = " · ".join([p for p in (kicker, str(year) if year else None) if p])
+    if meta:
+        meta_w = d.textlength(meta, font=f_meta)
+        d.text((right - meta_w, y - 6), meta, font=f_meta, fill=(214, 222, 234, 235))
+
+    if title:
+        f_title = None
+        lines = []
+        for size in (64, 58, 52, 46, 42, 38, 34, 30):
+            font = load_font("IBMPlexSansArabic-Bold.ttf", size)
+            wrapped = wrap_words(d, title, font, right - left)
+            if len(wrapped) <= 3:
+                f_title, lines = font, wrapped
+                break
+        if f_title is None:
+            f_title = load_font("IBMPlexSansArabic-Bold.ttf", 30)
+            lines = wrap_words(d, title, f_title, right - left)[:3]
+        line_h = f_title.size + 8
+        top = y - 18 - line_h * len(lines)
+        for i, line in enumerate(lines):
+            d.text((left, top + i * line_h), line, font=f_title, fill=(246, 248, 252, 255))
+
+    f_mark = load_font("IBMPlexSansArabic-SemiBold.ttf", 15)
+    d.text((left, 46), track("CINEMANA", 2), font=f_mark, fill=(196, 206, 222, 150))
+    return img
+
+
+STYLES = {
+    "warm": style_warm,
+    "cold": style_cold,
+    "amber": style_amber,
+    "olive": style_olive,
+    "noir": make_motif_style("noir"),
+    "teal": make_motif_style("teal"),
+    "rose": make_motif_style("rose"),
+    "sand": make_motif_style("sand"),
+    "crimson": make_motif_style("crimson"),
+    "ink": make_motif_style("ink"),
+}
+
+
+MOTIF_STYLES = {"noir", "teal", "rose", "sand", "crimson", "ink"}
+
+
+def build(slug, style="warm", out_dir="public/posters", title=None, year=None, kicker=None, note=None, motif=None):
     pal = PALETTES.get(style, PALETTES["warm"])
     # تنويع مميز لكل عمل: بذرة مشتقة من المعرّف حتى لا يتطابق بوستر عملين مختلفين
     seed = zlib.crc32(slug.encode("utf-8")) & 0xFFFFFFFF
     rnd = random.Random(seed)
     img = vgradient((W, H), pal["bg"], tuple(max(0, c - 12) for c in pal["bg"]))
-    img = STYLES.get(style, style_warm)(img, pal)
+    if style in MOTIF_STYLES:
+        chosen = motif if motif in MOTIFS else MOTIFS[seed % len(MOTIFS)]
+        img = STYLES[style](img, pal, seed=seed, motif=chosen)
+    else:
+        img = STYLES.get(style, style_warm)(img, pal)
     img = img.filter(ImageFilter.GaussianBlur(0.6))
     img = vignette(img, 0.6)
     # تقريب/قصّ ببذرة العمل: تكوين مختلف قليلًا لكل بوستر
-    zoom = rnd.uniform(1.0, 1.16)
+    zoom = rnd.uniform(1.0, 1.16) if title is None else rnd.uniform(1.0, 1.08)
     cw, ch = int(W / zoom), int(H / zoom)
     ox = rnd.randint(0, W - cw)
-    oy = rnd.randint(0, H - ch)
+    oy = rnd.randint(0, max(1, int((H - ch) * 0.55)))
     img = img.crop((ox, oy, ox + cw, oy + ch)).resize((W, H), Image.LANCZOS)
     img = ImageEnhance.Brightness(img).enhance(rnd.uniform(0.90, 1.10))
     img = ImageEnhance.Color(img).enhance(rnd.uniform(0.80, 1.20))
     img = ImageEnhance.Contrast(img).enhance(rnd.uniform(0.92, 1.08))
     img = add_noise(img, 8, seed=seed % 10000)
+    img = render_text(
+        img,
+        title=title,
+        year=year,
+        kicker=kicker,
+        note=note if note is not None else ("Original design cover created for Cinemana — not the official poster." if title else None),
+    )
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, f"{slug}.jpg")
     img.save(path, "JPEG", quality=84, optimize=True, progressive=True)
@@ -269,5 +485,19 @@ if __name__ == "__main__":
     ap.add_argument("slug")
     ap.add_argument("--style", default="warm", choices=sorted(STYLES))
     ap.add_argument("--out", default="public/posters")
+    ap.add_argument("--title", default=None, help="عنوان العمل المطبوع على البطاقة (لاتيني)")
+    ap.add_argument("--year", default=None, help="سنة العرض المطبوعة أسفل العنوان")
+    ap.add_argument("--kicker", default=None, help="سطر صغير فوق العنوان، مثل TV SERIES")
+    ap.add_argument("--note", default=None, help="ملاحظة التوضيح أسفل البطاقة")
+    ap.add_argument("--motif", default=None, choices=sorted(MOTIFS), help="الزخرفة الهندسية للخلفية")
     a = ap.parse_args()
-    build(a.slug, a.style, a.out)
+    build(
+        a.slug,
+        a.style,
+        a.out,
+        title=a.title,
+        year=a.year,
+        kicker=a.kicker,
+        note=a.note,
+        motif=a.motif,
+    )

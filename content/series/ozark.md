@@ -21,9 +21,10 @@ seasons:
   - number: 4
     episodes: 14
     year: 2022
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل أوزارك (Ozark) — ليست البوستر الرسمي"
+poster: "/posters/ozark.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «أوزارك» (2017) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Ozark (2017) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "أوزارك (Ozark) 2017–2022 | 4 مواسم · 44 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل أوزارك (Ozark): 4 مواسم · 44 حلقة، العرض 2017–2022، الحالة: منتهٍ، المنصة: نتفليكس. مستشار مالي يضطر لنقل عائلته من شيكاغو إلى بحيرة أوزارك لغسل خمسمئة مليون دولار خلال خمس سنوات لإنقاذ حياته. كلما حاول الخروج من الدائرة، اتسعت:…"

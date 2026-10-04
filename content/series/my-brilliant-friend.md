@@ -21,9 +21,10 @@ seasons:
   - number: 4
     episodes: 10
     year: 2024
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل صديقتي الرائعة (L'amica geniale) — ليست البوستر الرسمي"
+poster: "/posters/my-brilliant-friend.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «صديقتي الرائعة» (2018) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for L'amica geniale (2018) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "صديقتي الرائعة (L'amica geniale) 2018–2024 | 4 مواسم · 34 حلقة · HBO / RAI"
 seoDescription: "كل ما تريد معرفته عن مسلسل صديقتي الرائعة (L'amica geniale): 4 مواسم · 34 حلقة، العرض 2018–2024، الحالة: منتهٍ، المنصة: HBO / RAI. صداقة تمتد ستين عامًا بين لينا ولينا الأخريين في حي نابولي الفقير: ذكاءان متنافسان، وحياة واحدة تُعاش مرّتين. مقتبس من رباعية إيلينا…"

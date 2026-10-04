@@ -11,9 +11,10 @@ seasons:
   - number: 1
     episodes: 16
     year: 2022
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل المجد (The Glory) — ليست البوستر الرسمي"
+poster: "/posters/the-glory.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «المجد» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for The Glory (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "المجد (The Glory) 2022 | 1 موسم · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل المجد (The Glory): 1 موسم · 16 حلقة، العرض 2022، الحالة: منتهٍ، المنصة: نتفليكس. امرأة قضت سنوات تُعذَّب في المدرسة تعود بعد عشرين عامًا بخطة انتقام باردة ومحكمة ضد من دمّروا حياتها. تشويق نفسي عن الألم الطويل وثمن العدالة…"

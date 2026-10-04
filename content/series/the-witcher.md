@@ -21,9 +21,10 @@ seasons:
   - number: 4
     episodes: 8
     year: 2025
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل الساحر (The Witcher) — ليست البوستر الرسمي"
+poster: "/posters/the-witcher.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «الساحر» (2019) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for The Witcher (2019) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الساحر (The Witcher) 2019–مستمر | 4 مواسم · 32 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل الساحر (The Witcher): 4 مواسم · 32 حلقة، العرض 2019–مستمر، الحالة: مستمر، المنصة: نتفليكس. غيرالت من ريفيا، صياد وحوش متحوّل، يشقّ طريقه في قارّة تتقدّم فيها الممالك على حساب البشر والسحرة، حتى يربطه «قانون المفاجأة» بالأميرة سيري، فيما…"

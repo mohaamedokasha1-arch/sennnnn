@@ -8,9 +8,10 @@ country: TR
 language: tr
 status: ended
 seasons: []
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل فاطمة (Fatmagül'ün Suçu Ne?) — ليست البوستر الرسمي"
+poster: "/posters/fatmagul.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «فاطمة» (2010) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Fatmagül'ün Suçu Ne? (2010) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "فاطمة (Fatmagül'ün Suçu Ne?) 2010 | بيانات المواسم غير مكتملة · Kanal D"
 seoDescription: "كل ما تريد معرفته عن مسلسل فاطمة (Fatmagül'ün Suçu Ne?): بيانات المواسم غير مكتملة، العرض 2010، الحالة: منتهٍ، المنصة: Kanal D. فاطمة، فتاة بسيطة من قرية ساحلية، تتعرّض لاعتداء يغيّر حياتها، ثم تُجبر على الزواج من أحد المعتدين. دراما قاسية عن العدالة والكرامة وقدرة الضحية على…"
