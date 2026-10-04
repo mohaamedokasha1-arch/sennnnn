@@ -14,8 +14,9 @@ seasons:
   - number: 2
     episodes: 36
     year: 2020
-poster: "/posters/mucize-doktor.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل الطبيب المعجزة (Mucize Doktor) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل الطبيب المعجزة (Mucize Doktor) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "الطبيب المعجزة (Mucize Doktor) 2019–2020 | 2 موسمان · 64 حلقة · FOX"
 seoDescription: "كل ما تريد معرفته عن مسلسل الطبيب المعجزة (Mucize Doktor): 2 موسمان · 64 حلقة، العرض 2019–2020، الحالة: منتهٍ، المنصة: FOX. علي vefa، جرّاح شاب مصاب بالتوحّد ومتلازمة العالم، يحاول إثبات نفسه في مستشفى جامعي لا يرحم: تشخيصات مستحيلة، زملاء متشككون، ومجتمع يشكّك في قدرته…"

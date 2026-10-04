@@ -8,10 +8,11 @@
     "validate": "node lib/validate.mjs",
     "test:content": "node lib/test-validation.mjs",
     "test:logic": "node lib/test-logic.mjs",
-    "test": "npm run validate && npm run test:content && npm run test:logic",
+    "test:posters": "node lib/test-posters.mjs",
+    "test": "npm run validate && npm run test:content && npm run test:logic && npm run test:posters",
     "dev": "next dev",
     "prebuild": "node lib/validate.mjs",
-    "build": "next build",
+    "build": "next build && node tools/audit-poster-export.mjs",
     "preview": "node tools/serve-static.mjs 4000 out",
     "clean": "rm -rf .next out"
   },

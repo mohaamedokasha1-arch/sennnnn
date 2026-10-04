@@ -21,8 +21,9 @@ seasons:
   - number: 4
     episodes: 10
     year: 2025
-poster: "/posters/the-bear.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل الدب (The Bear) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل الدب (The Bear) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "الدب (The Bear) 2022–مستمر | 4 مواسم · 38 حلقة · Hulu / FX (Disney+ دوليًا)"
 seoDescription: "كل ما تريد معرفته عن مسلسل الدب (The Bear): 4 مواسم · 38 حلقة، العرض 2022–مستمر، الحالة: مستمر، المنصة: Hulu / FX (Disney+ دوليًا). طاهٍ شاب يترك مطعمًا راقياً في نيويورك ليعود إلى شيكاغو ويدير محل شطائر أخيه الراحل: مطبخ ضيق، ديون، فريق متعب، وحزن لم يُقل. دراما سريعة الإيقاع عن…"

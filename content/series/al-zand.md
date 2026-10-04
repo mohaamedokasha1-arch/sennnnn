@@ -12,8 +12,9 @@ seasons:
   - number: 1
     episodes: 30
     year: 2023
-poster: "/posters/al-zand.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل الزند: ذئب العاصي (Al Zand: Dheeb Al Aasi) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل الزند: ذئب العاصي (Al Zand: Dheeb Al Aasi) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "الزند: ذئب العاصي (Al Zand: Dheeb Al Aasi) 2023 | 1 موسم · 30 حلقة · MBC دراما / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل الزند: ذئب العاصي (Al Zand: Dheeb Al Aasi): 1 موسم · 30 حلقة، العرض 2023، الحالة: منتهٍ، المنصة: MBC دراما / شاهد. على ضفاف نهر العاصي أوائل القرن العشرين، يعود شاب من الخدمة العسكرية ليجد أرض عائلته ونفوذ الإقطاع في مواجهته. دراما بيئة شامية-ساحلية عن الأرض…"

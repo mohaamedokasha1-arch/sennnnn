@@ -33,8 +33,9 @@ seasons:
   - number: 8
     episodes: 6
     year: 2019
-poster: "/posters/game-of-thrones.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل صراع العروش (Game of Thrones) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل صراع العروش (Game of Thrones) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "صراع العروش (Game of Thrones) 2011–2019 | 8 مواسم · 73 حلقة · HBO"
 seoDescription: "كل ما تريد معرفته عن مسلسل صراع العروش (Game of Thrones): 8 مواسم · 73 حلقة، العرض 2011–2019، الحالة: منتهٍ، المنصة: HBO. في قارّتي ويستيروس وإسوس، تتصارع عائلات نبيلة على العرش الحديدي فيما يقترب خطر قديم من الشمال. ملحمة سياسية دموية عن السلطة والولاء، مقتبسة من روايات…"

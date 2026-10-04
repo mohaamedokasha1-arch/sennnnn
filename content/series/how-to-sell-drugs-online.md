@@ -20,8 +20,9 @@ seasons:
   - number: 4
     episodes: 6
     year: 2025
-poster: "/posters/how-to-sell-drugs-online.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل كيف تبيع المخدرات أونلاين (How to Sell Drugs Online) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل كيف تبيع المخدرات أونلاين (How to Sell Drugs Online) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "كيف تبيع المخدرات أونلاين (How to Sell Drugs Online) 2019–2025 | 4 مواسم · 24 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل كيف تبيع المخدرات أونلاين (How to Sell Drugs Online): 4 مواسم · 24 حلقة، العرض 2019–2025، الحالة: غير مؤكدة، المنصة: نتفليكس. مراهق ألماني يبدأ ببيع المخدرات من غرفته ليستعيد حبيبته، فتتحوّل فكرته الصغيرة إلى أحد أكبر متاجر الإنترنت غير المشروعة في أوروبا. كوميديا سوداء…"

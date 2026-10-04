@@ -17,7 +17,7 @@ import {
 import { SectionHeader, Notice, Stat } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid, ReviewCard, ListCard } from '@/components/cards.jsx';
-import { PosterFallback } from '@/components/JsonLd.jsx';
+import PosterImage from '@/components/PosterImage.jsx';
 
 export const metadata = buildMetadata({
   title: undefined,
@@ -79,11 +79,16 @@ export default function HomePage() {
         <div className="hero-posters" aria-hidden="true">
           {heroPosters.map((w) => (
             <span key={`${w.kind}:${w.slug}`} className="card-media" style={{ display: 'block' }}>
-              {w.hasPoster ? (
-                <img src={w.poster} alt="" width={600} height={900} loading="eager" fetchPriority="high" />
-              ) : (
-                <PosterFallback title={w.title} year={w.year} />
-              )}
+              <PosterImage
+                src={w.hasPoster ? w.poster : null}
+                title={w.title}
+                year={w.year}
+                alt=""
+                width={600}
+                height={900}
+                loading="eager"
+                fetchPriority="high"
+              />
             </span>
           ))}
         </div>
@@ -132,11 +137,15 @@ export default function HomePage() {
                   {g.sample.map((w) => (
                     <Link key={`${w.kind}:${w.slug}`} href={w.url} aria-label={`${w.title} — ${g.label}`}>
                       <span className="card-media" style={{ aspectRatio: '2/3', display: 'block' }}>
-                        {w.hasPoster ? (
-                          <img src={w.poster} alt="" width={172} height={258} loading="lazy" />
-                        ) : (
-                          <PosterFallback title={w.title} />
-                        )}
+                        <PosterImage
+                          src={w.hasPoster ? w.poster : null}
+                          title={w.title}
+                          year={w.year}
+                          alt=""
+                          width={172}
+                          height={258}
+                          loading="lazy"
+                        />
                       </span>
                     </Link>
                   ))}

@@ -171,6 +171,7 @@ main { flex: 1; padding-bottom: calc(var(--bottom-nav-h) + 24px); }
 .suggest-item:last-child { border-bottom: 0; }
 .suggest-item:hover, .suggest-item[data-active='true'] { background: var(--surface-2); }
 .suggest-thumb { width: 42px; height: 62px; border-radius: 6px; object-fit: cover; flex-shrink: 0; background: var(--surface-3); }
+.suggest-thumb-fallback { display: grid; place-items: center; padding: 3px; border: 1px solid var(--border); color: var(--muted); font-size: 0.52rem; line-height: 1.2; text-align: center; overflow: hidden; }
 .suggest-title { font-size: 0.92rem; font-weight: 600; }
 .suggest-meta { font-size: 0.78rem; color: var(--muted); }
 .suggest-all {
@@ -291,6 +292,7 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-hover); }
 }
 .poster-fallback span { font-size: 0.86rem; color: var(--text-soft); font-weight: 600; line-height: 1.5; }
 .poster-fallback small { display: block; color: var(--faint); font-size: 0.7rem; margin-top: 6px; }
+.poster-fallback .poster-fallback-status { color: var(--muted); font-weight: 500; }
 
 /* -------------------------------- الفلاتر -------------------------------- */
 .filters {

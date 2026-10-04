@@ -14,8 +14,9 @@ seasons:
   - number: 2
     episodes: 10
     year: 2022
-poster: "/posters/alchemy-of-souls.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل كيمياء الأرواح (Alchemy of Souls) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل كيمياء الأرواح (Alchemy of Souls) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "كيمياء الأرواح (Alchemy of Souls) 2022 | 2 موسمان · 30 حلقة · tvN / نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل كيمياء الأرواح (Alchemy of Souls): 2 موسمان · 30 حلقة، العرض 2022، الحالة: منتهٍ، المنصة: tvN / نتفليكس. في عالم السحرة «داهو»، تُبدَّل الأرواح بين الأجساد عبر سحر محرّم، فتجد محاربة قوية نفسها في جسد ضعيف وتصبح معلّمة لوريث عائلة كبيرة. فانتازيا…"

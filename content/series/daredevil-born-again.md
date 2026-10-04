@@ -12,8 +12,9 @@ seasons:
   - number: 1
     episodes: 9
     year: 2025
-poster: "/posters/daredevil-born-again.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل ديرديفل: ولادة جديدة (Daredevil: Born Again) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل ديرديفل: ولادة جديدة (Daredevil: Born Again) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "ديرديفل: ولادة جديدة (Daredevil: Born Again) 2025–مستمر | 1 موسم · 9 حلقة · ديزني+"
 seoDescription: "كل ما تريد معرفته عن مسلسل ديرديفل: ولادة جديدة (Daredevil: Born Again): 1 موسم · 9 حلقة، العرض 2025–مستمر، الحالة: مستمر، المنصة: ديزني+. مات مردوك، المحامي الأعمى، يحاول تعليق قناع «ديرديفل» والعيش بالقانون، بينما يصعد ويلسون فيسك في نيويورك إلى منصب عام. صراع الرجلين يعود بأشكال أخطر…"

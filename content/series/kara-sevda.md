@@ -8,8 +8,9 @@ country: TR
 language: tr
 status: ended
 seasons: []
-poster: "/posters/kara-sevda.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل حب أعمى (Kara Sevda) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل حب أعمى (Kara Sevda) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "حب أعمى (Kara Sevda) 2015 | بيانات المواسم غير مكتملة · Star TV"
 seoDescription: "كل ما تريد معرفته عن مسلسل حب أعمى (Kara Sevda): بيانات المواسم غير مكتملة، العرض 2015، الحالة: منتهٍ، المنصة: Star TV. طالب هندسة فقير وفتاة من عائلة ثرية يقعان في حب مستحيل، ثم يفرّقهما الطموح والخيانة والزواج القسري. بعد سنوات يعود الحساب: قصة حب تتحوّل إلى هوس…"

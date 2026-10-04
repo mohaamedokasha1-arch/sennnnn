@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { t, genreLabel, typeLabel, genreUrl } from '@/lib/i18n.mjs';
-import { PosterFallback } from './JsonLd.jsx';
+import PosterImage from './PosterImage.jsx';
 import FavoriteButton from './FavoriteButton.jsx';
 
 /**
@@ -29,19 +29,17 @@ export default function WorkCard({ work, priority = false, showGenres = true, no
     <article className="card">
       <div className="card-media">
         <Link href={url} tabIndex={-1} aria-hidden="true">
-          {hasPoster ? (
-            <img
-              src={poster}
-              alt={posterAlt}
-              width={600}
-              height={900}
-              loading={priority ? 'eager' : 'lazy'}
-              {...(priority ? { fetchPriority: 'high' } : {})}
-              decoding="async"
-            />
-          ) : (
-            <PosterFallback title={title} year={year} />
-          )}
+          <PosterImage
+            src={hasPoster ? poster : null}
+            title={title}
+            year={year}
+            alt={posterAlt}
+            width={600}
+            height={900}
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : undefined}
+            decoding="async"
+          />
         </Link>
 
         <div className="card-badges">

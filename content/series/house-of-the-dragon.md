@@ -18,8 +18,9 @@ seasons:
   - number: 3
     episodes: 8
     year: 2026
-poster: "/posters/house-of-the-dragon.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل آل التنين (House of the Dragon) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل آل التنين (House of the Dragon) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "آل التنين (House of the Dragon) 2022–مستمر | 3 مواسم · 26 حلقة · HBO / HBO Max"
 seoDescription: "كل ما تريد معرفته عن مسلسل آل التنين (House of the Dragon): 3 مواسم · 26 حلقة، العرض 2022–مستمر، الحالة: مستمر، المنصة: HBO / HBO Max. قبل مئتي عام من أحداث «صراع العروش»، يتآكل بيت تارجاريان من الداخل حين يتحوّل الخلاف على وراثة العرش إلى حرب أهلية تُعرف برقصة التنانين، وتُدفع فيها…"

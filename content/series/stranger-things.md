@@ -24,8 +24,9 @@ seasons:
   - number: 5
     episodes: 8
     year: 2025
-poster: "/posters/stranger-things.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل أشياء غريبة (Stranger Things) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل أشياء غريبة (Stranger Things) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "أشياء غريبة (Stranger Things) 2016–2025 | 5 مواسم · 42 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل أشياء غريبة (Stranger Things): 5 مواسم · 42 حلقة، العرض 2016–2025، الحالة: منتهٍ، المنصة: نتفليكس. في بلدة هوكينز الصغيرة عام 1983 يختفي طفل في ظروف غامضة، فيفتح اختفاؤه بابًا على تجارب حكومية سرية وعالم موازٍ مرعب وفتاة ذات قدرات خارقة. على امتداد…"

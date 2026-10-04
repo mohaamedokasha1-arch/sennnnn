@@ -15,8 +15,9 @@ seasons:
   - number: 2
     episodes: 7
     year: 2025
-poster: "/posters/the-last-of-us.jpg"
-posterAlt: "غلاف تصميمي أصلي لمسلسل ذا لاست أوف أس (The Last of Us) — البوستر الرسمي يحتاج ترخيصًا"
+poster: null
+posterTemporary: true
+posterAlt: "صورة مؤقتة لمسلسل ذا لاست أوف أس (The Last of Us) — ليست البوستر الرسمي"
 addedAt: 2026-10-04
 seoTitle: "ذا لاست أوف أس (The Last of Us) 2023–مستمر | 2 موسمان · 16 حلقة · HBO / Max"
 seoDescription: "كل ما تريد معرفته عن مسلسل ذا لاست أوف أس (The Last of Us): 2 موسمان · 16 حلقة، العرض 2023–مستمر، الحالة: مستمر، المنصة: HBO / Max. بعد عشرين عامًا على انهيار الحضارة بفعل عدوى فطرية، يُكلّف المهرّب جول بتهريب المراهقة إيلي عبر الولايات المتحدة، لأن مناعتها قد تحمل مفتاح العلاج.…"

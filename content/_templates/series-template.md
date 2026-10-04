@@ -19,7 +19,9 @@ seasons:                     # اتركها فارغة [] إن لم تتحقق �
   - number: 2
     episodes: 8
     year: 2025
-poster: "/posters/اسم-الملف.jpg"
+poster: null                 # اتركها null ما لم تكن الصورة موثوقة/مرخّصة
+posterTemporary: true         # يعرض الموقع بديلًا يحمل اسم المسلسل إلى حين توفر بوستر مسموح
+posterAlt: "صورة مؤقتة لمسلسل الاسم — ليست البوستر الرسمي"
 addedAt: 2026-10-03
 directors: [director-id]
 cast: [actor-1]
