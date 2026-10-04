@@ -3,7 +3,6 @@
 #  قالب شخص (مخرج/ممثل) — انسخه إلى content/people/ باسم مثل: layla-mansour.md
 #  اسم الملف هو المعرّف الذي تستخدمه في حقل directors / cast داخل ملفات الأعمال.
 # ==========================================================================
-demo: false
 title: "الاسم الكامل"
 nameOriginal: "Full Name"    # اختياري
 roles: [actor]                # director / actor / writer (يمكن الجمع)

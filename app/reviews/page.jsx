@@ -2,7 +2,8 @@ import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata } from '@/lib/seo.mjs';
 import { getReviews } from '@/lib/content.mjs';
-import { Breadcrumbs, SectionHeader, Notice, EmptyState, AdSlot } from '@/components/ui.jsx';
+import { Breadcrumbs, SectionHeader, Notice, EmptyState } from '@/components/ui.jsx';
+import { AdSlot } from '@/components/Ads.jsx';
 import { ReviewCard } from '@/components/cards.jsx';
 
 export const metadata = buildMetadata({
@@ -48,7 +49,7 @@ export default function ReviewsPage() {
         </div>
       )}
 
-      <AdSlot position="bottom" hidden={reviews.length < 4} />
+      <AdSlot zone="bottom" hidden={reviews.length < 4} />
     </div>
   );
 }

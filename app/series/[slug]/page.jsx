@@ -4,11 +4,16 @@ import { getSeries, getWork } from '@/lib/content.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
 
 /** صفحة تفاصيل المسلسل — نفس منطق صفحة الفيلم مع بيانات المواسم والحالة */
+
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getSeries().map((s) => ({ slug: s.slug }));
+  const items = getSeries();
+  // في وضع التصدير الثابت لا يقبل Next مسارًا ديناميكيًا بلا أي صفحة مُولَّدة،
+  // لذلك عند غياب المحتوى نولّد مسارًا داخليًا واحدًا يعرض صفحة «الصفحة غير موجودة» (noindex).
+  // يختفي هذا المسار تلقائيًا بمجرد إضافة أول عنصر، ولا يُدرج في الخريطة ولا يُفهرس.
+  return items.length ? items.map((s) => ({ slug: s.slug })) : [{ slug: '__no-content__' }];
 }
 
 export async function generateMetadata({ params }) {

@@ -220,7 +220,6 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-hover); }
   padding: 3px 9px; border-radius: 999px; letter-spacing: 0.01em;
 }
 .badge-accent { background: var(--accent-soft); color: var(--accent-hover); }
-.badge-demo { background: rgba(255, 196, 92, 0.14); color: #ffcf7a; }
 
 /* -------------------------------- الأقسام -------------------------------- */
 .section { margin-block: clamp(32px, 4vw, 56px); }
@@ -414,15 +413,10 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-hover); }
 .crumbs .sep { opacity: 0.5; }
 
 /* ------------------------------ مساحة إعلانية ------------------------------ */
-.ad-slot {
-  display: grid; place-items: center; gap: 4px; text-align: center;
-  min-height: 90px; padding: 18px; margin-block: 28px;
-  border: 1px dashed var(--border-strong); border-radius: var(--radius);
-  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.012) 0 12px, transparent 12px 24px);
-  color: var(--faint); font-size: 0.78rem;
-}
-.ad-slot strong { color: var(--muted); font-size: 0.84rem; font-weight: 600; }
-@media (min-width: 900px) { .ad-slot { min-height: 110px; } }
+/* حاوية الإعلان: لا ارتفاع ولا حدود ولا أي مظهر عندما لا يوجد كود إعلاني،
+   فلا يتغيّر شكل الصفحة إطلاقًا قبل تفعيل الإعلانات. */
+.ad-zone { display: block; margin-block: 28px; text-align: center; }
+.ad-zone:empty { display: none; margin: 0; }
 
 /* -------------------------------- التنبيهات -------------------------------- */
 .notice {
@@ -430,7 +424,6 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-hover); }
   background: var(--accent-soft); border: 1px solid var(--accent-ring);
   border-radius: var(--radius); padding: 12px 14px; font-size: 0.88rem; color: var(--text);
 }
-.notice-demo { background: rgba(255, 196, 92, 0.1); border-color: rgba(255, 196, 92, 0.3); }
 .notice-icon { flex-shrink: 0; }
 
 /* -------------------------------- التذييل -------------------------------- */

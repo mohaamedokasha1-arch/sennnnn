@@ -4,8 +4,9 @@ import { formatRuntime, formatDate } from '@/lib/format.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { workJsonLd, reviewJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
 import { similarWorks, getReviewForWork } from '@/lib/content.mjs';
-import { DemoBadge, PosterFallback, default as JsonLd } from './JsonLd.jsx';
-import { Breadcrumbs, AdSlot, Notice } from './ui.jsx';
+import { PosterFallback, default as JsonLd } from './JsonLd.jsx';
+import { Breadcrumbs } from './ui.jsx';
+import { AdSlot } from './Ads.jsx';
 import { Star, WatchLinks, SeasonsBlock, PersonChips } from './WorkDetailParts.jsx';
 import ShareRow from './ShareRow.jsx';
 import FavoriteButton from './FavoriteButton.jsx';
@@ -111,7 +112,6 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
               {work.isSubtitled ? (
                 <span className="badge badge-accent">{t('work.subtitlesBadge', null, locale)}</span>
               ) : null}
-              {work.demo ? <DemoBadge /> : null}
               {work.kind === 'series' && work.seriesStatus ? (
                 <span className="chip chip-static">{statusLabel(work.seriesStatus, locale)}</span>
               ) : null}
@@ -252,7 +252,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
           </div>
         </header>
 
-        <AdSlot position="top" />
+        <AdSlot zone="movie-top" />
 
         {/* ------------------------------ طاقم العمل ------------------------------ */}
         {work.directorPeople.length || work.writerPeople?.length || work.castPeople.length ? (
@@ -378,13 +378,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
           </section>
         ) : null}
 
-        {work.demo ? (
-          <Notice variant="demo">
-            <span className="small">{t('site.demoBannerBody')}</span>
-          </Notice>
-        ) : null}
-
-        <AdSlot position="bottom" />
+        <AdSlot zone="movie-bottom" />
       </article>
     </div>
   );

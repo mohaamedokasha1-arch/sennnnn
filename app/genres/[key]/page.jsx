@@ -4,7 +4,8 @@ import siteConfig from '@/site.config.mjs';
 import { t, GENRES, genreLabel } from '@/lib/i18n.mjs';
 import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo.mjs';
 import { genresWithContent, worksInGenre } from '@/lib/content.mjs';
-import { Breadcrumbs, SectionHeader, AdSlot, EmptyState } from '@/components/ui.jsx';
+import { Breadcrumbs, SectionHeader, EmptyState } from '@/components/ui.jsx';
+import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid } from '@/components/cards.jsx';
 import JsonLd from '@/components/JsonLd.jsx';
 
@@ -78,7 +79,7 @@ export default async function GenrePage({ params }) {
         </section>
       ) : null}
 
-      <AdSlot position="bottom" hidden={all.length < 6} />
+      <AdSlot zone="bottom" hidden={all.length < 6} />
 
       <p className="muted small center mt-6">
         <Link href="/genres/">كل التصنيفات</Link> · <Link href="/movies/">كل الأفلام</Link> ·{' '}

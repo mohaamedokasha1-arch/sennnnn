@@ -14,7 +14,8 @@ import {
   popularWorks,
   siteStats,
 } from '@/lib/content.mjs';
-import { SectionHeader, AdSlot, Notice, Stat } from '@/components/ui.jsx';
+import { SectionHeader, Notice, Stat } from '@/components/ui.jsx';
+import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid, ReviewCard, ListCard } from '@/components/cards.jsx';
 import { PosterFallback } from '@/components/JsonLd.jsx';
 
@@ -88,19 +89,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {stats.hasDemo ? (
-        <div className="mt-4">
-          <Notice variant="demo">
-            <strong>{t('site.demoBannerTitle')}</strong>
-            <p className="small" style={{ marginBottom: 0 }}>
-              {t('site.demoBannerBody')}
-            </p>
-          </Notice>
-        </div>
-      ) : null}
-
       {/* مساحة إعلانية واحدة أعلى المحتوى (فارغة حاليًا) — لا تلامس المحتوى ولا تزاحمه */}
-      <AdSlot position="top" hidden={stats.works < 6} />
+      <AdSlot zone="top" hidden={stats.works < 6} />
 
       {/* --------------------------- أحدث الإضافات --------------------------- */}
       {latest.length ? (
@@ -118,7 +108,7 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      <AdSlot position="between" hidden={stats.works < 8} />
+      <AdSlot zone="between" hidden={stats.works < 8} />
 
       {/* ----------------------------- المسلسلات ----------------------------- */}
       {series.length ? (
@@ -258,7 +248,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <AdSlot position="bottom" hidden={stats.works < 6} />
+      <AdSlot zone="bottom" hidden={stats.works < 6} />
     </div>
   );
 }

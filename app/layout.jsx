@@ -7,6 +7,7 @@ import SiteHeader from '@/components/SiteHeader.jsx';
 import SiteFooter from '@/components/SiteFooter.jsx';
 import MobileNav from '@/components/Navigation.jsx';
 import JsonLd from '@/components/JsonLd.jsx';
+import { AdHead } from '@/components/Ads.jsx';
 
 /**
  * التخطيط العام: RTL عربي، الوضع الداكن افتراضي، هوية من site.config.mjs.
@@ -79,6 +80,8 @@ export default function RootLayout({ children }) {
         </div>
         <MobileNav />
         <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
+        {/* سكربت Monetag العام — لا يُحمَّل إلا إذا وُضع الكود في site.config.mjs */}
+        <AdHead />
       </body>
     </html>
   );

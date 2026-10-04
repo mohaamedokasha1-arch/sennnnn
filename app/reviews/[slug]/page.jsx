@@ -5,15 +5,21 @@ import { buildMetadata, reviewJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
 import { getReviews, getReview } from '@/lib/content.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { readingTime, formatDate } from '@/lib/format.mjs';
-import { Breadcrumbs, Notice, AdSlot } from '@/components/ui.jsx';
-import JsonLd, { DemoBadge } from '@/components/JsonLd.jsx';
+import { Breadcrumbs, Notice } from '@/components/ui.jsx';
+import { AdSlot } from '@/components/Ads.jsx';
+import JsonLd from '@/components/JsonLd.jsx';
 import ShareRow from '@/components/ShareRow.jsx';
+
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getReviews().map((r) => ({ slug: r.slug }));
+  const items = getReviews();
+  // في وضع التصدير الثابت لا يقبل Next مسارًا ديناميكيًا بلا أي صفحة مُولَّدة،
+  // لذلك عند غياب المحتوى نولّد مسارًا داخليًا واحدًا يعرض صفحة «الصفحة غير موجودة» (noindex).
+  // يختفي هذا المسار تلقائيًا بمجرد إضافة أول عنصر، ولا يُدرج في الخريطة ولا يُفهرس.
+  return items.length ? items.map((r) => ({ slug: r.slug })) : [{ slug: '__no-content__' }];
 }
 
 export async function generateMetadata({ params }) {
@@ -53,7 +59,6 @@ export default async function ReviewPage({ params }) {
       <article className="legal" style={{ maxWidth: 820, marginTop: 18 }}>
         <div className="chips mb-2">
           <span className="chip chip-static chip-type">{t('site.editorialNote')}</span>
-          {review.demo ? <DemoBadge /> : null}
         </div>
 
         <h1>{review.title}</h1>
@@ -110,7 +115,7 @@ export default async function ReviewPage({ params }) {
         </p>
       </article>
 
-      <AdSlot position="bottom" />
+      <AdSlot zone="bottom" />
     </div>
   );
 }

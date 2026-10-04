@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { t, genreLabel, typeLabel, genreUrl } from '@/lib/i18n.mjs';
-import { DemoBadge, PosterFallback } from './JsonLd.jsx';
+import { PosterFallback } from './JsonLd.jsx';
 import FavoriteButton from './FavoriteButton.jsx';
 
 /**
@@ -19,7 +19,6 @@ export default function WorkCard({ work, priority = false, showGenres = true, no
     genres,
     hasPoster,
     poster,
-    demo,
     seriesStatus,
   } = work;
 
@@ -47,7 +46,6 @@ export default function WorkCard({ work, priority = false, showGenres = true, no
 
         <div className="card-badges">
           <span className="chip chip-static chip-type">{typeLabel(kind)}</span>
-          {demo ? <DemoBadge compact /> : null}
           {kind === 'series' && seriesStatus ? (
             <span className="chip chip-static">{seriesStatus === 'ongoing' ? 'مستمر' : seriesStatus === 'limited' ? 'محدود' : 'منتهٍ'}</span>
           ) : null}

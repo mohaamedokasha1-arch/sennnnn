@@ -3,7 +3,6 @@
 #  قالب مسلسل جديد — انسخ هذا الملف إلى مجلد content/series/
 # ==========================================================================
 draft: true
-demo: false
 title: "الاسم بالعربية"
 titleOriginal: "Original Title"
 year: 2024
