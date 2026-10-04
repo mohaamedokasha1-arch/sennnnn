@@ -88,6 +88,13 @@ for (const work of series) {
 }
 const listingPosters = (seriesIndex.match(/src="\/posters\//g) ?? []).length;
 assert.ok(listingPosters >= 24, `قائمة المسلسلات تعرض ${listingPosters} صورة فقط في HTML (المتوقع ≥ 24).`);
+if (series.some((w) => w.posterDesign)) {
+  assert.match(
+    seriesIndex,
+    /data-poster-design="true"/,
+    'قائمة /series/ لا تعرض وسم «غلاف تصميمي أصلي» على البطاقات المنشورة.'
+  );
+}
 const homePosters = (home.match(/src="\/posters\//g) ?? []).length;
 assert.ok(homePosters >= 20, `الصفحة الرئيسية تعرض ${homePosters} صورة بوستر فقط (المتوقع ≥ 20).`);
 
