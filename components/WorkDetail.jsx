@@ -74,7 +74,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
 
       <div className="spread" style={{ alignItems: 'center' }}>
         <Breadcrumbs items={crumbs} />
-        {work.kind === 'movie' ? (
+        {work.kind === 'movie' && work.synopsisEn ? (
           <div className="mt-4">
             <Link
               href={isEn ? canonicalArPath : altEnPath}
@@ -99,7 +99,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
                 year={work.year}
                 alt={posterAlt}
                 width={640}
-                height={800}
+                height={960}
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"

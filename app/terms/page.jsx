@@ -18,7 +18,7 @@ export default function TermsPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'شروط الاستخدام' }]} />
       <div className="mt-4">
-        <SectionHeader kicker="قانوني" title="شروط الاستخدام" />
+        <SectionHeader as="h1" kicker="قانوني" title="شروط الاستخدام" />
       </div>
 
       <div className="legal prose">

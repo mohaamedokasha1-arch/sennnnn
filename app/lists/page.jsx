@@ -1,15 +1,18 @@
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
-import { buildMetadata } from '@/lib/seo.mjs';
+import { buildMetadata, noIndex } from '@/lib/seo.mjs';
 import { getLists } from '@/lib/content.mjs';
 import { Breadcrumbs, SectionHeader, Notice, EmptyState } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { ListCard } from '@/components/cards.jsx';
 
+const publishedLists = getLists();
+
 export const metadata = buildMetadata({
   title: t('lists.title'),
   description: `قوائم ترشيحات من إعداد فريق ${siteConfig.siteName}: مجموعات مختارة من الأفلام والمسلسلات في الموقع، بحسب الحالة والمزاج والوقت المتاح.`,
   path: '/lists/',
+  robots: publishedLists.length ? undefined : noIndex,
 });
 
 export const dynamic = 'force-static';
@@ -21,7 +24,7 @@ export default function ListsPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.lists') }]} />
       <div className="mt-4">
-        <SectionHeader kicker="اختيارات المحرر" title={t('lists.title')} sub={t('lists.intro')} />
+        <SectionHeader as="h1" kicker="اختيارات المحرر" title={t('lists.title')} sub={t('lists.intro')} />
       </div>
 
       <Notice>

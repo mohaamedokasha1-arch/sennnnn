@@ -1,8 +1,7 @@
 import './globals.css';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
-import { buildMetadata, abs, websiteJsonLd, organizationJsonLd } from '@/lib/seo.mjs';
-const SITE_URL = abs('/');
+import { buildMetadata, websiteJsonLd, organizationJsonLd } from '@/lib/seo.mjs';
 import SiteHeader from '@/components/SiteHeader.jsx';
 import SiteFooter from '@/components/SiteFooter.jsx';
 import MobileNav from '@/components/Navigation.jsx';
@@ -64,8 +63,6 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preload" href="/fonts/plex-arabic-coptic-0.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{ __html: accentCss }} />
-        <link rel="alternate" hrefLang="ar" href={abs('/')} />
-        {/* ملف تعريف بمزوّدي التضمين المسموحين فقط (YouTube/Vimeo) — لا نتصل بأي نطاق آخر */}
         <link rel="preconnect" href="https://www.youtube-nocookie.com" />
         <meta name="format-detection" content="telephone=no" />
       </head>

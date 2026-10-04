@@ -18,7 +18,7 @@ export default function PrivacyPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'سياسة الخصوصية' }]} />
       <div className="mt-4">
-        <SectionHeader kicker="قانوني" title="سياسة الخصوصية" />
+        <SectionHeader as="h1" kicker="قانوني" title="سياسة الخصوصية" />
       </div>
 
       <div className="legal prose">

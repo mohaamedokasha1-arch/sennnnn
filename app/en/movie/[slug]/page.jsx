@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { buildMetadata } from '@/lib/seo.mjs';
+import { buildMetadata, noIndex } from '@/lib/seo.mjs';
 import { getMovies, getWork } from '@/lib/content.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
 
@@ -33,12 +33,15 @@ export async function generateMetadata({ params }) {
     title: enTitle,
     description: desc,
     path: `/en/movie/${slug}/`,
-    canonical: `/en/movie/${slug}/`,
-    languages: {
-      ar: `/movie/${slug}/`,
-      en: `/en/movie/${slug}/`,
-      'x-default': `/movie/${slug}/`,
-    },
+    canonical: `/en${work.url}`,
+    languages: work.synopsisEn
+      ? {
+          ar: work.url,
+          en: `/en${work.url}`,
+          'x-default': work.url,
+        }
+      : null,
+    robots: work.synopsisEn ? undefined : noIndex,
     image: work.hasPoster ? work.poster : null,
     imageAlt: work.posterAltEn || `Official poster for ${work.titleOriginal || work.title}${work.year ? ` (${work.year})` : ''}`,
     type: 'video.movie',
@@ -50,5 +53,5 @@ export default async function MovieAliasPageEn({ params }) {
   const { slug } = await params;
   const work = getWork('movie', slug);
   if (!work) notFound();
-  return <WorkDetail work={work} locale="en" basePath={`/movie/${slug}/`} />;
+  return <WorkDetail work={work} locale="en" basePath={work.url} />;
 }

@@ -9,7 +9,7 @@ import FilterBar from '@/components/FilterBar.jsx';
 
 export const metadata = buildMetadata({
   title: t('series.title'),
-  description: `كل المسلسلات المنشورة في ${siteConfig.siteName}: بيانات المواسم والحلقات عند توفرها، حالة المسلسل، ومراجعات تحريرية — مع فلاتر بالنوع والسنة واللغة.`,
+  description: `كل المسلسلات المنشورة في ${siteConfig.siteName}: بيانات المواسم والحلقات عند توفرها، وحالة المسلسل، مع المراجعات المنشورة إن وُجدت — وفلاتر بالنوع والسنة واللغة.`,
   path: '/series/',
 });
 
@@ -41,7 +41,7 @@ export default function SeriesPage() {
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.series') }]} />
 
       <div className="mt-4">
-        <SectionHeader kicker="المكتبة" title={t('series.title')} sub={t('series.intro')} />
+        <SectionHeader as="h1" kicker="المكتبة" title={t('series.title')} sub={t('series.intro')} />
       </div>
 
       <FilterBar items={items} facets={f} showStatus emptyText={t('empty.series')} />

@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { buildMetadata } from '@/lib/seo.mjs';
+import { buildMetadata, noIndex } from '@/lib/seo.mjs';
 import { getMovies, getWork } from '@/lib/content.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
 
@@ -34,11 +34,14 @@ export async function generateMetadata({ params }) {
     description: desc,
     path: `/en${work.url}`,
     canonical: `/en${work.url}`,
-    languages: {
-      ar: work.url,
-      en: `/en${work.url}`,
-      'x-default': work.url,
-    },
+    languages: work.synopsisEn
+      ? {
+          ar: work.url,
+          en: `/en${work.url}`,
+          'x-default': work.url,
+        }
+      : null,
+    robots: work.synopsisEn ? undefined : noIndex,
     image: work.hasPoster ? work.poster : null,
     imageAlt: work.posterAltEn || `Official poster for ${work.titleOriginal || work.title}${work.year ? ` (${work.year})` : ''}`,
     type: 'video.movie',

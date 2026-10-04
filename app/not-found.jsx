@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { t, genreLabel } from '@/lib/i18n.mjs';
+import { noIndex } from '@/lib/seo.mjs';
 import { genresWithContent, latestAdditions } from '@/lib/content.mjs';
 import { EmptyState, SectionHeader } from '@/components/ui.jsx';
 import { WorkGrid } from '@/components/cards.jsx';
-import { IconSearch, IconHome } from '@/components/Icons.jsx';
 
 /**
  * صفحة 404 مفيدة: لا تترك الزائر في طريق مسدود — بحث مباشر + تصنيفات + أحدث الإضافات.
@@ -11,7 +11,10 @@ import { IconSearch, IconHome } from '@/components/Icons.jsx';
  */
 export const metadata = {
   title: 'الصفحة غير موجودة',
-  robots: { index: false, follow: true },
+  description: 'تعذر العثور على الصفحة المطلوبة. استخدم الروابط للعودة إلى محتوى سينمانا.',
+  robots: noIndex,
+  // Do not inherit the homepage canonical for an actual 404 response.
+  alternates: {},
 };
 
 export default function NotFound() {
@@ -23,6 +26,7 @@ export default function NotFound() {
       <div className="mt-6">
         <EmptyState
           icon="🧭"
+          titleAs="h1"
           title={t('notFound.title')}
           body={t('notFound.body')}
           actions={[

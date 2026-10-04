@@ -1,15 +1,18 @@
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
-import { buildMetadata } from '@/lib/seo.mjs';
+import { buildMetadata, noIndex } from '@/lib/seo.mjs';
 import { getReviews } from '@/lib/content.mjs';
 import { Breadcrumbs, SectionHeader, Notice, EmptyState } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { ReviewCard } from '@/components/cards.jsx';
 
+const publishedReviews = getReviews();
+
 export const metadata = buildMetadata({
   title: t('reviews.title'),
   description: `مراجعات أصلية كتبها فريق ${siteConfig.siteName}: تحليل ونقد وخلاصة لكل عمل، مع توضيح دائم أنها آراء تحريرية لا أحكام نهائية.`,
   path: '/reviews/',
+  robots: publishedReviews.length ? undefined : noIndex,
 });
 
 export const dynamic = 'force-static';
@@ -21,7 +24,7 @@ export default function ReviewsPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.reviews') }]} />
       <div className="mt-4">
-        <SectionHeader kicker="نقد تحريري" title={t('reviews.title')} sub={t('reviews.intro')} />
+        <SectionHeader as="h1" kicker="نقد تحريري" title={t('reviews.title')} sub={t('reviews.intro')} />
       </div>
 
       <Notice>

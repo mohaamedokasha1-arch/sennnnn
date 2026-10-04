@@ -22,7 +22,7 @@ export default function PeoplePage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'الأشخاص' }]} />
       <div className="mt-4">
-        <SectionHeader kicker="طاقم العمل" title="الممثلون والمخرجون" sub="نبذة مكتوبة خصيصًا لسينمانا، وأعمال تم تسجيلها داخل الموقع فقط." />
+        <SectionHeader as="h1" kicker="طاقم العمل" title="الممثلون والمخرجون" sub="نبذة مكتوبة خصيصًا لسينمانا، وأعمال تم تسجيلها داخل الموقع فقط." />
       </div>
 
       <Notice>

@@ -39,7 +39,7 @@ export default function SearchPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('search.title') }]} />
       <div className="mt-4">
-        <SectionHeader kicker="بحث داخلي" title={t('search.title')} sub={t('search.tip')} />
+        <SectionHeader as="h1" kicker="بحث داخلي" title={t('search.title')} sub={t('search.tip')} />
       </div>
       <Suspense fallback={<p className="muted">…</p>}>
         <SearchResults latest={latest} genres={genres} />

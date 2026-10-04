@@ -9,7 +9,7 @@ import FilterBar from '@/components/FilterBar.jsx';
 
 export const metadata = buildMetadata({
   title: t('movies.title'),
-  description: `كل الأفلام المنشورة في ${siteConfig.siteName}: قصة كل فيلم، تصنيفاته، طاقم العمل، ومراجعات تحريرية أصلية — مع فلاتر بالنوع والسنة واللغة والبلد.`,
+  description: `كل الأفلام المنشورة في ${siteConfig.siteName}: قصة كل فيلم، تصنيفاته، وطاقم العمل، مع المراجعات المنشورة إن وُجدت — وفلاتر بالنوع والسنة واللغة والبلد.`,
   path: '/movies/',
 });
 
@@ -45,7 +45,7 @@ export default function MoviesPage() {
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.movies') }]} />
 
       <div className="mt-4">
-        <SectionHeader kicker="المكتبة" title={t('movies.title')} sub={t('movies.intro')} />
+        <SectionHeader as="h1" kicker="المكتبة" title={t('movies.title')} sub={t('movies.intro')} />
       </div>
 
       <FilterBar items={items} facets={f} showStatus={false} emptyText={t('empty.movies')} />

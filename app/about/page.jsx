@@ -20,14 +20,14 @@ export default function AboutPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'من نحن' }]} />
       <div className="mt-4">
-        <SectionHeader kicker="تعرّف علينا" title={`من نحن — ${siteConfig.siteName}`} sub={siteConfig.slogan} />
+        <SectionHeader as="h1" kicker="تعرّف علينا" title={`من نحن — ${siteConfig.siteName}`} sub={siteConfig.slogan} />
       </div>
 
       <div className="legal prose">
         <h2>ما هي سينمانا؟</h2>
         <p>
           {siteConfig.siteName} منصة عربية لاكتشاف الأفلام والمسلسلات. هدفها مساعدتك على الوصول إلى العمل المناسب
-          بسرعة: قصة واضحة، تصنيفات، طاقم عمل، مراجعة تحريرية، وروابط رسمية للمشاهدة عند توفرها. نحن
+          بسرعة: قصة واضحة، تصنيفات، طاقم عمل، ومراجعات تحريرية عند نشرها، وروابط رسمية للمشاهدة عند توفرها. نحن
           <strong> لسنا موقع مشاهدة أو تحميل</strong>، ولا نستضيف أي فيلم أو حلقة على خوادمنا.
         </p>
 
