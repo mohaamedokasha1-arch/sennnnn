@@ -31,6 +31,9 @@ export default function sitemap() {
 
   const works = [
     ...getMovies().map((w) => url(w.url, 0.8, 'monthly', w.addedAt ? new Date(w.addedAt) : now)),
+    ...getMovies()
+      .filter((w) => w.synopsisEn)
+      .map((w) => url(`/en${w.url}`, 0.7, 'monthly', w.addedAt ? new Date(w.addedAt) : now)),
     ...getSeries().map((w) => url(w.url, 0.8, 'monthly', w.addedAt ? new Date(w.addedAt) : now)),
   ];
 

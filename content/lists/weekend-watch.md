@@ -5,6 +5,7 @@ description: "ثلاثة أفلام لا تحتاج أكثر من مساء وا�
 author: "فريق التحرير"
 date: 2026-09-25
 items:
+  - movie:digger-2026
   - movie:the-last-reel
   - movie:paper-birds
   - movie:seven-nights
