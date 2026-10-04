@@ -23,8 +23,8 @@ headingEn: "Street Fighter (2026)"
 seoDescription: "شاهد تفاصيل فيلم Street Fighter 2026 (مقاتل الشوارع) بطولة أندرو كوجي ونوح سينتينيو وجيسون موموا، وتعرّف على القصة وأبطال العمل والمخرج، واكتشف معلومات الفيلم باللغة العربية."
 seoDescriptionEn: "Explore full details of Street Fighter (2026) starring Andrew Koji, Noah Centineo, Callina Liang, Jason Momoa, and directed by Kitao Sakurai: plot synopsis, full cast, genres, release date, and official trailer."
 poster: "/posters/street-fighter-2026.jpg"
-posterAlt: "البوستر الرسمي لفيلم مقاتل الشوارع Street Fighter (2026) بطولة أندرو كوجي ونوح سينتينيو وجيسون موموا وإخراج كيتاو ساكوراي"
-posterAltEn: "Official poster for Street Fighter (2026) starring Andrew Koji, Noah Centineo, Jason Momoa, and directed by Kitao Sakurai"
+posterAlt: "البوستر الرسمي الرئيسي لفيلم مقاتل الشوارع Street Fighter (2026) — تكوين مرسوم لريو وتشون لي وكين"
+posterAltEn: "Official main theatrical poster for Street Fighter (2026) — painted trio of Ryu, Chun-Li and Ken"
 addedAt: 2026-10-04
 featured: false
 directors: [kitao-sakurai]

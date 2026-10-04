@@ -14,8 +14,8 @@ headingEn: "Hexed (2026)"
 seoDescription: "كل ما تريد معرفته عن فيلم الرسوم المتحركة Hexed (هيكسد) من Walt Disney Animation: بيلي تكتشف قوى سحرية وعالم هيكس الساحرات، أصوات هيلي ستاينفيلد وراشيدا جونز وجودي فوستر، العرض 25 نوفمبر 2026، والتريلر الرسمي."
 seoDescriptionEn: "Everything about Walt Disney Animation's Hexed (2026): Billie's magical awakening and the witch realm of Hexe, voiced by Hailee Steinfeld, Rashida Jones and Jodie Foster, in theaters November 25, with the official trailer."
 poster: "/posters/hexed-2026.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم هيكسد Hexed (2026) من ديزني"
-posterAltEn: "Original design poster for Disney's Hexed (2026)"
+posterAlt: "البوستر التشويقي الرسمي لفيلم هيكسد Hexed (2026) من ديزني — البطلة بيلي تطفو وسط أغراضها المسحورة"
+posterAltEn: "Official teaser poster for Disney's Hexed (2026) — Billie floating amid her enchanted belongings"
 addedAt: 2026-10-04
 featured: false
 directors: []

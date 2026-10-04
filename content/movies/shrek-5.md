@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Walt Dohrn** and **Conrad Vernon** (co-directed by Brad Ableson); produced by Chris Meledandri and Gina Shay; music by John Powell; **DreamWorks Animation** / **Universal Pictures**.
   * **Theatrical release:** June 30, 2027 (delayed from December 2026). No official Egypt release date announced yet.
   * Voices: Mike Myers (Shrek), Eddie Murphy (Donkey), Cameron Diaz (Fiona), **Zendaya (Felicia)**, Marcello Hernández (Fergus), Skyler Gisondo (Farkle), Conrad Vernon (Gingy), Cody Cameron (Pinocchio).
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

@@ -18,9 +18,9 @@ heading: "فيلم Moana 2026 (موانا — النسخة الحية)"
 headingEn: "Moana Live-Action (2026)"
 seoDescription: "كل ما تريد معرفته عن النسخة الحية من Moana: كاثرين لاجايا موانا ودواين جونسون ماوي، إخراج توماس كايل، العرض 10 يوليو 2026 في ذكرى الفيلم الأصلي العاشرة، والتريلر الرسمي."
 seoDescriptionEn: "Everything about the live-action Moana (2026): Catherine Laga'aia as Moana and Dwayne Johnson as Maui, directed by Thomas Kail, in theaters July 10 for the original's 10th anniversary, with the official trailer."
-poster: "/posters/moana-live-action.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم موانا النسخة الحية (2026)"
-posterAltEn: "Original design poster for the live-action Moana (2026)"
+poster: "/posters/moana-live-action.webp"
+posterAlt: "البوستر الرسمي للنسخة الحية من موانا (2026) — موانا وماوي وسط الأمواج"
+posterAltEn: "Official theatrical poster for the live-action Moana (2026) — Moana and Maui amid the waves"
 addedAt: 2026-10-04
 featured: false
 directors: []

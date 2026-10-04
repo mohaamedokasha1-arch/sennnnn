@@ -15,8 +15,8 @@ headingEn: "The Lord of the Rings: The Hunt for Gollum (2027)"
 seoDescription: "كل ما تريد معرفته عن The Hunt for Gollum: عودة إلى الأرض الوسطى مع آندي سيركيس مخرجًا وبطلًا، وإيان ماكيلين غاندالف، مطاردة أراغورن لغولوم بين The Hobbit وFellowship، العرض 17 ديسمبر 2027."
 seoDescriptionEn: "Everything about The Hunt for Gollum (2027): Andy Serkis directs and stars in a return to Middle-earth with Ian McKellen's Gandalf, following Aragorn's hunt for Gollum, in theaters December 17."
 poster: "/posters/the-hunt-for-gollum.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم سيد الخواتم: مطاردة غولوم (2027)"
-posterAltEn: "Original design poster for The Lord of the Rings: The Hunt for Gollum (2027)"
+posterAlt: "البوستر التشويقي الرسمي لفيلم سيد الخواتم: مطاردة غولوم (2027) — غولوم تحت شعاع ضوء في الكهف"
+posterAltEn: "Official teaser poster for The Lord of the Rings: The Hunt for Gollum (2027) — Gollum beneath a shaft of light"
 addedAt: 2026-10-04
 featured: false
 directors: [andy-serkis]
@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Andy Serkis**, who also reprises Gollum/Sméagol; produced by Peter Jackson, Fran Walsh and Philippa Boyens; screenplay by Walsh, Boyens, Phoebe Gittins and Arty Papageorgiou; New Line Cinema / **Warner Bros. Pictures**.
   * **Theatrical release:** December 17, 2027 (confirmed by Serkis; moved from December 2026). No official Egypt release date announced yet.
   * Cast: Andy Serkis, Ian McKellen (Gandalf), Elijah Wood (Frodo), Jamie Dornan, Kate Winslet, Leo Woodall, Lee Pace, Anya Taylor-Joy.
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. The poster shown is the official teaser poster released by the studio.
 ---
 
 ### قراءة أولية في المشروع

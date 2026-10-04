@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **Dean DeBlois**, creator of the original animated trilogy; **Universal Pictures** / DreamWorks live-action expansion.
   * **Theatrical release:** June 11, 2027 (dated at CinemaCon 2025). No official Egypt release date announced yet.
   * Returning: Mason Thames (Hiccup), Nico Parker (Astrid), Gerard Butler (Stoick); new: **Cate Blanchett (Valka)** and **Ólafur Darri Ólafsson (Drago)**. Principal photography wrapped May 2026.
-  * Official runtime and rating not announced — withheld. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Official runtime and rating not announced — withheld. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

@@ -19,8 +19,8 @@ headingEn: "The Influencer Project (2026)"
 seoDescription: "تفاصيل فيلم The Influencer Project (مشروع المؤثرة): مؤثرة تصور وثائقيًا عن حياتها فيتحوّل إلى سجل مطاردة مرعب، إخراج مايك نيبروي وإنتاج إدواردو سانشيز، العرض 2 أكتوبر 2026."
 seoDescriptionEn: "Details of The Influencer Project (2026): an influencer's behind-the-scenes documentary mutates into a stalker's evidence reel, directed by Mike Nybroe with producers from The Blair Witch Project, released October 2, 2026."
 poster: "/posters/the-influencer-project.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم مشروع المؤثرة The Influencer Project (2026)"
-posterAltEn: "Original design poster for The Influencer Project (2026)"
+posterAlt: "البوستر الرسمي لفيلم مشروع المؤثرة (2026) — هاتف داخل حلقة إضاءة متوهجة"
+posterAltEn: "Official poster for The Influencer Project (2026) — a phone inside a glowing ring light"
 addedAt: 2026-10-04
 featured: false
 directors: []
@@ -35,7 +35,7 @@ notesEn: >-
 
   * Directed by **Mike Nybroe**; produced by **Eduardo Sánchez** and **Gregg Hale** (of The Blair Witch Project) with Ahmet Zappa and Alex Hertzberg; USA/Denmark.
   * **Release:** October 2, 2026 (US, rated R); additional territories through October–November 2026. No official Egypt release date announced yet.
-  * **Runtime:** 95 minutes per theatrical listings. No official trailer embed added yet — will be linked once an official distributor upload is verified. Poster is an original design artwork created for this site.
+  * **Runtime:** 95 minutes per theatrical listings. No official trailer embed added yet — will be linked once an official distributor upload is verified. The poster shown is the official theatrical poster released by the studio.
 ---
 
 ### قراءة أولية في المشروع

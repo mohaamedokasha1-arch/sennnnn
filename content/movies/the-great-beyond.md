@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **J.J. Abrams**; produced with Tommy Gormley; cinematography by James Friend; **Bad Robot** / **Warner Bros. Pictures**.
   * **Theatrical release:** October 1, 2027 (took The Batman Part II's original slot; previously November 13, 2026). No official Egypt release date announced yet.
   * Cast: Glen Powell, Jenna Ortega, Emma Mackey, Sophie Okonedo, Merritt Wever, Samuel L. Jackson.
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

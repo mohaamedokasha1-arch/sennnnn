@@ -15,8 +15,8 @@ headingEn: "Godzilla x Kong: Supernova (2027)"
 seoDescription: "كل ما تريد معرفته عن Godzilla x Kong: Supernova: سادس أفلام المونسترفيرس، إخراج غرانت سبوتور، كايتلين ديفر ودان ستيفنز، ليخندري ووارنر، العرض 26 مارس 2027."
 seoDescriptionEn: "Everything about Godzilla x Kong: Supernova (2027): the sixth MonsterVerse film, directed by Grant Sputore, starring Kaitlyn Dever and Dan Stevens, from Legendary and Warner Bros., in theaters March 26."
 poster: "/posters/godzilla-x-kong-supernova.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم غودزيلا ضد كونغ: المستعر الأعظم (2027)"
-posterAltEn: "Original design poster for Godzilla x Kong: Supernova (2027)"
+posterAlt: "بوستر الشعار التشويقي الرسمي لفيلم غودزيلا ضد كونغ: المستعر الأعظم (2027)"
+posterAltEn: "Official logo teaser poster for Godzilla x Kong: Supernova (2027)"
 addedAt: 2026-10-04
 featured: false
 directors: [grant-sputore]
@@ -38,7 +38,7 @@ notesEn: >-
   * Directed by **Grant Sputore** (I Am Mother); written by Dave Callaham and Michael Lloyd Green; music by Henry Jackman; produced by Mary Parent, Alex Garcia, Thomas Tull and Jon Jashni; **Legendary Pictures** / **Warner Bros. Pictures**.
   * **Theatrical release:** March 26, 2027. No official Egypt release date announced yet.
   * Cast: Kaitlyn Dever, Dan Stevens (returning as Trapper), Jack O'Connell, Delroy Lindo, Matthew Modine, Alycia Debnam-Carey, Sam Neill.
-  * The embed above is Warner Bros.' official production announcement (title + date reveal); no full trailer has been released yet. Runtime and age rating not announced. Poster is an original design artwork created for this site.
+  * The embed above is Warner Bros.' official production announcement (title + date reveal); no full trailer has been released yet. Runtime and age rating not announced. The poster shown is the official logo/title teaser poster released by the studio.
 ---
 
 ### قراءة أولية في المشروع

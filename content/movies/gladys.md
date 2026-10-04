@@ -32,7 +32,7 @@ notesEn: >-
   * Written by **Zach Cregger** (Weapons) with **Zach Shields**; produced by Roy Lee and Miri Yoo; New Line Cinema / Vertigo Entertainment / **Warner Bros. Pictures**.
   * **Theatrical release:** September 8, 2028 (announced at CinemaCon). No official Egypt release date announced yet.
   * Amy Madigan — who won the Academy Award for Best Supporting Actress as Gladys — is set to return. Director not yet announced (Cregger has stepped back from directing the spin-off).
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

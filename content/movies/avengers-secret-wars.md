@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Anthony and Joe Russo** — their fourth Avengers film — for Marvel Studios / **Walt Disney Studios Motion Pictures**; follows Avengers: Doomsday (2026).
   * **Theatrical release:** May 7, 2027. No official Egypt release date announced yet.
   * Only officially confirmed cast so far: **Robert Downey Jr. as Victor von Doom / Doctor Doom**; Marvel has publicly attached no other actor — every reported return should be treated as unconfirmed until announced.
-  * Plot structure has not been officially confirmed; treat story speculation as rumor. Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Plot structure has not been officially confirmed; treat story speculation as rumor. Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

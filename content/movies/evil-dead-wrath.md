@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **Francis Galluppi**; produced by **Sam Raimi** and Rob Tapert; **Warner Bros. Pictures**. (Distinct from Evil Dead Burn (2026), directed by Sébastien Vaniček.)
   * **Theatrical release:** April 7, 2028 (US). No official Egypt release date announced yet.
   * Cast: Charlotte Hope, Jessica McNamee, Zach Gilford, Josh Helman, Ella Newton, Elizabeth Cullen.
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

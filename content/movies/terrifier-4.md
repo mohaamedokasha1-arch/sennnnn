@@ -36,7 +36,7 @@ notesEn: >-
   * Written and directed by **Damien Leone**; Cineverse / Dark Age Cinema; billed as the final chapter of the Art the Clown saga arc.
   * **Theatrical release:** opened October 1, 2026 across US and international territories (per theatrical release trackers). No official Egypt release date announced yet.
   * Cast: David Howard Thornton (Art the Clown), Lauren LaVera (Sienna Shaw), with Elliott Fullam, Antonella Rose and others returning.
-  * Runtime and official rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and official rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **Greta Gerwig**; a **Netflix** production with a rare full wide theatrical release.
   * **Release:** IMAX sneak previews from February 10, 2027; IMAX and wide global theatrical release **February 12, 2027** (a seven-week theatrical run); streaming on **Netflix April 2, 2027**. No official Egypt release date announced yet.
   * Cast: newcomers David McKenna and Beatrice Campbell, with Emma Mackey, Carey Mulligan, Kobna Holdbrook-Smith, **Daniel Craig** and **Meryl Streep**.
-  * Runtime and age rating not announced. No official trailer embed added yet — will be linked once Netflix publishes it. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet — will be linked once Netflix publishes it. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

@@ -15,8 +15,8 @@ headingEn: "Supergirl (2026)"
 seoDescription: "كل ما تريد معرفته عن Supergirl: فيلم DC Studios الثاني، ميلي ألكوك كارا زور-إل وجيسون موموا لوبو، مقتبس من Woman of Tomorrow، إخراج كريغ غيليسبي، العرض 26 يونيو 2026، والتريلر الرسمي."
 seoDescriptionEn: "Everything about Supergirl (2026): DC Studios' second feature, Milly Alcock as Kara Zor-El with Jason Momoa's Lobo, based on Woman of Tomorrow, directed by Craig Gillespie, released June 26, with the official trailer."
 poster: "/posters/supergirl-2026.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم سوبرغيرل (2026)"
-posterAltEn: "Original design poster for Supergirl (2026)"
+posterAlt: "البوستر الرسمي لفيلم سوبرغيرل (2026) — ميلي ألكوك بمعطف بني أمام شعار S"
+posterAltEn: "Official theatrical poster for Supergirl (2026) — Milly Alcock in a brown trench coat before the S shield"
 addedAt: 2026-10-04
 featured: false
 directors: []

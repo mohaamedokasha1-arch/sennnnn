@@ -15,8 +15,8 @@ headingEn: "The Batman Part II (2028)"
 seoDescription: "كل ما نعرفه عن The Batman Part II: مات ريفز يعود وروبرت باتينسون ببدلة باتينسون، تصوير جارٍ وموعد جديد 18 فبراير 2028، «فيلم باتمان من نوع مختلف تمامًا»."
 seoDescriptionEn: "Everything about The Batman Part II (2028): Matt Reeves returns with Robert Pattinson back in the suit, filming underway and a new date of February 18, 2028 — \"a very different type of Batman movie.\""
 poster: "/posters/the-batman-part-ii.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم باتمان: الجزء الثاني (2028)"
-posterAltEn: "Original design poster for The Batman Part II (2028)"
+posterAlt: "بوستر الشعار الرسمي لفيلم باتمان: الجزء الثاني (2028)"
+posterAltEn: "Official logo teaser poster for The Batman Part II (2028)"
 addedAt: 2026-10-04
 featured: false
 directors: [matt-reeves]
@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **Matt Reeves** (co-written with Mattson Tomlin); cinematography by Erik Messerschmidt; DC Elseworlds / **Warner Bros. Pictures**.
   * **Theatrical release:** February 18, 2028 (Presidents Day weekend; moved from October 1, 2027 in July 2026 to allow more post-production time). Production is underway and set to wrap in October 2026. No official Egypt release date announced yet.
   * Returning: Robert Pattinson (Bruce Wayne / Batman), Barry Keoghan (the Joker).
-  * Official runtime and rating not announced — withheld. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Official runtime and rating not announced — withheld. No official trailer embed added yet. The poster shown is the official logo/title teaser poster released by the studio.
 ---
 
 ### قراءة أولية في المشروع

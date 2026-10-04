@@ -19,8 +19,8 @@ headingEn: "Toy Story 5 (2026)"
 seoDescription: "كل ما تريد معرفته عن Toy Story 5: وودي وباز وجيسي يواجهون تهديد التكنولوجيا واللوحات الذكية، أصوات توم هانكس وتيم آلن، إخراج أندرو ستانتون، العرض 19 يونيو 2026، والتريلر الرسمي."
 seoDescriptionEn: "Everything about Toy Story 5 (2026): Woody, Buzz and Jessie face the threat of technology, voiced by Tom Hanks and Tim Allen, directed by Andrew Stanton, released June 19, with the official trailer."
 poster: "/posters/toy-story-5.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم حكاية لعبة 5 (2026)"
-posterAltEn: "Original design poster for Toy Story 5 (2026)"
+posterAlt: "البوستر التشويقي الرسمي لفيلم حكاية لعبة 5 (2026) — وودي وبوز وجيسي أمام شاشة الجهاز اللوحي الضفدعي"
+posterAltEn: "Official teaser poster for Toy Story 5 (2026) — Woody, Buzz and Jessie facing the frog tablet screen"
 addedAt: 2026-10-04
 featured: false
 directors: []

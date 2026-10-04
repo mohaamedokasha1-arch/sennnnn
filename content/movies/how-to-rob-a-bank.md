@@ -19,8 +19,8 @@ headingEn: "How to Rob a Bank (2026)"
 seoDescription: "كل ما تريد معرفته عن فيلم How to Rob a Bank (كيف تسرق بنكًا): عصابة تبث سرقاتها مباشرة وتتصدر الترند، نيكولاس هولت وزوي كرافيتز وآنا ساواي، إخراج ديفيد ليتش، العرض 13 نوفمبر 2026، والتريلر الرسمي."
 seoDescriptionEn: "Everything about How to Rob a Bank (2026): a crew broadcasting their heists to viral fame, Nicholas Hoult, Zoë Kravitz and Anna Sawai, directed by David Leitch, in theaters November 13, with the official trailer."
 poster: "/posters/how-to-rob-a-bank.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم كيف تسرق بنكًا (2026)"
-posterAltEn: "Original design poster for How to Rob a Bank (2026)"
+posterAlt: "البوستر الرسمي لفيلم كيف تسرق بنكًا (2026) — طاقم السطو بأقنعة الحيوانات"
+posterAltEn: "Official theatrical poster for How to Rob a Bank (2026) — the heist crew in animal masks"
 addedAt: 2026-10-04
 featured: false
 directors: [david-leitch]

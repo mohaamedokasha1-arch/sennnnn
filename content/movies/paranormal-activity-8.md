@@ -31,7 +31,7 @@ notesEn: >-
 
   * Directed by **Ian Tuason**; produced by **James Wan** (franchise newcomer) and Jason Blum for Blumhouse-Atomic Monster, with Oren Peli producing via Solana Films; co-financed by **Paramount Pictures**.
   * **Theatrical release:** May 21, 2027 (officially dated January 2026). No official Egypt release date announced yet.
-  * Early cast reports: Chase Yi and Sonia Mena. The official title remains unannounced — this page uses the installment number. Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Early cast reports: Chase Yi and Sonia Mena. The official title remains unannounced — this page uses the installment number. Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

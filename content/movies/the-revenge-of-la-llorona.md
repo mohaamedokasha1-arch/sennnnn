@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Santiago Menghini**; written by Sean Tretta; produced by **James Wan**, Gary Dauberman and Emile Gladstone; New Line Cinema / Atomic Monster / Coin Operated / Latchkey; distributed by **Warner Bros. Pictures**.
   * **Theatrical release:** February 26, 2027 (US; swapped with Panic Carefully from April 9). No official Egypt release date announced yet.
   * Cast: Monica Raymund, Jay Hernandez, **Raymond Cruz** (reprising his role from The Curse of La Llorona), Edy Ganem, Martín Fajardo, Acston Luca Porto, Avie Porto.
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع
