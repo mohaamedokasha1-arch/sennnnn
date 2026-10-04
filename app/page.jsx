@@ -216,15 +216,18 @@ export default function HomePage() {
                 <div className="trailer-frame">
                   <iframe
                     src={
-                      w.trailer.provider === 'youtube'
-                        ? `https://www.youtube-nocookie.com/embed/${w.trailer.id}?rel=0&modestbranding=1&hl=ar`
-                        : `https://player.vimeo.com/video/${w.trailer.id}`
+                      w.trailer.url
+                        ? w.trailer.url.replace(/^(https:\/\/[^/]+\/)(?:watch|play)\.php\?vid=([\w-]+)$/i, '$1embed.php?vid=$2')
+                        : w.trailer.provider === 'youtube'
+                          ? `https://www.youtube-nocookie.com/embed/${w.trailer.id}?rel=0&modestbranding=1&hl=ar`
+                          : `https://player.vimeo.com/video/${w.trailer.id}`
                     }
+                    data-original-url={w.trailer.url || undefined}
                     title={`${t('work.trailer')}: ${w.title}`}
                     loading="lazy"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                     allowFullScreen
-                    referrerPolicy="strict-origin-when-cross-origin"
+                    referrerPolicy="no-referrer-when-cross-origin"
                   />
                 </div>
                 <p className="panel-note mt-2" style={{ marginBottom: 0 }}>

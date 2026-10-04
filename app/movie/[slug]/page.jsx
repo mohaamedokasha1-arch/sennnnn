@@ -4,8 +4,8 @@ import { getMovies, getWork } from '@/lib/content.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
 
 /**
- * صفحة تفاصيل الفيلم — تُولَّد صفحة ثابتة لكل فيلم (Static Export).
- * الرابط ثابت وقصير: /movies/<slug>/ ولا يتغير بتغير ترتيب البيانات.
+ * مسار مرادف لصفحة الفيلم (/movie/<slug>/) مع توجيه Canonical للرابط الأساسي
+ * حتى يعمل كلٌّ من /movie/digger-2026/ و /movies/digger-2026/ بكفاءة ودون تكرار محتوى في محركات البحث.
  */
 export const dynamic = 'force-static';
 export const dynamicParams = false;
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
     return buildMetadata({
       title: 'الصفحة غير موجودة',
       description: 'لم نجد هذا الفيلم في المكتبة.',
-      path: `/movies/${slug}/`,
+      path: `/movie/${slug}/`,
       robots: { index: false, follow: true },
     });
   }
@@ -33,12 +33,12 @@ export async function generateMetadata({ params }) {
   return buildMetadata({
     title: seoTitle,
     description: desc,
-    path: work.url,
-    canonical: work.url,
+    path: `/movie/${slug}/`,
+    canonical: `/movie/${slug}/`,
     languages: {
-      ar: work.url,
-      en: `/en${work.url}`,
-      'x-default': work.url,
+      ar: `/movie/${slug}/`,
+      en: `/en/movie/${slug}/`,
+      'x-default': `/movie/${slug}/`,
     },
     image: work.hasPoster ? work.poster : null,
     imageAlt: work.posterAlt || `بوستر فيلم ${work.title}${work.year ? ` (${work.year})` : ''}`,
@@ -47,9 +47,9 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export default async function MoviePage({ params }) {
+export default async function MovieAliasPage({ params }) {
   const { slug } = await params;
   const work = getWork('movie', slug);
   if (!work) notFound();
-  return <WorkDetail work={work} locale="ar" basePath={work.url} />;
+  return <WorkDetail work={work} locale="ar" basePath={`/movie/${slug}/`} />;
 }
