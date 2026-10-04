@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **Parker Finn** (Smile, Smile 2); produced by Finn, Jonathan Fass, Roy Lee, Andrew Childs and Robert Pattinson; **Paramount Pictures**.
   * **Theatrical release:** June 11, 2027 (announced August 2026). No official Egypt release date announced yet.
   * Cast: Margaret Qualley and Callum Turner.
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

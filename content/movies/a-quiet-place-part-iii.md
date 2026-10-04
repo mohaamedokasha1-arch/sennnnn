@@ -31,7 +31,7 @@ notesEn: >-
 
   * Written, directed and produced by **John Krasinski**, returning after the first two films; produced via Sunday Night Productions and Platinum Dunes; **Paramount Pictures**.
   * **Theatrical release:** July 30, 2027 (moved three weeks from July 9). No official Egypt release date announced yet.
-  * No cast has been officially confirmed and the story is kept secret; runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * No cast has been officially confirmed and the story is kept secret; runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

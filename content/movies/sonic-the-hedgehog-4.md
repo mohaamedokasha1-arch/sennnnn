@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Jeff Fowler**; written by Pat Casey, Josh Miller and John Whittington; produced by Neal H. Moritz, Toby Ascher and Toru Nakahara; **Paramount Pictures** / Sega / Original Film.
   * **Theatrical release:** March 19, 2027 (US, announced January 2025). No official Egypt release date announced yet.
   * Cast: Ben Schwartz (Sonic), Kristen Bell (Amy Rose), Keanu Reeves (Shadow), Jim Carrey (Robotnik), Idris Elba (Knuckles), James Marsden, Tika Sumpter, Colleen O'Shaughnessey (Tails), Ben Kingsley, Matt Berry, Nick Offerman, Richard Ayoade.
-  * Runtime and age rating not officially announced. No official trailer embed added yet — will be linked once Paramount publishes it. Poster is an original design artwork created for this site.
+  * Runtime and age rating not officially announced. No official trailer embed added yet — will be linked once Paramount publishes it. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

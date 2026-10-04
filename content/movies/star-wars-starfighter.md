@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Shawn Levy**; screenplay by **Jonathan Tropper**; produced by Levy and Kathleen Kennedy; executive producers include Ryan Gosling and Dave Filoni; Lucasfilm / **Walt Disney Studios Motion Pictures**.
   * **Theatrical release:** May 28, 2027 — timed near the saga's 50th anniversary. No official Egypt release date announced yet.
   * Cast: Ryan Gosling (Kade Auberon), Flynn Gray, Matt Smith, Mia Goth, Aaron Pierre, Simon Bird, Jamael Westman, Daniel Ings, Amy Adams.
-  * Filming began August 2025 in the UK and has wrapped. Runtime and age rating not officially announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Filming began August 2025 in the UK and has wrapped. Runtime and age rating not officially announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

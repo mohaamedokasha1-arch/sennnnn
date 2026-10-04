@@ -15,8 +15,8 @@ headingEn: "The Odyssey (2026)"
 seoDescription: "كل ما تريد معرفته عن The Odyssey: ملحمة كريستوفر نولان المصورة كليًا بكاميرات IMAX عن رحلة أوديسيوس، مات ديمون وتوم هولاند وزيندايا، العرض 17 يوليو 2026، والتريلر الرسمي."
 seoDescriptionEn: "Everything about The Odyssey (2026): Christopher Nolan's mythic epic shot entirely on IMAX film cameras, starring Matt Damon, Tom Holland and Zendaya, in theaters July 17, with the official trailer."
 poster: "/posters/the-odyssey-2026.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم الأوديسة The Odyssey (2026)"
-posterAltEn: "Original design poster for The Odyssey (2026)"
+posterAlt: "البوستر الرسمي بنسخة IMAX لفيلم الأوديسة (2026) من إخراج كريستوفر نولان"
+posterAltEn: "Official IMAX poster for Christopher Nolan's The Odyssey (2026)"
 addedAt: 2026-10-04
 featured: false
 directors: [christopher-nolan]

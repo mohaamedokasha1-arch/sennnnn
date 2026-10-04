@@ -15,8 +15,8 @@ headingEn: "The Conjuring: First Communion (2027)"
 seoDescription: "كل ما نعرفه عن The Conjuring: First Communion: بريكويل عالم الشعوذة عن السنوات الأولى لإد ولورين وارين، إنتاج جيمس وان وبيتر سافران، العرض 10 سبتمبر 2027."
 seoDescriptionEn: "Everything about The Conjuring: First Communion (2027): a Conjuring Universe prequel about the Warrens' early years, produced by James Wan and Peter Safran, in theaters September 10."
 poster: "/posters/the-conjuring-first-communion.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم الشعوذة: التناول الأول (2027)"
-posterAltEn: "Original design poster for The Conjuring: First Communion (2027)"
+posterAlt: "البوستر الرسمي بعنوان فيلم الشعوذة: التناول الأول (2027)"
+posterAltEn: "Official title poster for The Conjuring: First Communion (2027)"
 addedAt: 2026-10-04
 featured: false
 directors: []

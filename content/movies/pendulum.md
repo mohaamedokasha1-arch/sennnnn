@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **Mark Heyman** (debut; known for Black Swan); produced by **Darren Aronofsky**, Dave Caplan and Jacob Jaffke via Protozoa Pictures / C2 / Motel Mojave; music by Ben Lovett; distributed by **Vertical**.
   * **Theatrical release:** January 1, 2027 (US). No official Egypt release date announced yet.
   * Cast: Joseph Gordon-Levitt, Phoebe Dynevor, Jacki Weaver, Norman Reedus.
-  * Runtime and age rating not announced. No official trailer embed added yet — will be linked once a verified official-channel upload is available. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet — will be linked once a verified official-channel upload is available. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

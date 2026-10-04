@@ -15,8 +15,8 @@ headingEn: "Mortal Kombat II (2026)"
 seoDescription: "كل ما نعرفه عن Mortal Kombat II: تتمة فيلم 2021، كارل أوربان بدور جوني كيج، عودة لويس تان وهيرويوكي سانادا، إخراج سايمون ماكويد، العرض 8 مايو 2026."
 seoDescriptionEn: "Everything about Mortal Kombat II (2026): the sequel to the 2021 reboot, Karl Urban as Johnny Cage, with Lewis Tan and Hiroyuki Sanada returning, directed by Simon McQuoid, released May 8."
 poster: "/posters/mortal-kombat-ii.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم مورتال كومبات 2 (2026)"
-posterAltEn: "Original design poster for Mortal Kombat II (2026)"
+posterAlt: "البوستر الرسمي لفيلم مورتال كومبات 2 (2026) بشعار التنين الخاص بالسلسلة"
+posterAltEn: "Official poster for Mortal Kombat II (2026) featuring the franchise's dragon emblem"
 addedAt: 2026-10-04
 featured: false
 directors: []

@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **Mike Flanagan**; produced by Flanagan, David Robinson and Jason Blum; **Blumhouse** / Morgan Creek / **Universal Pictures**.
   * **Theatrical release:** March 12, 2027 (US; international March 10–12). No official Egypt release date announced yet.
   * Cast: Scarlett Johansson, John Leguizamo, Jacobi Jupe, Samantha Sloyan.
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

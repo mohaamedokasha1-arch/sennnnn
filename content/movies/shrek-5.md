@@ -15,8 +15,8 @@ headingEn: "Shrek 5 (2027)"
 seoDescription: "كل ما تريد معرفته عن Shrek 5: عودة مايك مايرز وإيدي ميرفي وكاميرون دياز مع انضمام زيندايا بدور فيليشيا، إخراج والت دورن وكونراد فيرنون، العرض 30 يونيو 2027."
 seoDescriptionEn: "Everything about Shrek 5 (2027): Mike Myers, Eddie Murphy and Cameron Diaz return with Zendaya joining as Felicia, directed by Walt Dohrn and Conrad Vernon, in theaters June 30."
 poster: "/posters/shrek-5.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم شريك 5 (2027)"
-posterAltEn: "Original design poster for Shrek 5 (2027)"
+posterAlt: "البوستر التشويقي الرسمي لفيلم شريك 5 (2027): الرقم 5 بأذني شريك"
+posterAltEn: "Official teaser poster for Shrek 5 (2027) with the ogre-eared number 5"
 addedAt: 2026-10-04
 featured: false
 directors: []
@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Walt Dohrn** and **Conrad Vernon** (co-directed by Brad Ableson); produced by Chris Meledandri and Gina Shay; music by John Powell; **DreamWorks Animation** / **Universal Pictures**.
   * **Theatrical release:** June 30, 2027 (delayed from December 2026). No official Egypt release date announced yet.
   * Voices: Mike Myers (Shrek), Eddie Murphy (Donkey), Cameron Diaz (Fiona), **Zendaya (Felicia)**, Marcello Hernández (Fergus), Skyler Gisondo (Farkle), Conrad Vernon (Gingy), Cody Cameron (Pinocchio).
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

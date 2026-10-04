@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **Tim Miller** (Deadpool, Terminator: Dark Fate); screenplay by Ian Shorr; produced by Matthew Vaughn (Marv Films) and Aaron Ryder; FilmNation / Marv Studios / **Warner Bros. Pictures**.
   * **Theatrical release:** August 13, 2027. No official Egypt release date announced yet.
   * Starring Keanu Reeves.
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

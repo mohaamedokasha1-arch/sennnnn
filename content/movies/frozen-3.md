@@ -32,7 +32,7 @@ notesEn: >-
   * Written and directed by **Jennifer Lee** (returning to filmmaking after her CCO role); produced by Peter Del Vecho; **Walt Disney Animation Studios** / Walt Disney Studios Motion Pictures.
   * **Theatrical release:** November 24, 2027 (US Thanksgiving window; shifted from a 2026 target). No official Egypt release date announced yet.
   * Voices: Kristen Bell (Anna), Idina Menzel (Elsa), Josh Gad (Olaf), Jonathan Groff (Kristoff).
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

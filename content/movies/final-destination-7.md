@@ -31,7 +31,7 @@ notesEn: >-
 
   * Directed by **Michiel Blanchart**; written by **Lori Evans Taylor** (returning from Bloodlines); produced by Craig Perry, Sheila Hanahan Taylor and Jon Watts; New Line Cinema / **Warner Bros. Pictures**.
   * **Theatrical release:** May 12, 2028 (officially dated at CinemaCon 2026). No official Egypt release date announced yet.
-  * Cast not yet announced; production expected to begin late 2026/early 2027. Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Cast not yet announced; production expected to begin late 2026/early 2027. Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

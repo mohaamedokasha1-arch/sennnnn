@@ -32,7 +32,7 @@ notesEn: >-
   * Directed by **JT Mollner** (script revised by Mollner from Brian Duffield's initial draft); produced by **J.J. Abrams**; based on Philip Fracassi's "Fail-Safe"; **Sony Pictures Releasing**.
   * **Theatrical release:** June 4, 2027. No official Egypt release date announced yet.
   * Cast: Brie Larson, Kyle Gallner, Daithí Ó Haragáin, Willa Fitzgerald, Ione Skye, John Goodman, Keith Carradine. Principal photography began June 2026 in Australia.
-  * Runtime and age rating not announced. No official trailer embed added yet. Poster is an original design artwork created for this site.
+  * Runtime and age rating not announced. No official trailer embed added yet. No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

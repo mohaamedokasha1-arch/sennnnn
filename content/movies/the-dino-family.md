@@ -15,8 +15,8 @@ headingEn: "The Dino Family (2026)"
 seoDescription: "تفاصيل فيلم الأنيميشن العائلي The Dino Family (عائلة الدينو): طفل يفتح بوابة إلى عصر الديناصورات فتتقلب حياته، طرح دولي 2026 بعد نجاحه الروسي، ومدته 94 دقيقة."
 seoDescriptionEn: "Details of The Dino Family: a schoolboy opens a portal to the Mesozoic era and his life turns into a prehistoric adventure, rolling out internationally through 2026 after its Russian release, 94 minutes."
 poster: "/posters/the-dino-family.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم عائلة الدينو The Dino Family (2026)"
-posterAltEn: "Original design poster for The Dino Family (2026)"
+posterAlt: "البوستر الرسمي لفيلم الرسوم المتحركة عائلة الدينو (2026)"
+posterAltEn: "Official poster for the animated film The Dino Family (2026)"
 addedAt: 2026-10-04
 featured: false
 directors: []
@@ -31,7 +31,7 @@ notesEn: >-
 
   * A **Popok Animation Studio** production (full animation), produced by Yarko LLC; directed by **Maxim Volkov**; original Russian release in 2025 with international rollout through 2026 (e.g., South Korea on October 7, 2026).
   * **Runtime:** 94 minutes per theatrical listings. Listed here within the 2026 international family releases.
-  * No official Egypt release date announced; no official trailer embed added yet (will be linked once a verified official upload is available). Poster is an original design artwork created for this site.
+  * No official Egypt release date announced; no official trailer embed added yet (will be linked once a verified official upload is available). No official poster has been released for this film yet; the artwork shown is an original design poster created for this site.
 ---
 
 ### قراءة أولية في المشروع

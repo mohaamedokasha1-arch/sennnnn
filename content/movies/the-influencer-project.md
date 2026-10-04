@@ -19,8 +19,8 @@ headingEn: "The Influencer Project (2026)"
 seoDescription: "تفاصيل فيلم The Influencer Project (مشروع المؤثرة): مؤثرة تصور وثائقيًا عن حياتها فيتحوّل إلى سجل مطاردة مرعب، إخراج مايك نيبروي وإنتاج إدواردو سانشيز، العرض 2 أكتوبر 2026."
 seoDescriptionEn: "Details of The Influencer Project (2026): an influencer's behind-the-scenes documentary mutates into a stalker's evidence reel, directed by Mike Nybroe with producers from The Blair Witch Project, released October 2, 2026."
 poster: "/posters/the-influencer-project.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم مشروع المؤثرة The Influencer Project (2026)"
-posterAltEn: "Original design poster for The Influencer Project (2026)"
+posterAlt: "البوستر الرسمي لفيلم مشروع المؤثرة (2026): حلقة إضاءة وهاتف محمول"
+posterAltEn: "Official poster for The Influencer Project (2026) with a ring light and a smartphone"
 addedAt: 2026-10-04
 featured: false
 directors: []
