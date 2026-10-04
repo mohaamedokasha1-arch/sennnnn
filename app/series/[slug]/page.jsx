@@ -22,9 +22,10 @@ export async function generateMetadata({ params }) {
   if (!work) {
     return buildMetadata({ title: 'الصفحة غير موجودة', description: 'لم نجد هذا المسلسل في المكتبة.', path: `/series/${slug}/`, robots: { index: false, follow: true } });
   }
-  const desc = `${work.title}${work.year ? ` (${work.year})` : ''}: ${work.synopsis}`;
+  const seoTitle = work.seoTitle || work.title;
+  const desc = work.seoDescription || `${work.title}${work.year ? ` (${work.year})` : ''}: ${work.synopsis}`;
   return buildMetadata({
-    title: work.title,
+    title: seoTitle,
     description: desc,
     path: work.url,
     image: work.hasPoster ? work.poster : null,
