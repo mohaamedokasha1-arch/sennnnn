@@ -18,7 +18,7 @@ export default function CookiesPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'ملفات تعريف الارتباط' }]} />
       <div className="mt-4">
-        <SectionHeader kicker="قانوني" title="سياسة ملفات تعريف الارتباط" />
+        <SectionHeader as="h1" kicker="قانوني" title="سياسة ملفات تعريف الارتباط" />
       </div>
 
       <div className="legal prose">

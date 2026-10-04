@@ -17,7 +17,7 @@ export default function ContactPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'اتصل بنا' }]} />
       <div className="mt-4">
-        <SectionHeader kicker="تواصل" title="اتصل بنا" sub="نقرأ كل رسالة، ويصل الرد عادةً عبر البريد الإلكتروني." />
+        <SectionHeader as="h1" kicker="تواصل" title="اتصل بنا" sub="نقرأ كل رسالة، ويصل الرد عادةً عبر البريد الإلكتروني." />
       </div>
 
       <div className="two-col">

@@ -32,7 +32,7 @@ export default function FavoritesPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.favorites') }]} />
       <div className="mt-4">
-        <SectionHeader kicker="على جهازك" title={t('favorites.title')} sub={t('favorites.intro')} />
+        <SectionHeader as="h1" kicker="على جهازك" title={t('favorites.title')} sub={t('favorites.intro')} />
       </div>
       <FavoritesView items={items} />
     </div>

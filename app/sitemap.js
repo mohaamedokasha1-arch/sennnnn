@@ -1,48 +1,55 @@
 import siteConfig from '@/site.config.mjs';
-import { getMovies, getSeries, getPeople, getReviews, getLists, genresWithContent } from '@/lib/content.mjs';
+import {
+  getMovies,
+  getSeries,
+  getPeople,
+  getReviews,
+  getLists,
+  genresWithContent,
+} from '@/lib/content.mjs';
 
 /**
- * خريطة الموقع — تُولَّد تلقائيًا من بيانات المحتوى الفعلية وقت البناء.
- * لا تُدرج صفحات الفلاتر/البحث/المفضلة لأنها صفحات وظيفية غير مفيدة في نتائج البحث.
+ * Sitemap built only from published content and indexable collection pages.
+ * No lastmod is emitted because this project has no trustworthy per-page modified date.
  */
 export const dynamic = 'force-static';
 
 export default function sitemap() {
   const base = siteConfig.url.replace(/\/$/, '');
-  const now = new Date();
+  const page = (path) => {
+    const normalized = path.startsWith('/') ? path : `/${path}`;
+    return { url: `${base}${normalized.endsWith('/') ? normalized : `${normalized}/`}` };
+  };
 
-  const url = (path, priority = 0.6, changeFrequency = 'weekly', lastModified = now) => ({
-    url: `${base}${path}`,
-    lastModified,
-    changeFrequency,
-    priority,
-  });
+  const movies = getMovies();
+  const series = getSeries();
+  const people = getPeople().filter((person) => person.works.length > 0);
+  const reviews = getReviews();
+  const lists = getLists();
+  const genres = genresWithContent();
 
   const staticPages = [
-    url('/', 1.0, 'daily'),
-    url('/movies/', 0.9, 'daily'),
-    url('/series/', 0.9, 'daily'),
-    url('/genres/', 0.7, 'weekly'),
-    url('/reviews/', 0.7, 'weekly'),
-    url('/lists/', 0.6, 'weekly'),
-    url('/people/', 0.5, 'monthly'),
-    ...['/about/', '/contact/', '/privacy/', '/cookies/', '/terms/', '/ip-rights/'].map((p) => url(p, 0.3, 'yearly')),
+    page('/'),
+    ...(movies.length ? [page('/movies/')] : []),
+    ...(series.length ? [page('/series/')] : []),
+    ...(genres.length ? [page('/genres/')] : []),
+    ...(people.length ? [page('/people/')] : []),
+    ...(reviews.length ? [page('/reviews/')] : []),
+    ...(lists.length ? [page('/lists/')] : []),
+    ...['/about/', '/contact/', '/privacy/', '/cookies/', '/terms/', '/ip-rights/'].map(page),
   ];
 
-  const works = [
-    ...getMovies().map((w) => url(w.url, 0.8, 'monthly', w.addedAt ? new Date(w.addedAt) : now)),
-    ...getMovies()
-      .filter((w) => w.synopsisEn)
-      .map((w) => url(`/en${w.url}`, 0.7, 'monthly', w.addedAt ? new Date(w.addedAt) : now)),
-    ...getSeries().map((w) => url(w.url, 0.8, 'monthly', w.addedAt ? new Date(w.addedAt) : now)),
+  const contentPages = [
+    ...movies.map((work) => page(work.url)),
+    // English pages are listed only when an explicit English synopsis exists.
+    ...movies.filter((work) => work.synopsisEn).map((work) => page(`/en${work.url}`)),
+    ...series.map((work) => page(work.url)),
+    ...genres.map((genre) => page(genre.url)),
+    ...reviews.map((review) => page(review.url)),
+    ...lists.map((list) => page(list.url)),
+    ...people.map((person) => page(person.url)),
   ];
 
-  const genres = genresWithContent().map((g) => url(g.url, 0.6, 'weekly'));
-  const reviews = getReviews().map((r) => url(r.url, 0.6, 'monthly', r.date ? new Date(r.date) : now));
-  const lists = getLists().map((l) => url(l.url, 0.5, 'monthly', l.date ? new Date(l.date) : now));
-  const people = getPeople()
-    .filter((p) => p.works.length)
-    .map((p) => url(p.url, 0.4, 'monthly'));
-
-  return [...staticPages, ...works, ...genres, ...reviews, ...lists, ...people];
+  // Guard against accidental duplicate URLs if a custom legacy path collides with another record.
+  return [...new Map([...staticPages, ...contentPages].map((entry) => [entry.url, entry])).values()];
 }

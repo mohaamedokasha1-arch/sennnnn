@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
   const counts = genresWithContent().find((g) => g.key === key);
   return buildMetadata({
     title: `أفلام ومسلسلات ${label}`,
-    description: `أفضل ما يمكن مشاهدته في تصنيف ${label}: ${counts?.count ?? 0} عملًا منشورًا في ${siteConfig.siteName} مع القصة والتصنيفات ومراجعات تحريرية.`,
+    description: `تصفّح ${counts?.count ?? 0} عملًا منشورًا في تصنيف ${label} ضمن ${siteConfig.siteName}، مع معلومات الأعمال وطاقمها عند توفره.`,
     path: `/genres/${key}/`,
   });
 }
@@ -51,6 +51,7 @@ export default async function GenrePage({ params }) {
 
       <div className="mt-4">
         <SectionHeader
+          as="h1"
           kicker={t('nav.genres')}
           title={`${label}`}
           sub={`${t('genres.count', { n: all.length })} في تصنيف ${label} — مرتبة بحسب أحدث إضافة.`}

@@ -35,7 +35,7 @@ export async function generateMetadata({ params }) {
     image: review.work?.hasPoster ? review.work.poster : null,
     type: 'article',
     publishedTime: review.date,
-    modifiedTime: review.updatedAt ?? review.date,
+    ...(review.updatedAt ? { modifiedTime: review.updatedAt } : {}),
     authors: review.author,
   });
 }

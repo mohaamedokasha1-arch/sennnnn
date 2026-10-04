@@ -18,7 +18,7 @@ export default function IpRightsPage() {
     <div className="container">
       <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'حقوق الملكية' }]} />
       <div className="mt-4">
-        <SectionHeader kicker="قانوني" title="حقوق الملكية الفكرية وإزالة المحتوى" />
+        <SectionHeader as="h1" kicker="قانوني" title="حقوق الملكية الفكرية وإزالة المحتوى" />
       </div>
 
       <div className="legal prose">

@@ -3,14 +3,14 @@ import { t } from '@/lib/i18n.mjs';
 import { IconArrow, IconInfo } from './Icons.jsx';
 
 /* ------------------------------ رأس قسم ------------------------------ */
-export function SectionHeader({ kicker, title, sub, href, linkLabel, id }) {
+export function SectionHeader({ kicker, title, sub, href, linkLabel, id, as: Heading = 'h2' }) {
   return (
     <div className="section-head">
       <div>
         {kicker ? <p className="section-kicker">{kicker}</p> : null}
-        <h2 className="section-title" id={id}>
+        <Heading className="section-title" id={id}>
           {title}
-        </h2>
+        </Heading>
         {sub ? <p className="section-sub">{sub}</p> : null}
       </div>
       {href ? (
@@ -24,13 +24,13 @@ export function SectionHeader({ kicker, title, sub, href, linkLabel, id }) {
 }
 
 /* ------------------------------ حالة فراغ ------------------------------ */
-export function EmptyState({ icon = '🎬', title, body, actions = [], hint }) {
+export function EmptyState({ icon = '🎬', title, body, actions = [], hint, titleAs: Heading = 'h3' }) {
   return (
     <div className="empty">
       <div className="empty-icon" aria-hidden="true">
         {icon}
       </div>
-      <h3>{title}</h3>
+      <Heading className="empty-title">{title}</Heading>
       {body ? <p>{body}</p> : null}
       {hint ? <p className="small">{hint}</p> : null}
       {actions.length ? (

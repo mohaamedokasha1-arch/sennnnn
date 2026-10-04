@@ -35,11 +35,13 @@ export async function generateMetadata({ params }) {
     description: desc,
     path: work.url,
     canonical: work.url,
-    languages: {
-      ar: work.url,
-      en: `/en${work.url}`,
-      'x-default': work.url,
-    },
+    languages: work.synopsisEn
+      ? {
+          ar: work.url,
+          en: `/en${work.url}`,
+          'x-default': work.url,
+        }
+      : null,
     image: work.hasPoster ? work.poster : null,
     imageAlt: work.posterAlt || `بوستر فيلم ${work.title}${work.year ? ` (${work.year})` : ''}`,
     type: 'video.movie',

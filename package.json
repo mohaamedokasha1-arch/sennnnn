@@ -12,7 +12,7 @@
     "test": "npm run validate && npm run test:content && npm run test:logic && npm run test:posters",
     "dev": "next dev",
     "prebuild": "node lib/validate.mjs",
-    "build": "next build && node tools/audit-poster-export.mjs",
+    "build": "next build && node tools/prepare-static-export.mjs && node tools/audit-poster-export.mjs && node tools/audit-seo-export.mjs",
     "preview": "node tools/serve-static.mjs 4000 out",
     "posters:series": "node tools/series-covers-install.mjs",
     "posters:verify": "python3 tools/poster-hunt/verify-covers.py",
@@ -25,5 +25,10 @@
     "next": "^15.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "^8.5.28"
+    }
   }
 }

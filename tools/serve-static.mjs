@@ -68,6 +68,14 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  // The exported 404 document is a fallback, not a public 200 route itself.
+  if (urlPath === '/404' || urlPath === '/404/' || urlPath === '/404.html') {
+    const notFound = path.join(root, '404.html');
+    if (fs.existsSync(notFound)) sendFile(res, notFound, 404);
+    else res.writeHead(404).end('404');
+    return;
+  }
+
   let file = path.join(root, urlPath.replace(/^\/+/, ''));
 
   // منع الخروج خارج مجلد المخرجات

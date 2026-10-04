@@ -4,8 +4,8 @@ import { getMovies, getWork } from '@/lib/content.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
 
 /**
- * مسار مرادف لصفحة الفيلم (/movie/<slug>/) مع توجيه Canonical للرابط الأساسي
- * حتى يعمل كلٌّ من /movie/digger-2026/ و /movies/digger-2026/ بكفاءة ودون تكرار محتوى في محركات البحث.
+ * مسار قديم متوافق (/movie/<slug>/). يبقى متاحًا لحفظ الروابط السابقة،
+ * لكن canonical يشير دائمًا إلى المسار الأساسي المحدد في بيانات العمل.
  */
 export const dynamic = 'force-static';
 export const dynamicParams = false;
@@ -34,12 +34,14 @@ export async function generateMetadata({ params }) {
     title: seoTitle,
     description: desc,
     path: `/movie/${slug}/`,
-    canonical: `/movie/${slug}/`,
-    languages: {
-      ar: `/movie/${slug}/`,
-      en: `/en/movie/${slug}/`,
-      'x-default': `/movie/${slug}/`,
-    },
+    canonical: work.url,
+    languages: work.synopsisEn
+      ? {
+          ar: work.url,
+          en: `/en${work.url}`,
+          'x-default': work.url,
+        }
+      : null,
     image: work.hasPoster ? work.poster : null,
     imageAlt: work.posterAlt || `بوستر فيلم ${work.title}${work.year ? ` (${work.year})` : ''}`,
     type: 'video.movie',
@@ -51,5 +53,5 @@ export default async function MovieAliasPage({ params }) {
   const { slug } = await params;
   const work = getWork('movie', slug);
   if (!work) notFound();
-  return <WorkDetail work={work} locale="ar" basePath={`/movie/${slug}/`} />;
+  return <WorkDetail work={work} locale="ar" basePath={work.url} />;
 }

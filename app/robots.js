@@ -6,14 +6,8 @@ export const dynamic = 'force-static';
 export default function robots() {
   const base = siteConfig.url.replace(/\/$/, '');
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        // صفحات وظيفية لا فائدة من فهرستها (وقد تُنتج محتوى مكررًا)
-        disallow: ['/search/', '/favorites/', '/404/', '/404.html'],
-      },
-    ],
+    // Keep noindex pages crawlable so Google can read their robots meta directive.
+    rules: [{ userAgent: '*', allow: '/' }],
     sitemap: `${base}/sitemap.xml`,
     host: base,
   };
