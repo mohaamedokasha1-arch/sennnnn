@@ -31,7 +31,6 @@ export default function SearchPage() {
     genres: w.genres,
     poster: w.hasPoster ? w.poster : null,
     hasPoster: w.hasPoster,
-    demo: w.demo,
     seriesStatus: w.seriesStatus,
   }));
   const genres = genresWithContent().slice(0, 6).map((g) => ({ key: g.key, label: g.label, url: g.url, count: g.count }));

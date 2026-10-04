@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { IconArrow, IconInfo } from './Icons.jsx';
 
@@ -44,23 +43,6 @@ export function EmptyState({ icon = '🎬', title, body, actions = [], hint }) {
         </div>
       ) : null}
     </div>
-  );
-}
-
-/* ------------------------------ مساحة إعلانية فارغة ------------------------------ */
-/**
- * مساحة إعلانية *فارغة* جاهزة للاستخدام لاحقًا — لا يوجد أي كود إعلان فعلي.
- * لا تُعرض إطلاقًا على الصفحات القليلة المحتوى (القرار عند الصفحة نفسها).
- * لتفعيلها مستقبلًا: أضف كود الشبكة الإعلانية داخل هذا المكوّن فقط، بعد قبول حسابك
- * والالتزام بسياسات الناشر (شرط: محتوى أصلي كافٍ + صفحات سياسات جاهزة — وهي جاهزة هنا).
- */
-export function AdSlot({ position = 'mid', hidden = false }) {
-  if (!siteConfig.features.adSlots || hidden) return null;
-  return (
-    <aside className="ad-slot" aria-label={t('ad.label')} data-position={position}>
-      <strong>{t('ad.label')}</strong>
-      <span>{t('ad.note')}</span>
-    </aside>
   );
 }
 

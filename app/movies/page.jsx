@@ -3,7 +3,8 @@ import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata } from '@/lib/seo.mjs';
 import { getMovies, facets } from '@/lib/content.mjs';
-import { Breadcrumbs, AdSlot, SectionHeader } from '@/components/ui.jsx';
+import { Breadcrumbs, SectionHeader } from '@/components/ui.jsx';
+import { AdSlot } from '@/components/Ads.jsx';
 import FilterBar from '@/components/FilterBar.jsx';
 
 export const metadata = buildMetadata({
@@ -35,7 +36,6 @@ export default function MoviesPage() {
     country: m.country,
     poster: m.hasPoster ? m.poster : null,
     hasPoster: m.hasPoster,
-    demo: m.demo,
     addedAt: m.addedAt,
     seriesStatus: null,
   }));
@@ -50,7 +50,7 @@ export default function MoviesPage() {
 
       <FilterBar items={items} facets={f} showStatus={false} emptyText={t('empty.movies')} />
 
-      <AdSlot position="bottom" hidden={movies.length < 6} />
+      <AdSlot zone="bottom" hidden={movies.length < 6} />
 
       <p className="muted small center mt-6">
         تفضّل المسلسلات؟ <Link href="/series/">تصفّح صفحة المسلسلات</Link> · أو ابدأ من{' '}

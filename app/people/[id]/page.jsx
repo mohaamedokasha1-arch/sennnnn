@@ -4,7 +4,8 @@ import { t, countryLabel } from '@/lib/i18n.mjs';
 import { buildMetadata, personJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
 import { getPeople, getPerson } from '@/lib/content.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
-import { Breadcrumbs, EmptyState, AdSlot } from '@/components/ui.jsx';
+import { Breadcrumbs, EmptyState } from '@/components/ui.jsx';
+import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid } from '@/components/cards.jsx';
 import JsonLd from '@/components/JsonLd.jsx';
 
@@ -99,7 +100,7 @@ export default async function PersonPage({ params }) {
         </p>
       </article>
 
-      <AdSlot position="bottom" hidden={person.works.length < 4} />
+      <AdSlot zone="bottom" hidden={person.works.length < 4} />
     </div>
   );
 }

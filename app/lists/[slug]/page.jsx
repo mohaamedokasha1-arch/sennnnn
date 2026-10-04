@@ -9,11 +9,16 @@ import { Breadcrumbs, Notice } from '@/components/ui.jsx';
 import JsonLd from '@/components/JsonLd.jsx';
 import ShareRow from '@/components/ShareRow.jsx';
 
+
 export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getLists().map((l) => ({ slug: l.slug }));
+  const items = getLists();
+  // في وضع التصدير الثابت لا يقبل Next مسارًا ديناميكيًا بلا أي صفحة مُولَّدة،
+  // لذلك عند غياب المحتوى نولّد مسارًا داخليًا واحدًا يعرض صفحة «الصفحة غير موجودة» (noindex).
+  // يختفي هذا المسار تلقائيًا بمجرد إضافة أول عنصر، ولا يُدرج في الخريطة ولا يُفهرس.
+  return items.length ? items.map((l) => ({ slug: l.slug })) : [{ slug: '__no-content__' }];
 }
 
 export async function generateMetadata({ params }) {

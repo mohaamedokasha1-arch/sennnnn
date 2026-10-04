@@ -25,7 +25,6 @@ export default function FavoritesPage() {
     genres: w.genres,
     poster: w.hasPoster ? w.poster : null,
     hasPoster: w.hasPoster,
-    demo: w.demo,
     seriesStatus: w.seriesStatus,
   }));
 

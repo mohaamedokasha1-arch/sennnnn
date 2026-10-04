@@ -2,7 +2,8 @@ import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata } from '@/lib/seo.mjs';
 import { getLists } from '@/lib/content.mjs';
-import { Breadcrumbs, SectionHeader, Notice, EmptyState, AdSlot } from '@/components/ui.jsx';
+import { Breadcrumbs, SectionHeader, Notice, EmptyState } from '@/components/ui.jsx';
+import { AdSlot } from '@/components/Ads.jsx';
 import { ListCard } from '@/components/cards.jsx';
 
 export const metadata = buildMetadata({
@@ -47,7 +48,7 @@ export default function ListsPage() {
         </div>
       )}
 
-      <AdSlot position="bottom" hidden={lists.length < 3} />
+      <AdSlot zone="bottom" hidden={lists.length < 3} />
     </div>
   );
 }

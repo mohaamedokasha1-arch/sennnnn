@@ -5,7 +5,8 @@ import { renderMarkdown } from '@/lib/markdown.mjs';
 import { workJsonLd, reviewJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
 import { similarWorks, getReviewForWork } from '@/lib/content.mjs';
 import { PosterFallback, default as JsonLd } from './JsonLd.jsx';
-import { Breadcrumbs, AdSlot } from './ui.jsx';
+import { Breadcrumbs } from './ui.jsx';
+import { AdSlot } from './Ads.jsx';
 import { Star, WatchLinks, SeasonsBlock, PersonChips } from './WorkDetailParts.jsx';
 import ShareRow from './ShareRow.jsx';
 import FavoriteButton from './FavoriteButton.jsx';
@@ -251,7 +252,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
           </div>
         </header>
 
-        <AdSlot position="top" />
+        <AdSlot zone="movie-top" />
 
         {/* ------------------------------ طاقم العمل ------------------------------ */}
         {work.directorPeople.length || work.writerPeople?.length || work.castPeople.length ? (
@@ -377,7 +378,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
           </section>
         ) : null}
 
-        <AdSlot position="bottom" />
+        <AdSlot zone="movie-bottom" />
       </article>
     </div>
   );

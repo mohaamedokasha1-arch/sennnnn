@@ -413,15 +413,10 @@ a.chip:hover { border-color: var(--accent); color: var(--accent-hover); }
 .crumbs .sep { opacity: 0.5; }
 
 /* ------------------------------ مساحة إعلانية ------------------------------ */
-.ad-slot {
-  display: grid; place-items: center; gap: 4px; text-align: center;
-  min-height: 90px; padding: 18px; margin-block: 28px;
-  border: 1px dashed var(--border-strong); border-radius: var(--radius);
-  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.012) 0 12px, transparent 12px 24px);
-  color: var(--faint); font-size: 0.78rem;
-}
-.ad-slot strong { color: var(--muted); font-size: 0.84rem; font-weight: 600; }
-@media (min-width: 900px) { .ad-slot { min-height: 110px; } }
+/* حاوية الإعلان: لا ارتفاع ولا حدود ولا أي مظهر عندما لا يوجد كود إعلاني،
+   فلا يتغيّر شكل الصفحة إطلاقًا قبل تفعيل الإعلانات. */
+.ad-zone { display: block; margin-block: 28px; text-align: center; }
+.ad-zone:empty { display: none; margin: 0; }
 
 /* -------------------------------- التنبيهات -------------------------------- */
 .notice {
