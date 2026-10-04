@@ -15,9 +15,10 @@ seasons:
   - number: 2
     episodes: 30
     year: 2023
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل لمكتوب (L'Maktoub) — ليست البوستر الرسمي"
+poster: "/posters/l-maktoub.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «لمكتوب» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for L'Maktoub (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "لمكتوب (L'Maktoub) 2022–2023 | 2 موسمان · 60 حلقة · القناة الثانية المغربية (2M)"
 seoDescription: "كل ما تريد معرفته عن مسلسل لمكتوب (L'Maktoub): 2 موسمان · 60 حلقة، العرض 2022–2023، الحالة: منتهٍ، المنصة: القناة الثانية المغربية (2M). عائلة «الشيخة» التي تواجه نظرة المجتمع لمهنتها، وصراع على الميراث بعد وفاة الأب. دراما مغربية عن الطبقة والنساء والمال، استُلهمت فكرتها من المسلسل…"

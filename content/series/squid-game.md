@@ -18,9 +18,10 @@ seasons:
   - number: 3
     episodes: 6
     year: 2025
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل لعبة الحبار (Squid Game) — ليست البوستر الرسمي"
+poster: "/posters/squid-game.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «لعبة الحبار» (2021) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Squid Game (2021) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "لعبة الحبار (Squid Game) 2021–2025 | 3 مواسم · 22 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل لعبة الحبار (Squid Game): 3 مواسم · 22 حلقة، العرض 2021–2025، الحالة: منتهٍ، المنصة: نتفليكس. مئات من الغارقين في الديون يقبلون دعوة غامضة للمنافسة في ألعاب أطفال على جائزة مالية ضخمة، من دون أن يعرفوا أن الخاسر يُقتل. سونغ جي-هون، الفائز…"

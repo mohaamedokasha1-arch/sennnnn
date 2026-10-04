@@ -15,9 +15,10 @@ seasons:
   - number: 2
     episodes: 8
     year: 2019
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل ألعاب مقدسة (Sacred Games) — ليست البوستر الرسمي"
+poster: "/posters/sacred-games.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «ألعاب مقدسة» (2018) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Sacred Games (2018) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "ألعاب مقدسة (Sacred Games) 2018–2019 | 2 موسمان · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل ألعاب مقدسة (Sacred Games): 2 موسمان · 16 حلقة، العرض 2018–2019، الحالة: منتهٍ، المنصة: نتفليكس. ضابط شرطة في مومباي يتصل به زعيم عصابة مختفٍ منذ سنوات ليحذّره من كارثة تهدد المدينة خلال 25 يومًا. تحقيق يتشابك مع السياسة والدين والتاريخ الحديث…"

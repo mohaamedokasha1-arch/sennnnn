@@ -14,6 +14,8 @@
     "prebuild": "node lib/validate.mjs",
     "build": "next build && node tools/audit-poster-export.mjs",
     "preview": "node tools/serve-static.mjs 4000 out",
+    "posters:series": "node tools/series-covers-install.mjs",
+    "posters:verify": "python3 tools/poster-hunt/verify-covers.py",
     "clean": "rm -rf .next out"
   },
   "dependencies": {

@@ -15,9 +15,10 @@ seasons:
   - number: 2
     episodes: 10
     year: 2025
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل الانفصال (Severance) — ليست البوستر الرسمي"
+poster: "/posters/severance.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «الانفصال» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Severance (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الانفصال (Severance) 2022–مستمر | 2 موسمان · 19 حلقة · آبل تي في+"
 seoDescription: "كل ما تريد معرفته عن مسلسل الانفصال (Severance): 2 موسمان · 19 حلقة، العرض 2022–مستمر، الحالة: مستمر، المنصة: آبل تي في+. موظفو شركة «لومون» يخضعون لإجراء يفصل ذاكرة العمل عن ذاكرة الحياة الخاصة: لا يعرف الداخل ما يفعله في الخارج ولا العكس. حين تبدأ الشقوق بالظهور،…"

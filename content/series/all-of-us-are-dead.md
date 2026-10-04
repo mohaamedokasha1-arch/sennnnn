@@ -11,9 +11,10 @@ seasons:
   - number: 1
     episodes: 12
     year: 2022
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل كلنا موتى (All of Us Are Dead) — ليست البوستر الرسمي"
+poster: "/posters/all-of-us-are-dead.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «كلنا موتى» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for All of Us Are Dead (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "كلنا موتى (All of Us Are Dead) 2022–مستمر | 1 موسم · 12 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل كلنا موتى (All of Us Are Dead): 1 موسم · 12 حلقة، العرض 2022–مستمر، الحالة: مستمر، المنصة: نتفليكس. فيروس غامض يتحوّل إلى وباء زومبي داخل مدرسة ثانوية، فيجد الطلاب أنفسهم محاصرين بلا مساعدة من الخارج. نجاة جماعية تختبر الصداقة والطبقة…"

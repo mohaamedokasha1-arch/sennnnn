@@ -15,9 +15,10 @@ seasons:
   - number: 2
     episodes: 8
     year: 2026
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل برلين (Berlín) — ليست البوستر الرسمي"
+poster: "/posters/berlin.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «برلين» (2023) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Berlín (2023) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "برلين (Berlín) 2023–مستمر | 2 موسمان · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل برلين (Berlín): 2 موسمان · 16 حلقة، العرض 2023–مستمر، الحالة: مستمر، المنصة: نتفليكس. قبل أحداث «بيت من ورق»، يعيش أندريس دي فونولوسا (برلين) أيام مجده: سرقات جريئة في عواصم أوروبية، وعصابة أنيقة، وقلوب تُكسر في الطريق. عمل مشتق بنفس…"

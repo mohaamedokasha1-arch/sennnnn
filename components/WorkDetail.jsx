@@ -91,25 +91,41 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
 
       <article className="mt-4">
         <header className="detail-head">
-          <div className="detail-poster" style={work.hasPoster ? { aspectRatio: 'auto' } : undefined}>
-            <PosterImage
-              src={work.hasPoster ? work.poster : null}
-              title={isEn ? work.titleOriginal || work.title : work.title}
-              year={work.year}
-              alt={posterAlt}
-              width={640}
-              height={800}
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              locale={locale}
-              style={{ width: '100%', height: 'auto', display: 'block' }}
-            />
+          <div>
+            <div className="detail-poster" style={work.hasPoster ? { aspectRatio: 'auto' } : undefined}>
+              <PosterImage
+                src={work.hasPoster ? work.poster : null}
+                title={isEn ? work.titleOriginal || work.title : work.title}
+                year={work.year}
+                alt={posterAlt}
+                width={640}
+                height={800}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                locale={locale}
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
+            </div>
+            {work.posterDesign ? (
+              <p
+                className="poster-design-note"
+                style={{ margin: '10px 0 0', fontSize: '0.78rem', lineHeight: 1.6, color: 'var(--muted)' }}
+                data-poster-design="true"
+              >
+                {t('work.posterDesignNote', null, locale)}
+              </p>
+            ) : null}
           </div>
 
           <div>
             <div className="chips mb-2">
               <span className="chip chip-static chip-type">{kindLabel}</span>
+              {work.posterDesign ? (
+                <span className="chip chip-static" data-poster-design="true">
+                  {t('work.posterDesignBadge', null, locale)}
+                </span>
+              ) : null}
               {work.isSubtitled ? (
                 <span className="badge badge-accent">{t('work.subtitlesBadge', null, locale)}</span>
               ) : null}

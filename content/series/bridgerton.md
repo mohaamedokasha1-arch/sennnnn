@@ -21,9 +21,10 @@ seasons:
   - number: 4
     episodes: 8
     year: 2026
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل بريدجرتون (Bridgerton) — ليست البوستر الرسمي"
+poster: "/posters/bridgerton.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «بريدجرتون» (2020) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Bridgerton (2020) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "بريدجرتون (Bridgerton) 2020–مستمر | 4 مواسم · 32 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل بريدجرتون (Bridgerton): 4 مواسم · 32 حلقة، العرض 2020–مستمر، الحالة: مستمر، المنصة: نتفليكس. في موسم الزواج بلندن أوائل القرن التاسع عشر، تتشابك قصص عائلة بريدجرتون الأرستقراطية مع أسرار المجتمع وهمسات الكاتبة المجهولة «ليدي ويسلداون». كل…"

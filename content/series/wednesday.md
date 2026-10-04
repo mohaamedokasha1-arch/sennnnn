@@ -15,9 +15,10 @@ seasons:
   - number: 2
     episodes: 8
     year: 2025
-poster: null
-posterTemporary: true
-posterAlt: "صورة مؤقتة لمسلسل وينزداي (Wednesday) — ليست البوستر الرسمي"
+poster: "/posters/wednesday.jpg"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «وينزداي» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Wednesday (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "وينزداي (Wednesday) 2022–مستمر | 2 موسمان · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل وينزداي (Wednesday): 2 موسمان · 16 حلقة، العرض 2022–مستمر، الحالة: مستمر، المنصة: نتفليكس. وينزداي أدامز، المراهقة الحادة اللسان والباردة المشاعر، تُرسل إلى أكاديمية نيفرمور حيث تحاول إتقان قدرتها النفسية، وتحلّ جرائم قتل مرعبة تعصف بالبلدة…"
