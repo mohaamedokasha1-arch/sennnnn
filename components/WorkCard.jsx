@@ -20,11 +20,15 @@ export default function WorkCard({ work, priority = false, showGenres = true, no
     hasPoster,
     poster,
     posterDesign,
+    posterAlt: posterAltFromData,
     seriesStatus,
   } = work;
 
   const genitive = kind === 'series' ? 'مسلسل' : 'فيلم';
-  const posterAlt = `بوستر ${genitive} ${title}${year ? ` (${year})` : ''}`;
+  // نص alt: نُفضّل النص الموثّق في بيانات العمل (يصف الغلاف التصميمي بأنه ليس رسميًا)،
+  // وإلا نص عام وصفي. لا يغيّر هذا أي تصميم — يحسّن وصف الصورة لقارئات الشاشة.
+  const posterAlt =
+    posterAltFromData || `بوستر ${genitive} ${title}${year ? ` (${year})` : ''}`;
 
   return (
     <article className="card">

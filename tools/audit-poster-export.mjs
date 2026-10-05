@@ -15,7 +15,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { getSeries } from '../lib/content.mjs';
+import { getSeries, getMovies } from '../lib/content.mjs';
 
 const OUT = path.resolve('out');
 assert.ok(fs.existsSync(OUT), 'لا يوجد مجلد out/ — شغّل npm run build قبل هذا التدقيق.');
@@ -98,15 +98,46 @@ if (series.some((w) => w.posterDesign)) {
 const homePosters = (home.match(/src="\/posters\//g) ?? []).length;
 assert.ok(homePosters >= 20, `الصفحة الرئيسية تعرض ${homePosters} صورة بوستر فقط (المتوقع ≥ 20).`);
 
+/* ---- قائمة الأفلام: نفس ضمانات قائمة المسلسلات ----
+ * سبب الإضافة: كانت صفحة /movies/ تبني قائمة حقول مختارة وتُسقط posterDesign،
+ * فتظهر الأغلفة التصميمية بلا وسم «غلاف تصميمي أصلي» — بينما /series/ تعرضه.
+ * هذا الفحص يمنع تكرار الفجوة في أي قائمة مستقبلية.
+ */
+const movies = getMovies();
+const moviesIndex = readExport(path.join('movies', 'index.html'));
+for (const work of movies) {
+  if (work.posterTemporary) continue;
+  const shown = moviesIndex.includes(posterRef(work.poster)) || moviesIndex.includes(posterPayload(work.poster));
+  assert.ok(shown, `${work.slug}: قائمة /movies/ لا تحمل صورة البوستر (${work.poster}) لا في HTML ولا في بيانات الصفحة.`);
+}
+if (movies.some((w) => w.posterDesign)) {
+  assert.match(
+    moviesIndex,
+    /data-poster-design="true"/,
+    'قائمة /movies/ لا تعرض وسم «غلاف تصميمي أصلي» على البطاقات المنشورة.'
+  );
+  assert.match(
+    moviesIndex,
+    /ليس البوستر الرسمي/,
+    'قائمة /movies/ لا يُظهر نص alt التوضيحي للأغلفة التصميمية (يجب ألا تُوصف كأنها بوستر رسمي).'
+  );
+}
+
 /* ---- فهرس البحث ---- */
 const searchIndex = JSON.parse(readExport('search-index.json'));
-for (const work of series) {
-  const indexed = searchIndex.works.find((item) => item.id === `series:${work.slug}`);
+for (const work of [...series, ...movies]) {
+  const indexed = searchIndex.works.find((item) => item.id === `${work.kind}:${work.slug}`);
   assert.ok(indexed, `${work.slug}: مفقود من فهرس البحث المنشور.`);
   if (work.posterTemporary) {
     assert.equal(indexed.poster, null, `${work.slug}: صورة غير موثقة تسرّبت إلى فهرس البحث.`);
   } else {
     assert.equal(indexed.poster, work.poster, `${work.slug}: فهرس البحث لا يشير إلى ملف البوستر الصحيح.`);
+    // بدون هذا الحقل تعرض نتيجة البحث غلافًا تصميميًا بلا وسم، وتصفه كأنه بوستر رسمي.
+    assert.equal(
+      indexed.posterDesign,
+      work.posterDesign === true,
+      `${work.slug}: فهرس البحث لا يحمل حالة «غلاف تصميمي أصلي» بشكل صحيح.`
+    );
   }
 }
 

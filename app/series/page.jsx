@@ -32,6 +32,7 @@ export default function SeriesPage() {
     poster: s.hasPoster ? s.poster : null,
     hasPoster: s.hasPoster,
     posterDesign: s.posterDesign,
+    posterAlt: s.posterAlt,
     addedAt: s.addedAt,
     seriesStatus: s.seriesStatus,
   }));
