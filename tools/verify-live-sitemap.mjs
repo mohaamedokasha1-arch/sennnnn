@@ -18,6 +18,7 @@ import siteConfig from '../site.config.mjs';
 
 const GOOGLEBOT_USER_AGENT = 'Googlebot/2.1 (+http://www.google.com/bot.html)';
 const SITEMAP_PATH = '/sitemap.xml';
+const SITEMAP_MIRROR_PATH = '/sitemap-all.xml';
 const ROBOTS_PATH = '/robots.txt';
 const SITEMAP_NAMESPACE = 'http://www.sitemaps.org/schemas/sitemap/0.9';
 const MAX_SITEMAP_BYTES = 50 * 1024 * 1024;
@@ -174,6 +175,19 @@ export async function verifyLiveSitemap({
   const xml = await sitemapResponse.text();
   const locations = parseSitemapXml(xml);
 
+  // The mirror gives Search Console a clean URL when its cached result for /sitemap.xml
+  // is a stale failure. It must answer 200 as XML and serve the identical document.
+  const mirrorRequestUrl = `${requestOrigin}${SITEMAP_MIRROR_PATH}`;
+  const mirrorResponse = await request(mirrorRequestUrl, { accept: 'application/xml,text/xml;q=0.9,*/*;q=0.8', timeoutMs });
+  requireCondition(mirrorResponse.status === 200, `sitemap-all.xml returned HTTP ${mirrorResponse.status}, expected 200.`);
+  requireCondition(
+    /^(?:application|text)\/xml(?:\s*;|$)/i.test(mirrorResponse.headers.get('content-type') ?? ''),
+    `sitemap-all.xml has an invalid Content-Type: ${mirrorResponse.headers.get('content-type') ?? '(missing)'}`
+  );
+  requireCondition(mirrorResponse.url === mirrorRequestUrl, 'sitemap-all.xml unexpectedly redirected.');
+  const mirrorXml = await mirrorResponse.text();
+  requireCondition(mirrorXml === xml, 'sitemap-all.xml does not serve the exact same document as sitemap.xml.');
+
   for (const location of locations) {
     let url;
     try {
@@ -241,9 +255,12 @@ export async function verifyLiveSitemap({
     sitemapStatus: sitemapResponse.status,
     sitemapContentType: sitemapResponse.headers.get('content-type'),
     sitemapBytes: Buffer.byteLength(xml, 'utf8'),
+    mirrorStatus: mirrorResponse.status,
+    mirrorContentType: mirrorResponse.headers.get('content-type'),
     urlCount: locations.length,
     checkedPages,
     publicSitemapUrl,
+    publicMirrorUrl: `${publicOrigin}${SITEMAP_MIRROR_PATH}`,
   };
 }
 
@@ -258,8 +275,10 @@ async function main() {
   const result = await verifyLiveSitemap({ requestBase, publicBase, concurrency, timeoutMs });
   console.log(`✅ robots.txt: HTTP ${result.robotsStatus} · ${result.robotsContentType} · allows crawling + points to sitemap.`);
   console.log(`✅ sitemap.xml: HTTP ${result.sitemapStatus} · ${result.sitemapContentType} · ${result.sitemapBytes.toLocaleString()} bytes · ${result.urlCount} unique HTTPS URLs.`);
+  console.log(`✅ sitemap-all.xml: HTTP ${result.mirrorStatus} · ${result.mirrorContentType} · identical document (fresh URL for Search Console).`);
   console.log(`✅ ${result.checkedPages}/${result.urlCount} sitemap pages: HTTP 200, self-canonical, indexable (User-Agent simulation: ${result.userAgent}).`);
   console.log(`Sitemap: ${result.publicSitemapUrl}`);
+  console.log(`Mirror:  ${result.publicMirrorUrl}`);
   console.log('Note: this verifies public HTTP access and a Googlebot User-Agent simulation; only Search Console can confirm Google’s own fetch/report.');
 }
 
