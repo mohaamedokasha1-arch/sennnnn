@@ -9,6 +9,7 @@
     "test:content": "node lib/test-validation.mjs",
     "test:logic": "node lib/test-logic.mjs",
     "test:posters": "node lib/test-posters.mjs",
+    "seo:live": "node tools/verify-live-sitemap.mjs",
     "test": "npm run validate && npm run test:content && npm run test:logic && npm run test:posters",
     "dev": "next dev",
     "prebuild": "node lib/validate.mjs",

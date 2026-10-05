@@ -65,8 +65,20 @@ const genres = genresWithContent();
 
 /* ---- Sitemap integrity: canonical URLs only, no fake lastmod ---- */
 const sitemap = readRoute('/sitemap.xml');
+assert.ok(Buffer.byteLength(sitemap, 'utf8') <= 50 * 1024 * 1024, 'Sitemap exceeds the 50 MiB limit.');
+assert.match(
+  sitemap,
+  /^<\?xml version="1\.0" encoding="UTF-8"\?>\s*<urlset\b[^>]*xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9"/i,
+  'Sitemap must use the standard XML declaration and sitemap.org urlset namespace.'
+);
+assert.match(sitemap, /<\/urlset>\s*$/, 'Sitemap must close its urlset root cleanly.');
+assert.doesNotMatch(sitemap, /<!DOCTYPE|<!ENTITY/i, 'Sitemap must not contain a DTD or entity declarations.');
+const sitemapEntryBlocks = [...sitemap.matchAll(/<url\b[^>]*>([\s\S]*?)<\/url>/gi)];
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 assert.ok(sitemapUrls.length > 0, 'Sitemap must contain at least one URL.');
+assert.ok(sitemapUrls.length <= 50_000, 'Sitemap exceeds the 50,000 URL limit.');
+assert.equal(sitemapEntryBlocks.length, sitemapUrls.length, 'Each sitemap <url> must have exactly one <loc>.');
+assert.equal((sitemap.match(/<loc\b/gi) ?? []).length, sitemapUrls.length, 'Sitemap contains a <loc> outside a complete URL entry.');
 assert.equal(new Set(sitemapUrls).size, sitemapUrls.length, 'Sitemap contains duplicate URLs.');
 assert.doesNotMatch(sitemap, /<lastmod>/i, 'Sitemap must not contain generated or unverified lastmod values.');
 assert.doesNotMatch(sitemap, /\/(?:search|favorites|404)(?:\/|\.html|$)/i, 'Sitemap contains a functional/error route.');
@@ -159,9 +171,17 @@ for (const work of movies) {
 
 /* ---- robots/noindex and the custom 404 output ---- */
 const robots = readRoute('/robots.txt');
-assert.match(robots, /Allow:\s*\//i, 'robots.txt should allow public crawling.');
-assert.match(robots, new RegExp(`Sitemap:\\s*${BASE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\/sitemap\\.xml`, 'i'));
-assert.doesNotMatch(robots, /Disallow:\s*\/(?:search|favorites)\//i, 'Do not block crawlers from reading noindex directives.');
+assert.match(robots, /User-agent:\s*\*/i, 'robots.txt should apply to all crawlers.');
+assert.match(robots, /^Allow:\s*\/\s*$/im, 'robots.txt should allow public crawling.');
+const robotsSitemaps = robots.split(/\r?\n/).filter((line) => /^\s*Sitemap\s*:/i.test(line));
+assert.equal(robotsSitemaps.length, 1, 'robots.txt should contain exactly one Sitemap directive.');
+assert.equal(
+  robotsSitemaps[0].replace(/^\s*Sitemap\s*:\s*/i, '').trim(),
+  `${BASE}/sitemap.xml`,
+  'robots.txt should point to the correct canonical sitemap URL.'
+);
+assert.doesNotMatch(robots, /^Disallow:\s*\S/im, 'robots.txt must not block Google from sitemap pages or page-level noindex directives.');
+assert.doesNotMatch(robots, /^Host\s*:/im, 'Do not emit the unsupported Host directive for Google crawlers.');
 
 const noIndexRoutes = ['/search/', '/favorites/'];
 if (!reviews.length) noIndexRoutes.push('/reviews/');
