@@ -1,14 +1,17 @@
 import siteConfig from '@/site.config.mjs';
 
-/** ملف robots.txt — يُولَّد تلقائيًا ويشير إلى خريطة الموقع */
+/**
+ * robots.txt is generated as a static text/plain file for every deployment.
+ * Keep it to directives Google supports: the site stays crawlable, while
+ * noindex pages remain accessible so Google can read their page-level robots tag.
+ * The non-standard `Host` directive is intentionally omitted (Google ignores it).
+ */
 export const dynamic = 'force-static';
 
 export default function robots() {
-  const base = siteConfig.url.replace(/\/$/, '');
+  const origin = new URL(siteConfig.url).origin;
   return {
-    // Keep noindex pages crawlable so Google can read their robots meta directive.
     rules: [{ userAgent: '*', allow: '/' }],
-    sitemap: `${base}/sitemap.xml`,
-    host: base,
+    sitemap: `${origin}/sitemap.xml`,
   };
 }

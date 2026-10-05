@@ -15,10 +15,35 @@ import {
 export const dynamic = 'force-static';
 
 export default function sitemap() {
-  const base = siteConfig.url.replace(/\/$/, '');
+  const siteUrl = new URL(siteConfig.url);
+  if (
+    siteUrl.protocol !== 'https:' ||
+    siteUrl.pathname !== '/' ||
+    siteUrl.search ||
+    siteUrl.hash ||
+    siteUrl.username ||
+    siteUrl.password
+  ) {
+    throw new Error('site.config.mjs: url must be an HTTPS origin without a path, query, fragment, or credentials.');
+  }
+  const origin = siteUrl.origin;
   const page = (path) => {
-    const normalized = path.startsWith('/') ? path : `/${path}`;
-    return { url: `${base}${normalized.endsWith('/') ? normalized : `${normalized}/`}` };
+    if (
+      typeof path !== 'string' ||
+      !path.startsWith('/') ||
+      path.startsWith('//') ||
+      /[?#]/.test(path) ||
+      path.includes(String.fromCharCode(92)) ||
+      [...path].some((character) => character.charCodeAt(0) < 0x20)
+    ) {
+      throw new Error(`Invalid local sitemap path: ${String(path)}`);
+    }
+    const normalized = path.endsWith('/') ? path : `${path}/`;
+    const url = new URL(normalized, `${origin}/`);
+    if (url.origin !== origin || url.search || url.hash || url.username || url.password) {
+      throw new Error(`Sitemap path escaped the configured site origin: ${path}`);
+    }
+    return { url: url.href };
   };
 
   const movies = getMovies();

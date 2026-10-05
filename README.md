@@ -85,8 +85,9 @@ npm run preview      # معاينة نسخة النشر النهائية (للم
 
 **بعد النشر — تحقق من هذه النقاط:**
 - `/sitemap.xml` و`/robots.txt` يظهران وبهما نطاقك الصحيح.
-- الصفحة الرئيسية وشريط البحث يعملان على الهاتف.
-- في Google Search Console: أضف النطاق وارفع `sitemap.xml` — ووسم الإثبات `google-site-verification`
+- شغّل `npm run seo:live` من اتصال خارجي: يطلب `robots.txt` و`sitemap.xml` بهوية User-Agent تحاكي Googlebot، ثم يفحص HTTP 200 وMIME type وكل صفحة مدرجة (200 + canonical ذاتي + بلا `noindex`).
+- اختبر الصفحة الرئيسية وشريط البحث على الهاتف.
+- في Google Search Console: أضف النطاق وارفع الرابط الكامل `https://<نطاقك>/sitemap.xml` — ووسم الإثبات `google-site-verification`
   مُدرج مسبقًا في `<head>` لكل الصفحات من `site.config.mjs` (تأكد من مطابقة الرمز لرمزك قبل الضغط على «تحقق»).
 
 **تحديث المحتوى:** عدّل ملفًا في `content/` → احفظ → `git push` → Vercel يعيد النشر تلقائيًا في دقائق.
