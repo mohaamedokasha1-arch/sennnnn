@@ -15,8 +15,9 @@ headingEn: "The Mummy 4 (2027)"
 seoDescription: "كل ما نعرفه عن The Mummy 4: عودة بريندان فريزر ورايتشل وايز بعد 20 عامًا، إخراج ثنائي Radio Silence، يونيفرسال، العرض 15 أكتوبر 2027."
 seoDescriptionEn: "Everything about The Mummy 4 (2027): Brendan Fraser and Rachel Weisz return after 20 years, directed by Radio Silence, from Universal, in theaters October 15."
 poster: "/posters/the-mummy-4.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم المومياء 4 (2027)"
-posterAltEn: "Original design poster for The Mummy 4 (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم المومياء 4 (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for The Mummy 4 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

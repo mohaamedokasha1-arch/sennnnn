@@ -249,7 +249,7 @@ export default function HomePage() {
         <SectionHeader id="stats-title" title="المكتبة بالأرقام" sub="أرقام محسوبة من ملفات المحتوى الفعلية داخل الموقع" />
         <div className="stat-row">
           <Stat value={stats.works} label="عمل منشور" />
-          <Stat value={stats.people} label="شخص مسجّل" />
+          <Stat value={stats.people} label="شخص في الدليل" />
           <Stat value={stats.reviews} label="مراجعة تحريرية" />
           <Stat value={stats.lists} label="قائمة ترشيحات" />
           <Stat value={stats.trailers} label="تريلر رسمي مضمّن" />

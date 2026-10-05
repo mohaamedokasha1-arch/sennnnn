@@ -15,8 +15,9 @@ headingEn: "Gladys (2028)"
 seoDescription: "كل ما نعرفه عن Gladys: بريكويل فيلم Weapons عن أصل الخالة غلاديس (إيمي ماديغان الحائزة على الأوسكار)، كتابة زاك كريغر وزاك شيلدز، نيو لاين ووارنر، العرض 8 سبتمبر 2028."
 seoDescriptionEn: "Everything about Gladys (2028): a Weapons prequel exploring Aunt Gladys' origin (Oscar winner Amy Madigan), written by Zach Cregger and Zach Shields, from New Line and Warner Bros., in theaters September 8."
 poster: "/posters/gladys.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم غلاديس Gladys (2028)"
-posterAltEn: "Original design poster for Gladys (2028)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم غلاديس Gladys (2028) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Gladys (2028) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

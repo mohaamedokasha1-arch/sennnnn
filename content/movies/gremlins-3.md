@@ -15,8 +15,9 @@ headingEn: "Gremlins 3 (2028)"
 seoDescription: "كل ما نعرفه عن Gremlins 3: كريس كولومبوس كاتب الأصل يعود مخرجًا ومنتجًا وستيفن سبيلبرغ منتجًا منفذًا، جيزمو يعود أخيرًا، وارنر وأمبلين، العرض 6 أكتوبر 2028."
 seoDescriptionEn: "Everything about Gremlins 3 (2028): original writer Chris Columbus returns to direct with Steven Spielberg executive producing, as Gizmo finally comes back, from Warner Bros. and Amblin, in theaters October 6."
 poster: "/posters/gremlins-3.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم غريمليز 3 (2028)"
-posterAltEn: "Original design poster for Gremlins 3 (2028)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم غريمليز 3 (2028) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Gremlins 3 (2028) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [chris-columbus]

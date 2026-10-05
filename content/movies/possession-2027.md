@@ -15,8 +15,9 @@ headingEn: "Possession (2027)"
 seoDescription: "كل ما نعرفه عن Possession: إعادة تقديم لكلاسيكية جولافسكي 1981 بكتابة وإخراج باركر فين (Smile)، مارغريت كوالي وكالوم تيرنر، باراماونت، العرض 11 يونيو 2027."
 seoDescriptionEn: "Everything about Possession (2027): Smile creator Parker Finn writes and directs this reimagining of Andrzej Żuławski's 1981 cult horror, with Margaret Qualley and Callum Turner, from Paramount, in theaters June 11."
 poster: "/posters/possession-2027.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم استحواذ Possession (2027)"
-posterAltEn: "Original design poster for Possession (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم استحواذ Possession (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Possession (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [parker-finn]

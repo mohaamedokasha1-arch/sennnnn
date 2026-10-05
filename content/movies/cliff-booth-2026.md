@@ -14,8 +14,9 @@ headingEn: "The Further Mis-Adventures of Cliff Booth (2026)"
 seoDescription: "كل ما تريد معرفته عن فيلم The Further Mis-Adventures of Cliff Booth: براد بيت منسقًا لفضائح هوليوود 1977، إخراج ديفيد فينشر عن سيناريو كوينتن تارانتينو، عرض IMAX في 25 نوفمبر ونتفليكس في 23 ديسمبر 2026، والتريلر الرسمي."
 seoDescriptionEn: "Everything about The Further Mis-Adventures of Cliff Booth (2026): Brad Pitt as 1977 Hollywood's studio fixer, directed by David Fincher from Quentin Tarantino's screenplay, IMAX November 25 and Netflix December 23, with the official trailer."
 poster: "/posters/cliff-booth-2026.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم مغامرات كليف بوث الإضافية (2026)"
-posterAltEn: "Original design poster for The Further Mis-Adventures of Cliff Booth (2026)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم مغامرات كليف بوث الإضافية (2026) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for The Further Mis-Adventures of Cliff Booth (2026) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [david-fincher]

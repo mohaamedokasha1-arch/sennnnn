@@ -15,8 +15,9 @@ headingEn: "Shiver (2027)"
 seoDescription: "كل ما نعرفه عن Shiver: كيانو ريفز مهرب عالق في حلقة زمنية في الكاريبي، إخراج تيم ميلر وإنتاج ماثيو فون، وارنر براذرز، العرض 13 أغسطس 2027."
 seoDescriptionEn: "Everything about Shiver (2027): Keanu Reeves as a smuggler trapped in a Caribbean time loop, directed by Tim Miller and produced by Matthew Vaughn, from Warner Bros., in theaters August 13."
 poster: "/posters/shiver.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم قشعريرة Shiver (2027)"
-posterAltEn: "Original design poster for Shiver (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم قشعريرة Shiver (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Shiver (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [tim-miller]

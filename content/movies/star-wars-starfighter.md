@@ -15,8 +15,9 @@ headingEn: "Star Wars: Starfighter (2027)"
 seoDescription: "كل ما تريد معرفته عن فيلم Star Wars: Starfighter: مغامرة مستقلة جديدة من لوكاس فيلم، رايان غوسلينغ وإيمي آدامز، إخراج شون ليفي، العرض 28 مايو 2027."
 seoDescriptionEn: "Everything about Star Wars: Starfighter (2027): a standalone Lucasfilm adventure starring Ryan Gosling and Amy Adams, directed by Shawn Levy, in theaters May 28."
 poster: "/posters/star-wars-starfighter.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم حرب النجوم: ستارفايتر (2027)"
-posterAltEn: "Original design poster for Star Wars: Starfighter (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم حرب النجوم: ستارفايتر (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Star Wars: Starfighter (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [shawn-levy]

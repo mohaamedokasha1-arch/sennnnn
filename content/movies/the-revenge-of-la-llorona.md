@@ -15,8 +15,9 @@ headingEn: "The Revenge of La Llorona (2027)"
 seoDescription: "كل ما نعرفه عن The Revenge of La Llorona: تتمة The Curse of La Llorona من عالم الشعوذة، إخراج سانتياغو منغيني وإنتاج جيمس وان، العرض 26 فبراير 2027."
 seoDescriptionEn: "Everything about The Revenge of La Llorona (2027): sequel to The Curse of La Llorona from the Conjuring Universe, directed by Santiago Menghini and produced by James Wan, in theaters February 26."
 poster: "/posters/the-revenge-of-la-llorona.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم انتقام لا يورنا (2027)"
-posterAltEn: "Original design poster for The Revenge of La Llorona (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم انتقام لا يورنا (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for The Revenge of La Llorona (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

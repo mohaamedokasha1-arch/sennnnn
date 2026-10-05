@@ -15,8 +15,9 @@ headingEn: "The Great Beyond (2027)"
 seoDescription: "كل ما نعرفه عن The Great Beyond: جيه جيه أبرامز يكتب ويخرج، غلين باول وجينا أورتيغا وصمويل إل. جاكسون، Bad Robot ووارنر، العرض 1 أكتوبر 2027."
 seoDescriptionEn: "Everything about The Great Beyond (2027): J.J. Abrams writes and directs, starring Glen Powell, Jenna Ortega and Samuel L. Jackson, from Bad Robot and Warner Bros., in theaters October 1."
 poster: "/posters/the-great-beyond.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم ما وراء الأفق The Great Beyond (2027)"
-posterAltEn: "Original design poster for The Great Beyond (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم ما وراء الأفق The Great Beyond (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for The Great Beyond (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [jj-abrams]

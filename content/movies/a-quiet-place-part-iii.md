@@ -15,8 +15,9 @@ headingEn: "A Quiet Place Part III (2027)"
 seoDescription: "كل ما نعرفه عن A Quiet Place Part III: جون كراسينسكي يعود كاتبًا ومخرجًا ومنتجًا، الفصل التالي من عالم الكائنات الحساسة للصوت، العرض 30 يوليو 2027 من باراماونت."
 seoDescriptionEn: "What we know about A Quiet Place Part III: John Krasinski returns to write, direct and produce the next chapter of the sound-sensitive alien saga, in theaters July 30, 2027 from Paramount."
 poster: "/posters/a-quiet-place-part-iii.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم مكان هادئ: الجزء الثالث (2027)"
-posterAltEn: "Original design poster for A Quiet Place Part III (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم مكان هادئ: الجزء الثالث (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for A Quiet Place Part III (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [john-krasinski]

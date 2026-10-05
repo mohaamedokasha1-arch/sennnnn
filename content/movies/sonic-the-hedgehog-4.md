@@ -15,8 +15,9 @@ headingEn: "Sonic the Hedgehog 4 (2027)"
 seoDescription: "كل ما تريد معرفته عن فيلم Sonic the Hedgehog 4: سونيك وإيمي روز يواجهان ميتال سونيك، أصوات بن شوارتز وكريستن بيل وكيانو ريفز وجيم كاري، إخراج جيف فاولر، العرض 19 مارس 2027."
 seoDescriptionEn: "Everything about Sonic the Hedgehog 4 (2027): Sonic and newcomer Amy Rose face Metal Sonic, with Ben Schwartz, Kristen Bell, Keanu Reeves and Jim Carrey, directed by Jeff Fowler, in theaters March 19."
 poster: "/posters/sonic-the-hedgehog-4.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم القنفذ سونيك 4 (2027)"
-posterAltEn: "Original design poster for Sonic the Hedgehog 4 (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم القنفذ سونيك 4 (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Sonic the Hedgehog 4 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [jeff-fowler]
