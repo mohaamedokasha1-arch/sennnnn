@@ -87,6 +87,22 @@ assert.ok(
   'Sitemap contains a placeholder or parameterized URL.'
 );
 
+/* ---- /sitemap-all.xml must mirror the canonical sitemap byte for byte ---- */
+// It exists only so Search Console can be handed a never-before-fetched URL when it
+// keeps a stale "couldn't read" state for /sitemap.xml. It must never drift.
+const sitemapMirror = readRoute('/sitemap-all.xml');
+assert.equal(sitemapMirror, sitemap, 'sitemap-all.xml must be a byte-identical mirror of sitemap.xml.');
+assert.match(
+  sitemapMirror,
+  /^<\?xml version="1\.0" encoding="UTF-8"\?>\s*<urlset\b/i,
+  'sitemap-all.xml must be a well-formed <urlset> document.'
+);
+assert.equal(
+  (sitemapMirror.match(/<loc>/g) ?? []).length,
+  sitemapUrls.length,
+  'sitemap-all.xml must list exactly the same URLs as sitemap.xml.'
+);
+
 const expectedSitemap = new Set([
   '/',
   ...(movies.length ? ['/movies/'] : []),
@@ -254,7 +270,7 @@ assert.deepEqual(brokenLinks, [], `Broken same-origin links:\n${brokenLinks.join
 assert.deepEqual(brokenImages, [], `Broken local image URLs:\n${brokenImages.join('\n')}`);
 
 console.log(
-  `✅ SEO/export audit: ${sitemapUrls.length} canonical sitemap URLs; ${movies.length} reciprocal ar/en movie pairs; ` +
+  `✅ SEO/export audit: ${sitemapUrls.length} canonical sitemap URLs (+ byte-identical /sitemap-all.xml mirror); ${movies.length} reciprocal ar/en movie pairs; ` +
     `${noIndexRoutes.length} noindex utility/empty pages excluded; ${posterCount} local posters ≤200 KiB; ` +
     `${schemaCount} JSON-LD objects parsed; ${htmlFiles.length} HTML documents checked for internal links/images.`
 );

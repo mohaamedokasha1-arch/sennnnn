@@ -35,8 +35,25 @@ if (fs.existsSync(notFoundAlias) && fs.statSync(notFoundAlias).isDirectory()) {
   removed.push('/404/');
 }
 
+/*
+ * Publish a byte-identical copy of the canonical sitemap at /sitemap-all.xml.
+ * Why: Google Search Console can keep a stale "couldn't read" result for a sitemap URL
+ * it fetched while an older deployment was broken, and re-adding the same URL often
+ * keeps that failed state. The copy is generated from out/sitemap.xml on every build
+ * (never hand-written, so it can never drift), which gives Search Console a clean,
+ * never-fetched URL to read without touching /sitemap.xml, robots.txt, or any page.
+ */
+const sitemapFile = path.join(out, 'sitemap.xml');
+if (!fs.existsSync(sitemapFile)) throw new Error('Missing out/sitemap.xml after next build.');
+const sitemapMirror = path.join(out, 'sitemap-all.xml');
+fs.copyFileSync(sitemapFile, sitemapMirror);
+const sitemapBytes = fs.statSync(sitemapFile).size;
+
 console.log(
   removed.length
     ? `✅ Static export cleanup: removed HTTP-200 placeholders ${removed.join(', ')}; retained /404.html as the Vercel 404 document.`
     : '✅ Static export cleanup: no empty placeholder routes to remove.'
+);
+console.log(
+  `✅ Sitemap mirror: /sitemap-all.xml written as a byte-identical copy of /sitemap.xml (${sitemapBytes.toLocaleString()} bytes) for a fresh Search Console submission.`
 );
