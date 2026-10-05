@@ -15,8 +15,9 @@ headingEn: "Pendulum (2027)"
 seoDescription: "كل ما نعرفه عن Pendulum: أول إخراج لمارك هايمان وإنتاج دارين أرونوفسكي، جوزيف غوردون-ليفيت وفيبي دينيفور زوجان في خلوة بنيو مكسيكو تتحول لكابوس، العرض 1 يناير 2027."
 seoDescriptionEn: "Everything about Pendulum (2027): Mark Heyman's directorial debut produced by Darren Aronofsky, with Joseph Gordon-Levitt and Phoebe Dynevor as a couple whose New Mexico retreat turns nightmarish, releasing January 1, 2027."
 poster: "/posters/pendulum.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم بندول Pendulum (2027)"
-posterAltEn: "Original design poster for Pendulum (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم بندول Pendulum (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Pendulum (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

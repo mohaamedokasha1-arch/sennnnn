@@ -15,8 +15,9 @@ headingEn: "Final Destination 7 (2028)"
 seoDescription: "كل ما نعرفه عن Final Destination 7: الجزء السابع من سلسلة الموت المحتوم، إخراج ميشيل بلانشارت وكتابة لوري إيفانز تايلور، نيو لاين ووارنر، العرض 12 مايو 2028."
 seoDescriptionEn: "Everything about Final Destination 7 (2028): the seventh chapter of the death-design saga, directed by Michiel Blanchart and written by Lori Evans Taylor, from New Line and Warner Bros., in theaters May 12."
 poster: "/posters/final-destination-7.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم الوجهة النهائية 7 (2028)"
-posterAltEn: "Original design poster for Final Destination 7 (2028)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم الوجهة النهائية 7 (2028) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Final Destination 7 (2028) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

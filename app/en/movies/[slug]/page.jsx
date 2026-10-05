@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { buildMetadata, noIndex } from '@/lib/seo.mjs';
 import { getMovies, getWork } from '@/lib/content.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
+import DocumentLang from '@/components/DocumentLang.jsx';
 
 /**
  * English (LTR) Movie Detail Page — Static Export (/en/movies/<slug>/).
@@ -53,5 +54,10 @@ export default async function MoviePageEn({ params }) {
   const { slug } = await params;
   const work = getWork('movie', slug);
   if (!work) notFound();
-  return <WorkDetail work={work} locale="en" basePath={work.url} />;
+  return (
+    <>
+      <DocumentLang lang="en" dir="ltr" />
+      <WorkDetail work={work} locale="en" basePath={work.url} />
+    </>
+  );
 }

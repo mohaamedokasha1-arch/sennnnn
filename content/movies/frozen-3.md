@@ -15,8 +15,9 @@ headingEn: "Frozen 3 (2027)"
 seoDescription: "كل ما تريد معرفته عن Frozen 3: جينيفر لي تعود كتابةً وإخراجًا، كريستن بيل وإيدينا مينزل وجوش غاد، زفاف آنا وكريستوف ورحلة جديدة لإلسا، العرض 24 نوفمبر 2027."
 seoDescriptionEn: "Everything about Frozen 3 (2027): Jennifer Lee returns to write and direct, with Kristen Bell, Idina Menzel and Josh Gad, as Anna and Kristoff's wedding leads into Elsa's new journey, in theaters November 24."
 poster: "/posters/frozen-3.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم فروزن 3 (2027)"
-posterAltEn: "Original design poster for Frozen 3 (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم فروزن 3 (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Frozen 3 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

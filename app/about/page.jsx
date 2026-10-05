@@ -50,7 +50,7 @@ export default function AboutPage() {
           <Stat value={stats.works} label="عمل منشور" />
           <Stat value={stats.reviews} label="مراجعة تحريرية" />
           <Stat value={stats.lists} label="قائمة ترشيحات" />
-          <Stat value={stats.people} label="شخص مسجّل" />
+          <Stat value={stats.people} label="شخص في الدليل" />
         </div>
 
         <h2>ما هو متاح الآن</h2>

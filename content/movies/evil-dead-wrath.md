@@ -15,8 +15,9 @@ headingEn: "Evil Dead Wrath (2028)"
 seoDescription: "كل ما نعرفه عن Evil Dead Wrath: فصل جديد من سلسلة Evil Dead بكتابة وإخراج فرانسيس غالوبي وإنتاج سام رايمي وروب تابيرت، وارنر براذرز، العرض 7 أبريل 2028."
 seoDescriptionEn: "Everything about Evil Dead Wrath (2028): a new Evil Dead chapter written and directed by Francis Galluppi and produced by Sam Raimi and Rob Tapert, from Warner Bros., in theaters April 7."
 poster: "/posters/evil-dead-wrath.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم إيفل ديد: الغضب (2028)"
-posterAltEn: "Original design poster for Evil Dead Wrath (2028)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم إيفل ديد: الغضب (2028) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Evil Dead Wrath (2028) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

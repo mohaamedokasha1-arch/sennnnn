@@ -34,8 +34,11 @@ writers: [alexander-dinelaris, nicolas-giacobone, sabina-berman]
 cast: [tom-cruise, riz-ahmed, john-goodman, sandra-huller, michael-stuhlbarg, jesse-plemons]
 
 # رابط تضمين التريلر الرسمي (يمكن تعديله في أي وقت من هنا):
+# المصدر: القناة الرسمية لـ Warner Bros. على يوتيوب (استوديو الإنتاج/التوزيع الرسمي).
 trailer:
-  url: "https://a.qfilm.tv/watch.php?vid=9a89dad5a"
+  provider: youtube
+  id: qORTe1wW3Wg
+  title: "DIGGER | Official Trailer (Warner Bros.)"
   subtitled: true
 
 synopsis: >-

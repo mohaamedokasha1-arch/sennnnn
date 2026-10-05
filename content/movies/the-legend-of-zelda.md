@@ -15,8 +15,9 @@ headingEn: "The Legend of Zelda (2027)"
 seoDescription: "كل ما تريد معرفته عن فيلم The Legend of Zelda: أول اقتباس حي من نينتندو وسوني، إخراج ويس بول وإنتاج مياموتو، بوات براغاسون زيلدا وبنجامين إيفان إينسورث لينك، العرض 30 أبريل 2027."
 seoDescriptionEn: "Everything about The Legend of Zelda (2027): Nintendo and Sony's live-action adaptation, directed by Wes Ball and produced by Shigeru Miyamoto, with Bo Bragason as Zelda and Benjamin Evan Ainsworth as Link, in theaters April 30."
 poster: "/posters/the-legend-of-zelda.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم أسطورة زيلدا (2027)"
-posterAltEn: "Original design poster for The Legend of Zelda (2027)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم أسطورة زيلدا (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for The Legend of Zelda (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [wes-ball]

@@ -14,8 +14,9 @@ headingEn: "Jumanji: Open World (2026)"
 seoDescription: "كل ما تريد معرفته عن فيلم Jumanji: Open World (جومانجي: العالم المفتوح): اللعبة تهرب إلى عالمنا الحقيقي، دواين جونسون وكيفن هارت وجاك بلاك، إخراج جيك كاسدان، العرض 25 ديسمبر 2026، والتريلر الرسمي."
 seoDescriptionEn: "Everything about Jumanji: Open World (2026): the game's perils escaping into the real world, Dwayne Johnson, Kevin Hart and Jack Black, directed by Jake Kasdan, in theaters December 25, with the official trailer."
 poster: "/posters/jumanji-open-world.jpg"
-posterAlt: "بوستر تصميمي أصلي لفيلم جومانجي: العالم المفتوح (2026)"
-posterAltEn: "Original design poster for Jumanji: Open World (2026)"
+posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
+posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم جومانجي: العالم المفتوح (2026) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Cinemana for Jumanji: Open World (2026) — not the official poster"
 addedAt: 2026-10-04
 featured: true
 directors: [jake-kasdan]
