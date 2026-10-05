@@ -36,6 +36,10 @@ export default function MoviesPage() {
     country: m.country,
     poster: m.hasPoster ? m.poster : null,
     hasPoster: m.hasPoster,
+    // إلزامي: بدونه تظهر الأغلفة التصميمية في القائمة بلا وسم «غلاف تصميمي أصلي» للزائر.
+    // (series/page.jsx تحمله بالفعل — كان ناقصًا هنا فقط.)
+    posterDesign: m.posterDesign,
+    posterAlt: m.posterAlt,
     addedAt: m.addedAt,
     seriesStatus: null,
   }));

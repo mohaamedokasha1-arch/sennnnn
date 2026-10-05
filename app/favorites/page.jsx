@@ -25,6 +25,9 @@ export default function FavoritesPage() {
     genres: w.genres,
     poster: w.hasPoster ? w.poster : null,
     hasPoster: w.hasPoster,
+    // يلزم لعرض وسم «غلاف تصميمي أصلي» على بطاقات المفضلة (WorkCard يقرأه من هنا).
+    posterDesign: w.posterDesign,
+    posterAlt: w.posterAlt,
     seriesStatus: w.seriesStatus,
   }));
 

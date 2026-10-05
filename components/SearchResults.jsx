@@ -145,7 +145,11 @@ export default function SearchResults({ latest = [], genres = [] }) {
                           src={r.poster}
                           title={r.title}
                           year={r.year}
-                          alt={`بوستر ${r.title}`}
+                          alt={
+                            r.posterDesign
+                              ? `غلاف تصميمي أصلي من إنتاج سينمانا لـ ${r.title} — ليس البوستر الرسمي`
+                              : `بوستر ${r.title}`
+                          }
                           width={600}
                           height={900}
                           loading="lazy"
@@ -155,6 +159,13 @@ export default function SearchResults({ latest = [], genres = [] }) {
                         <span className="chip chip-static chip-type">{r.typeLabel}</span>
                         {r.year ? <span className="chip chip-static">{r.year}</span> : null}
                       </div>
+                      {r.posterDesign ? (
+                        <div className="card-scrim">
+                          <span className="chip chip-static" data-poster-design="true" title={t('work.posterDesignNote')}>
+                            {t('work.posterDesignBadge')}
+                          </span>
+                        </div>
+                      ) : null}
                     </div>
                     <div className="card-body">
                       <h3 className="card-title">
