@@ -39,6 +39,12 @@ export default {
   locale: 'ar',              // اللغة الأساسية (البنية جاهزة لإضافة لغة ثانية لاحقًا)
   dir: 'rtl',
 
+  // تحقق ملكية الموقع في Google Search Console.
+  // يُدرج تلقائيًا في <head> لكل الصفحات هكذا:
+  //   <meta name="google-site-verification" content="..." />
+  // اتركه '' (فارغًا) لعدم إدراج أي وسم تحقق.
+  googleSiteVerification: '6nwKbe3UwHbbzzDg0S8a6TRE_rEEIAdyGgIJD6q6ua4',
+
   contact: {
     email: 'cenimanafilms@gmail.com',      // بريد التواصل العام
     copyrightEmail: 'cenimanafilms@gmail.com', // بريد طلبات حقوق الملكية (DMCA)

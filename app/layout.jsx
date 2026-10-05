@@ -35,6 +35,11 @@ export const metadata = {
   authors: [{ name: `${siteConfig.siteName} — فريق التحرير` }],
   creator: siteConfig.siteName,
   publisher: siteConfig.siteName,
+  // وسم إثبات ملكية الموقع لدى Google Search Console — يُقرأ من site.config.mjs.
+  // Next.js يُدرجه في <head> قبل <body> تلقائيًا (meta name="google-site-verification").
+  ...(siteConfig.googleSiteVerification
+    ? { verification: { google: siteConfig.googleSiteVerification } }
+    : {}),
   formatDetection: { telephone: false, email: false, address: false },
   manifest: '/site.webmanifest',
   icons: {
