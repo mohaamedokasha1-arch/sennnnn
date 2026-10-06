@@ -11,7 +11,7 @@ seasons: []
 poster: "/posters/sen-cal-kapimi.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «أنت اطرق بابي» (2020) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Sen Çal Kapımı (2020) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Sen Çal Kapımı (2020) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "أنت اطرق بابي (Sen Çal Kap) 2020 | بيانات المواسم غير مكتملة · FOX"
 seoDescription: "كل ما تريد معرفته عن مسلسل أنت اطرق بابي (Sen Çal Kap): بيانات المواسم غير مكتملة، العرض 2020، الحالة: منتهٍ، المنصة: FOX. طالبة تفقد منحتها بسبب رجل أعمال صارم، فتقتحم مكتبه مطالبة بحقها، فيعرض عليها عقد خطوبة صوري مقابل استعادة دراستها. من اتفاق تجاري إلى حب حقيقي:…"

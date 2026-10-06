@@ -15,7 +15,7 @@ seasons:
 poster: "/posters/shogun.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «شوغن» (2024) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Shōgun (2024) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Shōgun (2024) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "شوغن (gun) 2024–مستمر | 1 موسم · 10 حلقة · FX / Hulu / ديزني+"
 seoDescription: "كل ما تريد معرفته عن مسلسل شوغن (gun): 1 موسم · 10 حلقة، العرض 2024–مستمر، الحالة: مستمر، المنصة: FX / Hulu / ديزني+. اليابان عام 1600: لورد يوشـي توراناغا يناور بين وصايا السلطة، فيما يصل ملاح إنجليزي يصبح أداة في لعبة أكبر منه. ملحمة تاريخية عن السياسة والشرف…"

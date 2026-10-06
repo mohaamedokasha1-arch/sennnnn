@@ -29,7 +29,7 @@ seasons:
 poster: "/posters/kurulus-osman.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «المؤسس عثمان» (2019) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Kuruluş: Osman (2019) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Kuruluş: Osman (2019) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "المؤسس عثمان (Kurulu) 2019–مستمر | 6 مواسم · 194 حلقة · ATV"
 seoDescription: "كل ما تريد معرفته عن مسلسل المؤسس عثمان (Kurulu): 6 مواسم · 194 حلقة، العرض 2019–مستمر، الحالة: مستمر، المنصة: ATV. تتمة ملحمة «قيامة أرطغرل»: عثمان بن أرطغرل يقود قبيلة قايي في مرحلة أشدّ تعقيدًا، بين المغول والصليبيين والبيزنطيين، ويضع أسس الدولة العثمانية…"

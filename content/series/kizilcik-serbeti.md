@@ -23,7 +23,7 @@ seasons:
 poster: "/posters/kizilcik-serbeti.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «شراب التوت» (2022) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Kızılcık Şerbeti (2022) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Kızılcık Şerbeti (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "شراب التوت (erbeti) 2022–مستمر | 4 مواسم · 138 حلقة · Show TV"
 seoDescription: "كل ما تريد معرفته عن مسلسل شراب التوت (erbeti): 4 مواسم · 138 حلقة، العرض 2022–مستمر، الحالة: مستمر، المنصة: Show TV. زواج يجمع عائلة علمانية بعائلة محافظة يضع عادات العالمين وجهًا لوجه: من تربية الأطفال إلى العمل والحرية. دراما اجتماعية تناقش الانقسام الثقافي في…"

@@ -16,7 +16,7 @@ seoDescriptionEn: "Everything about The Further Mis-Adventures of Cliff Booth (2
 poster: "/posters/cliff-booth-2026.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم مغامرات كليف بوث الإضافية (2026) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for The Further Mis-Adventures of Cliff Booth (2026) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for The Further Mis-Adventures of Cliff Booth (2026) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [david-fincher]

@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about Skeletons (2027): creature horror directed b
 poster: "/posters/skeletons.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم هياكل عظمية Skeletons (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Skeletons (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Skeletons (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

@@ -21,7 +21,7 @@ seasons:
 poster: "/posters/lupin.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «لوبين» (2021) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Lupin (2021) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Lupin (2021) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "لوبين (Lupin) 2021–مستمر | 3 مواسم · 17 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل لوبين (Lupin): 3 مواسم · 17 حلقة، العرض 2021–مستمر، الحالة: مستمر، المنصة: نتفليكس. أسان ديوب، متأثرًا بكتب اللص الظريف أرسين لوبين، يستخدم الذكاء والتخفي للانتقام لوالده الذي ظُلم قبل سنوات. سرقات أنيقة في باريس، وخطة لا تتوقف عند…"

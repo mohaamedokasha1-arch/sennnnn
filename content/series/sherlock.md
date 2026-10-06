@@ -24,7 +24,7 @@ seasons:
 poster: "/posters/sherlock.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «شرلوك» (2010) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Sherlock (2010) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Sherlock (2010) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "شرلوك (Sherlock) 2010–2017 | 4 مواسم · 12 حلقة · BBC One"
 seoDescription: "كل ما تريد معرفته عن مسلسل شرلوك (Sherlock): 4 مواسم · 12 حلقة، العرض 2010–2017، الحالة: منتهٍ، المنصة: BBC One. شرلوك هولمز في لندن المعاصرة: محقق «استشاري» شديد الذكاء وحادّ اللسان، مع رفيقه الطبيب جون واتسون، يواجهان جرائم مستحيلة وخصمًا بحجم موريارتي. حلقات…"

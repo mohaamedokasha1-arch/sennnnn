@@ -23,7 +23,7 @@ seasons:
 poster: "/posters/cukur.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الحفرة» (2017) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Çukur (2017) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Çukur (2017) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الحفرة (Çukur) 2017–2020 | 4 مواسم · 131 حلقة · Show TV"
 seoDescription: "كل ما تريد معرفته عن مسلسل الحفرة (Çukur): 4 مواسم · 131 حلقة، العرض 2017–2020، الحالة: منتهٍ، المنصة: Show TV. حي «الحفرة» في إسطنبول تحكمه عائلة كوتشوفالي بقوانينها الخاصة، حتى يعود الابن ياماش الذي هرب من عالم العائلة ليصير موسيقيًا. عودته تُشعل حرب عصابات…"

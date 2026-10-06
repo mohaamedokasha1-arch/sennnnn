@@ -18,7 +18,7 @@ seasons:
 poster: "/posters/al-atawla.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «العتاولة» (2024) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Al Atawla (2024) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Al Atawla (2024) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "العتاولة (Al Atawla) 2024–2025 | 2 موسمان · 60 حلقة · MBC مصر / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل العتاولة (Al Atawla): 2 موسمان · 60 حلقة، العرض 2024–2025، الحالة: منتهٍ، المنصة: MBC مصر / شاهد. الشقيقان نصّار وخضر يرثان عالم الجريمة عن والدهما، ويصطدمان بزعيم العصابة عيسى الوزان. في الجزء الثاني يعود نصّار إلى هذا العالم مضطرًا من أجل علاج…"

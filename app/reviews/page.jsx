@@ -30,7 +30,7 @@ export default function ReviewsPage() {
       <Notice>
         <strong>{t('site.editorialNote')}</strong>
         <p className="small" style={{ marginBottom: 0 }}>
-          {t('site.editorialNoteLong')} المراجعات مكتوبة يدويًا لأكاشا سينما، ولا تُنقل من أي مصدر آخر،
+          {t('site.editorialNoteLong')} المراجعات مكتوبة يدويًا لـ{siteConfig.siteName}، ولا تُنقل من أي مصدر آخر,
           ولا تُنشأ آليًا.
         </p>
       </Notice>

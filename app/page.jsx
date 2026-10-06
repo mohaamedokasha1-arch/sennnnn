@@ -20,9 +20,10 @@ import { WorkGrid, ReviewCard, ListCard } from '@/components/cards.jsx';
 import PosterImage from '@/components/PosterImage.jsx';
 
 export const metadata = buildMetadata({
-  title: undefined,
+  title: 'اكتشف الأفلام والمسلسلات العربية والعالمية',
   description: siteConfig.description,
   path: '/',
+  image: '/og-default.jpg',
 });
 
 /**

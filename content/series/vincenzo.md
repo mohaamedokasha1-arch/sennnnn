@@ -14,7 +14,7 @@ seasons:
 poster: "/posters/vincenzo.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «فينتشنزو» (2021) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Vincenzo (2021) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Vincenzo (2021) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "فينتشنزو (Vincenzo) 2021 | 1 موسم · 20 حلقة · tvN / نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل فينتشنزو (Vincenzo): 1 موسم · 20 حلقة، العرض 2021، الحالة: منتهٍ، المنصة: tvN / نتفليكس. محامٍ كوري الأصل نشأ في إيطاليا ويعمل مستشارًا للمافيا، يعود إلى سيول ويستعيد ذهبًا مخفيًا، فيجد نفسه يواجه شركة فاسدة بأساليب المافيا نفسها. سخرية…"

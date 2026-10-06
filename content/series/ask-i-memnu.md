@@ -11,7 +11,7 @@ seasons: []
 poster: "/posters/ask-i-memnu.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «العشق الممنوع» (2008) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Aşk-ı Memnu (2008) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Aşk-ı Memnu (2008) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "العشق الممنوع (Memnu) 2008 | بيانات المواسم غير مكتملة · Kanal D"
 seoDescription: "كل ما تريد معرفته عن مسلسل العشق الممنوع (Memnu): بيانات المواسم غير مكتملة، العرض 2008، الحالة: منتهٍ، المنصة: Kanal D. زوجة شابة لرجل ثري أكبر منها تقع في حب ابن شقيقته الذي يعيش في القصر نفسه. خيانة تتسلّل ببطء إلى كل زاوية من البيت، حتى تصير كلفة الحقيقة أفدح من…"

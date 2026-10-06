@@ -17,7 +17,7 @@ seoDescriptionEn: "What we know about A Quiet Place Part III: John Krasinski ret
 poster: "/posters/a-quiet-place-part-iii.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم مكان هادئ: الجزء الثالث (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for A Quiet Place Part III (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for A Quiet Place Part III (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [john-krasinski]

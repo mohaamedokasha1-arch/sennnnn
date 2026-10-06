@@ -27,7 +27,7 @@ seasons:
 poster: "/posters/breaking-bad.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «بريكنغ باد» (2008) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Breaking Bad (2008) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Breaking Bad (2008) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "بريكنغ باد (Breaking Bad) 2008–2012 | 5 مواسم · 62 حلقة · AMC (ومتوفر على نتفليكس في عدة مناطق)"
 seoDescription: "كل ما تريد معرفته عن مسلسل بريكنغ باد (Breaking Bad): 5 مواسم · 62 حلقة، العرض 2008–2012، الحالة: منتهٍ، المنصة: AMC (ومتوفر على نتفليكس في عدة مناطق). معلّم كيمياء يصاب بسرطان الرئة فيقرّر تأمين مستقبل عائلته بطبخ الميثامفيتامين مع تلميذ سابق. من رجل خائف إلى «هايزنبرغ»: دراسة دقيقة في تحوّل الإنسان…"

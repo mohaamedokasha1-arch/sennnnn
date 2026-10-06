@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about Gladys (2028): a Weapons prequel exploring A
 poster: "/posters/gladys.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم غلاديس Gladys (2028) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Gladys (2028) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Gladys (2028) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

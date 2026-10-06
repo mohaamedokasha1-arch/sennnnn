@@ -11,7 +11,7 @@ seasons: []
 poster: "/posters/ezel.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «إيزيل» (2009) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Ezel (2009) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Ezel (2009) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "إيزيل (Ezel) 2009 | بيانات المواسم غير مكتملة · Show TV ثم ATV"
 seoDescription: "كل ما تريد معرفته عن مسلسل إيزيل (Ezel): بيانات المواسم غير مكتملة، العرض 2009، الحالة: منتهٍ، المنصة: Show TV ثم ATV. شاب يُخدع من أقرب الناس إليه — حبيبته وصديقاه — فيُسجن ظلمًا ويخرج بهوية جديدة وثروة، ليبدأ انتقامًا محسوبًا خطوة بخطوة. مستوحى من رواية «كونت مونت…"

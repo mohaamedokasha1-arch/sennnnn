@@ -16,7 +16,7 @@ seoDescriptionEn: "Everything about Jumanji: Open World (2026): the game's peril
 poster: "/posters/jumanji-open-world.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم جومانجي: العالم المفتوح (2026) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Jumanji: Open World (2026) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Jumanji: Open World (2026) — not the official poster"
 addedAt: 2026-10-04
 featured: true
 directors: [jake-kasdan]

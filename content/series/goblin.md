@@ -14,7 +14,7 @@ seasons:
 poster: "/posters/goblin.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «العفريت» (2016) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Guardian: The Lonely and Great God (2016) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Guardian: The Lonely and Great God (2016) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "العفريت (Guardian: The Lonely and Great God) 2016 | 1 موسم · 16 حلقة · tvN"
 seoDescription: "كل ما تريد معرفته عن مسلسل العفريت (Guardian: The Lonely and Great God): 1 موسم · 16 حلقة، العرض 2016، الحالة: منتهٍ، المنصة: tvN. عفريت خالد يعيش منذ مئات السنين يبحث عن عروسه البشرية التي وحدها قادرة على إنهاء حياته الأبدية. حكاية حبّ وقدر وموت، مع حاصد أرواح يشاركه البيت…"

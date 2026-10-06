@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import siteConfig from '@/site.config.mjs';
 import { t, genreLabel } from '@/lib/i18n.mjs';
 import { noIndex } from '@/lib/seo.mjs';
 import { genresWithContent, latestAdditions } from '@/lib/content.mjs';
@@ -11,7 +12,7 @@ import { WorkGrid } from '@/components/cards.jsx';
  */
 export const metadata = {
   title: 'الصفحة غير موجودة',
-  description: 'تعذر العثور على الصفحة المطلوبة. استخدم الروابط للعودة إلى محتوى أكاشا سينما.',
+  description: `تعذر العثور على الصفحة المطلوبة. استخدم الروابط للعودة إلى محتوى ${siteConfig.siteName}.`,
   robots: noIndex,
   // Do not inherit the homepage canonical for an actual 404 response.
   alternates: {},

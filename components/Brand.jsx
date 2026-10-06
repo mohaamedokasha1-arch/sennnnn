@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import siteConfig from '@/site.config.mjs';
-import { brandName, brandAltName, brandDir, localeFromPath, brandLogoAlt } from '@/lib/brand.mjs';
+import { brandName, brandAltName, brandDir, localeFromPath, brandLogoAlt, brandMarkUrl } from '@/lib/brand.mjs';
 import { LogoGlyph } from './Logo.jsx';
 
 /**
@@ -20,11 +20,12 @@ export function useBrandLocale() {
  * كتلة الشعار (العلامة + الاسم النصي) بنفس بنية التصميم الحالية تمامًا:
  * .brand > (.brand-mark | img) + .brand-text — لا تُضيف أي CSS جديد؛
  * التكيّف مع الاتجاه يأتي من flex الذي يتبع dir الصفحة،
- * والاسم يتبدل ديناميكيًا: «أكاشا سينما» ⇄ «Akasha Cinema».
+ * والاسم يتبدل ديناميكيًا: «أكاشا سينما» ⇄ «Akasha Cenima».
  */
 export function BrandBlock({ linked = false, style = undefined }) {
   const locale = useBrandLocale();
   const name = brandName(locale);
+  const markImage = brandMarkUrl();
 
   const inner = (
     <>
@@ -32,7 +33,7 @@ export function BrandBlock({ linked = false, style = undefined }) {
         <img src={siteConfig.logoImage} alt={name} width={38} height={38} />
       ) : (
         <span className="brand-mark" aria-hidden="true">
-          <LogoGlyph size={22} />
+          {markImage ? <img src={markImage} alt="" width={38} height={38} draggable="false" /> : <LogoGlyph size={22} />}
         </span>
       )}
       <span className="brand-text">

@@ -17,7 +17,7 @@ seasons:
 poster: "/posters/sahmaran.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «شهرمان» (2023) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Şahmaran (2023) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Şahmaran (2023) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "شهرمان (ahmaran) 2023–2024 | 2 موسمان · 14 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل شهرمان (ahmaran): 2 موسمان · 14 حلقة، العرض 2023–2024، الحالة: منتهٍ، المنصة: نتفليكس. أكاديمية شابة تكتشف أن جذورها مرتبطة بأسطورة «شهرمان» وبعالم كائنات خفية تُدعى «المارّ»، وأن نبوءة قديمة تخصّها. خيال تركي معاصر مبني على تراث…"

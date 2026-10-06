@@ -28,6 +28,38 @@ for (const { route, count } of optionalCollections) {
   }
 }
 
+/**
+ * Next's static export inherits the Arabic root <html> element inside nested layouts.
+ * Correct the built HTML itself (not only a post-hydration effect) for crawlable /en pages.
+ */
+function listHtmlFiles(directory) {
+  if (!fs.existsSync(directory)) return [];
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const file = path.join(directory, entry.name);
+    if (entry.isDirectory()) return listHtmlFiles(file);
+    return entry.isFile() && entry.name.endsWith('.html') ? [file] : [];
+  });
+}
+
+const englishHtmlFiles = listHtmlFiles(path.join(out, 'en'));
+let localizedEnglishDocuments = 0;
+for (const file of englishHtmlFiles) {
+  const html = fs.readFileSync(file, 'utf8');
+  const htmlTag = html.match(/<html\b[^>]*>/i)?.[0];
+  if (!htmlTag) throw new Error(`Missing root <html> element in English export: ${path.relative(out, file)}`);
+  const localizedTag = htmlTag
+    .replace(/\s(?:lang|dir)\s*=\s*(?:"[^"]*"|'[^']*')/gi, '')
+    .replace(/>$/, ' lang="en" dir="ltr">');
+  const nextHtml = html.replace(htmlTag, localizedTag);
+  if (nextHtml !== html) {
+    fs.writeFileSync(file, nextHtml);
+    localizedEnglishDocuments++;
+  }
+  if (!/<html\b[^>]*\blang="en"[^>]*\bdir="ltr"[^>]*>/i.test(nextHtml)) {
+    throw new Error(`English export has the wrong document language/direction: ${path.relative(out, file)}`);
+  }
+}
+
 // Keep only the conventional 404.html; a /404/index.html would look like a real 200 page.
 const notFoundAlias = path.join(out, '404');
 if (fs.existsSync(notFoundAlias) && fs.statSync(notFoundAlias).isDirectory()) {
@@ -53,6 +85,9 @@ console.log(
   removed.length
     ? `✅ Static export cleanup: removed HTTP-200 placeholders ${removed.join(', ')}; retained /404.html as the Vercel 404 document.`
     : '✅ Static export cleanup: no empty placeholder routes to remove.'
+);
+console.log(
+  `✅ Document language: ${localizedEnglishDocuments}/${englishHtmlFiles.length} English HTML documents carry lang="en" dir="ltr" in the exported source.`
 );
 console.log(
   `✅ Sitemap mirror: /sitemap-all.xml written as a byte-identical copy of /sitemap.xml (${sitemapBytes.toLocaleString()} bytes) for a fresh Search Console submission.`

@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about Evil Dead Wrath (2028): a new Evil Dead chap
 poster: "/posters/evil-dead-wrath.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم إيفل ديد: الغضب (2028) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Evil Dead Wrath (2028) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Evil Dead Wrath (2028) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

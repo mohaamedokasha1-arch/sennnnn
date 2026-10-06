@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about the eighth Paranormal Activity film: produce
 poster: "/posters/paranormal-activity-8.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم نشاط خارق للطبيعة 8 (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Paranormal Activity 8 (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Paranormal Activity 8 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

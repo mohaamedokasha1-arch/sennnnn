@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about Narnia: The Magician's Nephew (2027): Greta 
 poster: "/posters/narnia-the-magicians-nephew.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم نارنيا: ابن أخت الساحر (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Narnia: The Magician's Nephew (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Narnia: The Magician's Nephew (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [greta-gerwig]

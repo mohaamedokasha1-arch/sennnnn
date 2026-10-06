@@ -24,7 +24,7 @@ seasons:
 poster: "/posters/the-bear.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الدب» (2022) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for The Bear (2022) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for The Bear (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الدب (The Bear) 2022–مستمر | 4 مواسم · 38 حلقة · Hulu / FX (Disney+ دوليًا)"
 seoDescription: "كل ما تريد معرفته عن مسلسل الدب (The Bear): 4 مواسم · 38 حلقة، العرض 2022–مستمر، الحالة: مستمر، المنصة: Hulu / FX (Disney+ دوليًا). طاهٍ شاب يترك مطعمًا راقياً في نيويورك ليعود إلى شيكاغو ويدير محل شطائر أخيه الراحل: مطبخ ضيق، ديون، فريق متعب، وحزن لم يُقل. دراما سريعة الإيقاع عن…"
