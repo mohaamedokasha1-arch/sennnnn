@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import siteConfig from '@/site.config.mjs';
 import { t, countryLabel } from '@/lib/i18n.mjs';
 import { buildMetadata, personJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
 import { getPeople, getPerson } from '@/lib/content.mjs';
@@ -67,7 +68,7 @@ export default async function PersonPage({ params }) {
             </h2>
             <div className="prose" dangerouslySetInnerHTML={{ __html: renderMarkdown(person.bio) }} />
             <p className="panel-note" style={{ marginBottom: 0 }}>
-              النبذة مكتوبة أصلًا لأكاشا سينما، وليست منقولة من أي مصدر خارجي.
+              النبذة مكتوبة أصلًا لـ{siteConfig.siteName}، وليست منقولة من أي مصدر خارجي.
             </p>
           </section>
         ) : null}

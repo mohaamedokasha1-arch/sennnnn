@@ -15,7 +15,7 @@ seasons:
 poster: "/posters/jaafar-el-omda.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «جعفر العمدة» (2023) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Jaafar El Omda (2023) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Jaafar El Omda (2023) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "جعفر العمدة (Jaafar El Omda) 2023 | 1 موسم · 30 حلقة · MBC مصر / DMC / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل جعفر العمدة (Jaafar El Omda): 1 موسم · 30 حلقة، العرض 2023، الحالة: منتهٍ، المنصة: MBC مصر / DMC / شاهد. جعفر العمدة، رجل يحمل ثقل العائلة وغياب ابنه المفقود، يعيش بين زوجاته ونفوذه في منطقته، حتى يعود الماضي ليطرق بابه. دراما شعبية عن الأبوة والانتقام…"

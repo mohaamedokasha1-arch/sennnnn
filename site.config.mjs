@@ -1,6 +1,6 @@
 /**
  * ============================================================================
- *  الإعدادات المركزية للموقع — «أكاشا سينما / Akasha Cinema»
+ *  الإعدادات المركزية للموقع — «أكاشا سينما / Akasha Cenima»
  * ============================================================================
  *  كل ما يخص الهوية والتشغيل يُعدَّل من هنا فقط:
  *  الاسم (بالعربية والإنجليزية)، الشعار، اللون المميز، البريد، الروابط الاجتماعية، وتفعيل/تعطيل الميزات.
@@ -13,25 +13,30 @@ export default {
    * 1) الهوية الأساسية (ثنائية اللغة: عربي RTL + إنجليزي LTR)
    * ------------------------------------------------------------------------- */
   siteName: 'أكاشا سينما',                   // الاسم العربي — اللغة الأساسية (rtl)
-  siteNameLatin: 'Akasha Cinema',            // الاسم الإنجليزي (ltr)
+  siteNameLatin: 'Akasha Cenima',             // الاسم الإنجليزي (ltr)
   // الاسم الظاهر للزائر حسب اللغة النشطة (البادئة /en/ تعني الإنجليزية):
   nameByLocale: {
     ar: 'أكاشا سينما',
-    en: 'Akasha Cinema',
+    en: 'Akasha Cenima',
+  },
+  shortNameByLocale: {
+    ar: 'أكاشا',
+    en: 'Akasha',
   },
   slogan: 'اكتشف الفيلم الذي ستبقى تتحدث عنه',
   sloganEn: 'Discover the film you’ll keep talking about',
   description:
     'منصة عربية لاكتشاف الأفلام والمسلسلات: معلومات منظّمة عن القصص والتصنيفات وطاقم العمل، مع روابط المنصات الرسمية عند توفرها.',
-  logoText: 'أكاشا سينما',                   // الشعار النصي (يُعرض بجانب علامة الشعار، ويتبدل حسب اللغة)
+  descriptionEn:
+    'Bilingual movie and series discovery catalog with organized story, genre and cast details, original editorial reviews, and verified official-platform links when available. The site does not host video content.',
   // لاستخدام شعار صورة لاحقًا: ضع الملف في public/ مثالًا: public/logo.svg ثم اكتب: logoImage: '/logo.svg'
   logoImage: null,
-  // أصول الشعار الاتجاهية (ملفات جاهزة في public/): النسخة العربية بمحاذاة RTL
-  // والنسخة الإنجليزية بمحاذاة LTR، مع علامة موحّدة تضمن الاتساق البصري بين اللغتين.
+  // أصول الشعار الاتجاهية الجاهزة داخل public/assets/logo/؛ تُستخدم للمواد
+  // المستقلة، بينما يعرض مكوّن العلامة الاسم النصي محليًا للحفاظ على تبديل اللغة.
   logo: {
-    ar: '/logo-ar.svg',
-    en: '/logo-en.svg',
-    mark: '/logo-mark.svg',
+    ar: '/assets/logo/akasha-logo-dark.svg',
+    en: '/assets/logo/akasha-logo-horizontal.svg',
+    mark: '/assets/logo/akasha-favicon-192.png',
   },
 
   /* ---------------------------------------------------------------------------
@@ -49,7 +54,7 @@ export default {
    * ------------------------------------------------------------------------- */
   // النطاق النهائي للموقع. يُستخدم في Sitemap وCanonical وOpen Graph وروابط JSON-LD.
   url: 'https://cenimana-aflam-arabic.vercel.app',
-  locale: 'ar',              // اللغة الأساسية (البنية جاهزة لإضافة لغة ثانية لاحقًا)
+  locale: 'ar',              // اللغة الأساسية للموقع؛ القسم الإنجليزي يستخدم /en/
   dir: 'rtl',
 
   // تحقق ملكية الموقع في Google Search Console.

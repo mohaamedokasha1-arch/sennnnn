@@ -5,10 +5,11 @@
  مولّد أصول الهوية البصرية — tools/make-assets.py
 ============================================================================
  يولّد صور الهوية بالكود، بدون استخدام أي صورة من الإنترنت (الحقوق مضمونة):
-   - public/og-default.jpg     صورة المشاركة الافتراضية (1200×630)
+   - public/og-default.jpg و public/og-default-en.jpg (1200×630، عربي/إنجليزي)
    - app/apple-icon.png        أيقونة آبل (180×180)
    - app/favicon.ico           أيقونة المتصفح (أحجام متعددة)
    - public/icons/icon-192.png و icon-512.png  (أيقونات إضافة الموقع للشاشة الرئيسية)
+   - public/assets/logo/akasha-favicon.* (أيقونات الشعار الموحّدة)
 
  النص العربي يُرسَم بالخط العربي IBM Plex Sans Arabic (رخصة OFL — انظر tools/fonts/)
  مع محرك تشكيل عربي حقيقي (libraqm) لضمان ظهور الحروف متصلة وباتجاه صحيح.
@@ -159,7 +160,7 @@ def build_og():
     if LATIN_FALLBACK_OK:
         f_lat = ImageFont.truetype(LATIN_BOLD, 26)
         # الاسم اللاتيني أسفل الاسم العربي، بنفس حدّ المحاذاة اليمين
-        d.text((w - 78 - 168 - 34, 236), 'AKASHA CINEMA', font=f_lat, fill=ACCENT, anchor='ra')
+        d.text((w - 78 - 168 - 34, 236), 'AKASHA CENIMA', font=f_lat, fill=ACCENT, anchor='ra')
 
     ar_text(d, (w - 78, 356), 'اكتشف الفيلم الذي ستبقى تتحدث عنه', f_semi, TEXT)
     ar_text(d, (w - 78, 420), 'معلومات منظّمة · مراجعات تحريرية أصلية · روابط مشاهدة رسمية فقط', f_reg, MUTED)
@@ -172,6 +173,38 @@ def build_og():
     out = os.path.join(ROOT, 'public', 'og-default.jpg')
     img.convert('RGB').save(out, 'JPEG', quality=88, optimize=True, progressive=True)
     print('✔', os.path.relpath(out, ROOT))
+
+
+def build_og_en():
+    """English 1200×630 social image for the localized /en/ movie pages."""
+    w, h = 1200, 630
+    img = gradient((w, h), BG_TOP, BG_BOTTOM)
+    img = glow(img, (1010, 70), 560, ACCENT, 100)
+    img = glow(img, (110, 600), 430, (48, 92, 120), 70)
+
+    d = ImageDraw.Draw(img, 'RGBA')
+    d.rounded_rectangle([26, 26, w - 26, h - 26], radius=24, outline=(255, 255, 255, 26), width=2)
+    strip = film_strip(300, 22)
+    img.paste(strip, (78, 60), strip)
+    tile = mark_tile(168)
+    img.paste(tile, (w - 168 - 78, 96), tile)
+
+    d = ImageDraw.Draw(img, 'RGBA')
+    bold_path = LATIN_BOLD if LATIN_FALLBACK_OK else AR_BOLD
+    f_name = font(bold_path, 76)
+    f_semi = font(LATIN_BOLD if LATIN_FALLBACK_OK else AR_SEMI, 39)
+    f_reg = font(LATIN_BOLD if LATIN_FALLBACK_OK else AR_REG, 27)
+    x_right = w - 78 - 168 - 34
+    d.text((x_right, 112), 'Akasha Cenima', font=f_name, fill=TEXT, anchor='ra')
+    d.text((x_right, 218), 'MOVIE & SERIES DISCOVERY', font=font(LATIN_BOLD, 23) if LATIN_FALLBACK_OK else f_semi, fill=ACCENT, anchor='ra')
+    d.text((w - 78, 356), 'Stories, cast details and original editorial reviews', font=f_semi, fill=TEXT, anchor='ra')
+    d.text((w - 78, 420), 'Verified information · Official platforms only · No hosted video', font=f_reg, fill=MUTED, anchor='ra')
+    d.rectangle([w - 78 - 240, 500, w - 78, 505], fill=ACCENT)
+    d.text((w - 78, 536), 'Explore films and series in Arabic and English', font=f_reg, fill=MUTED, anchor='ra')
+
+    out = os.path.join(ROOT, 'public', 'og-default-en.jpg')
+    img.convert('RGB').save(out, 'JPEG', quality=88, optimize=True, progressive=True)
+    print('✔ public/og-default-en.jpg')
 
 
 def build_icons():
@@ -187,6 +220,11 @@ def build_icons():
     base.save(os.path.join(ROOT, 'app', 'favicon.ico'), sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
     print('✔ app/favicon.ico')
 
+    logo_dir = os.path.join(ROOT, 'public', 'assets', 'logo')
+    os.makedirs(logo_dir, exist_ok=True)
+    base.save(os.path.join(logo_dir, 'akasha-favicon.ico'), sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
+    print('✔ public/assets/logo/akasha-favicon.ico')
+
     # أيقونات الشاشة الرئيسية
     icons_dir = os.path.join(ROOT, 'public', 'icons')
     os.makedirs(icons_dir, exist_ok=True)
@@ -195,7 +233,10 @@ def build_icons():
         c.alpha_composite(mark_tile(size))
         path = os.path.join(icons_dir, f'icon-{size}.png')
         c.convert('RGB').save(path, 'PNG', optimize=True)
+        logo_path = os.path.join(logo_dir, f'akasha-favicon-{size}.png')
+        c.convert('RGB').save(logo_path, 'PNG', optimize=True)
         print('✔', os.path.relpath(path, ROOT))
+        print('✔', os.path.relpath(logo_path, ROOT))
 
 
 if __name__ == '__main__':
@@ -205,5 +246,6 @@ if __name__ == '__main__':
             print('   ملفات الخطوط يجب أن تكون داخل tools/fonts/ (رخصة OFL — انظر tools/fonts/OFL-IBM-Plex.txt).')
             sys.exit(1)
     build_og()
+    build_og_en()
     build_icons()
     print('تم توليد كل أصول الهوية بنجاح.')

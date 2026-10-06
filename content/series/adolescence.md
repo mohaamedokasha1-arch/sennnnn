@@ -15,7 +15,7 @@ seasons:
 poster: "/posters/adolescence.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «المراهقة» (2025) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Adolescence (2025) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Adolescence (2025) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "المراهقة (Adolescence) 2025 | 1 موسم · 4 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل المراهقة (Adolescence): 1 موسم · 4 حلقة، العرض 2025، الحالة: محدود بموسم واحد، المنصة: نتفليكس. تُداهم الشرطة منزل عائلة ميلر وتعتقل الابن جيمي (13 عامًا) بتهمة قتل زميلته. أربع حلقات، كل واحدة منها مصوّرة بلقطة واحدة متصلة، تتتبّع الأب والمحقق…"

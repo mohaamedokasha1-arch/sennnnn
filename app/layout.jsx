@@ -1,7 +1,8 @@
 import './globals.css';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
-import { buildMetadata, websiteJsonLd, organizationJsonLd } from '@/lib/seo.mjs';
+import { buildMetadata, seoTitle, websiteJsonLd, organizationJsonLd } from '@/lib/seo.mjs';
+import { brandName } from '@/lib/brand.mjs';
 import SiteHeader from '@/components/SiteHeader.jsx';
 import SiteFooter from '@/components/SiteFooter.jsx';
 import MobileNav from '@/components/Navigation.jsx';
@@ -27,14 +28,14 @@ export const metadata = {
   }),
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.siteName} — ${siteConfig.slogan}`,
-    template: `%s | ${siteConfig.siteName}`,
+    default: seoTitle('اكتشف الأفلام والمسلسلات العربية والعالمية', 'ar', '/'),
+    template: `%s | ${brandName('ar')}`,
   },
-  applicationName: siteConfig.siteName,
+  applicationName: brandName('ar'),
   keywords: ['أفلام', 'مسلسلات', 'مراجعات أفلام', 'تصنيفات أفلام', 'ترشيحات', 'سينما عربية', 'اكتشاف أفلام'],
-  authors: [{ name: `${siteConfig.siteName} — فريق التحرير` }],
-  creator: siteConfig.siteName,
-  publisher: siteConfig.siteName,
+  authors: [{ name: `${brandName('ar')} — فريق التحرير` }],
+  creator: brandName('ar'),
+  publisher: brandName('ar'),
   // وسم إثبات ملكية الموقع لدى Google Search Console — يُقرأ من site.config.mjs.
   // Next.js يُدرجه في <head> قبل <body> تلقائيًا (meta name="google-site-verification").
   ...(siteConfig.googleSiteVerification
@@ -43,15 +44,22 @@ export const metadata = {
   formatDetection: { telephone: false, email: false, address: false },
   manifest: '/site.webmanifest',
   icons: {
-    icon: [{ url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }],
-    apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+    icon: [
+      { url: '/assets/logo/akasha-favicon.ico', sizes: 'any', type: 'image/x-icon' },
+      { url: '/assets/logo/akasha-favicon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/assets/logo/akasha-favicon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
+  other: { language: 'ar' },
   openGraph: {
     ...buildMetadata({ path: '/', image: '/og-default.jpg' }).openGraph,
-    siteName: siteConfig.siteName,
+    title: seoTitle('اكتشف الأفلام والمسلسلات العربية والعالمية', 'ar', '/'),
+    siteName: brandName('ar'),
   },
   twitter: {
     ...buildMetadata({ path: '/', image: '/og-default.jpg' }).twitter,
+    title: seoTitle('اكتشف الأفلام والمسلسلات العربية والعالمية', 'ar', '/'),
   },
 };
 

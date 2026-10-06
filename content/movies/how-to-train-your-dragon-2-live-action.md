@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about the live-action How to Train Your Dragon 2 (
 poster: "/posters/how-to-train-your-dragon-2-live-action.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم كيف تروض تنينك 2 النسخة الحية (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for the live-action How to Train Your Dragon 2 (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for the live-action How to Train Your Dragon 2 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [dean-deblois]

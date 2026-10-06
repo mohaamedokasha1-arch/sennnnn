@@ -12,7 +12,7 @@ seasons: []
 poster: "/posters/al-hayba.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الهيبة» (2017) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Al Hayba (2017) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Al Hayba (2017) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الهيبة (Al Hayba) 2017 | بيانات المواسم غير مكتملة · MBC دراما / MTV اللبنانية / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل الهيبة (Al Hayba): بيانات المواسم غير مكتملة، العرض 2017، الحالة: منتهٍ، المنصة: MBC دراما / MTV اللبنانية / شاهد. جبل شيخ الجبل زعيم قرية حدودية يحكمها السلاح والتهريب، تعود إليه امرأة من خارج هذا العالم فتكشف تصدّعات العائلة وتفتح صراعًا بين قانون الدولة وقانون…"

@@ -7,6 +7,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import siteConfig from '../site.config.mjs';
+import { brandName } from '../lib/brand.mjs';
+import { buildMetadata } from '../lib/seo.mjs';
+import { dims } from './img-dims.mjs';
 import {
   getMovies,
   getSeries,
@@ -44,6 +47,23 @@ function canonicalOf(html) {
 function metaContent(html, name) {
   const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   return html.match(new RegExp(`<meta\\s+name="${escaped}"\\s+content="([^"]*)"`, 'i'))?.[1] ?? null;
+}
+
+function metaProperty(html, property) {
+  const escaped = property.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return html.match(new RegExp(`<meta\\s+property="${escaped}"\\s+content="([^"]*)"`, 'i'))?.[1] ?? null;
+}
+
+function decodeHtml(value) {
+  return String(value ?? '')
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCodePoint(Number(dec)))
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>');
 }
 
 function alternateLinks(html) {
@@ -126,15 +146,53 @@ assert.deepEqual(
   [...expectedSitemap].sort(),
   'Sitemap entries do not match published/indexable content.'
 );
+const sitemapTitles = new Set();
+const sitemapDescriptions = new Set();
 for (const url of sitemapUrls) {
   assert.ok(url.startsWith(`${BASE}/`), `Sitemap URL uses the wrong host: ${url}`);
   assert.equal(new URL(url).protocol, 'https:', `Sitemap URL is not HTTPS: ${url}`);
   const html = readRoute(url);
+  const parsedUrl = new URL(url);
+  const english = parsedUrl.pathname.startsWith('/en/');
+  const locale = english ? 'en' : 'ar';
+  const expectedName = brandName(locale);
   assert.equal(canonicalOf(html), url, `Sitemap URL is not self-canonical: ${url}`);
-  assert.ok(/<title>\s*[^<\s][^<]*<\/title>/i.test(html), `Missing or empty title: ${url}`);
-  assert.ok(metaContent(html, 'description')?.trim(), `Missing meta description: ${url}`);
+  const title = decodeHtml(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? '');
+  const description = decodeHtml(metaContent(html, 'description') ?? '');
+  assert.ok(title, `Missing or empty title: ${url}`);
+  assert.ok(description, `Missing meta description: ${url}`);
+  assert.ok(title.length >= 50 && title.length <= 60, `Title must be 50–60 characters (${title.length}): ${url} → ${title}`);
+  assert.ok(title.endsWith(`| ${expectedName}`), `Title is missing the locale-specific brand suffix: ${url} → ${title}`);
+  assert.ok(description.length >= 150 && description.length <= 160, `Description must be 150–160 characters (${description.length}): ${url}`);
+  assert.ok(!sitemapTitles.has(title), `Duplicate title in sitemap: ${title}`);
+  assert.ok(!sitemapDescriptions.has(description), `Duplicate meta description in sitemap: ${url}`);
+  sitemapTitles.add(title);
+  sitemapDescriptions.add(description);
+  assert.ok(/<meta\s+charSet="utf-8"/i.test(html), `Missing UTF-8 charset: ${url}`);
+  assert.ok(metaContent(html, 'viewport'), `Missing viewport metadata: ${url}`);
+  assert.equal(metaContent(html, 'language'), locale, `Wrong language meta tag: ${url}`);
+  if (english) assert.match(html, /<html\b[^>]*\blang="en"[^>]*\bdir="ltr"/i, `English document must be lang=en and dir=ltr: ${url}`);
+  else assert.match(html, /<html\b[^>]*\blang="ar"[^>]*\bdir="rtl"/i, `Arabic document must be lang=ar and dir=rtl: ${url}`);
   assert.equal((html.match(/<h1\b/gi) ?? []).length, 1, `Expected exactly one H1: ${url}`);
   assert.doesNotMatch(metaContent(html, 'robots') ?? '', /noindex/i, `Noindex page appears in sitemap: ${url}`);
+
+  const ogTitle = decodeHtml(metaProperty(html, 'og:title') ?? '');
+  const ogDescription = decodeHtml(metaProperty(html, 'og:description') ?? '');
+  const ogImage = decodeHtml(metaProperty(html, 'og:image') ?? '');
+  assert.equal(ogTitle, title, `Open Graph title differs from page title: ${url}`);
+  assert.equal(ogDescription, description, `Open Graph description differs from page description: ${url}`);
+  assert.equal(metaProperty(html, 'og:url'), url, `Open Graph URL differs from canonical: ${url}`);
+  assert.equal(metaProperty(html, 'og:site_name'), expectedName, `Open Graph site name has the wrong locale spelling: ${url}`);
+  assert.ok(metaProperty(html, 'og:type'), `Missing Open Graph type: ${url}`);
+  const parsedOgImage = new URL(ogImage);
+  assert.equal(parsedOgImage.origin, BASE, `Open Graph image must be an absolute first-party URL: ${url}`);
+  assert.ok(exportedFile(parsedOgImage.pathname), `Missing Open Graph image asset ${parsedOgImage.pathname}: ${url}`);
+  assert.equal(decodeHtml(metaContent(html, 'twitter:title') ?? ''), title, `Twitter title differs from page title: ${url}`);
+  assert.equal(decodeHtml(metaContent(html, 'twitter:description') ?? ''), description, `Twitter description differs from page description: ${url}`);
+  assert.equal(metaContent(html, 'twitter:card'), 'summary_large_image', `Missing large-image Twitter card: ${url}`);
+  const twitterImage = decodeHtml(metaContent(html, 'twitter:image') ?? '');
+  assert.equal(twitterImage, ogImage, `Twitter image differs from the validated Open Graph image: ${url}`);
+
   // وسم إثبات الملكية لدى Google Search Console (يُقرأ من site.config.mjs ويجب أن يكون في <head>)
   if (siteConfig.googleSiteVerification) {
     assert.equal(
@@ -208,6 +266,67 @@ for (const route of noIndexRoutes) {
   assert.ok(!actualSitemapPaths.has(route), `${route} must not be in sitemap.`);
 }
 
+/* ---- PWA, localized social imagery and integrated logo assets ---- */
+const manifest = JSON.parse(readRoute('/site.webmanifest'));
+assert.equal(manifest.name, brandName('ar'), 'PWA manifest must use the Arabic brand name.');
+assert.equal(manifest.lang, 'ar', 'Shared PWA manifest should retain the Arabic primary locale.');
+assert.equal(manifest.dir, 'rtl', 'Arabic PWA manifest should use RTL direction.');
+assert.equal(manifest.start_url, '/', 'PWA manifest should launch the existing home route.');
+for (const [size, expectedSize] of [[192, 192], [512, 512]]) {
+  const icon = manifest.icons.find((candidate) => candidate.sizes === `${size}x${size}`);
+  assert.ok(icon, `PWA manifest is missing its ${size}px icon.`);
+  const iconFile = exportedFile(icon.src);
+  assert.ok(iconFile, `PWA icon is missing from export: ${icon.src}`);
+  assert.deepEqual(dims(iconFile), { w: expectedSize, h: expectedSize, bytes: fs.statSync(iconFile).size }, `Incorrect PWA icon dimensions: ${icon.src}`);
+}
+const favicon = exportedFile('/assets/logo/akasha-favicon.ico');
+assert.ok(favicon, 'Multi-size favicon is missing from the export.');
+const faviconBytes = fs.readFileSync(favicon);
+assert.equal(faviconBytes.readUInt16LE(0), 0, 'Favicon ICO reserved field must be zero.');
+assert.equal(faviconBytes.readUInt16LE(2), 1, 'Favicon file must use the ICO format.');
+assert.equal(faviconBytes.readUInt16LE(4), 4, 'Favicon ICO should contain four common sizes.');
+const browserFavicon = exportedFile('/favicon.ico');
+assert.ok(browserFavicon, 'Next.js browser favicon is missing from the export.');
+assert.equal(fs.readFileSync(browserFavicon).readUInt16LE(4), 4, 'Browser favicon should contain four common sizes.');
+const appleIcon = exportedFile('/apple-icon.png');
+assert.ok(appleIcon, 'Apple touch icon is missing from the export.');
+assert.deepEqual(dims(appleIcon), { w: 180, h: 180, bytes: fs.statSync(appleIcon).size }, 'Incorrect Apple touch icon dimensions.');
+
+for (const [locale, logoPath] of Object.entries(siteConfig.logo)) {
+  const logoFile = exportedFile(logoPath);
+  assert.ok(logoFile, `Configured ${locale} logo is missing from the export: ${logoPath}`);
+  if (logoPath.endsWith('.svg')) {
+    const svg = fs.readFileSync(logoFile, 'utf8');
+    assert.match(svg, /^<svg\b/i, `Configured logo is not an SVG: ${logoPath}`);
+    assert.match(svg, /<title\b/i, `Configured SVG logo needs an accessible title: ${logoPath}`);
+  }
+}
+for (const logoPath of [
+  '/assets/logo/akasha-logo.svg',
+  '/assets/logo/akasha-logo-light.svg',
+  '/assets/logo/akasha-logo-dark.svg',
+  '/assets/logo/akasha-logo-horizontal.svg',
+  '/assets/logo/akasha-logo-vertical.svg',
+]) {
+  assert.ok(exportedFile(logoPath), `Missing standalone logo asset: ${logoPath}`);
+}
+for (const [locale, imagePath] of [['ar', '/og-default.jpg'], ['en', '/og-default-en.jpg']]) {
+  const imageFile = exportedFile(imagePath);
+  assert.ok(imageFile, `Missing ${locale} default social image: ${imagePath}`);
+  assert.deepEqual(dims(imageFile), { w: 1200, h: 630, bytes: fs.statSync(imageFile).size }, `Incorrect ${locale} social image dimensions.`);
+}
+assert.equal(
+  buildMetadata({ path: '/en/about/', locale: 'en' }).openGraph.images[0].url,
+  `${BASE}/og-default-en.jpg`,
+  'English metadata must use its localized default Open Graph image.'
+);
+const arabicHome = readRoute('/');
+const englishMovie = readRoute('/en/movies/evil-dead-wrath/');
+assert.ok(arabicHome.includes('أكاشا سينما'), 'Arabic header/footer should render the Arabic brand name.');
+assert.ok(englishMovie.includes('Akasha Cenima'), 'English header/footer should render the English brand name.');
+assert.ok(arabicHome.includes('src="/assets/logo/akasha-favicon-192.png"'), 'Arabic header/footer should use the configured brand mark.');
+assert.ok(englishMovie.includes('src="/assets/logo/akasha-favicon-192.png"'), 'English header/footer should use the configured brand mark.');
+
 assert.ok(fs.existsSync(path.join(OUT, '404.html')), 'Custom 404.html is missing.');
 assert.ok(!fs.existsSync(path.join(OUT, '404', 'index.html')), 'A /404/ path would be served as a 200 page.');
 for (const route of ['/reviews/__no-content__/', '/lists/__no-content__/']) {
@@ -220,6 +339,7 @@ assert.equal((notFound.match(/<h1\b/gi) ?? []).length, 1, '404 page should have 
 
 /* ---- Structured data is valid JSON and has no invented exact release dates/ratings ---- */
 let schemaCount = 0;
+const schemaTypes = new Set();
 for (const file of walkHtml(OUT)) {
   const html = fs.readFileSync(file, 'utf8');
   for (const [, json] of html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
@@ -227,6 +347,9 @@ for (const file of walkHtml(OUT)) {
     const records = Array.isArray(data) ? data : [data];
     for (const record of records) {
       schemaCount++;
+      for (const type of Array.isArray(record['@type']) ? record['@type'] : [record['@type']]) {
+        if (type) schemaTypes.add(type);
+      }
       assert.ok(record['@context'] === 'https://schema.org', `Unexpected JSON-LD context in ${path.relative(OUT, file)}`);
       assert.doesNotMatch(JSON.stringify(record), /aggregateRating/, 'Aggregate ratings are not supported by real user data.');
       if (record.datePublished) {
@@ -236,6 +359,9 @@ for (const file of walkHtml(OUT)) {
   }
 }
 assert.ok(schemaCount > 0, 'Expected JSON-LD on the static export.');
+for (const type of ['Organization', 'WebSite', 'Movie', 'TVSeries', 'Person', 'BreadcrumbList']) {
+  assert.ok(schemaTypes.has(type), `Expected Schema.org ${type} data on the static export.`);
+}
 
 /* ---- Local poster assets and image byte budget ---- */
 let posterCount = 0;
@@ -271,8 +397,9 @@ assert.deepEqual(brokenImages, [], `Broken local image URLs:\n${brokenImages.joi
 
 console.log(
   `✅ SEO/export audit: ${sitemapUrls.length} canonical sitemap URLs (+ byte-identical /sitemap-all.xml mirror); ${movies.length} reciprocal ar/en movie pairs; ` +
+    `${sitemapTitles.size} unique 50–60 character titles and 150–160 character descriptions; 2 localized share images and PWA icons validated; ` +
     `${noIndexRoutes.length} noindex utility/empty pages excluded; ${posterCount} local posters ≤200 KiB; ` +
-    `${schemaCount} JSON-LD objects parsed; ${htmlFiles.length} HTML documents checked for internal links/images.`
+    `${schemaCount} JSON-LD objects across ${schemaTypes.size} Schema.org types parsed; ${htmlFiles.length} HTML documents checked for internal links/images.`
 );
 
 function walkHtml(dir, result = []) {

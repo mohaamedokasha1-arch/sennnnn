@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about Frozen 3 (2027): Jennifer Lee returns to wri
 poster: "/posters/frozen-3.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم فروزن 3 (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Frozen 3 (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Frozen 3 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

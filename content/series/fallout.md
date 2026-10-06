@@ -18,7 +18,7 @@ seasons:
 poster: "/posters/fallout.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «فول أوت» (2024) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Fallout (2024) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Fallout (2024) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "فول أوت (Fallout) 2024–مستمر | 2 موسمان · 16 حلقة · برايم فيديو"
 seoDescription: "كل ما تريد معرفته عن مسلسل فول أوت (Fallout): 2 موسمان · 16 حلقة، العرض 2024–مستمر، الحالة: مستمر، المنصة: برايم فيديو. بعد مئتي عام من حرب نووية، تخرج شابة من ملجأ تحت الأرض إلى أرض قاحلة غريبة، فتكتشف أن العالم الذي تركه البشر لم يمت بل تحوّل. مقتبس من سلسلة الألعاب…"

@@ -17,6 +17,7 @@
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
+import { brandName } from '../lib/brand.mjs';
 
 const port = Number(process.argv[2] ?? 4000);
 const root = path.resolve(process.cwd(), process.argv[3] ?? 'out');
@@ -112,5 +113,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, '0.0.0.0', () => {
-  console.log(`\n🎬  معاينة أكاشا سينما تعمل الآن:  http://localhost:${port}\n    (المجلد: ${path.relative(process.cwd(), root)} — أوقف التشغيل بـ Ctrl+C)\n`);
+  console.log(`\n🎬  معاينة ${brandName('ar')} تعمل الآن:  http://localhost:${port}\n    (المجلد: ${path.relative(process.cwd(), root)} — أوقف التشغيل بـ Ctrl+C)\n`);
 });

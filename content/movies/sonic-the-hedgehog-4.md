@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about Sonic the Hedgehog 4 (2027): Sonic and newco
 poster: "/posters/sonic-the-hedgehog-4.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم القنفذ سونيك 4 (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Sonic the Hedgehog 4 (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Sonic the Hedgehog 4 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [jeff-fowler]

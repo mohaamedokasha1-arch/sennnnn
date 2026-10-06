@@ -18,7 +18,7 @@ seasons:
 poster: "/posters/the-pitt.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «ذا بيت» (2025) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for The Pitt (2025) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for The Pitt (2025) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "ذا بيت (The Pitt) 2025–مستمر | 2 موسمان · 30 حلقة · HBO Max"
 seoDescription: "كل ما تريد معرفته عن مسلسل ذا بيت (The Pitt): 2 موسمان · 30 حلقة، العرض 2025–مستمر، الحالة: مستمر، المنصة: HBO Max. داخل قسم الطوارئ في مستشفى بيتسبرغ، يقود الدكتور مايكل «روبي» روبينافيتش مناوبة واحدة من خمس عشرة ساعة، وكل حلقة توازي ساعة فعلية من ضغط العمل: حالات…"

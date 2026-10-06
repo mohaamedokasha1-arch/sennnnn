@@ -21,6 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import matter from 'gray-matter';
+import { brandName } from '../lib/brand.mjs';
 import { dims } from './img-dims.mjs';
 
 const ROOT = process.cwd();
@@ -124,11 +125,11 @@ function printedTitle(data, slug) {
 
 function arPosterAlt(data, printed) {
   const name = String(data.title || printed).trim();
-  return `غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «${name}»${data.year ? ` (${data.year})` : ''} — ليس البوستر الرسمي للعمل`;
+  return `غلاف تصميمي أصلي من إنتاج ${brandName('ar')} لمسلسل «${name}»${data.year ? ` (${data.year})` : ''} — ليس البوستر الرسمي للعمل`;
 }
 
 function enPosterAlt(printed, year) {
-  return `Original design cover created for Akasha Cinema for ${printed}${year ? ` (${year})` : ''} — not the official poster`;
+  return `Original design cover created for ${brandName('en')} for ${printed}${year ? ` (${year})` : ''} — not the official poster`;
 }
 
 function patchFrontMatter(md, { poster, ar, en }) {
@@ -202,6 +203,7 @@ for (const file of files) {
           '--title', printed,
           '--year', String(data.year ?? ''),
           '--kicker', kicker,
+          '--brand', brandName('en'),
         ],
         { stdio: ['ignore', 'pipe', 'inherit'] }
       );

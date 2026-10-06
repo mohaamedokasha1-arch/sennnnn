@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { t } from '@/lib/i18n.mjs';
+import { brandName } from '@/lib/brand.mjs';
 import { highlightParts, matchTokens, scoreItem, snippet } from '@/lib/highlight.mjs';
 import { EmptyState } from './ui.jsx';
 import { WorkGrid, ReviewCard, PersonCard } from './cards.jsx';
@@ -147,7 +148,7 @@ export default function SearchResults({ latest = [], genres = [] }) {
                           year={r.year}
                           alt={
                             r.posterDesign
-                              ? `غلاف تصميمي أصلي من إنتاج أكاشا سينما لـ ${r.title} — ليس البوستر الرسمي`
+                              ? `غلاف تصميمي أصلي من إنتاج ${brandName('ar')} لـ ${r.title} — ليس البوستر الرسمي`
                               : `بوستر ${r.title}`
                           }
                           width={600}

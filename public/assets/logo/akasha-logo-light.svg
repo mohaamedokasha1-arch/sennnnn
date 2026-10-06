@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="96" viewBox="0 0 500 96" role="img" aria-labelledby="title desc">
+  <title id="title">أكاشا سينما — Akasha Cenima</title>
+  <desc id="desc">شعار أكاشا سينما الملائم للخلفيات الفاتحة.</desc>
+  <defs>
+    <linearGradient id="akashaTileLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7CBEE3"/><stop offset="1" stop-color="#1D3A4D"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0 0)">
+    <rect x="1" y="1" width="94" height="94" rx="22.5" fill="url(#akashaTileLight)"/>
+    <rect x="1.5" y="1.5" width="93" height="93" rx="22" fill="none" stroke="#FFFFFF" stroke-opacity=".22"/>
+    <path d="M35 28v40l33-20z" fill="#06161F"/>
+    <path d="m68 12 3.2 10.8L82 26l-10.8 3.2L68 40l-3.2-10.8L54 26l10.8-3.2z" fill="#EAF6FF"/>
+  </g>
+  <text x="120" y="57" text-anchor="start" font-family="DejaVu Sans, Verdana, sans-serif" font-size="42" font-weight="700" fill="#13202A">Akasha Cenima</text>
+  <text x="120" y="86" text-anchor="start" direction="rtl" unicode-bidi="bidi-override" font-family="IBM Plex Sans Arabic, Noto Kufi Arabic, Tahoma, sans-serif" font-size="20" font-weight="600" fill="#246A8D">أكاشا سينما</text>
+</svg>

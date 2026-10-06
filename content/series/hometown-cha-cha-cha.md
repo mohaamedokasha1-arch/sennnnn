@@ -14,7 +14,7 @@ seasons:
 poster: "/posters/hometown-cha-cha-cha.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «هوم تاون تشا تشا تشا» (2021) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Hometown Cha-Cha-Cha (2021) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Hometown Cha-Cha-Cha (2021) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "هوم تاون تشا تشا تشا (Hometown Cha-Cha-Cha) 2021 | 1 موسم · 16 حلقة · tvN / نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل هوم تاون تشا تشا تشا (Hometown Cha-Cha-Cha): 1 موسم · 16 حلقة، العرض 2021، الحالة: منتهٍ، المنصة: tvN / نتفليكس. طبيبة أسنان من سيول تنتقل إلى قرية ساحلية صغيرة وتفتح عيادة فيها، فتصطدم برجل يصلح كل شيء في القرية ولا يملك وظيفة ثابتة. رومانسية دافئة عن المدينة…"

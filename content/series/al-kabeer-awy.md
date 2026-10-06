@@ -11,7 +11,7 @@ seasons: []
 poster: "/posters/al-kabeer-awy.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الكبير أوي» (2010) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Al Kabeer Awi (2010) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Al Kabeer Awi (2010) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الكبير أوي (Al Kabeer Awi) 2010 | بيانات المواسم غير مكتملة · قنوات مصرية (منها CBC وON) / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل الكبير أوي (Al Kabeer Awi): بيانات المواسم غير مكتملة، العرض 2010، الحالة: منتهٍ، المنصة: قنوات مصرية (منها CBC وON) / شاهد. الكبير، عمدة قرية «المزاريطة» الصعيدية، يواجه يوميات عبثية مع شقيقه التوأم جوني القادم من أمريكا وأهل القرية. كوميديا شعبية صارت جزءًا من الثقافة…"

@@ -18,7 +18,7 @@ seasons:
 poster: "/posters/the-gentlemen.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «السادة» (2024) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for The Gentlemen (2024) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for The Gentlemen (2024) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "السادة (The Gentlemen) 2024–مستمر | 2 موسمان · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل السادة (The Gentlemen): 2 موسمان · 16 حلقة، العرض 2024–مستمر، الحالة: مستمر، المنصة: نتفليكس. إيدي هورنيمان يرث لقب دوق وإقطاعية شاسعة، ليكتشف أن تحت أرضها تعمل إمبراطورية قنّب غير مشروعة. بين أرستقراطية بريطانية متعالية وعصابات شديدة…"

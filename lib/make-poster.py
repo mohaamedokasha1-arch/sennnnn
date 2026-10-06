@@ -369,7 +369,7 @@ def wrap_words(draw, text, font, max_width):
     return lines
 
 
-def render_text(img, title=None, year=None, kicker=None, note=None):
+def render_text(img, title=None, year=None, kicker=None, note=None, brand=None):
     """طبقة العنوان أسفل البوستر: تُستخدم فقط في البطاقات التصميمية الأصلية."""
     if not (title or kicker or note):
         return img
@@ -422,8 +422,9 @@ def render_text(img, title=None, year=None, kicker=None, note=None):
         for i, line in enumerate(lines):
             d.text((left, top + i * line_h), line, font=f_title, fill=(246, 248, 252, 255))
 
-    f_mark = load_font("IBMPlexSansArabic-SemiBold.ttf", 15)
-    d.text((left, 46), track("CINEMANA", 2), font=f_mark, fill=(196, 206, 222, 150))
+    if brand:
+        f_mark = load_font("IBMPlexSansArabic-SemiBold.ttf", 15)
+        d.text((left, 46), track(str(brand).upper(), 2), font=f_mark, fill=(196, 206, 222, 150))
     return img
 
 
@@ -444,7 +445,7 @@ STYLES = {
 MOTIF_STYLES = {"noir", "teal", "rose", "sand", "crimson", "ink"}
 
 
-def build(slug, style="warm", out_dir="public/posters", title=None, year=None, kicker=None, note=None, motif=None):
+def build(slug, style="warm", out_dir="public/posters", title=None, year=None, kicker=None, note=None, motif=None, brand=None):
     pal = PALETTES.get(style, PALETTES["warm"])
     # تنويع مميز لكل عمل: بذرة مشتقة من المعرّف حتى لا يتطابق بوستر عملين مختلفين
     seed = zlib.crc32(slug.encode("utf-8")) & 0xFFFFFFFF
@@ -472,7 +473,8 @@ def build(slug, style="warm", out_dir="public/posters", title=None, year=None, k
         title=title,
         year=year,
         kicker=kicker,
-        note=note if note is not None else ("Original design cover created for Akasha Cinema — not the official poster." if title else None),
+        note=note if note is not None else ((f"Original design cover created for {brand} — not the official poster." if brand else "Original design cover — not the official poster.") if title else None),
+        brand=brand,
     )
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, f"{slug}.jpg")
@@ -490,6 +492,7 @@ if __name__ == "__main__":
     ap.add_argument("--kicker", default=None, help="سطر صغير فوق العنوان، مثل TV SERIES")
     ap.add_argument("--note", default=None, help="ملاحظة التوضيح أسفل البطاقة")
     ap.add_argument("--motif", default=None, choices=sorted(MOTIFS), help="الزخرفة الهندسية للخلفية")
+    ap.add_argument("--brand", default=None, help="Optional localized brand name printed on the cover")
     a = ap.parse_args()
     build(
         a.slug,
@@ -500,4 +503,5 @@ if __name__ == "__main__":
         kicker=a.kicker,
         note=a.note,
         motif=a.motif,
+        brand=a.brand,
     )

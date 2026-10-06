@@ -18,7 +18,7 @@ seasons:
 poster: "/posters/the-last-of-us.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «ذا لاست أوف أس» (2023) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for The Last of Us (2023) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for The Last of Us (2023) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "ذا لاست أوف أس (The Last of Us) 2023–مستمر | 2 موسمان · 16 حلقة · HBO / Max"
 seoDescription: "كل ما تريد معرفته عن مسلسل ذا لاست أوف أس (The Last of Us): 2 موسمان · 16 حلقة، العرض 2023–مستمر، الحالة: مستمر، المنصة: HBO / Max. بعد عشرين عامًا على انهيار الحضارة بفعل عدوى فطرية، يُكلّف المهرّب جول بتهريب المراهقة إيلي عبر الولايات المتحدة، لأن مناعتها قد تحمل مفتاح العلاج.…"

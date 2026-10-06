@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about Man of Tomorrow (2027): James Gunn's Superma
 poster: "/posters/man-of-tomorrow.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم رجل الغد Man of Tomorrow (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Man of Tomorrow (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Man of Tomorrow (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [james-gunn]

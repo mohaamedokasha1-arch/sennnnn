@@ -15,7 +15,7 @@ seasons:
 poster: "/posters/rashash.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «رشاش» (2021) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Rashash (2021) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Rashash (2021) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "رشاش (Rashash) 2021 | 1 موسم · 8 حلقة · شاهد VIP"
 seoDescription: "كل ما تريد معرفته عن مسلسل رشاش (Rashash): 1 موسم · 8 حلقة، العرض 2021، الحالة: منتهٍ، المنصة: شاهد VIP. من أرشيف المباحث الجنائية: قصة رشاش الشيباني الذي كوّن عصابة في ثمانينيات القرن الماضي، والمطاردة الطويلة التي خاضها الضابط فهد للإيقاع به. دراما…"

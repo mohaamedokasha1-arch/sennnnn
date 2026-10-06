@@ -15,7 +15,7 @@ seasons:
 poster: "/posters/al-ameel.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «العميل» (2024) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Al Ameer (2024) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Al Ameer (2024) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "العميل (Al Ameer) 2024 | 1 موسم · 90 حلقة · شاهد / MBC1"
 seoDescription: "كل ما تريد معرفته عن مسلسل العميل (Al Ameer): 1 موسم · 90 حلقة، العرض 2024، الحالة: منتهٍ، المنصة: شاهد / MBC1. أخوان فرّقهما القدر منذ الصغر: أحدهما يكبر ليصير ضابط شرطة يُزرع داخل عصابة، والآخر ينشأ داخلها. صراع الأخوة الأعداء في نسخة عربية من المسلسل التركي…"

@@ -11,7 +11,7 @@ seasons: []
 poster: "/posters/yargi.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الحكم» (2021) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Yargı (2021) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Yargı (2021) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الحكم (Yarg) 2021 | بيانات المواسم غير مكتملة · Kanal D"
 seoDescription: "كل ما تريد معرفته عن مسلسل الحكم (Yarg): بيانات المواسم غير مكتملة، العرض 2021، الحالة: منتهٍ، المنصة: Kanal D. مدّعٍ عام صارم ومحامية دفاع عنيدة يجدان نفسيهما في قضية قتل تقلب حياتهما، فيتعاملان مع القانون من طرفين متقابلين. جريمة وغموض ورومانسية داخل أروقة…"

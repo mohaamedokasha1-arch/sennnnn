@@ -27,7 +27,7 @@ seasons:
 poster: "/posters/stranger-things.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «أشياء غريبة» (2016) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Stranger Things (2016) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Stranger Things (2016) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "أشياء غريبة (Stranger Things) 2016–2025 | 5 مواسم · 42 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل أشياء غريبة (Stranger Things): 5 مواسم · 42 حلقة، العرض 2016–2025، الحالة: منتهٍ، المنصة: نتفليكس. في بلدة هوكينز الصغيرة عام 1983 يختفي طفل في ظروف غامضة، فيفتح اختفاؤه بابًا على تجارب حكومية سرية وعالم موازٍ مرعب وفتاة ذات قدرات خارقة. على امتداد…"

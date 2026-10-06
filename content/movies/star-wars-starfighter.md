@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about Star Wars: Starfighter (2027): a standalone 
 poster: "/posters/star-wars-starfighter.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم حرب النجوم: ستارفايتر (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Star Wars: Starfighter (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Star Wars: Starfighter (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [shawn-levy]

@@ -17,7 +17,7 @@ seoDescriptionEn: "Everything about The Exorcist: Martyrs (2027): a new Exorcist
 poster: "/posters/the-exorcist-martyrs.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم طارد الأرواح: الشهداء (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for The Exorcist: Martyrs (2027) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for The Exorcist: Martyrs (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [mike-flanagan]

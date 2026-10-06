@@ -23,7 +23,7 @@ seasons:
 poster: "/posters/how-to-sell-drugs-online.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «كيف تبيع المخدرات أونلاين» (2019) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for How to Sell Drugs Online (2019) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for How to Sell Drugs Online (2019) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "كيف تبيع المخدرات أونلاين (How to Sell Drugs Online) 2019–2025 | 4 مواسم · 24 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل كيف تبيع المخدرات أونلاين (How to Sell Drugs Online): 4 مواسم · 24 حلقة، العرض 2019–2025، الحالة: غير مؤكدة، المنصة: نتفليكس. مراهق ألماني يبدأ ببيع المخدرات من غرفته ليستعيد حبيبته، فتتحوّل فكرته الصغيرة إلى أحد أكبر متاجر الإنترنت غير المشروعة في أوروبا. كوميديا سوداء…"

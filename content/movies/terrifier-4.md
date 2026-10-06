@@ -21,7 +21,7 @@ seoDescriptionEn: "Everything about Terrifier 4 (2026): Damien Leone calls it th
 poster: "/posters/terrifier-4.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
 posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم المرعب 4 (2026) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Akasha Cinema for Terrifier 4 (2026) — not the official poster"
+posterAltEn: "Original design cover created for Akasha Cenima for Terrifier 4 (2026) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [damien-leone]
