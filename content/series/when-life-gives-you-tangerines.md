@@ -13,8 +13,8 @@ seasons:
     year: 2025
 poster: "/posters/when-life-gives-you-tangerines.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «حين تهبك الحياة يوسفي» (2025) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for When Life Gives You Tangerines (2025) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «حين تهبك الحياة يوسفي» (2025) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for When Life Gives You Tangerines (2025) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "حين تهبك الحياة يوسفي (When Life Gives You Tangerines) 2025 | 1 موسم · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل حين تهبك الحياة يوسفي (When Life Gives You Tangerines): 1 موسم · 16 حلقة، العرض 2025، الحالة: منتهٍ، المنصة: نتفليكس. قصة حب تمتد خمسين عامًا بين آ سون المتمرّدة وغوان شيك الصامت، تبدأ في جزيرة جيجو في الستينيات وتتابعها ابنتهما. دراما عائلية هادئة عن الفقر والعمل…"

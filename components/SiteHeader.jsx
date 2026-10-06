@@ -1,12 +1,13 @@
 import Link from 'next/link';
-import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import HeaderSearch from './HeaderSearch.jsx';
 import { IconHeart } from './Icons.jsx';
+import { BrandBlock } from './Brand.jsx';
 
 /**
  * الشريط العلوي: الشعار + التنقل (سطح المكتب) + البحث الفوري + رابط المفضلة.
  * الاسم والشعار واللون كلها تأتي من site.config.mjs — تغييرها لا يمسّ هذا الملف.
+ * الاسم والشعار يتبدلان ديناميكيًا حسب اللغة النشطة (أكاشا سينما / Akasha Cinema).
  */
 export default function SiteHeader() {
   const nav = [
@@ -20,19 +21,7 @@ export default function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="brand" aria-label={`${siteConfig.siteName} — الصفحة الرئيسية`}>
-          {siteConfig.logoImage ? (
-            <img src={siteConfig.logoImage} alt={siteConfig.siteName} width={38} height={38} />
-          ) : (
-            <span className="brand-mark" aria-hidden="true">
-              {(siteConfig.logoText || siteConfig.siteName).slice(0, 1)}
-            </span>
-          )}
-          <span className="brand-text">
-            <span className="brand-name">{siteConfig.logoText || siteConfig.siteName}</span>
-            <span className="brand-latin">{siteConfig.siteNameLatin}</span>
-          </span>
-        </Link>
+        <BrandBlock linked />
 
         <nav className="main-nav" aria-label="التنقل الرئيسي">
           {nav.map((n) => (

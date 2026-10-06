@@ -13,8 +13,8 @@ seasons:
     year: 2024
 poster: "/posters/lovely-runner.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «لوفلي رانر» (2024) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Lovely Runner (2024) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «لوفلي رانر» (2024) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Lovely Runner (2024) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "لوفلي رانر (Lovely Runner) 2024 | 1 موسم · 16 حلقة · tvN"
 seoDescription: "كل ما تريد معرفته عن مسلسل لوفلي رانر (Lovely Runner): 1 موسم · 16 حلقة، العرض 2024، الحالة: منتهٍ، المنصة: tvN. معجبة تفقد نجمها المفضل فتعود بالزمن خمسة عشر عامًا إلى أيام المدرسة، وتحاول إنقاذه من مصيره. رومانسية خيالية عن القدر والذاكرة والحب الذي يستحق…"

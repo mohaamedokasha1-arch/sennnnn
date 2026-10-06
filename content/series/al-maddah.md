@@ -10,8 +10,8 @@ status: ended
 seasons: []
 poster: "/posters/al-maddah.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «المداح» (2021) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Al Maddah (2021) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «المداح» (2021) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Al Maddah (2021) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "المداح (Al Maddah) 2021 | بيانات المواسم غير مكتملة · MBC مصر / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل المداح (Al Maddah): بيانات المواسم غير مكتملة، العرض 2021، الحالة: منتهٍ، المنصة: MBC مصر / شاهد. صابر المدّاح، رجل يملك قدرة غير مفسَّرة على التعامل مع عالم الجن والسحر، يجد نفسه في مواجهة قوى خفية وقضايا تمسّ الناس البسطاء. دراما رعب وغموض بإطار…"

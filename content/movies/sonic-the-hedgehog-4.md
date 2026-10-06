@@ -16,8 +16,8 @@ seoDescription: "كل ما تريد معرفته عن فيلم Sonic the Hedgeho
 seoDescriptionEn: "Everything about Sonic the Hedgehog 4 (2027): Sonic and newcomer Amy Rose face Metal Sonic, with Ben Schwartz, Kristen Bell, Keanu Reeves and Jim Carrey, directed by Jeff Fowler, in theaters March 19."
 poster: "/posters/sonic-the-hedgehog-4.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم القنفذ سونيك 4 (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Sonic the Hedgehog 4 (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم القنفذ سونيك 4 (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Sonic the Hedgehog 4 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [jeff-fowler]

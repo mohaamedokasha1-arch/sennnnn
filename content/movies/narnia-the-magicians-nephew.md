@@ -16,8 +16,8 @@ seoDescription: "كل ما تريد معرفته عن Narnia: The Magician's Nep
 seoDescriptionEn: "Everything about Narnia: The Magician's Nephew (2027): Greta Gerwig writes and directs Narnia's origin story with Meryl Streep, Daniel Craig and Emma Mackey, in IMAX and theaters February 12 and on Netflix April 2."
 poster: "/posters/narnia-the-magicians-nephew.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم نارنيا: ابن أخت الساحر (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Narnia: The Magician's Nephew (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم نارنيا: ابن أخت الساحر (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Narnia: The Magician's Nephew (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [greta-gerwig]

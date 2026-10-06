@@ -13,8 +13,8 @@ seasons:
     year: 2024
 poster: "/posters/queen-of-tears.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «ملكة الدموع» (2024) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Queen of Tears (2024) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «ملكة الدموع» (2024) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Queen of Tears (2024) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "ملكة الدموع (Queen of Tears) 2024 | 1 موسم · 16 حلقة · tvN / نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل ملكة الدموع (Queen of Tears): 1 موسم · 16 حلقة، العرض 2024، الحالة: منتهٍ، المنصة: tvN / نتفليكس. زواج على وشك الانهيار بين وريثة إمبراطورية تجارية ومحامٍ من قرية ريفية، يعيد اكتشاف نفسه حين تُصاب الزوجة بمرض نادر. دراما رومانسية عن العائلة والمال…"

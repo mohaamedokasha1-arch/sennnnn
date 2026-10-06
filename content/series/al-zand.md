@@ -14,8 +14,8 @@ seasons:
     year: 2023
 poster: "/posters/al-zand.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «الزند: ذئب العاصي» (2023) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Al Zand: Dheeb Al Aasi (2023) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الزند: ذئب العاصي» (2023) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Al Zand: Dheeb Al Aasi (2023) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الزند: ذئب العاصي (Al Zand: Dheeb Al Aasi) 2023 | 1 موسم · 30 حلقة · MBC دراما / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل الزند: ذئب العاصي (Al Zand: Dheeb Al Aasi): 1 موسم · 30 حلقة، العرض 2023، الحالة: منتهٍ، المنصة: MBC دراما / شاهد. على ضفاف نهر العاصي أوائل القرن العشرين، يعود شاب من الخدمة العسكرية ليجد أرض عائلته ونفوذ الإقطاع في مواجهته. دراما بيئة شامية-ساحلية عن الأرض…"

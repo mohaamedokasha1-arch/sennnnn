@@ -16,8 +16,8 @@ seoDescription: "كل ما تريد معرفته عن Avengers: Secret Wars: ا�
 seoDescriptionEn: "Everything about Avengers: Secret Wars (2027): the Russo brothers return with Robert Downey Jr. as Doctor Doom, the finale of the Multiverse Saga, in theaters May 7."
 poster: "/posters/avengers-secret-wars.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم المنتقمون: الحروب السرية (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Avengers: Secret Wars (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم المنتقمون: الحروب السرية (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Avengers: Secret Wars (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

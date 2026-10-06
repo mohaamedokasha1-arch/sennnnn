@@ -16,8 +16,8 @@ seasons:
     year: 2022
 poster: "/posters/kulup.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «النادي» (2021) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Kulüp (2021) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «النادي» (2021) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Kulüp (2021) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "النادي (Kulüp) 2021–2022 | 2 موسمان · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل النادي (Kulüp): 2 موسمان · 16 حلقة، العرض 2021–2022، الحالة: منتهٍ، المنصة: نتفليكس. إسطنبول في الخمسينيات: أمّ خارجة من السجن تعمل في ملهى ليلي لتقترب من ابنتها التي لا تعرفها، وسط مجتمع متعدد الأعراق والديانات على وشك التغيّر إلى…"

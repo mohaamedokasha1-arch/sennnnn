@@ -124,11 +124,11 @@ function printedTitle(data, slug) {
 
 function arPosterAlt(data, printed) {
   const name = String(data.title || printed).trim();
-  return `غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «${name}»${data.year ? ` (${data.year})` : ''} — ليس البوستر الرسمي للعمل`;
+  return `غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «${name}»${data.year ? ` (${data.year})` : ''} — ليس البوستر الرسمي للعمل`;
 }
 
 function enPosterAlt(printed, year) {
-  return `Original design cover created for Cinemana for ${printed}${year ? ` (${year})` : ''} — not the official poster`;
+  return `Original design cover created for Akasha Cinema for ${printed}${year ? ` (${year})` : ''} — not the official poster`;
 }
 
 function patchFrontMatter(md, { poster, ar, en }) {

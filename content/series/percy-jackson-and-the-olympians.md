@@ -17,8 +17,8 @@ seasons:
     year: 2025
 poster: "/posters/percy-jackson-and-the-olympians.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «بيرسي جاكسون والآلهة الأولمبية» (2023) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Percy Jackson and the Olympians (2023) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «بيرسي جاكسون والآلهة الأولمبية» (2023) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Percy Jackson and the Olympians (2023) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "بيرسي جاكسون والآلهة الأولمبية (Percy Jackson and the Olympians) 2023–مستمر | 2 موسمان · 16 حلقة · ديزني+"
 seoDescription: "كل ما تريد معرفته عن مسلسل بيرسي جاكسون والآلهة الأولمبية (Percy Jackson and the Olympians): 2 موسمان · 16 حلقة، العرض 2023–مستمر، الحالة: مستمر، المنصة: ديزني+. يكتشف الفتى بيرسي جاكسون أنه ابن إله يوناني، فيدخل عالم الآلهة والوحوش، ويُكلَّف بمهمة لاستعادة ما سُرق من الأوليمب قبل أن تنفجر حرب بينها. مقتبس من…"

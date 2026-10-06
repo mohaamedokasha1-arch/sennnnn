@@ -29,8 +29,8 @@ seasons:
     year: 2026
 poster: "/posters/slow-horses.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «الخيول البطيئة» (2022) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Slow Horses (2022) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الخيول البطيئة» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Slow Horses (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الخيول البطيئة (Slow Horses) 2022–مستمر | 6 مواسم · 36 حلقة · آبل تي في+"
 seoDescription: "كل ما تريد معرفته عن مسلسل الخيول البطيئة (Slow Horses): 6 مواسم · 36 حلقة، العرض 2022–مستمر، الحالة: مستمر، المنصة: آبل تي في+. «سلو هاوس» قسم منبوذ في جهاز MI5 يُرسل إليه العملاء الذين أفسدوا مهامهم، تحت قيادة جاكسون لامب الفظّ. ومع ذلك، كلما حاولت المؤسسة تجاهلهم، تبيّن أنهم…"

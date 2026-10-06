@@ -1,0 +1,25 @@
+import siteConfig from '@/site.config.mjs';
+import { brandName } from '@/lib/brand.mjs';
+
+/**
+ * تخطيط القسم الإنجليزي — بيانات وصفية (SEO) فقط، بلا أي تغيير في DOM أو التصميم:
+ * يجعل عناوين الصفحات الإنجليزية ووسوم المشاركة تحمل الاسم الإنجليزي
+ * «Akasha Cinema» بدل الاسم العربي، بينما يبقى الجذر عربيًا (RTL).
+ * إعادة `children` كما هي لا تُنتج أي عنصر إضافي في الصفحة.
+ */
+const enName = brandName('en');
+
+export const metadata = {
+  title: {
+    default: `${enName} — ${siteConfig.sloganEn || siteConfig.slogan}`,
+    template: `%s | ${enName}`,
+  },
+  applicationName: enName,
+  openGraph: {
+    siteName: enName,
+  },
+};
+
+export default function EnglishSectionLayout({ children }) {
+  return children;
+}

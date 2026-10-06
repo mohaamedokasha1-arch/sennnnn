@@ -19,8 +19,8 @@ seasons:
     year: 2024
 poster: "/posters/sweet-home.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «البيت الحلو» (2020) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Sweet Home (2020) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «البيت الحلو» (2020) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Sweet Home (2020) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "البيت الحلو (Sweet Home) 2020–2024 | 3 مواسم · 26 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل البيت الحلو (Sweet Home): 3 مواسم · 26 حلقة، العرض 2020–2024، الحالة: منتهٍ، المنصة: نتفليكس. مراهق منعزل ينتقل إلى مجمع سكني قديم، لتبدأ البشرية بالتحوّل إلى وحوش تعكس رغباتها. الناجون يتحصّنون داخل المبنى ويكتشفون أن الخطر ليس في الخارج…"

@@ -15,8 +15,8 @@ seoDescription: "كل ما تريد معرفته عن فيلم Jumanji: Open Wor
 seoDescriptionEn: "Everything about Jumanji: Open World (2026): the game's perils escaping into the real world, Dwayne Johnson, Kevin Hart and Jack Black, directed by Jake Kasdan, in theaters December 25, with the official trailer."
 poster: "/posters/jumanji-open-world.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم جومانجي: العالم المفتوح (2026) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Jumanji: Open World (2026) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم جومانجي: العالم المفتوح (2026) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Jumanji: Open World (2026) — not the official poster"
 addedAt: 2026-10-04
 featured: true
 directors: [jake-kasdan]

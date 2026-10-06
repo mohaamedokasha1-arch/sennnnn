@@ -13,8 +13,8 @@ seasons:
     year: 2026
 poster: "/posters/seni-taniyorum.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «لست غريبًا» (2026) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Seni Tanıyorum (2026) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «لست غريبًا» (2026) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Seni Tanıyorum (2026) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "لست غريبًا (Seni Tan) 2026 | 1 موسم · 8 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل لست غريبًا (Seni Tan): 1 موسم · 8 حلقة، العرض 2026، الحالة: غير مؤكدة، المنصة: نتفليكس. فوندا، رسّامة ابتعدت عن عملها بعد ولادة طفلها، توظّف مربية لتعود إلى المرسم. المربية نازلي كفؤة ودافئة وسرعان ما تصير ضرورية للبيت… وهذا بالضبط هو…"

@@ -20,8 +20,8 @@ seoDescription: "كل ما نعرفه عن Terrifier 4: داميان ليون ي
 seoDescriptionEn: "Everything about Terrifier 4 (2026): Damien Leone calls it the epic finale of the Art the Clown saga, with his origin revealed in the first 15 minutes, as David Howard Thornton and Lauren LaVera return for Halloween 2026."
 poster: "/posters/terrifier-4.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم المرعب 4 (2026) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Terrifier 4 (2026) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم المرعب 4 (2026) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Terrifier 4 (2026) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [damien-leone]

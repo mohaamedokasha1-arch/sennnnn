@@ -20,8 +20,8 @@ seasons:
     year: 2020
 poster: "/posters/dark.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «دارك» (2017) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Dark (2017) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «دارك» (2017) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Dark (2017) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "دارك (Dark) 2017–2020 | 3 مواسم · 26 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل دارك (Dark): 3 مواسم · 26 حلقة، العرض 2017–2020، الحالة: منتهٍ، المنصة: نتفليكس. اختفاء طفل في بلدة فيندن الألمانية الصغيرة يكشف أن أربع عائلات مرتبطة بثغرة زمنية تمتد عبر ثلاثة أجيال. ألغاز معقّدة تُبنى بعناية رياضية، ولا تُحل…"

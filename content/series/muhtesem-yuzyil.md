@@ -22,8 +22,8 @@ seasons:
     year: 2013
 poster: "/posters/muhtesem-yuzyil.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «حريم السلطان» (2011) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Muhteşem Yüzyıl (2011) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «حريم السلطان» (2011) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Muhteşem Yüzyıl (2011) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "حريم السلطان (Muhte) 2011–2013 | 4 مواسم · 139 حلقة · Show TV ثم Star TV"
 seoDescription: "كل ما تريد معرفته عن مسلسل حريم السلطان (Muhte): 4 مواسم · 139 حلقة، العرض 2011–2013، الحالة: منتهٍ، المنصة: Show TV ثم Star TV. في بلاط السلطان سليمان القانوني، تصعد هُرَّم من جارية إلى أقوى امرأة في الإمبراطورية العثمانية. دراما تاريخية عن الحب والسلطة والدسائس داخل القصر،…"

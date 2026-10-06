@@ -1,9 +1,9 @@
 {
-  "name": "cinemana",
+  "name": "akasha-cinema",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "سينمانا — منصة عربية لاكتشاف الأفلام والمسلسلات (محتوى ثابت، بدون أي API خارجي)",
+  "description": "أكاشا سينما (Akasha Cinema) — منصة عربية لاكتشاف الأفلام والمسلسلات (محتوى ثابت، بدون أي API خارجي)",
   "scripts": {
     "validate": "node lib/validate.mjs",
     "test:content": "node lib/test-validation.mjs",
