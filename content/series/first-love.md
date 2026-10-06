@@ -14,8 +14,8 @@ seasons:
     year: 2022
 poster: "/posters/first-love.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «الحب الأول» (2022) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for First Love (2022) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الحب الأول» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for First Love (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الحب الأول (First Love) 2022 | 1 موسم · 9 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل الحب الأول (First Love): 1 موسم · 9 حلقة، العرض 2022، الحالة: محدود بموسم واحد، المنصة: نتفليكس. قصة حب تمتد عشرين عامًا بين شاب طيّار وفتاة تحلم بأن تصبح مضيفة، تفصلها الظروف وحوادث الحياة ثم تعيدها المصادفة. دراما رومانسية يابانية مستوحاة من…"

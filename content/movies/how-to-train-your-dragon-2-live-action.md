@@ -16,8 +16,8 @@ seoDescription: "كل ما نعرفه عن How to Train Your Dragon 2 النسخ
 seoDescriptionEn: "Everything about the live-action How to Train Your Dragon 2 (2027): Dean DeBlois returns to direct, with Cate Blanchett as Valka and Ólafur Darri Ólafsson as Drago, from Universal, in theaters June 11."
 poster: "/posters/how-to-train-your-dragon-2-live-action.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم كيف تروض تنينك 2 النسخة الحية (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for the live-action How to Train Your Dragon 2 (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم كيف تروض تنينك 2 النسخة الحية (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for the live-action How to Train Your Dragon 2 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [dean-deblois]

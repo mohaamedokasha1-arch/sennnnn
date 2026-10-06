@@ -23,8 +23,8 @@ seasons:
     year: 2023
 poster: "/posters/succession.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «سكسيشن» (2018) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Succession (2018) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «سكسيشن» (2018) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Succession (2018) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "سكسيشن (Succession) 2018–2023 | 4 مواسم · 39 حلقة · HBO"
 seoDescription: "كل ما تريد معرفته عن مسلسل سكسيشن (Succession): 4 مواسم · 39 حلقة، العرض 2018–2023، الحالة: منتهٍ، المنصة: HBO. لوغان روي، إمبراطور الإعلام، يتقدّم في العمر وأبناؤه الأربعة يتصارعون على خلافته. حوار حادّ كأنه سلاح، ودراما عائلية عن المال والسلطة والعجز عن…"

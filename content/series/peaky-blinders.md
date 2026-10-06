@@ -29,8 +29,8 @@ seasons:
     year: 2022
 poster: "/posters/peaky-blinders.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «بيكي بلايندرز» (2013) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Peaky Blinders (2013) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «بيكي بلايندرز» (2013) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Peaky Blinders (2013) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "بيكي بلايندرز (Peaky Blinders) 2013–2022 | 6 مواسم · 36 حلقة · BBC (ومتوفر على نتفليكس)"
 seoDescription: "كل ما تريد معرفته عن مسلسل بيكي بلايندرز (Peaky Blinders): 6 مواسم · 36 حلقة، العرض 2013–2022، الحالة: منتهٍ، المنصة: BBC (ومتوفر على نتفليكس). برمنغهام بعد الحرب العالمية الأولى: تومي شيلبي يقود عصابة «بيكي بلايندرز» من شوارع المدينة إلى أروقة السياسة والأعمال، ويصطدم بالشرطة والشيوعيين…"

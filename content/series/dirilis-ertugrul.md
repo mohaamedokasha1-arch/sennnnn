@@ -25,8 +25,8 @@ seasons:
     year: 2018
 poster: "/posters/dirilis-ertugrul.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «قيامة أرطغرل» (2014) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Diriliş: Ertuğrul (2014) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «قيامة أرطغرل» (2014) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Diriliş: Ertuğrul (2014) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "قيامة أرطغرل (Dirili) 2014–2018 | 5 مواسم · 150 حلقة · TRT 1"
 seoDescription: "كل ما تريد معرفته عن مسلسل قيامة أرطغرل (Dirili): 5 مواسم · 150 حلقة، العرض 2014–2018، الحالة: منتهٍ، المنصة: TRT 1. ملحمة تاريخية عن أرطغرل بن سليمان شاه وقبيلة قايي في القرن الثالث عشر: صراع على البقاء بين المغول والبيزنطيين وأمراء الأناضول، ورحلة بحث عن أرض تقام…"

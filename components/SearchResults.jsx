@@ -147,7 +147,7 @@ export default function SearchResults({ latest = [], genres = [] }) {
                           year={r.year}
                           alt={
                             r.posterDesign
-                              ? `غلاف تصميمي أصلي من إنتاج سينمانا لـ ${r.title} — ليس البوستر الرسمي`
+                              ? `غلاف تصميمي أصلي من إنتاج أكاشا سينما لـ ${r.title} — ليس البوستر الرسمي`
                               : `بوستر ${r.title}`
                           }
                           width={600}

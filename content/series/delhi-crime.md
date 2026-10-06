@@ -19,8 +19,8 @@ seasons:
     year: 2025
 poster: "/posters/delhi-crime.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «جريمة دلهي» (2019) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Delhi Crime (2019) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «جريمة دلهي» (2019) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Delhi Crime (2019) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "جريمة دلهي (Delhi Crime) 2019–2025 | 3 مواسم · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل جريمة دلهي (Delhi Crime): 3 مواسم · 16 حلقة، العرض 2019–2025، الحالة: غير مؤكدة، المنصة: نتفليكس. وحدة التحقيق في شرطة دلهي تتابع قضايا هزّت الرأي العام الهندي، من جريمة الحافلة الجماعية إلى شبكات الاتجار بالبشر. دراما إجرائية هادئة مبنية على…"

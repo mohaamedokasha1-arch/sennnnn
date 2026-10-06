@@ -67,7 +67,7 @@ export default async function PersonPage({ params }) {
             </h2>
             <div className="prose" dangerouslySetInnerHTML={{ __html: renderMarkdown(person.bio) }} />
             <p className="panel-note" style={{ marginBottom: 0 }}>
-              النبذة مكتوبة أصلًا لسينمانا، وليست منقولة من أي مصدر خارجي.
+              النبذة مكتوبة أصلًا لأكاشا سينما، وليست منقولة من أي مصدر خارجي.
             </p>
           </section>
         ) : null}

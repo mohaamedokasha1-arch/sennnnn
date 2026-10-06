@@ -2,6 +2,7 @@ import Link from 'next/link';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { siteStats } from '@/lib/content.mjs';
+import { BrandBlock, BrandName } from './Brand.jsx';
 
 /**
  * التذييل: روابط التنقل + الصفحات القانونية + بيان النشاط (منصة اكتشاف لا استضافة).
@@ -34,15 +35,7 @@ export default function SiteFooter() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col">
-            <div className="brand" style={{ marginBottom: 12 }}>
-              <span className="brand-mark" aria-hidden="true">
-                {(siteConfig.logoText || siteConfig.siteName).slice(0, 1)}
-              </span>
-              <span className="brand-text">
-                <span className="brand-name">{siteConfig.logoText || siteConfig.siteName}</span>
-                <span className="brand-latin">{siteConfig.siteNameLatin}</span>
-              </span>
-            </div>
+            <BrandBlock style={{ marginBottom: 12 }} />
             <p className="footer-about">{siteConfig.description}</p>
             <p className="footer-about" style={{ marginTop: 10 }}>
               {stats.works} عملًا · {stats.reviews} مراجعة · {stats.lists} قائمة ترشيحات
@@ -96,7 +89,7 @@ export default function SiteFooter() {
 
         <div className="footer-bottom">
           <span>
-            © {year} {siteConfig.siteName} — {t('footer.rights')}
+            © {year} <BrandName /> — {t('footer.rights')}
           </span>
         </div>
       </div>

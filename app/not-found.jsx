@@ -11,7 +11,7 @@ import { WorkGrid } from '@/components/cards.jsx';
  */
 export const metadata = {
   title: 'الصفحة غير موجودة',
-  description: 'تعذر العثور على الصفحة المطلوبة. استخدم الروابط للعودة إلى محتوى سينمانا.',
+  description: 'تعذر العثور على الصفحة المطلوبة. استخدم الروابط للعودة إلى محتوى أكاشا سينما.',
   robots: noIndex,
   // Do not inherit the homepage canonical for an actual 404 response.
   alternates: {},

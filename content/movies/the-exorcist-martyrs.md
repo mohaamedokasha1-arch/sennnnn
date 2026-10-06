@@ -16,8 +16,8 @@ seoDescription: "كل ما نعرفه عن The Exorcist: Martyrs: فصل جدي�
 seoDescriptionEn: "Everything about The Exorcist: Martyrs (2027): a new Exorcist chapter written and directed by Mike Flanagan, starring Scarlett Johansson, from Blumhouse and Universal, in theaters March 12."
 poster: "/posters/the-exorcist-martyrs.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم طارد الأرواح: الشهداء (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for The Exorcist: Martyrs (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم طارد الأرواح: الشهداء (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for The Exorcist: Martyrs (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [mike-flanagan]

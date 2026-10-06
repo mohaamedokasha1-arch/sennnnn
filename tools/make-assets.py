@@ -44,6 +44,20 @@ MUTED = (147, 160, 173)
 
 RTL = dict(direction='rtl', language='ar')
 
+# دعم البيئات التي بُنيت فيها Pillow بدون libraqm: تشكيل عربي + ترتيب bidi ببرمجيات خالصة
+try:
+    from PIL import features as _pil_features
+    _HAS_RAQM = bool(_pil_features.check('raqm'))
+except Exception:  # noqa: BLE001
+    _HAS_RAQM = False
+
+if not _HAS_RAQM:
+    import arabic_reshaper as _ar_reshaper
+    from bidi.algorithm import get_display as _bidi_display
+
+    def _shape_ar(text):
+        return _bidi_display(_ar_reshaper.reshape(text))
+
 
 def font(path, size):
     return ImageFont.truetype(path, size)
@@ -51,7 +65,10 @@ def font(path, size):
 
 def ar_text(draw, xy, text, f, fill, anchor='ra'):
     """نص عربي بترتيب RTL صحيح (anchor ra = محاذاة يمين عند نقطة البداية)."""
-    draw.text(xy, text, font=f, fill=fill, anchor=anchor, **RTL)
+    if _HAS_RAQM:
+        draw.text(xy, text, font=f, fill=fill, anchor=anchor, **RTL)
+    else:
+        draw.text(xy, _shape_ar(text), font=f, fill=fill, anchor=anchor)
 
 
 def gradient(size, top, bottom):
@@ -88,7 +105,12 @@ def film_strip(w, h, color=(255, 255, 255, 30), step=34, hole=(9, 12)):
 
 
 def mark_tile(size, with_play=True, radius_ratio=0.24):
-    """علامة الموقع: مربع متدرّج باللون المميز + مثلث تشغيل."""
+    """علامة «أكاشا سينما»: مربع متدرّج باللون المميز + مثلث تشغيل تعانقه نجمة الأثير.
+
+    الهندسة مطابقة تمامًا لـ components/Logo.jsx ولأصول SVG في public/
+    (إحداثيات على شبكة 96×96): مثلث التشغيل (سينما/بث) ونجمة رباعية مضيئة
+    عند رأسه (أكاشا = السماء/الأثير) كأنها ومضة ضوء جهاز العرض.
+    """
     s = size
     tile = gradient((s, s), ACCENT_LIGHT, (29, 58, 77))
     mask = Image.new('L', (s, s), 0)
@@ -97,9 +119,18 @@ def mark_tile(size, with_play=True, radius_ratio=0.24):
     out.paste(tile, (0, 0), mask)
     if with_play:
         d = ImageDraw.Draw(out)
-        cx, cy = s / 2, s / 2 - s * 0.01
-        r = s * 0.18
-        d.polygon([(cx - r * 0.7, cy - r), (cx - r * 0.7, cy + r), (cx + r * 0.95, cy)], fill=(6, 22, 31, 255))
+
+        def pt(x, y):
+            return (x * s / 96.0, y * s / 96.0)
+
+        # مثلث التشغيل
+        d.polygon([pt(35, 28), pt(35, 68), pt(68, 48)], fill=(6, 22, 31, 255))
+        # نجمة الأثير الرباعية عند رأس المثلث
+        star = [
+            (68, 12), (71.2, 22.8), (82, 26), (71.2, 29.2),
+            (68, 40), (64.8, 29.2), (54, 26), (64.8, 22.8),
+        ]
+        d.polygon([pt(x, y) for x, y in star], fill=(234, 246, 255, 255))
     return out
 
 
@@ -119,16 +150,16 @@ def build_og():
     tile = mark_tile(168)
     img.paste(tile, (w - 168 - 78, 96), tile)
 
-    f_name = font(AR_BOLD, 96)
+    f_name = font(AR_BOLD, 84)
     f_semi = font(AR_SEMI, 40)
     f_reg = font(AR_REG, 30)
 
     # الاسم العربي (يمين) — والعنوان اللاتيني أسفله بالقرب من العلامة
-    ar_text(d, (w - 78 - 168 - 34, 118), 'سينمانا', f_name, TEXT)
+    ar_text(d, (w - 78 - 168 - 34, 118), 'أكاشا سينما', f_name, TEXT)
     if LATIN_FALLBACK_OK:
         f_lat = ImageFont.truetype(LATIN_BOLD, 26)
         # الاسم اللاتيني أسفل الاسم العربي، بنفس حدّ المحاذاة اليمين
-        d.text((w - 78 - 168 - 34, 236), 'CINEMANA', font=f_lat, fill=ACCENT, anchor='ra')
+        d.text((w - 78 - 168 - 34, 236), 'AKASHA CINEMA', font=f_lat, fill=ACCENT, anchor='ra')
 
     ar_text(d, (w - 78, 356), 'اكتشف الفيلم الذي ستبقى تتحدث عنه', f_semi, TEXT)
     ar_text(d, (w - 78, 420), 'معلومات منظّمة · مراجعات تحريرية أصلية · روابط مشاهدة رسمية فقط', f_reg, MUTED)

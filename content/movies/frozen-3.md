@@ -16,8 +16,8 @@ seoDescription: "كل ما تريد معرفته عن Frozen 3: جينيفر ل�
 seoDescriptionEn: "Everything about Frozen 3 (2027): Jennifer Lee returns to write and direct, with Kristen Bell, Idina Menzel and Josh Gad, as Anna and Kristoff's wedding leads into Elsa's new journey, in theaters November 24."
 poster: "/posters/frozen-3.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم فروزن 3 (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Frozen 3 (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم فروزن 3 (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Frozen 3 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

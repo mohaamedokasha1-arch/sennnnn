@@ -16,8 +16,8 @@ seoDescription: "كل ما نعرفه عن Skeletons: رعب مخلوقات من
 seoDescriptionEn: "Everything about Skeletons (2027): creature horror directed by JT Mollner and produced by J.J. Abrams, starring Brie Larson and John Goodman, based on Philip Fracassi's Fail-Safe, from Sony, in theaters June 4."
 poster: "/posters/skeletons.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم هياكل عظمية Skeletons (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Skeletons (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم هياكل عظمية Skeletons (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Skeletons (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

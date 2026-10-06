@@ -35,8 +35,8 @@ seasons:
     year: 2024
 poster: "/posters/elite.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «النخبة» (2018) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Élite (2018) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «النخبة» (2018) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Élite (2018) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "النخبة (Élite) 2018–2024 | 8 مواسم · 64 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل النخبة (Élite): 8 مواسم · 64 حلقة، العرض 2018–2024، الحالة: منتهٍ، المنصة: نتفليكس. ثلاثة طلاب من خلفية متواضعة يحصلون على منحة في أرقى مدرسة خاصة في إسبانيا، فيصطدمون بعالم الثراء والطبقية… وبجريمة قتل. كل موسم يبدأ بجريمة ويعود…"

@@ -20,8 +20,8 @@ seasons:
     year: 2022
 poster: "/posters/al-ekhtiyar.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «الاختيار» (2020) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Al Ekhtiyar (2020) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «الاختيار» (2020) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Al Ekhtiyar (2020) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "الاختيار (Al Ekhtiyar) 2020–2022 | 3 مواسم · 90 حلقة · ON / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل الاختيار (Al Ekhtiyar): 3 مواسم · 90 حلقة، العرض 2020–2022، الحالة: منتهٍ، المنصة: ON / شاهد. سلسلة مبنية على ملفات أمنية مصرية: مواجهات الجيش والشرطة مع التنظيمات المسلحة في سيناء وغيرها، من منظور الضباط الذين دفعوا الثمن. دراما وطنية بإنتاج…"

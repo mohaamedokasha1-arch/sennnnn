@@ -19,8 +19,8 @@ seasons:
     year: 2024
 poster: "/posters/yali-capkini.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «طائر الرفراف» (2022) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Yalı Çapkını (2022) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «طائر الرفراف» (2022) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Yalı Çapkını (2022) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "طائر الرفراف (Yal) 2022–2024 | 3 مواسم · 101 حلقة · Star TV"
 seoDescription: "كل ما تريد معرفته عن مسلسل طائر الرفراف (Yal): 3 مواسم · 101 حلقة، العرض 2022–2024، الحالة: منتهٍ، المنصة: Star TV. فريد، وريث عائلة ثرية مدلّل ومتهوّر، يُجبر على الزواج من سيران القادمة من عائلة محافظة. الزواج المرتّب يضع عالمين متناقضين تحت سقف واحد، ويكشف أن…"

@@ -472,7 +472,7 @@ def build(slug, style="warm", out_dir="public/posters", title=None, year=None, k
         title=title,
         year=year,
         kicker=kicker,
-        note=note if note is not None else ("Original design cover created for Cinemana — not the official poster." if title else None),
+        note=note if note is not None else ("Original design cover created for Akasha Cinema — not the official poster." if title else None),
     )
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, f"{slug}.jpg")

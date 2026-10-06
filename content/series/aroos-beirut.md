@@ -10,8 +10,8 @@ status: ended
 seasons: []
 poster: "/posters/aroos-beirut.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «عروس بيروت» (2019) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Aroos Beirut (2019) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «عروس بيروت» (2019) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Aroos Beirut (2019) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "عروس بيروت (Aroos Beirut) 2019 | بيانات المواسم غير مكتملة · MBC4 / شاهد"
 seoDescription: "كل ما تريد معرفته عن مسلسل عروس بيروت (Aroos Beirut): بيانات المواسم غير مكتملة، العرض 2019، الحالة: منتهٍ، المنصة: MBC4 / شاهد. قصة حب بين شاب من عائلة بيروتية عريقة وطاهية شابة من بيئة متواضعة، تواجه رفض الأم وسلطة التقاليد. دراما رومانسية اجتماعية لبنانية-سورية بنَفَس تركي…"

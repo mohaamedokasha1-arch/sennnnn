@@ -17,8 +17,8 @@ seasons:
     year: 2026
 poster: "/posters/one-piece.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «ون بيس» (2023) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for One Piece (2023) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «ون بيس» (2023) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for One Piece (2023) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "ون بيس (One Piece) 2023–مستمر | 2 موسمان · 16 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل ون بيس (One Piece): 2 موسمان · 16 حلقة، العرض 2023–مستمر، الحالة: مستمر، المنصة: نتفليكس. مونكي دي. لوفي، فتى مطاطي لا يفقد ابتسامته، يبحر مع طاقم «قبعة القش» بحثًا عن كنز ون بيس ليصبح ملك القراصنة. نسخة حيّة من المانغا الشهيرة، تحافظ على…"

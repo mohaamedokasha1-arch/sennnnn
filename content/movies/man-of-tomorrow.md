@@ -16,8 +16,8 @@ seoDescription: "كل ما نعرفه عن Man of Tomorrow: تتمة Superman ل
 seoDescriptionEn: "Everything about Man of Tomorrow (2027): James Gunn's Superman sequel, \"a movie about Lex and Clark,\" with David Corenswet and Nicholas Hoult, in theaters July 9."
 poster: "/posters/man-of-tomorrow.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم رجل الغد Man of Tomorrow (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Man of Tomorrow (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم رجل الغد Man of Tomorrow (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Man of Tomorrow (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: [james-gunn]

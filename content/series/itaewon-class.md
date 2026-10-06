@@ -13,8 +13,8 @@ seasons:
     year: 2020
 poster: "/posters/itaewon-class.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «إتايون كلاس» (2020) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Itaewon Class (2020) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «إتايون كلاس» (2020) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Itaewon Class (2020) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "إتايون كلاس (Itaewon Class) 2020 | 1 موسم · 16 حلقة · JTBC / نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل إتايون كلاس (Itaewon Class): 1 موسم · 16 حلقة، العرض 2020، الحالة: منتهٍ، المنصة: JTBC / نتفليكس. شاب يخرج من السجن بعد مقتل والده بسبب ابن إمبراطور مطاعم، فيفتح حانة صغيرة في حي إتايون ليهدم تلك الإمبراطورية خطوة خطوة. قصة طموح وانتقام عادل…"

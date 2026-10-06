@@ -19,8 +19,8 @@ seasons:
     year: 2025
 poster: "/posters/alice-in-borderland.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «أليس في بلاد الحدود» (2020) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Alice in Borderland (2020) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «أليس في بلاد الحدود» (2020) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Alice in Borderland (2020) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "أليس في بلاد الحدود (Alice in Borderland) 2020–2025 | 3 مواسم · 22 حلقة · نتفليكس"
 seoDescription: "كل ما تريد معرفته عن مسلسل أليس في بلاد الحدود (Alice in Borderland): 3 مواسم · 22 حلقة، العرض 2020–2025، الحالة: غير مؤكدة، المنصة: نتفليكس. شاب مهووس بالألعاب يجد نفسه في طوكيو خالية من البشر، حيث تفرض «الألعاب» على الناجين اللعب للبقاء أحياء. مغامرة نفسية عن الموت والمعنى ومن يستحق…"

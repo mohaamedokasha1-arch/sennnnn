@@ -112,5 +112,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, '0.0.0.0', () => {
-  console.log(`\n🎬  معاينة سينمانا تعمل الآن:  http://localhost:${port}\n    (المجلد: ${path.relative(process.cwd(), root)} — أوقف التشغيل بـ Ctrl+C)\n`);
+  console.log(`\n🎬  معاينة أكاشا سينما تعمل الآن:  http://localhost:${port}\n    (المجلد: ${path.relative(process.cwd(), root)} — أوقف التشغيل بـ Ctrl+C)\n`);
 });

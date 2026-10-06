@@ -16,8 +16,8 @@ seoDescription: "كل ما نعرفه عن فيلم Paranormal Activity الثا
 seoDescriptionEn: "Everything about the eighth Paranormal Activity film: produced by James Wan and Jason Blum, directed by Ian Tuason, from Paramount, in theaters May 21, 2027, with the plot kept secret."
 poster: "/posters/paranormal-activity-8.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس البوستر الرسمي
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لفيلم نشاط خارق للطبيعة 8 (2027) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Paranormal Activity 8 (2027) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لفيلم نشاط خارق للطبيعة 8 (2027) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Paranormal Activity 8 (2027) — not the official poster"
 addedAt: 2026-10-04
 featured: false
 directors: []

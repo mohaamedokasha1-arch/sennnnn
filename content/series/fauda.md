@@ -25,8 +25,8 @@ seasons:
     year: 2026
 poster: "/posters/fauda.jpg"
 posterDesign: true   # غلاف تصميمي أصلي من إنتاج الموقع — ليس بوسترًا رسميًا
-posterAlt: "غلاف تصميمي أصلي من إنتاج سينمانا لمسلسل «فوضى» (2015) — ليس البوستر الرسمي للعمل"
-posterAltEn: "Original design cover created for Cinemana for Fauda (2015) — not the official poster"
+posterAlt: "غلاف تصميمي أصلي من إنتاج أكاشا سينما لمسلسل «فوضى» (2015) — ليس البوستر الرسمي للعمل"
+posterAltEn: "Original design cover created for Akasha Cinema for Fauda (2015) — not the official poster"
 addedAt: 2026-10-04
 seoTitle: "فوضى (Fauda) 2015–2026 | 5 مواسم · 59 حلقة · نتفليكس (عالميًا)"
 seoDescription: "كل ما تريد معرفته عن مسلسل فوضى (Fauda): 5 مواسم · 59 حلقة، العرض 2015–2026، الحالة: غير مؤكدة، المنصة: نتفليكس (عالميًا). وحدة سرية إسرائيلية تعمل متنكّرة داخل الأراضي الفلسطينية، ويقودها ضابط يعود من التقاعد لمطاردة هدف قديم. إثارة ميدانية تُظهر الجانبين، ولا تنجو أي…"
