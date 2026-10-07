@@ -24,6 +24,9 @@ export function GET() {
     ],
   };
   return new Response(JSON.stringify(manifest), {
-    headers: { 'content-type': 'application/manifest+json; charset=utf-8' },
+    headers: {
+      'content-type': 'application/manifest+json; charset=utf-8',
+      'X-Robots-Tag': 'noindex, nofollow',
+    },
   });
 }

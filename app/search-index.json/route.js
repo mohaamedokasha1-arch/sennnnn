@@ -9,6 +9,9 @@ export const dynamic = 'force-static';
 export function GET() {
   const index = buildIndex();
   return new Response(JSON.stringify(index), {
-    headers: { 'content-type': 'application/json; charset=utf-8' },
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'X-Robots-Tag': 'noindex, nofollow',
+    },
   });
 }

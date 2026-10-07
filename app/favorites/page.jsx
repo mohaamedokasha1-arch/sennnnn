@@ -9,6 +9,7 @@ export const metadata = buildMetadata({
   title: t('favorites.title'),
   description: t('favorites.intro'),
   path: '/favorites/',
+  canonical: false,
   robots: noIndex,
 });
 
@@ -33,7 +34,7 @@ export default function FavoritesPage() {
 
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.favorites') }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.favorites'), url: '/favorites/' }]} structuredData={false} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="على جهازك" title={t('favorites.title')} sub={t('favorites.intro')} />
       </div>

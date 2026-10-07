@@ -1,0 +1,1364 @@
+{
+  "headers": [
+    {
+      "source": "/search-index.json",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/site.webmanifest",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/movie/evil-dead-wrath",
+      "destination": "/movies/evil-dead-wrath/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/evil-dead-wrath/",
+      "destination": "/movies/evil-dead-wrath/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/evil-dead-wrath",
+      "destination": "/en/movies/evil-dead-wrath/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/evil-dead-wrath/",
+      "destination": "/en/movies/evil-dead-wrath/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/final-destination-7",
+      "destination": "/movies/final-destination-7/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/final-destination-7/",
+      "destination": "/movies/final-destination-7/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/final-destination-7",
+      "destination": "/en/movies/final-destination-7/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/final-destination-7/",
+      "destination": "/en/movies/final-destination-7/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/gladys",
+      "destination": "/movies/gladys/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/gladys/",
+      "destination": "/movies/gladys/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/gladys",
+      "destination": "/en/movies/gladys/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/gladys/",
+      "destination": "/en/movies/gladys/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/gremlins-3",
+      "destination": "/movies/gremlins-3/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/gremlins-3/",
+      "destination": "/movies/gremlins-3/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/gremlins-3",
+      "destination": "/en/movies/gremlins-3/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/gremlins-3/",
+      "destination": "/en/movies/gremlins-3/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-batman-part-ii",
+      "destination": "/movies/the-batman-part-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-batman-part-ii/",
+      "destination": "/movies/the-batman-part-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-batman-part-ii",
+      "destination": "/en/movies/the-batman-part-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-batman-part-ii/",
+      "destination": "/en/movies/the-batman-part-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/a-minecraft-movie-squared",
+      "destination": "/movies/a-minecraft-movie-squared/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/a-minecraft-movie-squared/",
+      "destination": "/movies/a-minecraft-movie-squared/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/a-minecraft-movie-squared",
+      "destination": "/en/movies/a-minecraft-movie-squared/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/a-minecraft-movie-squared/",
+      "destination": "/en/movies/a-minecraft-movie-squared/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/a-quiet-place-part-iii",
+      "destination": "/movies/a-quiet-place-part-iii/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/a-quiet-place-part-iii/",
+      "destination": "/movies/a-quiet-place-part-iii/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/a-quiet-place-part-iii",
+      "destination": "/en/movies/a-quiet-place-part-iii/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/a-quiet-place-part-iii/",
+      "destination": "/en/movies/a-quiet-place-part-iii/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/avengers-secret-wars",
+      "destination": "/movies/avengers-secret-wars/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/avengers-secret-wars/",
+      "destination": "/movies/avengers-secret-wars/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/avengers-secret-wars",
+      "destination": "/en/movies/avengers-secret-wars/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/avengers-secret-wars/",
+      "destination": "/en/movies/avengers-secret-wars/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/beyond-the-spider-verse",
+      "destination": "/movies/beyond-the-spider-verse/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/beyond-the-spider-verse/",
+      "destination": "/movies/beyond-the-spider-verse/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/beyond-the-spider-verse",
+      "destination": "/en/movies/beyond-the-spider-verse/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/beyond-the-spider-verse/",
+      "destination": "/en/movies/beyond-the-spider-verse/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/children-of-blood-and-bone",
+      "destination": "/movies/children-of-blood-and-bone/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/children-of-blood-and-bone/",
+      "destination": "/movies/children-of-blood-and-bone/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/children-of-blood-and-bone",
+      "destination": "/en/movies/children-of-blood-and-bone/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/children-of-blood-and-bone/",
+      "destination": "/en/movies/children-of-blood-and-bone/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/day-drinker",
+      "destination": "/movies/day-drinker/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/day-drinker/",
+      "destination": "/movies/day-drinker/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/day-drinker",
+      "destination": "/en/movies/day-drinker/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/day-drinker/",
+      "destination": "/en/movies/day-drinker/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/frozen-3",
+      "destination": "/movies/frozen-3/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/frozen-3/",
+      "destination": "/movies/frozen-3/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/frozen-3",
+      "destination": "/en/movies/frozen-3/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/frozen-3/",
+      "destination": "/en/movies/frozen-3/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/gatto",
+      "destination": "/movies/gatto/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/gatto/",
+      "destination": "/movies/gatto/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/gatto",
+      "destination": "/en/movies/gatto/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/gatto/",
+      "destination": "/en/movies/gatto/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/godzilla-x-kong-supernova",
+      "destination": "/movies/godzilla-x-kong-supernova/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/godzilla-x-kong-supernova/",
+      "destination": "/movies/godzilla-x-kong-supernova/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/godzilla-x-kong-supernova",
+      "destination": "/en/movies/godzilla-x-kong-supernova/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/godzilla-x-kong-supernova/",
+      "destination": "/en/movies/godzilla-x-kong-supernova/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/how-to-train-your-dragon-2-live-action",
+      "destination": "/movies/how-to-train-your-dragon-2-live-action/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/how-to-train-your-dragon-2-live-action/",
+      "destination": "/movies/how-to-train-your-dragon-2-live-action/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/how-to-train-your-dragon-2-live-action",
+      "destination": "/en/movies/how-to-train-your-dragon-2-live-action/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/how-to-train-your-dragon-2-live-action/",
+      "destination": "/en/movies/how-to-train-your-dragon-2-live-action/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/ice-age-boiling-point",
+      "destination": "/movies/ice-age-boiling-point/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/ice-age-boiling-point/",
+      "destination": "/movies/ice-age-boiling-point/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/ice-age-boiling-point",
+      "destination": "/en/movies/ice-age-boiling-point/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/ice-age-boiling-point/",
+      "destination": "/en/movies/ice-age-boiling-point/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/man-of-tomorrow",
+      "destination": "/movies/man-of-tomorrow/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/man-of-tomorrow/",
+      "destination": "/movies/man-of-tomorrow/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/man-of-tomorrow",
+      "destination": "/en/movies/man-of-tomorrow/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/man-of-tomorrow/",
+      "destination": "/en/movies/man-of-tomorrow/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/narnia-the-magicians-nephew",
+      "destination": "/movies/narnia-the-magicians-nephew/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/narnia-the-magicians-nephew/",
+      "destination": "/movies/narnia-the-magicians-nephew/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/narnia-the-magicians-nephew",
+      "destination": "/en/movies/narnia-the-magicians-nephew/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/narnia-the-magicians-nephew/",
+      "destination": "/en/movies/narnia-the-magicians-nephew/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/paranormal-activity-8",
+      "destination": "/movies/paranormal-activity-8/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/paranormal-activity-8/",
+      "destination": "/movies/paranormal-activity-8/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/paranormal-activity-8",
+      "destination": "/en/movies/paranormal-activity-8/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/paranormal-activity-8/",
+      "destination": "/en/movies/paranormal-activity-8/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/pendulum",
+      "destination": "/movies/pendulum/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/pendulum/",
+      "destination": "/movies/pendulum/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/pendulum",
+      "destination": "/en/movies/pendulum/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/pendulum/",
+      "destination": "/en/movies/pendulum/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/possession-2027",
+      "destination": "/movies/possession-2027/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/possession-2027/",
+      "destination": "/movies/possession-2027/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/possession-2027",
+      "destination": "/en/movies/possession-2027/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/possession-2027/",
+      "destination": "/en/movies/possession-2027/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/remain",
+      "destination": "/movies/remain/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/remain/",
+      "destination": "/movies/remain/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/remain",
+      "destination": "/en/movies/remain/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/remain/",
+      "destination": "/en/movies/remain/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/shiver",
+      "destination": "/movies/shiver/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/shiver/",
+      "destination": "/movies/shiver/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/shiver",
+      "destination": "/en/movies/shiver/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/shiver/",
+      "destination": "/en/movies/shiver/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/shrek-5",
+      "destination": "/movies/shrek-5/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/shrek-5/",
+      "destination": "/movies/shrek-5/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/shrek-5",
+      "destination": "/en/movies/shrek-5/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/shrek-5/",
+      "destination": "/en/movies/shrek-5/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/skeletons",
+      "destination": "/movies/skeletons/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/skeletons/",
+      "destination": "/movies/skeletons/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/skeletons",
+      "destination": "/en/movies/skeletons/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/skeletons/",
+      "destination": "/en/movies/skeletons/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/sonic-the-hedgehog-4",
+      "destination": "/movies/sonic-the-hedgehog-4/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/sonic-the-hedgehog-4/",
+      "destination": "/movies/sonic-the-hedgehog-4/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/sonic-the-hedgehog-4",
+      "destination": "/en/movies/sonic-the-hedgehog-4/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/sonic-the-hedgehog-4/",
+      "destination": "/en/movies/sonic-the-hedgehog-4/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/star-wars-starfighter",
+      "destination": "/movies/star-wars-starfighter/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/star-wars-starfighter/",
+      "destination": "/movies/star-wars-starfighter/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/star-wars-starfighter",
+      "destination": "/en/movies/star-wars-starfighter/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/star-wars-starfighter/",
+      "destination": "/en/movies/star-wars-starfighter/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-conjuring-first-communion",
+      "destination": "/movies/the-conjuring-first-communion/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-conjuring-first-communion/",
+      "destination": "/movies/the-conjuring-first-communion/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-conjuring-first-communion",
+      "destination": "/en/movies/the-conjuring-first-communion/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-conjuring-first-communion/",
+      "destination": "/en/movies/the-conjuring-first-communion/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-exorcist-martyrs",
+      "destination": "/movies/the-exorcist-martyrs/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-exorcist-martyrs/",
+      "destination": "/movies/the-exorcist-martyrs/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-exorcist-martyrs",
+      "destination": "/en/movies/the-exorcist-martyrs/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-exorcist-martyrs/",
+      "destination": "/en/movies/the-exorcist-martyrs/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-great-beyond",
+      "destination": "/movies/the-great-beyond/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-great-beyond/",
+      "destination": "/movies/the-great-beyond/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-great-beyond",
+      "destination": "/en/movies/the-great-beyond/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-great-beyond/",
+      "destination": "/en/movies/the-great-beyond/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-hunt-for-gollum",
+      "destination": "/movies/the-hunt-for-gollum/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-hunt-for-gollum/",
+      "destination": "/movies/the-hunt-for-gollum/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-hunt-for-gollum",
+      "destination": "/en/movies/the-hunt-for-gollum/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-hunt-for-gollum/",
+      "destination": "/en/movies/the-hunt-for-gollum/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-legend-of-zelda",
+      "destination": "/movies/the-legend-of-zelda/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-legend-of-zelda/",
+      "destination": "/movies/the-legend-of-zelda/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-legend-of-zelda",
+      "destination": "/en/movies/the-legend-of-zelda/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-legend-of-zelda/",
+      "destination": "/en/movies/the-legend-of-zelda/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-mummy-4",
+      "destination": "/movies/the-mummy-4/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-mummy-4/",
+      "destination": "/movies/the-mummy-4/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-mummy-4",
+      "destination": "/en/movies/the-mummy-4/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-mummy-4/",
+      "destination": "/en/movies/the-mummy-4/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-revenge-of-la-llorona",
+      "destination": "/movies/the-revenge-of-la-llorona/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-revenge-of-la-llorona/",
+      "destination": "/movies/the-revenge-of-la-llorona/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-revenge-of-la-llorona",
+      "destination": "/en/movies/the-revenge-of-la-llorona/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-revenge-of-la-llorona/",
+      "destination": "/en/movies/the-revenge-of-la-llorona/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-simpsons-movie-2",
+      "destination": "/movies/the-simpsons-movie-2/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-simpsons-movie-2/",
+      "destination": "/movies/the-simpsons-movie-2/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-simpsons-movie-2",
+      "destination": "/en/movies/the-simpsons-movie-2/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-simpsons-movie-2/",
+      "destination": "/en/movies/the-simpsons-movie-2/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/always-lalisa",
+      "destination": "/movies/always-lalisa/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/always-lalisa/",
+      "destination": "/movies/always-lalisa/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/always-lalisa",
+      "destination": "/en/movies/always-lalisa/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/always-lalisa/",
+      "destination": "/en/movies/always-lalisa/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/avengers-doomsday",
+      "destination": "/movies/avengers-doomsday/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/avengers-doomsday/",
+      "destination": "/movies/avengers-doomsday/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/avengers-doomsday",
+      "destination": "/en/movies/avengers-doomsday/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/avengers-doomsday/",
+      "destination": "/en/movies/avengers-doomsday/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/clayface-2026",
+      "destination": "/movies/clayface-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/clayface-2026/",
+      "destination": "/movies/clayface-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/clayface-2026",
+      "destination": "/en/movies/clayface-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/clayface-2026/",
+      "destination": "/en/movies/clayface-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/cliff-booth-2026",
+      "destination": "/movies/cliff-booth-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/cliff-booth-2026/",
+      "destination": "/movies/cliff-booth-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/cliff-booth-2026",
+      "destination": "/en/movies/cliff-booth-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/cliff-booth-2026/",
+      "destination": "/en/movies/cliff-booth-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/dune-part-three",
+      "destination": "/movies/dune-part-three/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/dune-part-three/",
+      "destination": "/movies/dune-part-three/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/dune-part-three",
+      "destination": "/en/movies/dune-part-three/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/dune-part-three/",
+      "destination": "/en/movies/dune-part-three/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/godzilla-minus-zero",
+      "destination": "/movies/godzilla-minus-zero/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/godzilla-minus-zero/",
+      "destination": "/movies/godzilla-minus-zero/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/godzilla-minus-zero",
+      "destination": "/en/movies/godzilla-minus-zero/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/godzilla-minus-zero/",
+      "destination": "/en/movies/godzilla-minus-zero/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/hexed-2026",
+      "destination": "/movies/hexed-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/hexed-2026/",
+      "destination": "/movies/hexed-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/hexed-2026",
+      "destination": "/en/movies/hexed-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/hexed-2026/",
+      "destination": "/en/movies/hexed-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/how-to-rob-a-bank",
+      "destination": "/movies/how-to-rob-a-bank/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/how-to-rob-a-bank/",
+      "destination": "/movies/how-to-rob-a-bank/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/how-to-rob-a-bank",
+      "destination": "/en/movies/how-to-rob-a-bank/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/how-to-rob-a-bank/",
+      "destination": "/en/movies/how-to-rob-a-bank/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/jumanji-open-world",
+      "destination": "/movies/jumanji-open-world/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/jumanji-open-world/",
+      "destination": "/movies/jumanji-open-world/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/jumanji-open-world",
+      "destination": "/en/movies/jumanji-open-world/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/jumanji-open-world/",
+      "destination": "/en/movies/jumanji-open-world/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/klara-and-the-sun",
+      "destination": "/movies/klara-and-the-sun/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/klara-and-the-sun/",
+      "destination": "/movies/klara-and-the-sun/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/klara-and-the-sun",
+      "destination": "/en/movies/klara-and-the-sun/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/klara-and-the-sun/",
+      "destination": "/en/movies/klara-and-the-sun/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/matloub-3a2eleyain",
+      "destination": "/movies/matloub-3a2eleyain/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/matloub-3a2eleyain/",
+      "destination": "/movies/matloub-3a2eleyain/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/matloub-3a2eleyain",
+      "destination": "/en/movies/matloub-3a2eleyain/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/matloub-3a2eleyain/",
+      "destination": "/en/movies/matloub-3a2eleyain/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/moana-live-action",
+      "destination": "/movies/moana-live-action/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/moana-live-action/",
+      "destination": "/movies/moana-live-action/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/moana-live-action",
+      "destination": "/en/movies/moana-live-action/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/moana-live-action/",
+      "destination": "/en/movies/moana-live-action/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/mortal-kombat-ii",
+      "destination": "/movies/mortal-kombat-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/mortal-kombat-ii/",
+      "destination": "/movies/mortal-kombat-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/mortal-kombat-ii",
+      "destination": "/en/movies/mortal-kombat-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/mortal-kombat-ii/",
+      "destination": "/en/movies/mortal-kombat-ii/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/other-mommy",
+      "destination": "/movies/other-mommy/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/other-mommy/",
+      "destination": "/movies/other-mommy/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/other-mommy",
+      "destination": "/en/movies/other-mommy/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/other-mommy/",
+      "destination": "/en/movies/other-mommy/",
+      "permanent": true
+    },
+    {
+      "source": "/movies/street-fighter-2026",
+      "destination": "/movie/street-fighter-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movies/street-fighter-2026/",
+      "destination": "/movie/street-fighter-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movies/street-fighter-2026",
+      "destination": "/en/movie/street-fighter-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movies/street-fighter-2026/",
+      "destination": "/en/movie/street-fighter-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/sunrise-on-the-reaping",
+      "destination": "/movies/sunrise-on-the-reaping/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/sunrise-on-the-reaping/",
+      "destination": "/movies/sunrise-on-the-reaping/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/sunrise-on-the-reaping",
+      "destination": "/en/movies/sunrise-on-the-reaping/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/sunrise-on-the-reaping/",
+      "destination": "/en/movies/sunrise-on-the-reaping/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/supergirl-2026",
+      "destination": "/movies/supergirl-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/supergirl-2026/",
+      "destination": "/movies/supergirl-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/supergirl-2026",
+      "destination": "/en/movies/supergirl-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/supergirl-2026/",
+      "destination": "/en/movies/supergirl-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/terrifier-4",
+      "destination": "/movies/terrifier-4/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/terrifier-4/",
+      "destination": "/movies/terrifier-4/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/terrifier-4",
+      "destination": "/en/movies/terrifier-4/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/terrifier-4/",
+      "destination": "/en/movies/terrifier-4/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-cat-in-the-hat-2026",
+      "destination": "/movies/the-cat-in-the-hat-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-cat-in-the-hat-2026/",
+      "destination": "/movies/the-cat-in-the-hat-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-cat-in-the-hat-2026",
+      "destination": "/en/movies/the-cat-in-the-hat-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-cat-in-the-hat-2026/",
+      "destination": "/en/movies/the-cat-in-the-hat-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-dino-family",
+      "destination": "/movies/the-dino-family/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-dino-family/",
+      "destination": "/movies/the-dino-family/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-dino-family",
+      "destination": "/en/movies/the-dino-family/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-dino-family/",
+      "destination": "/en/movies/the-dino-family/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-florist-2026",
+      "destination": "/movies/the-florist-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-florist-2026/",
+      "destination": "/movies/the-florist-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-florist-2026",
+      "destination": "/en/movies/the-florist-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-florist-2026/",
+      "destination": "/en/movies/the-florist-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-influencer-project",
+      "destination": "/movies/the-influencer-project/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-influencer-project/",
+      "destination": "/movies/the-influencer-project/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-influencer-project",
+      "destination": "/en/movies/the-influencer-project/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-influencer-project/",
+      "destination": "/en/movies/the-influencer-project/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-mandalorian-and-grogu",
+      "destination": "/movies/the-mandalorian-and-grogu/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-mandalorian-and-grogu/",
+      "destination": "/movies/the-mandalorian-and-grogu/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-mandalorian-and-grogu",
+      "destination": "/en/movies/the-mandalorian-and-grogu/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-mandalorian-and-grogu/",
+      "destination": "/en/movies/the-mandalorian-and-grogu/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-mongoose-2026",
+      "destination": "/movies/the-mongoose-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-mongoose-2026/",
+      "destination": "/movies/the-mongoose-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-mongoose-2026",
+      "destination": "/en/movies/the-mongoose-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-mongoose-2026/",
+      "destination": "/en/movies/the-mongoose-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-odyssey-2026",
+      "destination": "/movies/the-odyssey-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/the-odyssey-2026/",
+      "destination": "/movies/the-odyssey-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-odyssey-2026",
+      "destination": "/en/movies/the-odyssey-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/the-odyssey-2026/",
+      "destination": "/en/movies/the-odyssey-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/toy-story-5",
+      "destination": "/movies/toy-story-5/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/toy-story-5/",
+      "destination": "/movies/toy-story-5/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/toy-story-5",
+      "destination": "/en/movies/toy-story-5/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/toy-story-5/",
+      "destination": "/en/movies/toy-story-5/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/verity",
+      "destination": "/movies/verity/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/verity/",
+      "destination": "/movies/verity/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/verity",
+      "destination": "/en/movies/verity/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/verity/",
+      "destination": "/en/movies/verity/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/violent-night-2",
+      "destination": "/movies/violent-night-2/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/violent-night-2/",
+      "destination": "/movies/violent-night-2/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/violent-night-2",
+      "destination": "/en/movies/violent-night-2/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/violent-night-2/",
+      "destination": "/en/movies/violent-night-2/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/wala-kan-ala-el-bal",
+      "destination": "/movies/wala-kan-ala-el-bal/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/wala-kan-ala-el-bal/",
+      "destination": "/movies/wala-kan-ala-el-bal/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/wala-kan-ala-el-bal",
+      "destination": "/en/movies/wala-kan-ala-el-bal/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/wala-kan-ala-el-bal/",
+      "destination": "/en/movies/wala-kan-ala-el-bal/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/werwulf",
+      "destination": "/movies/werwulf/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/werwulf/",
+      "destination": "/movies/werwulf/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/werwulf",
+      "destination": "/en/movies/werwulf/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/werwulf/",
+      "destination": "/en/movies/werwulf/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/whalefall",
+      "destination": "/movies/whalefall/",
+      "permanent": true
+    },
+    {
+      "source": "/movie/whalefall/",
+      "destination": "/movies/whalefall/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/whalefall",
+      "destination": "/en/movies/whalefall/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movie/whalefall/",
+      "destination": "/en/movies/whalefall/",
+      "permanent": true
+    },
+    {
+      "source": "/movies/digger-2026",
+      "destination": "/movie/digger-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/movies/digger-2026/",
+      "destination": "/movie/digger-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movies/digger-2026",
+      "destination": "/en/movie/digger-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/en/movies/digger-2026/",
+      "destination": "/en/movie/digger-2026/",
+      "permanent": true
+    }
+  ]
+}

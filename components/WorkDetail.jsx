@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { t, genreUrl, genreLabel, typeLabel, countryLabel, languageLabel, statusLabel } from '@/lib/i18n.mjs';
 import { formatRuntime, formatDate } from '@/lib/format.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
-import { workJsonLd, reviewJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
+import { workJsonLd, reviewJsonLd } from '@/lib/seo.mjs';
 import { similarWorks, getReviewForWork } from '@/lib/content.mjs';
 import { default as JsonLd } from './JsonLd.jsx';
 import PosterImage from './PosterImage.jsx';
@@ -47,7 +47,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
     { name: crumbName, url: currentUrl },
   ];
 
-  const ld = [workJsonLd(work, locale), breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: c.url })))];
+  const ld = [workJsonLd(work, locale)];
   if (review && !isEn) ld.push(reviewJsonLd(review));
 
   const posterAlt = isEn

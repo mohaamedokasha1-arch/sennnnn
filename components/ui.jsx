@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { t } from '@/lib/i18n.mjs';
+import { breadcrumbJsonLd } from '@/lib/seo.mjs';
 import { IconArrow, IconInfo } from './Icons.jsx';
+import JsonLd from './JsonLd.jsx';
 
 /* ------------------------------ رأس قسم ------------------------------ */
 export function SectionHeader({ kicker, title, sub, href, linkLabel, id, as: Heading = 'h2' }) {
@@ -61,16 +63,20 @@ export function Notice({ children, icon = true }) {
 }
 
 /* ------------------------------ مسار التنقل ------------------------------ */
-export function Breadcrumbs({ items = [] }) {
+export function Breadcrumbs({ items = [], structuredData = true }) {
+  const schemaItems = items.map(({ name, url }) => ({ name, ...(url ? { url } : {}) }));
   return (
-    <nav className="crumbs" aria-label="مسار التنقل">
-      {items.map((it, i) => (
-        <span key={`${it.url}-${i}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-          {i > 0 ? <span className="sep" aria-hidden="true">/</span> : null}
-          {it.url && i < items.length - 1 ? <Link href={it.url}>{it.name}</Link> : <span aria-current="page">{it.name}</span>}
-        </span>
-      ))}
-    </nav>
+    <>
+      {structuredData && schemaItems.length > 1 ? <JsonLd data={breadcrumbJsonLd(schemaItems)} /> : null}
+      <nav className="crumbs" aria-label="مسار التنقل">
+        {items.map((it, i) => (
+          <span key={`${it.url ?? it.name}-${i}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+            {i > 0 ? <span className="sep" aria-hidden="true">/</span> : null}
+            {it.url && i < items.length - 1 ? <Link href={it.url}>{it.name}</Link> : <span aria-current="page">{it.name}</span>}
+          </span>
+        ))}
+      </nav>
+    </>
   );
 }
 

@@ -8,9 +8,15 @@ export default function JsonLd({ data }) {
   const items = Array.isArray(data) ? data : [data];
   return (
     <>
-      {items.map((d, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(d) }} />
-      ))}
+      {items.map((d, i) => {
+        const json = JSON.stringify(d)
+          .replace(/</g, '\\u003c')
+          .replace(/>/g, '\\u003e')
+          .replace(/&/g, '\\u0026')
+          .replace(/\u2028/g, '\\u2028')
+          .replace(/\u2029/g, '\\u2029');
+        return <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
+      })}
     </>
   );
 }

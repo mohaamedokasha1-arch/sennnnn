@@ -22,7 +22,7 @@ export default function ReviewsPage() {
 
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.reviews') }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.reviews'), url: '/reviews/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="نقد تحريري" title={t('reviews.title')} sub={t('reviews.intro')} />
       </div>

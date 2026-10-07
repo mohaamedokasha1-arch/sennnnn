@@ -78,7 +78,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="hero-posters" aria-hidden="true">
-          {heroPosters.map((w) => (
+          {heroPosters.map((w, index) => (
             <span key={`${w.kind}:${w.slug}`} className="card-media" style={{ display: 'block' }}>
               <PosterImage
                 src={w.hasPoster ? w.poster : null}
@@ -87,8 +87,8 @@ export default function HomePage() {
                 alt=""
                 width={600}
                 height={900}
-                loading="eager"
-                fetchPriority="high"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchPriority={index === 0 ? 'high' : undefined}
               />
             </span>
           ))}

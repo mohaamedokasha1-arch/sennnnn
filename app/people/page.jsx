@@ -14,13 +14,13 @@ export const metadata = buildMetadata({
 export const dynamic = 'force-static';
 
 export default function PeoplePage() {
-  const people = getPeople();
+  const people = getPeople().filter((person) => person.works.length > 0);
   const directors = people.filter((p) => p.roles.includes('director'));
   const actors = people.filter((p) => p.roles.includes('actor'));
 
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'الأشخاص' }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'الأشخاص', url: '/people/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="طاقم العمل" title="الممثلون والمخرجون" sub={`نبذة مكتوبة خصيصًا لـ${siteConfig.siteName}، وأعمال تم تسجيلها داخل الموقع فقط.`} />
       </div>

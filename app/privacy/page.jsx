@@ -16,7 +16,7 @@ const UPDATED = '2026-10-03';
 export default function PrivacyPage() {
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'سياسة الخصوصية' }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'سياسة الخصوصية', url: '/privacy/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="قانوني" title="سياسة الخصوصية" />
       </div>

@@ -53,7 +53,7 @@ export default {
    * 3) الروابط والنطاق
    * ------------------------------------------------------------------------- */
   // النطاق النهائي للموقع. يُستخدم في Sitemap وCanonical وOpen Graph وروابط JSON-LD.
-  url: 'https://cenimana-aflam-arabic.vercel.app',
+  url: 'https://akasha-cenima.vercel.app',
   locale: 'ar',              // اللغة الأساسية للموقع؛ القسم الإنجليزي يستخدم /en/
   dir: 'rtl',
 

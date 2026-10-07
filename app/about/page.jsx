@@ -18,7 +18,7 @@ export default function AboutPage() {
 
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'من نحن' }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'من نحن', url: '/about/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="تعرّف علينا" title={`من نحن — ${siteConfig.siteName}`} sub={siteConfig.slogan} />
       </div>

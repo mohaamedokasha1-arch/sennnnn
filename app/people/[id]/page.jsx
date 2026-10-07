@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import siteConfig from '@/site.config.mjs';
 import { t, countryLabel } from '@/lib/i18n.mjs';
-import { buildMetadata, personJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
+import { buildMetadata, personJsonLd, noIndex } from '@/lib/seo.mjs';
 import { getPeople, getPerson } from '@/lib/content.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { Breadcrumbs, EmptyState } from '@/components/ui.jsx';
@@ -27,6 +27,9 @@ export async function generateMetadata({ params }) {
     title: `${person.name} — ${person.roleLabel}`,
     description: person.bio || `${person.name} (${person.roleLabel}) — الأعمال المسجّلة داخل الموقع.`,
     path: person.url,
+    image: person.hasPhoto ? person.photo : null,
+    imageAlt: person.hasPhoto ? `صورة ${person.name}` : null,
+    robots: person.works.length ? undefined : noIndex,
   });
 }
 
@@ -43,14 +46,27 @@ export default async function PersonPage({ params }) {
 
   return (
     <div className="container">
-      <JsonLd data={[personJsonLd(person), breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: c.url })))]} />
+      <JsonLd data={personJsonLd(person)} />
       <Breadcrumbs items={crumbs} />
 
       <article className="mt-4">
         <div className="row mb-2" style={{ gap: 14 }}>
-          <span className="person-avatar" style={{ width: 56, height: 56, fontSize: '1.3rem' }} aria-hidden="true">
-            {person.name.trim().slice(0, 1)}
-          </span>
+          {person.hasPhoto ? (
+            <img
+              className="person-avatar"
+              src={person.photo}
+              alt={`صورة ${person.name}`}
+              width={56}
+              height={56}
+              loading="eager"
+              decoding="async"
+              style={{ width: 56, height: 56, objectFit: 'cover' }}
+            />
+          ) : (
+            <span className="person-avatar" style={{ width: 56, height: 56, fontSize: '1.3rem' }} aria-hidden="true">
+              {person.name.trim().slice(0, 1)}
+            </span>
+          )}
           <div>
             <h1 style={{ margin: 0 }}>{person.name}</h1>
             <p className="muted small" style={{ margin: 0 }}>

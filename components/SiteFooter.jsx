@@ -16,6 +16,7 @@ export default function SiteFooter() {
     { href: '/movies/', label: t('nav.movies') },
     { href: '/series/', label: t('nav.series') },
     { href: '/genres/', label: t('nav.genres') },
+    { href: '/people/', label: 'الأشخاص' },
     { href: '/reviews/', label: t('nav.reviews') },
     { href: '/lists/', label: t('nav.lists') },
     { href: '/search/', label: t('nav.search') },

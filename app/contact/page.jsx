@@ -15,7 +15,7 @@ export const dynamic = 'force-static';
 export default function ContactPage() {
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'اتصل بنا' }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'اتصل بنا', url: '/contact/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="تواصل" title="اتصل بنا" sub="نقرأ كل رسالة، ويصل الرد عادةً عبر البريد الإلكتروني." />
       </div>

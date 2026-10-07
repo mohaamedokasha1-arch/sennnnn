@@ -21,6 +21,9 @@ import { brandName } from '../lib/brand.mjs';
 
 const port = Number(process.argv[2] ?? 4000);
 const root = path.resolve(process.cwd(), process.argv[3] ?? 'out');
+const vercelConfigFile = path.resolve(process.cwd(), 'vercel.json');
+const vercelConfig = fs.existsSync(vercelConfigFile) ? JSON.parse(fs.readFileSync(vercelConfigFile, 'utf8')) : {};
+const redirectRules = new Map((vercelConfig.redirects ?? []).map((rule) => [rule.source, rule]));
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -49,23 +52,44 @@ if (!fs.existsSync(root)) {
   process.exit(1);
 }
 
-function sendFile(res, file, status = 200) {
+function responseHeaders(urlPath) {
+  const headers = {};
+  for (const rule of vercelConfig.headers ?? []) {
+    if (rule.source !== urlPath) continue;
+    for (const header of rule.headers ?? []) headers[header.key.toLowerCase()] = header.value;
+  }
+  return headers;
+}
+
+function sendFile(res, file, status = 200, extraHeaders = {}) {
   const type = MIME[path.extname(file).toLowerCase()] ?? 'application/octet-stream';
   const body = fs.readFileSync(file);
   res.writeHead(status, {
     'content-type': type,
     'cache-control': 'no-cache',
     'content-length': body.length,
+    ...extraHeaders,
   });
   res.end(body);
 }
 
 const server = http.createServer((req, res) => {
   let urlPath;
+  let requestUrl;
   try {
-    urlPath = decodeURIComponent(new URL(req.url, `http://${req.headers.host}`).pathname);
+    requestUrl = new URL(req.url, `http://${req.headers.host}`);
+    urlPath = decodeURIComponent(requestUrl.pathname);
   } catch {
     res.writeHead(400).end('طلب غير صالح');
+    return;
+  }
+
+  const redirect = redirectRules.get(urlPath);
+  if (redirect) {
+    res.writeHead(redirect.permanent ? 308 : 307, {
+      location: `${redirect.destination}${requestUrl.search}`,
+      'cache-control': 'no-cache',
+    }).end();
     return;
   }
 
@@ -95,14 +119,14 @@ const server = http.createServer((req, res) => {
   }
 
   if (fs.existsSync(file) && fs.statSync(file).isFile()) {
-    sendFile(res, file);
+    sendFile(res, file, 200, responseHeaders(urlPath));
     return;
   }
 
   // جرّب index.html أو ملف .html مطابق قبل إظهار 404
   for (const candidate of [`${file}.html`, path.join(file, 'index.html')]) {
     if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
-      sendFile(res, candidate);
+      sendFile(res, candidate, 200, responseHeaders(urlPath));
       return;
     }
   }

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { t } from '@/lib/i18n.mjs';
-import { buildMetadata, reviewJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
+import { buildMetadata, reviewJsonLd } from '@/lib/seo.mjs';
 import { getReviews, getReview } from '@/lib/content.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { readingTime, formatDate } from '@/lib/format.mjs';
@@ -53,7 +53,7 @@ export default async function ReviewPage({ params }) {
 
   return (
     <div className="container">
-      <JsonLd data={[reviewJsonLd(review), breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: c.url })))]} />
+      <JsonLd data={reviewJsonLd(review)} />
       <Breadcrumbs items={crumbs} />
 
       <article className="legal" style={{ maxWidth: 820, marginTop: 18 }}>

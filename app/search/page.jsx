@@ -37,7 +37,7 @@ export default function SearchPage() {
 
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('search.title') }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('search.title'), url: '/search/' }]} structuredData={false} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="بحث داخلي" title={t('search.title')} sub={t('search.tip')} />
       </div>
