@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { t } from '@/lib/i18n.mjs';
-import { computeResults } from '@/lib/filter.mjs';
+import { computeResults, DEFAULT_PAGE_SIZE } from '@/lib/filter.mjs';
 import WorkCard from './WorkCard.jsx';
 import { EmptyState } from './ui.jsx';
 
@@ -16,14 +17,24 @@ import { EmptyState } from './ui.jsx';
  *  عبر robots/noindex (انظر الصفحات) لمنع المحتوى المكرر.
  * ============================================================================
  */
-export default function FilterBar({ items = [], facets = {}, pageSize = 24, showStatus = false, emptyText, hint }) {
+export default function FilterBar({
+  items = [],
+  facets = {},
+  pageSize = DEFAULT_PAGE_SIZE,
+  showStatus = false,
+  emptyText,
+  hint,
+  basePath = null,
+  initialPage = 1,
+}) {
   const [genre, setGenre] = useState('');
   const [year, setYear] = useState('');
   const [language, setLanguage] = useState('');
   const [country, setCountry] = useState('');
   const [status, setStatus] = useState('');
   const [sort, setSort] = useState('newest');
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(initialPage);
+  const criteriaMounted = useRef(false);
 
   const languages = facets.languages ?? [];
   const countries = facets.countries ?? [];
@@ -36,9 +47,19 @@ export default function FilterBar({ items = [], facets = {}, pageSize = 24, show
   );
   const { slice: visible, count, totalPages, current } = result;
 
-  useEffect(() => setPage(1), [genre, year, language, country, status, sort]);
+  useEffect(() => setPage(initialPage), [initialPage]);
+
+  useEffect(() => {
+    if (!criteriaMounted.current) {
+      criteriaMounted.current = true;
+      return;
+    }
+    setPage(1);
+  }, [genre, year, language, country, status, sort]);
 
   const hasFilters = Boolean(genre || year || language || country || status);
+  const useCrawlablePages = Boolean(basePath) && !hasFilters && sort === 'newest';
+  const pageHref = (number) => (number === 1 ? basePath : `${basePath}page/${number}/`);
 
   const reset = () => {
     setGenre('');
@@ -158,28 +179,49 @@ export default function FilterBar({ items = [], facets = {}, pageSize = 24, show
 
           {totalPages > 1 ? (
             <nav className="pager" aria-label="ترقيم النتائج">
-              <button type="button" className={current === 1 ? 'disabled' : ''} onClick={() => setPage(current - 1)} disabled={current === 1}>
-                {t('pager.previous')}
-              </button>
+              {current === 1 ? (
+                <button type="button" className="disabled" disabled>
+                  {t('pager.previous')}
+                </button>
+              ) : useCrawlablePages ? (
+                <Link href={pageHref(current - 1)} aria-label={t('pager.previous')}>
+                  {t('pager.previous')}
+                </Link>
+              ) : (
+                <button type="button" onClick={() => setPage(current - 1)}>
+                  {t('pager.previous')}
+                </button>
+              )}
+
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) =>
                 n === current ? (
                   <span key={n} aria-current="page">
                     {n}
                   </span>
+                ) : useCrawlablePages ? (
+                  <Link key={n} href={pageHref(n)} aria-label={t('pager.page', { n })}>
+                    {n}
+                  </Link>
                 ) : (
-                  <button key={n} type="button" onClick={() => setPage(n)} aria-label={`${t('pager.page', { n })}`}>
+                  <button key={n} type="button" onClick={() => setPage(n)} aria-label={t('pager.page', { n })}>
                     {n}
                   </button>
                 )
               )}
-              <button
-                type="button"
-                className={current === totalPages ? 'disabled' : ''}
-                onClick={() => setPage(current + 1)}
-                disabled={current === totalPages}
-              >
-                {t('pager.next')}
-              </button>
+
+              {current === totalPages ? (
+                <button type="button" className="disabled" disabled>
+                  {t('pager.next')}
+                </button>
+              ) : useCrawlablePages ? (
+                <Link href={pageHref(current + 1)} aria-label={t('pager.next')}>
+                  {t('pager.next')}
+                </Link>
+              ) : (
+                <button type="button" onClick={() => setPage(current + 1)}>
+                  {t('pager.next')}
+                </button>
+              )}
             </nav>
           ) : null}
 

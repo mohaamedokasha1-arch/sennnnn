@@ -1,4 +1,5 @@
 import siteConfig from '@/site.config.mjs';
+import { paginationPageNumbers } from '@/lib/filter.mjs';
 import {
   getMovies,
   getSeries,
@@ -55,8 +56,12 @@ export default function sitemap() {
 
   const staticPages = [
     page('/'),
-    ...(movies.length ? [page('/movies/')] : []),
-    ...(series.length ? [page('/series/')] : []),
+    ...(movies.length
+      ? [page('/movies/'), ...paginationPageNumbers(movies.length).map((number) => page(`/movies/page/${number}/`))]
+      : []),
+    ...(series.length
+      ? [page('/series/'), ...paginationPageNumbers(series.length).map((number) => page(`/series/page/${number}/`))]
+      : []),
     ...(genres.length ? [page('/genres/')] : []),
     ...(people.length ? [page('/people/')] : []),
     ...(reviews.length ? [page('/reviews/')] : []),

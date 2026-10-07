@@ -16,7 +16,7 @@ const UPDATED = '2026-10-03';
 export default function TermsPage() {
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'شروط الاستخدام' }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'شروط الاستخدام', url: '/terms/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="قانوني" title="شروط الاستخدام" />
       </div>

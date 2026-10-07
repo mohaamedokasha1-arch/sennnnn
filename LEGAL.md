@@ -55,7 +55,7 @@
 ## 5) قائمة التحقق قبل الإطلاق العام (افعلها بالترتيب)
 
 1. `site.config.mjs`:
-   - `url` ← النطاق الحقيقي (مضبوط حاليًا على `https://cenimana-aflam-arabic.vercel.app`).
+   - `url` ← النطاق الأساسي للمشروع (مضبوط حاليًا على `https://akasha-cenima.vercel.app`).
    - `contact.email` و`contact.copyrightEmail` ← بريدك الحقيقي.
    - `social` ← حساباتك الحقيقية أو اتركها فارغة `[]` (لا تظهر أيقونة بلا رابط).
    - `watchPlatforms` ← راجع القائمة: **أبقِ فقط المنصات الرسمية التي ستتعامل معها فعلًا**.

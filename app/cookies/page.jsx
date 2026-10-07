@@ -16,7 +16,7 @@ const UPDATED = '2026-10-03';
 export default function CookiesPage() {
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'ملفات تعريف الارتباط' }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'ملفات تعريف الارتباط', url: '/cookies/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="قانوني" title="سياسة ملفات تعريف الارتباط" />
       </div>

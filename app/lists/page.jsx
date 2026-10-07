@@ -22,7 +22,7 @@ export default function ListsPage() {
 
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.lists') }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.lists'), url: '/lists/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="اختيارات المحرر" title={t('lists.title')} sub={t('lists.intro')} />
       </div>

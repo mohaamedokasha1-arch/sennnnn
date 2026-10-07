@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { t } from '@/lib/i18n.mjs';
-import { buildMetadata, listJsonLd, breadcrumbJsonLd } from '@/lib/seo.mjs';
+import { buildMetadata, listJsonLd } from '@/lib/seo.mjs';
 import { getLists } from '@/lib/content.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { formatDate } from '@/lib/format.mjs';
@@ -52,7 +52,7 @@ export default async function ListPage({ params }) {
 
   return (
     <div className="container">
-      <JsonLd data={[listJsonLd(list), breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: c.url })))]} />
+      <JsonLd data={listJsonLd(list)} />
       <Breadcrumbs items={crumbs} />
 
       <article className="mt-4">

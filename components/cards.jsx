@@ -103,9 +103,22 @@ export function ListCard({ list }) {
 export function PersonCard({ person }) {
   return (
     <Link href={person.url} className="person-chip" style={{ borderRadius: 'var(--radius)', padding: 12 }}>
-      <span className="person-avatar" aria-hidden="true">
-        {person.name.trim().slice(0, 1)}
-      </span>
+      {person.hasPhoto ? (
+        <img
+          className="person-avatar"
+          src={person.photo}
+          alt={`صورة ${person.name}`}
+          width={32}
+          height={32}
+          loading="lazy"
+          decoding="async"
+          style={{ objectFit: 'cover' }}
+        />
+      ) : (
+        <span className="person-avatar" aria-hidden="true">
+          {person.name.trim().slice(0, 1)}
+        </span>
+      )}
       <span>
         <span style={{ fontWeight: 600 }}>{person.name}</span>
         <span className="person-role">

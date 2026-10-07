@@ -16,7 +16,7 @@ const UPDATED = '2026-10-03';
 export default function IpRightsPage() {
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'حقوق الملكية' }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: 'حقوق الملكية', url: '/ip-rights/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="قانوني" title="حقوق الملكية الفكرية وإزالة المحتوى" />
       </div>

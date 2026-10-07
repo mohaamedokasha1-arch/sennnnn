@@ -20,7 +20,7 @@ export default function GenresPage() {
 
   return (
     <div className="container">
-      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.genres') }]} />
+      <Breadcrumbs items={[{ name: t('nav.home'), url: '/' }, { name: t('nav.genres'), url: '/genres/' }]} />
       <div className="mt-4">
         <SectionHeader as="h1" kicker="تصفّح بالمزاج" title={t('genres.title')} sub={t('genres.intro')} />
       </div>

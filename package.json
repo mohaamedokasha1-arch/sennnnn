@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Bilingual Arabic/English movie and series discovery catalog with editorial guides and official-platform links; not a streaming host.",
   "author": "Akasha Cenima",
-  "homepage": "https://cenimana-aflam-arabic.vercel.app",
+  "homepage": "https://akasha-cenima.vercel.app",
   "scripts": {
     "validate": "node lib/validate.mjs",
     "test:content": "node lib/test-validation.mjs",

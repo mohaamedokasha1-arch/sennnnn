@@ -2,12 +2,11 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import siteConfig from '@/site.config.mjs';
 import { t, GENRES, genreLabel } from '@/lib/i18n.mjs';
-import { buildMetadata, breadcrumbJsonLd } from '@/lib/seo.mjs';
+import { buildMetadata } from '@/lib/seo.mjs';
 import { genresWithContent, worksInGenre } from '@/lib/content.mjs';
 import { Breadcrumbs, SectionHeader, EmptyState } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid } from '@/components/cards.jsx';
-import JsonLd from '@/components/JsonLd.jsx';
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
@@ -46,7 +45,6 @@ export default async function GenrePage({ params }) {
 
   return (
     <div className="container">
-      <JsonLd data={breadcrumbJsonLd(crumbs.map((c) => ({ name: c.name, url: c.url })))} />
       <Breadcrumbs items={crumbs} />
 
       <div className="mt-4">

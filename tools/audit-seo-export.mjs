@@ -10,6 +10,7 @@ import siteConfig from '../site.config.mjs';
 import { brandName } from '../lib/brand.mjs';
 import { buildMetadata } from '../lib/seo.mjs';
 import { dims } from './img-dims.mjs';
+import { DEFAULT_PAGE_SIZE, paginationPageNumbers } from '../lib/filter.mjs';
 import {
   getMovies,
   getSeries,
@@ -125,8 +126,12 @@ assert.equal(
 
 const expectedSitemap = new Set([
   '/',
-  ...(movies.length ? ['/movies/'] : []),
-  ...(series.length ? ['/series/'] : []),
+  ...(movies.length
+    ? ['/movies/', ...paginationPageNumbers(movies.length).map((page) => `/movies/page/${page}/`)]
+    : []),
+  ...(series.length
+    ? ['/series/', ...paginationPageNumbers(series.length).map((page) => `/series/page/${page}/`)]
+    : []),
   ...(genres.length ? ['/genres/'] : []),
   ...(people.length ? ['/people/'] : []),
   ...(reviews.length ? ['/reviews/'] : []),
@@ -146,6 +151,36 @@ assert.deepEqual(
   [...expectedSitemap].sort(),
   'Sitemap entries do not match published/indexable content.'
 );
+
+/* ---- Listing pagination: actual static HTML, self-canonicals and crawlable links ---- */
+for (const [label, collection, basePath] of [
+  ['movies', movies, '/movies/'],
+  ['series', series, '/series/'],
+]) {
+  const pageNumbers = paginationPageNumbers(collection.length);
+  const routes = [basePath, ...pageNumbers.map((page) => `${basePath}page/${page}/`)];
+  for (let pageIndex = 0; pageIndex < routes.length; pageIndex++) {
+    const route = routes[pageIndex];
+    const pageNumber = pageIndex + 1;
+    const html = readRoute(route);
+    const expectedItems = collection.slice((pageNumber - 1) * DEFAULT_PAGE_SIZE, pageNumber * DEFAULT_PAGE_SIZE);
+    assert.equal(canonicalOf(html), expectedUrl(route), `Pagination canonical is wrong: ${route}`);
+    assert.equal((html.match(/<article class="card"/g) ?? []).length, expectedItems.length, `Wrong number of SSR cards on ${route}`);
+    for (const work of expectedItems) {
+      assert.ok(html.includes(`href="${work.url}"`), `Pagination HTML does not link to ${work.kind}:${work.slug} on ${route}`);
+    }
+    if (pageNumber < routes.length) {
+      const nextRoute = routes[pageNumber];
+      assert.ok(html.includes(`href="${nextRoute}"`), `Missing crawlable next-page link on ${route}`);
+    }
+    if (pageNumber > 1) {
+      const previousRoute = routes[pageNumber - 2];
+      assert.ok(html.includes(`href="${previousRoute}"`), `Missing crawlable previous-page link on ${route}`);
+      assert.match(html, new RegExp(`الصفحة ${pageNumber}`), `Missing visible page number on ${route}`);
+    }
+  }
+}
+
 const sitemapTitles = new Set();
 const sitemapDescriptions = new Set();
 for (const url of sitemapUrls) {
@@ -264,7 +299,43 @@ for (const route of noIndexRoutes) {
   const html = readRoute(route);
   assert.match(metaContent(html, 'robots') ?? '', /noindex/i, `${route} must be noindex.`);
   assert.ok(!actualSitemapPaths.has(route), `${route} must not be in sitemap.`);
+  if (route === '/favorites/') assert.equal(canonicalOf(html), null, 'Personal favorites must not be declared as a canonical content page.');
 }
+
+/* Static JSON utilities are crawlable for noindex headers, not blocked in robots.txt. */
+const vercelConfig = JSON.parse(fs.readFileSync(path.resolve('vercel.json'), 'utf8'));
+for (const utilityPath of ['/search-index.json', '/site.webmanifest']) {
+  const rule = vercelConfig.headers?.find((entry) => entry.source === utilityPath);
+  assert.ok(rule, `Missing Vercel response-header rule for ${utilityPath}.`);
+  assert.ok(
+    rule.headers?.some((header) => header.key.toLowerCase() === 'x-robots-tag' && /noindex,\s*nofollow/i.test(header.value)),
+    `${utilityPath} must return X-Robots-Tag: noindex, nofollow.`
+  );
+}
+const redirectRules = vercelConfig.redirects ?? [];
+const redirectsBySource = new Map(redirectRules.map((rule) => [rule.source, rule]));
+assert.equal(redirectsBySource.size, redirectRules.length, 'Vercel redirect sources must be unique.');
+const expectedRedirectSources = new Set();
+for (const work of movies) {
+  for (const localePrefix of ['', '/en']) {
+    const canonical = `${localePrefix}${work.url}`;
+    for (const alias of [`${localePrefix}/movies/${work.slug}/`, `${localePrefix}/movie/${work.slug}/`]) {
+      if (alias === canonical) continue;
+      for (const source of [alias.replace(/\/$/, ''), alias]) {
+        expectedRedirectSources.add(source);
+        const redirect = redirectsBySource.get(source);
+        assert.ok(redirect, `Missing duplicate-route redirect from ${source}.`);
+        assert.equal(redirect.destination, canonical, `Redirect target must be the record's canonical URL: ${source}`);
+        assert.equal(redirect.permanent, true, `Duplicate-route redirect must be permanent: ${source}`);
+      }
+    }
+  }
+}
+assert.deepEqual(
+  [...redirectsBySource.keys()].sort(),
+  [...expectedRedirectSources].sort(),
+  'Vercel redirect configuration should cover exactly the existing movie aliases.'
+);
 
 /* ---- PWA, localized social imagery and integrated logo assets ---- */
 const manifest = JSON.parse(readRoute('/site.webmanifest'));
@@ -342,9 +413,11 @@ let schemaCount = 0;
 const schemaTypes = new Set();
 for (const file of walkHtml(OUT)) {
   const html = fs.readFileSync(file, 'utf8');
+  const documentRecords = [];
   for (const [, json] of html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
     const data = JSON.parse(json);
     const records = Array.isArray(data) ? data : [data];
+    documentRecords.push(...records);
     for (const record of records) {
       schemaCount++;
       for (const type of Array.isArray(record['@type']) ? record['@type'] : [record['@type']]) {
@@ -355,7 +428,31 @@ for (const file of walkHtml(OUT)) {
       if (record.datePublished) {
         assert.match(String(record.datePublished), /^\d{4}-\d{2}-\d{2}$/, 'Do not publish a year-only value as a precise datePublished.');
       }
+      if (record['@type'] === 'BreadcrumbList') {
+        assert.ok(Array.isArray(record.itemListElement) && record.itemListElement.length >= 2, 'BreadcrumbList must have at least two real levels.');
+        record.itemListElement.forEach((item, index) => {
+          assert.equal(item.position, index + 1, 'Breadcrumb positions must be sequential.');
+          assert.ok(item.name, 'BreadcrumbList entries need visible names.');
+          if (item.item) assert.equal(new URL(item.item).origin, BASE, 'Breadcrumb URLs must stay on the canonical site origin.');
+        });
+      }
     }
+  }
+
+  const breadcrumbNav = html.match(/<nav\s+class="crumbs"[^>]*>([\s\S]*?)<\/nav>/i);
+  const relativeFile = path.relative(OUT, file).replaceAll(path.sep, '/');
+  if (breadcrumbNav && !['search/index.html', 'favorites/index.html'].includes(relativeFile)) {
+    const breadcrumbRecords = documentRecords.filter((record) => record['@type'] === 'BreadcrumbList');
+    assert.equal(breadcrumbRecords.length, 1, `Breadcrumb UI should have exactly one matching BreadcrumbList: ${relativeFile}`);
+    const visibleNames = [...breadcrumbNav[1].matchAll(/<a\b[^>]*>([\s\S]*?)<\/a>|<span\b[^>]*aria-current="page"[^>]*>([\s\S]*?)<\/span>/gi)]
+      .map((match) => decodeHtml((match[1] ?? match[2] ?? '').replace(/<[^>]*>/g, '').trim()));
+    const schemaItems = breadcrumbRecords[0].itemListElement;
+    assert.deepEqual(schemaItems.map((item) => item.name), visibleNames, `Breadcrumb schema names must match visible navigation: ${relativeFile}`);
+    const visibleLinks = [...breadcrumbNav[1].matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)].map((match) => match[1]);
+    visibleLinks.forEach((href, index) => {
+      assert.equal(schemaItems[index]?.item, expectedUrl(href), `Breadcrumb schema link differs from visible link in ${relativeFile}`);
+    });
+    assert.equal(schemaItems.at(-1)?.item, canonicalOf(html), `Final breadcrumb should identify this canonical page: ${relativeFile}`);
   }
 }
 assert.ok(schemaCount > 0, 'Expected JSON-LD on the static export.');
@@ -383,6 +480,11 @@ const brokenImages = [];
 const htmlFiles = walkHtml(OUT);
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
+  for (const [, imageTag] of html.matchAll(/(<img\b[^>]*>)/gi)) {
+    assert.match(imageTag, /\balt=(?:"[^"]*"|'[^']*')/i, `Image is missing alt text in ${path.relative(OUT, file)}: ${imageTag.slice(0, 180)}`);
+    assert.match(imageTag, /\bwidth="\d+"/i, `Image is missing intrinsic width in ${path.relative(OUT, file)}: ${imageTag.slice(0, 180)}`);
+    assert.match(imageTag, /\bheight="\d+"/i, `Image is missing intrinsic height in ${path.relative(OUT, file)}: ${imageTag.slice(0, 180)}`);
+  }
   for (const [, href] of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/gi)) {
     const target = localTarget(file, href);
     if (target && !target.exists) brokenLinks.push(`${path.relative(OUT, file)} → ${href}`);
