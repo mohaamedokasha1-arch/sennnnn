@@ -8,7 +8,8 @@ import SiteHeader from '@/components/SiteHeader.jsx';
 import SiteFooter from '@/components/SiteFooter.jsx';
 import MobileNav from '@/components/Navigation.jsx';
 import JsonLd from '@/components/JsonLd.jsx';
-import { AdHead } from '@/components/Ads.jsx';
+import { RouteAdSlot } from '@/components/Ads.jsx';
+import { AdHeadScripts, AdBodyScripts } from '@/components/AdScripts.jsx';
 
 /**
  * التخطيط العام: RTL عربي، الوضع الداكن افتراضي، هوية من site.config.mjs.
@@ -79,6 +80,8 @@ export default function RootLayout({ children }) {
         <style dangerouslySetInnerHTML={{ __html: accentCss }} />
         <link rel="preconnect" href="https://www.youtube-nocookie.com" />
         <meta name="format-detection" content="telephone=no" />
+        {/* Adsterra Popunder — آخر ما في <head> لكل الصفحات (يُقرأ من site.config.mjs ← ads) */}
+        <AdHeadScripts />
       </head>
       <body>
         {/* Google Tag: browser-only initialization after hydration, shared by all routes. */}
@@ -100,13 +103,20 @@ export default function RootLayout({ children }) {
         </a>
         <div className="layout">
           <SiteHeader />
+          {/* بانر 728×90 تحت الهيدر (حاسوب/تابلت) — يتجدد مع كل صفحة */}
+          <RouteAdSlot zone="header" className="ad-slot--band" />
           <main id="main-content">{children}</main>
+          {/* موضع اختياري فوق الفوتر: يظهر فقط عند إضافة كود 728×90 ثانٍ مستقل */}
+          <RouteAdSlot zone="footer" className="ad-slot--band" />
           <SiteFooter />
         </div>
         <MobileNav />
+        {/* أعمدة جانبية ثابتة 160×600 و160×300 — الشاشات العريضة فقط، خارج مساحة المحتوى */}
+        <RouteAdSlot zone="rail-right" className="ad-rail ad-rail--right" />
+        <RouteAdSlot zone="rail-left" className="ad-rail ad-rail--left" />
         <JsonLd data={[websiteJsonLd(), organizationJsonLd()]} />
-        {/* سكربت Monetag العام — لا يُحمَّل إلا إذا وُضع الكود في site.config.mjs */}
-        <AdHead />
+        {/* Adsterra Social Bar — آخر عنصر قبل </body> مباشرة */}
+        <AdBodyScripts />
       </body>
     </html>
   );

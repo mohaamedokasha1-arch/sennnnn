@@ -11,7 +11,8 @@ import { AdSlot } from './Ads.jsx';
 import { Star, WatchLinks, SeasonsBlock, PersonChips } from './WorkDetailParts.jsx';
 import ShareRow from './ShareRow.jsx';
 import FavoriteButton from './FavoriteButton.jsx';
-import TrailerEmbed from './TrailerEmbed.jsx';
+import TrailerEmbed, { resolveTrailerSrc } from './TrailerEmbed.jsx';
+import SmartlinkButton from './SmartlinkButton.jsx';
 import { WorkGrid } from './cards.jsx';
 
 /**
@@ -24,6 +25,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
   const dir = isEn ? 'ltr' : 'rtl';
   const review = getReviewForWork(work);
   const similar = similarWorks(work, 6);
+  const hasPlayer = Boolean(resolveTrailerSrc(work.trailer, locale));
   const kindLabel = typeLabel(work.kind, locale);
   const genitive = work.kind === 'series' ? 'مسلسل' : 'فيلم';
 
@@ -267,11 +269,11 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
             <div className="row mt-4">
               <FavoriteButton id={`${work.kind}:${work.slug}`} title={work.title} variant="inline" />
               <ShareRow title={displayTitle} locale={locale} />
+              {/* Adsterra Smartlink — زر يحمل شارة «إعلان» (لا يُقدَّم كرابط مشاهدة) */}
+              <SmartlinkButton zone="smartlink-actions" locale={locale} />
             </div>
           </div>
         </header>
-
-        <AdSlot zone="movie-top" />
 
         {/* ------------------------------ طاقم العمل ------------------------------ */}
         {work.directorPeople.length || work.writerPeople?.length || work.castPeople.length ? (
@@ -321,21 +323,31 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
         {work.kind === 'series' ? <SeasonsBlock work={work} /> : null}
 
         {/* ------------------------------ التريلر ------------------------------ */}
-        {work.trailer ? (
-          <TrailerEmbed trailer={work.trailer} title={displayTitle} locale={locale} />
-        ) : (
-          <section className="panel panel-disabled" id="trailer-section" aria-labelledby="trailer-title">
-            <h2 className="panel-title" id="trailer-title">
-              {t('work.trailer', null, locale)}
-            </h2>
-            <p className="panel-note" style={{ marginBottom: 0 }}>
-              {t('work.trailerPending', null, locale)}
-            </p>
-          </section>
-        )}
+        {/* إعلان 320×50 أعلى المشغّل — للموبايل فقط */}
+        <AdSlot zone="player-top" locale={locale} />
+        <div className={`player-row${hasPlayer ? ' player-row--aside' : ''}`}>
+          <div className="player-main">
+            {work.trailer ? (
+              <TrailerEmbed trailer={work.trailer} title={displayTitle} locale={locale} />
+            ) : (
+              <section className="panel panel-disabled" id="trailer-section" aria-labelledby="trailer-title">
+                <h2 className="panel-title" id="trailer-title">
+                  {t('work.trailer', null, locale)}
+                </h2>
+                <p className="panel-note" style={{ marginBottom: 0 }}>
+                  {t('work.trailerPending', null, locale)}
+                </p>
+              </section>
+            )}
+          </div>
+          {/* إعلان 300×250 بجانب المشغّل على الحاسوب، وتحته مباشرة على الشاشات الأصغر */}
+          <AdSlot zone="player-side" locale={locale} />
+        </div>
 
         {/* --------------------------- روابط المشاهدة --------------------------- */}
         <WatchLinks work={work} locale={locale} />
+        {/* إعلان 468×60 أسفل قسم روابط المشاهدة — حاسوب وتابلت */}
+        <AdSlot zone="servers-bottom" locale={locale} />
 
         {/* --------------------------- المراجعة التحريرية --------------------------- */}
         {review ? (
@@ -397,7 +409,8 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
           </section>
         ) : null}
 
-        <AdSlot zone="movie-bottom" />
+        {/* Native Banner تحت «أعمال مشابهة» — مرة واحدة في الصفحة */}
+        <AdSlot zone="movie-bottom" locale={locale} />
       </article>
     </div>
   );
