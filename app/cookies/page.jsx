@@ -6,12 +6,12 @@ import { Breadcrumbs, SectionHeader, Notice } from '@/components/ui.jsx';
 
 export const metadata = buildMetadata({
   title: 'سياسة ملفات تعريف الارتباط',
-  description: `سياسة ملفات تعريف الارتباط في ${siteConfig.siteName}: لا نستخدم ملفات تعريف ارتباط إعلانية أو تتبّع؛ التخزين المحلي للمفضلة ليس ملف ارتباط ولا يُرسل لأي جهة.`,
+  description: `سياسة ملفات تعريف الارتباط في ${siteConfig.siteName}: نستخدم Google Analytics لقياس الزيارات؛ التخزين المحلي للمفضلة منفصل ولا يُرسل لأي جهة.`,
   path: '/cookies/',
 });
 
 export const dynamic = 'force-static';
-const UPDATED = '2026-10-03';
+const UPDATED = '2026-10-15';
 
 export default function CookiesPage() {
   return (
@@ -26,8 +26,7 @@ export default function CookiesPage() {
 
         <Notice>
           <p className="small" style={{ marginBottom: 0 }}>
-            الخلاصة المختصرة: لا نستخدم ملفات تعريف ارتباط إعلانية ولا تتبّع، ولا توجد لافتة موافقة لأننا لا
-            نحتاج واحدة.
+            نستخدم Google Analytics لقياس الزيارات، وقد يضع ملفات تعريف ارتباط تحليلية. تخزين المفضلة محلي ومنفصل عن التحليلات.
           </p>
         </Notice>
 
@@ -43,7 +42,7 @@ export default function CookiesPage() {
             <strong>تخزين محلي واحد</strong> لحفظ قائمة المفضلة على جهازك. لا يُرسل إلينا، ولا يُشارك مع أي جهة.
           </li>
           <li>
-            <strong>لا ملفات تعريف ارتباط من طرفنا</strong> ولا تخزين إعلاني أو تحليلي.
+            <strong>Google Analytics 4</strong> قد يضع ملفات مثل <code>_ga</code> و<code>_ga_*</code> لتمييز زيارات المتصفح وقياس التفاعل. تعتمد مدة الاحتفاظ على إعدادات الخدمة.
           </li>
           <li>
             <strong>الاستضافة (Vercel)</strong> قد تستخدم ملفات تعريف ارتباط تقنية وضرورية لحماية الطلبات من
@@ -58,7 +57,7 @@ export default function CookiesPage() {
         <h2>كيف تتحكم بها؟</h2>
         <p>
           يمكنك حذف التخزين المحلي في أي وقت من صفحة <Link href="/favorites/">المفضلة</Link> (زر «إفراغ
-          القائمة»)، أو من إعدادات متصفحك (مسح بيانات الموقع). حذف هذا التخزين لا يؤثر على تصفح الموقع.
+          القائمة»)، أو من إعدادات متصفحك (مسح بيانات الموقع). يمكنك أيضًا حذف أو حظر ملفات تعريف الارتباط من إعدادات المتصفح. حذف هذا التخزين لا يؤثر على تصفح الموقع.
         </p>
 
         <h2>الإعلانات</h2>

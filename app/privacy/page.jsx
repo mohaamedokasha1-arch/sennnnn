@@ -6,12 +6,12 @@ import { Breadcrumbs, SectionHeader, Notice } from '@/components/ui.jsx';
 
 export const metadata = buildMetadata({
   title: 'سياسة الخصوصية',
-  description: `كيف يتعامل ${siteConfig.siteName} مع بياناتك: لا تتبّع، لا حسابات، لا ملفات تعريف ارتباط إعلانية — وتخزين محلي للمفضلة على جهازك فقط.`,
+  description: `كيف يتعامل ${siteConfig.siteName} مع بياناتك: تحليلات الزيارات باستخدام Google Analytics، دون حسابات مستخدمين، وتخزين محلي للمفضلة على جهازك.`,
   path: '/privacy/',
 });
 
 export const dynamic = 'force-static';
-const UPDATED = '2026-10-03';
+const UPDATED = '2026-10-15';
 
 export default function PrivacyPage() {
   return (
@@ -26,14 +26,13 @@ export default function PrivacyPage() {
 
         <Notice>
           <p className="small" style={{ marginBottom: 0 }}>
-            هذه السياسة مكتوبة بلغة واضحة وبلا وعود لا يطابقها الواقع: لا حسابات، ولا تتبّع، ولا جمع لبياناتك.
+            لا توجد حسابات مستخدمين. نستخدم Google Analytics لفهم زيارات الموقع وتحسينه، ونحفظ المفضلة محليًا على جهازك.
           </p>
         </Notice>
 
         <h2>1) ما لا نجمعه</h2>
         <ul>
           <li>لا حسابات مستخدمين ولا كلمات مرور ولا بيانات تسجيل.</li>
-          <li>لا ملفات تعريف ارتباط (Cookies) من طرفنا ولا أدوات تتبّع أو تحليلات (Analytics).</li>
           <li>لا نطلب اسمك أو بريدك إلا إذا راسلتنا أنت بنفسك عبر البريد.</li>
         </ul>
 
@@ -46,6 +45,15 @@ export default function PrivacyPage() {
           <li>لا ينتقل بين المتصفحات أو الأجهزة، ويُفقد إذا مسحت بيانات المتصفح.</li>
           <li>يمكنك حذفه في أي وقت من صفحة <Link href="/favorites/">المفضلة</Link> (زر «إفراغ القائمة»).</li>
         </ul>
+
+        <h2>تحليلات الزيارات (Google Analytics)</h2>
+        <p>
+          نستخدم Google Analytics 4 لقياس زيارات الصفحات والتفاعل مع الموقع. قد تستخدم الخدمة ملفات تعريف
+          ارتباط مثل <code>_ga</code> ومعرّفات المتصفح، وترسل بيانات عن الصفحة والجهاز والتفاعل إلى Google.
+          لا نرسل إليها أسماء أو عناوين بريد إلكتروني أو محتويات قائمة المفضلة. تعتمد مدة الاحتفاظ
+          والميزات المفعّلة على إعدادات خاصية Analytics لدى إدارة الموقع.
+          راجع <a href="https://policies.google.com/privacy">سياسة خصوصية Google</a> و<Link href="/cookies/">سياسة ملفات تعريف الارتباط</Link>.
+        </p>
 
         <h2>3) التضمين من منصات خارجية</h2>
         <p>

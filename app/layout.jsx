@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata, seoTitle, websiteJsonLd, organizationJsonLd } from '@/lib/seo.mjs';
@@ -80,6 +81,20 @@ export default function RootLayout({ children }) {
         <meta name="format-detection" content="telephone=no" />
       </head>
       <body>
+        {/* Google Tag: browser-only initialization after hydration, shared by all routes. */}
+        <Script id="google-analytics-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MTEY12JS7Q');
+          `}
+        </Script>
+        <Script
+          id="google-analytics-loader"
+          src="https://www.googletagmanager.com/gtag/js?id=G-MTEY12JS7Q"
+          strategy="afterInteractive"
+        />
         <a className="skip-link" href="#main-content">
           {t('site.skipToContent')}
         </a>
