@@ -80,6 +80,12 @@ export default function RootLayout({ children }) {
         <style dangerouslySetInnerHTML={{ __html: accentCss }} />
         <link rel="preconnect" href="https://www.youtube-nocookie.com" />
         <meta name="format-detection" content="telephone=no" />
+        {/* Google AdSense — كود التحقق موجود مباشرة في HTML لكل الصفحات. */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5770911159315916"
+          crossOrigin="anonymous"
+        ></script>
         {/* Adsterra Popunder — آخر ما في <head> لكل الصفحات (يُقرأ من site.config.mjs ← ads) */}
         <AdHeadScripts />
       </head>
