@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { t, statusLabel } from '@/lib/i18n.mjs';
 import { formatRuntime } from '@/lib/format.mjs';
 import { IconStar, IconExternal, IconShield } from './Icons.jsx';
+import SmartlinkButton from './SmartlinkButton.jsx';
 
 /** تقييم المحرر (رأي تحريري — لا توجد تقييمات مستخدمين في هذه النسخة) */
 export function Star({ value, locale = 'ar' }) {
@@ -29,6 +30,8 @@ export function WatchLinks({ work, locale = 'ar' }) {
         <p className="panel-note" style={{ marginBottom: 0 }}>
           {t('work.watchEmpty', null, locale)}
         </p>
+        {/* زر Smartlink مفصول بوضوح عن الروابط الرسمية ويحمل شارة «إعلان» */}
+        <SmartlinkButton zone="smartlink-watch" locale={locale} withNote />
       </section>
     );
   }
@@ -52,6 +55,7 @@ export function WatchLinks({ work, locale = 'ar' }) {
       <p className="panel-note mt-4" style={{ marginBottom: 0 }}>
         {t('work.watchNote', null, locale)}
       </p>
+      <SmartlinkButton zone="smartlink-watch" locale={locale} withNote />
     </section>
   );
 }
