@@ -6,12 +6,14 @@ import siteConfig from '@/site.config.mjs';
  * noindex pages remain accessible so Google can read their page-level robots tag.
  * The non-standard `Host` directive is intentionally omitted (Google ignores it).
  */
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export default function robots() {
   const origin = new URL(siteConfig.url).origin;
   return {
-    rules: [{ userAgent: '*', allow: '/' }],
+    rules: [
+      { userAgent: '*', allow: '/', disallow: ['/admin/'] },
+    ],
     sitemap: `${origin}/sitemap.xml`,
   };
 }

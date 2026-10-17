@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata, noIndex } from '@/lib/seo.mjs';
-import { genresWithContent, latestAdditions } from '@/lib/content.mjs';
+import { genresWithContent, latestAdditions } from '@/lib/public-data.mjs';
 import { Breadcrumbs, SectionHeader } from '@/components/ui.jsx';
 import SearchResults from '@/components/SearchResults.jsx';
 
@@ -18,7 +18,7 @@ export const metadata = buildMetadata({
   robots: noIndex,
 });
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export default function SearchPage() {
   const latest = latestAdditions(4).map((w) => ({

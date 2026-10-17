@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
-import { siteStats } from '@/lib/content.mjs';
+import { siteStats } from '@/lib/public-data.mjs';
 import { BrandBlock, BrandName } from './Brand.jsx';
 
 /**

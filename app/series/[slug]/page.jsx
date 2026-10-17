@@ -1,12 +1,12 @@
 import { notFound } from 'next/navigation';
 import { buildMetadata } from '@/lib/seo.mjs';
-import { getSeries, getWork } from '@/lib/content.mjs';
+import { getSeries, getWork } from '@/lib/public-data.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
 
 /** صفحة تفاصيل المسلسل — نفس منطق صفحة الفيلم مع بيانات المواسم والحالة */
 
-export const dynamic = 'force-static';
-export const dynamicParams = false;
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   const items = getSeries();

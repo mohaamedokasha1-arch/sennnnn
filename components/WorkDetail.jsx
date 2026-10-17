@@ -3,7 +3,7 @@ import { t, genreUrl, genreLabel, typeLabel, countryLabel, languageLabel, status
 import { formatRuntime, formatDate } from '@/lib/format.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { workJsonLd, reviewJsonLd } from '@/lib/seo.mjs';
-import { similarWorks, getReviewForWork } from '@/lib/content.mjs';
+import { similarWorks, getReviewForWork } from '@/lib/public-data.mjs';
 import { default as JsonLd } from './JsonLd.jsx';
 import PosterImage from './PosterImage.jsx';
 import { Breadcrumbs } from './ui.jsx';
@@ -12,6 +12,8 @@ import { Star, WatchLinks, SeasonsBlock, PersonChips } from './WorkDetailParts.j
 import ShareRow from './ShareRow.jsx';
 import FavoriteButton from './FavoriteButton.jsx';
 import TrailerEmbed, { resolveTrailerSrc } from './TrailerEmbed.jsx';
+import EmbedPlayer from './EmbedPlayer.jsx';
+import EpisodesPlayer from './EpisodesPlayer.jsx';
 import SmartlinkButton from './SmartlinkButton.jsx';
 import { WorkGrid } from './cards.jsx';
 
@@ -26,6 +28,7 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
   const review = getReviewForWork(work);
   const similar = similarWorks(work, 6);
   const hasPlayer = Boolean(resolveTrailerSrc(work.trailer, locale));
+  const hasEmbed = Boolean(work.embedUrl || (work.embeds && work.embeds.length > 0));
   const kindLabel = typeLabel(work.kind, locale);
   const genitive = work.kind === 'series' ? 'مسلسل' : 'فيلم';
 
@@ -322,6 +325,11 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
         {/* ------------------------------ المواسم ------------------------------ */}
         {work.kind === 'series' ? <SeasonsBlock work={work} /> : null}
 
+        {/* --------------------------- حلقات المسلسل --------------------------- */}
+        {work.kind === 'series' && work.seasons && work.seasons.some((s) => s.episodesList && s.episodesList.length > 0) ? (
+          <EpisodesPlayer seasons={work.seasons} title={displayTitle} locale={locale} />
+        ) : null}
+
         {/* ------------------------------ التريلر ------------------------------ */}
         {/* إعلان 320×50 أعلى المشغّل — للموبايل فقط */}
         <AdSlot zone="player-top" locale={locale} />
@@ -343,6 +351,19 @@ export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
           {/* إعلان 300×250 بجانب المشغّل على الحاسوب، وتحته مباشرة على الشاشات الأصغر */}
           <AdSlot zone="player-side" locale={locale} />
         </div>
+
+        {/* --------------------------- مشغّل التضمين --------------------------- */}
+        {hasEmbed ? (
+          <>
+            <EmbedPlayer
+              url={work.embedUrl || ''}
+              sources={work.embeds || []}
+              title={displayTitle}
+            />
+            {/* إعلان 300×250 بعد مشغّل التضمين */}
+            <AdSlot zone="player-side" locale={locale} />
+          </>
+        ) : null}
 
         {/* --------------------------- روابط المشاهدة --------------------------- */}
         <WatchLinks work={work} locale={locale} />

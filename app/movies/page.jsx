@@ -10,7 +10,7 @@ export const metadata = buildMetadata({
 });
 
 /** The first catalog page is statically rendered; later pages have dedicated crawlable routes. */
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export default function MoviesPage() {
   return <CatalogListing kind="movie" />;

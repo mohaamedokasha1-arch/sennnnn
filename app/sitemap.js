@@ -7,7 +7,7 @@ import {
   getReviews,
   getLists,
   genresWithContent,
-} from '@/lib/content.mjs';
+} from '@/lib/public-data.mjs';
 
 /**
  * Sitemap built only from published content and indexable collection pages.

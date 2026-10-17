@@ -9,7 +9,7 @@ export const metadata = buildMetadata({
   path: '/series/',
 });
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export default function SeriesPage() {
   return <CatalogListing kind="series" />;

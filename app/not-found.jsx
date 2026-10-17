@@ -2,7 +2,7 @@ import Link from 'next/link';
 import siteConfig from '@/site.config.mjs';
 import { t, genreLabel } from '@/lib/i18n.mjs';
 import { noIndex } from '@/lib/seo.mjs';
-import { genresWithContent, latestAdditions } from '@/lib/content.mjs';
+import { genresWithContent, latestAdditions } from '@/lib/public-data.mjs';
 import { EmptyState, SectionHeader } from '@/components/ui.jsx';
 import { WorkGrid } from '@/components/cards.jsx';
 

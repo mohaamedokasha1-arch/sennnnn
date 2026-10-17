@@ -17,7 +17,9 @@
     "test": "npm run validate && npm run test:content && npm run test:logic && npm run test:seo && npm run test:posters && npm run test:ads && npm run test:analytics",
     "dev": "next dev",
     "prebuild": "node lib/validate.mjs",
-    "build": "next build && node tools/prepare-static-export.mjs && node tools/audit-poster-export.mjs && node tools/audit-seo-export.mjs",
+    "build": "next build",
+    "build:static": "AKASHA_STATIC_EXPORT=1 next build && node tools/prepare-static-export.mjs && node tools/audit-poster-export.mjs && node tools/audit-seo-export.mjs",
+    "start": "next start",
     "preview": "node tools/serve-static.mjs 4000 out",
     "posters:series": "node tools/series-covers-install.mjs",
     "posters:verify": "python3 tools/poster-hunt/verify-covers.py",
@@ -25,6 +27,7 @@
     "test:analytics": "node lib/test-analytics.mjs"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "marked": "^15.0.0",

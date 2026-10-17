@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata, listJsonLd } from '@/lib/seo.mjs';
-import { getLists } from '@/lib/content.mjs';
+import { getLists } from '@/lib/public-data.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { formatDate } from '@/lib/format.mjs';
 import { Breadcrumbs, Notice } from '@/components/ui.jsx';
@@ -11,8 +11,8 @@ import PosterImage from '@/components/PosterImage.jsx';
 import ShareRow from '@/components/ShareRow.jsx';
 
 
-export const dynamic = 'force-static';
-export const dynamicParams = false;
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   const items = getLists();

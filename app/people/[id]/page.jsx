@@ -3,15 +3,15 @@ import { notFound } from 'next/navigation';
 import siteConfig from '@/site.config.mjs';
 import { t, countryLabel } from '@/lib/i18n.mjs';
 import { buildMetadata, personJsonLd, noIndex } from '@/lib/seo.mjs';
-import { getPeople, getPerson } from '@/lib/content.mjs';
+import { getPeople, getPerson } from '@/lib/public-data.mjs';
 import { renderMarkdown } from '@/lib/markdown.mjs';
 import { Breadcrumbs, EmptyState } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid } from '@/components/cards.jsx';
 import JsonLd from '@/components/JsonLd.jsx';
 
-export const dynamic = 'force-static';
-export const dynamicParams = false;
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return getPeople().map((p) => ({ id: p.id }));

@@ -1,6 +1,6 @@
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata, noIndex } from '@/lib/seo.mjs';
-import { getWorks } from '@/lib/content.mjs';
+import { getWorks } from '@/lib/public-data.mjs';
 import { Breadcrumbs, SectionHeader } from '@/components/ui.jsx';
 import FavoritesView from '@/components/FavoritesView.jsx';
 
@@ -13,7 +13,7 @@ export const metadata = buildMetadata({
   robots: noIndex,
 });
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export default function FavoritesPage() {
   const items = getWorks('all').map((w) => ({
