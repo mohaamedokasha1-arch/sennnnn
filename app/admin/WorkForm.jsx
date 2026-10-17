@@ -122,11 +122,15 @@ export default function WorkForm({ kind = 'movie', work = null, genres = [] }) {
   async function handleDelete() {
     if (!work) return;
     if (!confirm('هل أنت متأكد من حذف هذا العنصر نهائيًا؟')) return;
-    const res = await fetch(`/api/admin/${kind}s/${work.id}`, { method: 'DELETE' });
-    const data = await res.json();
-    if (!data.ok) { setMessage(data.error || 'فشل الحذف.'); return; }
-    router.push(`/admin/${kind}s`);
-    router.refresh();
+    try {
+      const res = await fetch(`/api/admin/${kind}s/${work.id}`, { method: 'DELETE' });
+      const data = await res.json();
+      if (!res.ok || !data.ok) { setMessage(data.error || 'فشل الحذف.'); return; }
+      router.push(`/admin/${kind}s`);
+      router.refresh();
+    } catch {
+      setMessage('تعذّر الاتصال بالخادم. لم يُحذف العمل.');
+    }
   }
 
   return (

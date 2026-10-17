@@ -8,8 +8,8 @@ import { BrandBlock, BrandName } from './Brand.jsx';
  * التذييل: روابط التنقل + الصفحات القانونية + بيان النشاط (منصة اكتشاف لا استضافة).
  * كل الروابط تؤدي إلى صفحات موجودة فعليًا في الموقع.
  */
-export default function SiteFooter() {
-  const stats = siteStats();
+export default async function SiteFooter() {
+  const stats = await siteStats();
   const year = new Date().getFullYear();
 
   const browse = [

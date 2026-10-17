@@ -6,18 +6,21 @@ import {
   latestAdditions,
   featuredMovies,
   getSeries,
-  getMovies,
   getReviews,
   getLists,
   genresWithContent,
   worksWithTrailer,
   popularWorks,
   siteStats,
+  publicDataStatus,
 } from '@/lib/public-data.mjs';
 import { SectionHeader, Notice, Stat } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid, ReviewCard, ListCard } from '@/components/cards.jsx';
 import PosterImage from '@/components/PosterImage.jsx';
+
+// Dashboard edits must be visible on the homepage without a redeploy.
+export const dynamic = 'force-dynamic';
 
 export const metadata = buildMetadata({
   title: 'اكتشف الأفلام والمسلسلات العربية والعالمية',
@@ -30,22 +33,25 @@ export const metadata = buildMetadata({
  * الصفحة الرئيسية: أقسام تُبنى من بيانات المحتوى الفعلية.
  * أي قسم لا يجد بيانات كافية يُخفى تلقائيًا (أو يظهر برسالة صريحة عند الضرورة).
  */
-export default function HomePage() {
-  const latest = latestAdditions(8);
-  const featured = featuredMovies();
-  const series = getSeries().slice(0, 4);
-  const movies = getMovies();
+export default async function HomePage() {
+  const latest = await latestAdditions(8);
+  const featured = await featuredMovies();
+  const series = (await getSeries()).slice(0, 4);
   const reviews = getReviews().slice(0, 3);
   const lists = getLists().slice(0, 3);
-  const genres = genresWithContent().slice(0, 6);
-  const trailers = worksWithTrailer(3);
-  const popular = popularWorks(6);
-  const stats = siteStats();
+  const genres = (await genresWithContent()).slice(0, 6);
+  const trailers = await worksWithTrailer(3);
+  const popular = await popularWorks(6);
+  const stats = await siteStats();
+  const { unavailable } = await publicDataStatus();
 
   const heroPosters = (featured.length ? featured : latest).slice(0, 3);
 
   return (
     <div className="container">
+      {unavailable ? (
+        <div className="mt-4"><Notice>المكتبة تُعرض من النسخة المحفوظة حاليًا؛ قد تتأخر الإضافات الجديدة إلى حين عودة مخزن البيانات.</Notice></div>
+      ) : null}
       {/* ------------------------------ البانر ------------------------------ */}
       <section className="hero" aria-labelledby="hero-title">
         <div>

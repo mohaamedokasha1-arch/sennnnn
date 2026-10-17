@@ -18,16 +18,21 @@ export default function PasswordForm() {
     if (next.length < 8) { setError('كلمة المرور الجديدة يجب أن تكون 8 أحرف على الأقل.'); return; }
     if (next !== confirm) { setError('كلمتا المرور غير متطابقتين.'); return; }
     setLoading(true);
-    const res = await fetch('/api/admin/password', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ currentPassword: current, newPassword: next }),
-    });
-    const data = await res.json();
-    setLoading(false);
-    if (!data.ok) { setError(data.error || 'فشل التغيير.'); return; }
-    setMessage('تم تغيير كلمة المرور بنجاح. سيتم تسجيل خروجك.');
-    setTimeout(() => router.push('/admin/login'), 1200);
+    try {
+      const res = await fetch('/api/admin/password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ currentPassword: current, newPassword: next }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) { setError(data.error || 'فشل التغيير.'); return; }
+      setMessage('تم تغيير كلمة المرور بنجاح. سيتم تسجيل خروجك.');
+      setTimeout(() => router.push('/admin/login'), 1200);
+    } catch {
+      setError('تعذّر الاتصال بالخادم. حاول مجددًا.');
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (

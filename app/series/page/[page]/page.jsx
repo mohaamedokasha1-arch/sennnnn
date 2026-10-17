@@ -9,14 +9,10 @@ import CatalogListing from '@/components/CatalogListing.jsx';
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
 
-export function generateStaticParams() {
-  return paginationPageNumbers(getSeries().length).map((page) => ({ page: String(page) }));
-}
-
 export async function generateMetadata({ params }) {
   const { page: rawPage } = await params;
   const page = Number(rawPage);
-  const pageNumbers = paginationPageNumbers(getSeries().length);
+  const pageNumbers = paginationPageNumbers((await getSeries()).length);
   if (!Number.isInteger(page) || !pageNumbers.includes(page)) {
     return buildMetadata({
       title: 'صفحة مسلسلات غير موجودة',
@@ -37,6 +33,6 @@ export async function generateMetadata({ params }) {
 export default async function PaginatedSeriesPage({ params }) {
   const { page: rawPage } = await params;
   const page = Number(rawPage);
-  if (!Number.isInteger(page) || !paginationPageNumbers(getSeries().length).includes(page)) notFound();
+  if (!Number.isInteger(page) || !paginationPageNumbers((await getSeries()).length).includes(page)) notFound();
   return <CatalogListing kind="series" page={page} />;
 }

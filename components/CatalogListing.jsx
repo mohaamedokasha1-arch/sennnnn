@@ -1,16 +1,17 @@
 import Link from 'next/link';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
-import { getMovies, getSeries, facets } from '@/lib/public-data.mjs';
+import { getMovies, getSeries, facets, publicDataStatus } from '@/lib/public-data.mjs';
 import { DEFAULT_PAGE_SIZE } from '@/lib/filter.mjs';
-import { Breadcrumbs, SectionHeader } from '@/components/ui.jsx';
+import { Breadcrumbs, SectionHeader, Notice } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import FilterBar from '@/components/FilterBar.jsx';
 
 /** Shared server-rendered movie/series catalog. Pagination links remain ordinary crawlable URLs. */
-export default function CatalogListing({ kind, page = 1 }) {
+export default async function CatalogListing({ kind, page = 1 }) {
   const isMovie = kind === 'movie';
-  const works = isMovie ? getMovies() : getSeries();
+  const works = await (isMovie ? getMovies() : getSeries());
+  const { unavailable } = await publicDataStatus();
   const section = isMovie ? 'movies' : 'series';
   const basePath = isMovie ? '/movies/' : '/series/';
   const title = t(`${section}.title`);
@@ -56,9 +57,13 @@ export default function CatalogListing({ kind, page = 1 }) {
         />
       </div>
 
+      {unavailable ? (
+        <Notice>المخزن غير متاح مؤقتًا؛ تُعرض الأعمال المحفوظة في الموقع. قد لا تظهر أحدث الإضافات حتى تعود الخدمة.</Notice>
+      ) : null}
+
       <FilterBar
         items={items}
-        facets={facets(kind)}
+        facets={await facets(kind)}
         showStatus={!isMovie}
         initialPage={page}
         basePath={basePath}

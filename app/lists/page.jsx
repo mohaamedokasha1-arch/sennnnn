@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
 
 export const dynamic = 'force-dynamic';
 
-export default function ListsPage() {
+export default async function ListsPage() {
   const lists = getLists();
 
   return (

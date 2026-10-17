@@ -4,10 +4,10 @@ import { getCurrentUser, clearSessionCookie } from '@/lib/auth.mjs';
 
 export const POST = withAdmin(async (req, _ctx, session) => {
   const body = await parseBody(req);
-  const res = changePassword(session.user.id, String(body.currentPassword || ''), String(body.newPassword || ''));
+  const res = await changePassword(session.user.id, String(body.currentPassword || ''), String(body.newPassword || ''));
   if (!res.ok) return fail(res.error, 400);
   const s = await getCurrentUser();
-  if (s) logout(s.token);
+  if (s) await logout(s.token);
   await clearSessionCookie();
   return ok({ sessionEnded: true });
 });

@@ -1,22 +1,19 @@
 import { notFound } from 'next/navigation';
 import { buildMetadata, noIndex } from '@/lib/seo.mjs';
-import { getMovies, getWork } from '@/lib/public-data.mjs';
+import { getWork, publicDataStatus } from '@/lib/public-data.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
+import PublicUnavailable from '@/components/PublicUnavailable.jsx';
 import DocumentLang from '@/components/DocumentLang.jsx';
 
 /**
- * English (LTR) Movie Detail Page — Static Export (/en/movies/<slug>/).
+ * English (LTR) Movie Detail Page — server-rendered (/en/movies/<slug>/).
  */
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
 
-export function generateStaticParams() {
-  return getMovies().map((m) => ({ slug: m.slug }));
-}
-
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const work = getWork('movie', slug);
+  const work = await getWork('movie', slug);
   if (!work) {
     return buildMetadata({
       title: 'Page Not Found',
@@ -52,8 +49,11 @@ export async function generateMetadata({ params }) {
 
 export default async function MoviePageEn({ params }) {
   const { slug } = await params;
-  const work = getWork('movie', slug);
-  if (!work) notFound();
+  const work = await getWork('movie', slug);
+  if (!work) {
+    if ((await publicDataStatus()).unavailable) return <PublicUnavailable locale="en" />;
+    notFound();
+  }
   return (
     <>
       <DocumentLang lang="en" dir="ltr" />

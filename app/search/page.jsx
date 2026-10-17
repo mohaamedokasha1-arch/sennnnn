@@ -20,8 +20,8 @@ export const metadata = buildMetadata({
 
 export const dynamic = 'force-dynamic';
 
-export default function SearchPage() {
-  const latest = latestAdditions(4).map((w) => ({
+export default async function SearchPage() {
+  const latest = (await latestAdditions(4)).map((w) => ({
     kind: w.kind,
     slug: w.slug,
     url: w.url,
@@ -33,7 +33,7 @@ export default function SearchPage() {
     hasPoster: w.hasPoster,
     seriesStatus: w.seriesStatus,
   }));
-  const genres = genresWithContent().slice(0, 6).map((g) => ({ key: g.key, label: g.label, url: g.url, count: g.count }));
+  const genres = (await genresWithContent()).slice(0, 6).map((g) => ({ key: g.key, label: g.label, url: g.url, count: g.count }));
 
   return (
     <div className="container">

@@ -1,35 +1,29 @@
 import { cookies } from 'next/headers';
-import { getSession, hasAdmin } from '@/lib/db.mjs';
-import { redirect } from 'next/navigation';
+import { getSession, hasAdmin, getStorageStatus } from '@/lib/db.mjs';
+import AdminUnavailable from '@/components/AdminUnavailable.jsx';
 
 export const dynamic = 'force-dynamic';
 
 const COOKIE_NAME = 'akasha_session';
 
 export default async function AdminLayout({ children }) {
-  const cookieStore = await cookies();
-  const token = cookieStore.get(COOKIE_NAME)?.value;
-  const session = token ? getSession(token) : null;
-  const adminExists = hasAdmin();
+  const storage = getStorageStatus();
+  if (!storage.available) return <AdminUnavailable message={storage.message} />;
 
-  // في حال عدم المصادقة
+  let session;
+  try {
+    const cookieStore = await cookies();
+    const token = cookieStore.get(COOKIE_NAME)?.value;
+    session = token ? await getSession(token) : null;
+    // Also check connectivity on the setup/login pages, before rendering a form.
+    if (!session) await hasAdmin();
+  } catch (err) {
+    console.error('Admin layout could not read storage:', err);
+    return <AdminUnavailable message={err.statusCode === 503 ? err.message : undefined} />;
+  }
+
   if (!session) {
-    // إذا لم يُنشأ أي مدير بعد، اسمح بعرض صفحة الإعداد فقط.
-    // غير ذلك، صفحات الإدارة كلها تعيد التوجيه إلى /admin/login.
-    if (!adminExists) {
-      // سنسمح بصفحة setup فقط؛ باقي المسارات تعيد التوجيه.
-      return (
-        <div className="login-wrap">
-          <div className="login-card">{children}</div>
-        </div>
-      );
-    }
-    // صفحة login هي الوحيدة المسموح بها؛ باقي الصفحات تحول للدخول.
-    return (
-      <div className="login-wrap">
-        <div className="login-card">{children}</div>
-      </div>
-    );
+    return <div className="login-wrap"><div className="login-card">{children}</div></div>;
   }
 
   const { default: SidebarNav } = await import('./SidebarNav.jsx');

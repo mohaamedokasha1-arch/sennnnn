@@ -13,7 +13,7 @@ export const metadata = buildMetadata({
 
 export const dynamic = 'force-dynamic';
 
-export default function PeoplePage() {
+export default async function PeoplePage() {
   const people = getPeople().filter((person) => person.works.length > 0);
   const directors = people.filter((p) => p.roles.includes('director'));
   const actors = people.filter((p) => p.roles.includes('actor'));

@@ -22,11 +22,11 @@ import { WorkGrid } from './cards.jsx';
  * كل قسم يعتمد على وجود بيانات فعلية: إن غابت البيانات يختفي القسم أو تظهر رسالة صريحة،
  * ولا نعرض أبدًا قيمة فارغة أو قسمًا شبه فارغ.
  */
-export default function WorkDetail({ work, locale = 'ar', basePath = null }) {
+export default async function WorkDetail({ work, locale = 'ar', basePath = null }) {
   const isEn = locale === 'en';
   const dir = isEn ? 'ltr' : 'rtl';
   const review = getReviewForWork(work);
-  const similar = similarWorks(work, 6);
+  const similar = await similarWorks(work, 6);
   const hasPlayer = Boolean(resolveTrailerSrc(work.trailer, locale));
   const hasEmbed = Boolean(work.embedUrl || (work.embeds && work.embeds.length > 0));
   const kindLabel = typeLabel(work.kind, locale);

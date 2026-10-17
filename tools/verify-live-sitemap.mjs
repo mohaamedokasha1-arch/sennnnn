@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * End-to-end sitemap check for a deployed site (or the static export preview).
+ * End-to-end sitemap check for a deployed site (or a local Next.js server).
  *
  * Checks the public robots.txt and sitemap.xml using a Googlebot User-Agent,
  * then fetches every sitemap URL and verifies HTTP 200, self-canonical, and
@@ -9,7 +9,7 @@
  *
  * Usage:
  *   npm run seo:live
- *   SITE_URL=http://127.0.0.1:4000 npm run seo:live  # local static preview
+ *   SITE_URL=http://127.0.0.1:3000 npm run seo:live  # local next start
  *   PUBLIC_SITE_URL=https://example.com SITE_URL=https://preview.example.com npm run seo:live
  */
 import path from 'node:path';
@@ -139,8 +139,8 @@ async function mapWithConcurrency(values, concurrency, worker) {
 
 /**
  * Verify a live origin. `publicBase` is the canonical/public domain in sitemap
- * entries; `requestBase` can be a Vercel preview or local static server used to
- * fetch the same exported paths.
+ * entries; `requestBase` can be a Vercel preview or local Next.js server used to
+ * fetch the same live routes.
  */
 export async function verifyLiveSitemap({
   requestBase = siteConfig.url,
@@ -161,7 +161,9 @@ export async function verifyLiveSitemap({
   requireCondition(robotsResponse.url === robotsUrl, 'robots.txt unexpectedly redirected.');
   requireCondition(/^User-agent:\s*\*\s*$/im.test(robotsText), 'robots.txt must contain a User-agent: * group.');
   requireCondition(/^Allow:\s*\/\s*$/im.test(robotsText), 'robots.txt must explicitly allow public crawling.');
-  requireCondition(!/^Disallow:\s*\S/im.test(robotsText), 'robots.txt contains a non-empty Disallow rule that may block sitemap pages.');
+  const disallows = robotsText.split(/\r?\n/).filter((line) => /^\s*Disallow\s*:/i.test(line))
+    .map((line) => line.replace(/^\s*Disallow\s*:\s*/i, '').trim());
+  requireCondition(disallows.every((path) => !path || path === '/admin/'), 'robots.txt blocks a public sitemap page.');
   requireCondition(!/^Host\s*:/im.test(robotsText), 'robots.txt contains the unsupported Host directive.');
   const sitemapDirectives = robotsText.split(/\r?\n/).filter((line) => /^\s*Sitemap\s*:/i.test(line));
   requireCondition(sitemapDirectives.length === 1, `robots.txt must contain exactly one Sitemap directive; found ${sitemapDirectives.length}.`);

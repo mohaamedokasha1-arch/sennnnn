@@ -7,25 +7,37 @@ export default function SettingsForm() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
+  const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
-    fetch('/api/admin/settings').then(r => r.json()).then((d) => {
-      if (d.ok) setSettings(d.settings || {});
-      setLoading(false);
-    });
+    let active = true;
+    fetch('/api/admin/settings')
+      .then(async (r) => {
+        const data = await r.json();
+        if (!r.ok || !data.ok) throw new Error(data.error || 'تعذّر تحميل الإعدادات.');
+        if (active) setSettings(data.settings || {});
+      })
+      .catch((err) => { if (active) { setLoadError(true); setMessage(err.message || 'تعذّر الاتصال بالخادم.'); } })
+      .finally(() => { if (active) setLoading(false); });
+    return () => { active = false; };
   }, []);
 
   async function save(e) {
     e.preventDefault();
     setSaving(true); setMessage('');
-    const res = await fetch('/api/admin/settings', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(settings),
-    });
-    const data = await res.json();
-    setSaving(false);
-    setMessage(data.ok ? 'تم الحفظ بنجاح.' : (data.error || 'فشل الحفظ.'));
+    try {
+      const res = await fetch('/api/admin/settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(settings),
+      });
+      const data = await res.json();
+      setMessage(res.ok && data.ok ? 'تم الحفظ بنجاح.' : (data.error || 'فشل الحفظ.'));
+    } catch {
+      setMessage('تعذّر الاتصال بالخادم. لم تُحفظ التغييرات.');
+    } finally {
+      setSaving(false);
+    }
   }
 
   if (loading) return <div className="empty-state">جاري التحميل…</div>;
@@ -88,7 +100,7 @@ export default function SettingsForm() {
         </div>
 
         <div className="form-actions">
-          <button type="submit" className="btn btn-primary" disabled={saving}>
+          <button type="submit" className="btn btn-primary" disabled={saving || loadError}>
             {saving ? 'جاري الحفظ…' : 'حفظ الإعدادات'}
           </button>
         </div>
