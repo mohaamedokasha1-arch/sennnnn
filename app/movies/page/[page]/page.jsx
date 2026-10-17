@@ -2,12 +2,12 @@ import { notFound } from 'next/navigation';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata, noIndex } from '@/lib/seo.mjs';
-import { getMovies } from '@/lib/content.mjs';
+import { getMovies } from '@/lib/public-data.mjs';
 import { DEFAULT_PAGE_SIZE, paginationPageNumbers } from '@/lib/filter.mjs';
 import CatalogListing from '@/components/CatalogListing.jsx';
 
-export const dynamic = 'force-static';
-export const dynamicParams = false;
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return paginationPageNumbers(getMovies().length).map((page) => ({ page: String(page) }));

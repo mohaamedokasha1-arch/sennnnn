@@ -2,7 +2,7 @@ import Link from 'next/link';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata } from '@/lib/seo.mjs';
-import { genresWithContent } from '@/lib/content.mjs';
+import { genresWithContent } from '@/lib/public-data.mjs';
 import { Breadcrumbs, SectionHeader, EmptyState } from '@/components/ui.jsx';
 import { GenreCard } from '@/components/cards.jsx';
 
@@ -12,7 +12,7 @@ export const metadata = buildMetadata({
   path: '/genres/',
 });
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 /** صفحات التصنيفات: تُبنى فقط للتصنيفات التي تحتوي محتوى منشورًا فعليًا */
 export default function GenresPage() {

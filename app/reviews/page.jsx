@@ -1,7 +1,7 @@
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata, noIndex } from '@/lib/seo.mjs';
-import { getReviews } from '@/lib/content.mjs';
+import { getReviews } from '@/lib/public-data.mjs';
 import { Breadcrumbs, SectionHeader, Notice, EmptyState } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { ReviewCard } from '@/components/cards.jsx';
@@ -15,7 +15,7 @@ export const metadata = buildMetadata({
   robots: publishedReviews.length ? undefined : noIndex,
 });
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export default function ReviewsPage() {
   const reviews = getReviews();

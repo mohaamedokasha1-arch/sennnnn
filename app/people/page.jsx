@@ -1,7 +1,7 @@
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata } from '@/lib/seo.mjs';
-import { getPeople } from '@/lib/content.mjs';
+import { getPeople } from '@/lib/public-data.mjs';
 import { Breadcrumbs, SectionHeader, EmptyState, Notice } from '@/components/ui.jsx';
 import { PersonCard } from '@/components/cards.jsx';
 
@@ -11,7 +11,7 @@ export const metadata = buildMetadata({
   path: '/people/',
 });
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
 export default function PeoplePage() {
   const people = getPeople().filter((person) => person.works.length > 0);

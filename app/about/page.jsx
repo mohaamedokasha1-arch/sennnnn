@@ -2,7 +2,7 @@ import Link from 'next/link';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
 import { buildMetadata } from '@/lib/seo.mjs';
-import { siteStats } from '@/lib/content.mjs';
+import { siteStats } from '@/lib/public-data.mjs';
 import { Breadcrumbs, SectionHeader, Stat } from '@/components/ui.jsx';
 
 export const metadata = buildMetadata({

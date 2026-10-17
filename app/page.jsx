@@ -13,7 +13,7 @@ import {
   worksWithTrailer,
   popularWorks,
   siteStats,
-} from '@/lib/content.mjs';
+} from '@/lib/public-data.mjs';
 import { SectionHeader, Notice, Stat } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid, ReviewCard, ListCard } from '@/components/cards.jsx';

@@ -1,14 +1,24 @@
 /**
- * إعدادات Next.js — الموقع يُبنى كموقع ثابت بالكامل (Static Export)
- * السبب: استضافة Vercel المجانية بدون قاعدة بيانات، بدون خادم، وبدون كتابة على نظام الملفات.
- * كل البيانات تُقرأ من مجلد content/ وقت البناء (Build Time) وتتحول إلى صفحات HTML جاهزة.
+ * ============================================================================
+ *  إعدادات Next.js — أكاشا سينما
+ * ============================================================================
+ *  يدعم الموقع الآن وضع الخادم (Node.js server) لتشغيل لوحة التحكم والـAPI،
+ *  مع إمكانية التصدير الثابت عند ضبط AKASHA_STATIC_EXPORT=1.
+ * ============================================================================
  */
+const isStaticExport = process.env.AKASHA_STATIC_EXPORT === '1';
+
 const nextConfig = {
-  output: 'export',          // موقع ثابت 100% (مجلد out/ بعد البناء)
-  trailingSlash: true,       // روابط منتهية بـ / (أفضل للاستضافة الثابتة)
-  images: { unoptimized: true }, // لأن التحسين التلقائي يحتاج خادم؛ نعتمد صورًا مضغوطة مسبقًا + تحميل كسول
+  output: isStaticExport ? 'export' : undefined,
+  trailingSlash: true,
+  images: { unoptimized: true },
   reactStrictMode: true,
   poweredByHeader: false,
+  // في وضع التشغيل العادي (مع لوحة التحكم) نحتاج للـAPI routes والخادم.
+  // لا نستخدم export في الوضع الافتراضي كي تعمل طرق POST وملفات الـAPI.
+  experimental: {
+    // لضمان عمل cookies في Next.js 15
+  },
 };
 
 export default nextConfig;

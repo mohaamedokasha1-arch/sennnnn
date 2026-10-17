@@ -3,13 +3,13 @@ import { notFound } from 'next/navigation';
 import siteConfig from '@/site.config.mjs';
 import { t, GENRES, genreLabel } from '@/lib/i18n.mjs';
 import { buildMetadata } from '@/lib/seo.mjs';
-import { genresWithContent, worksInGenre } from '@/lib/content.mjs';
+import { genresWithContent, worksInGenre } from '@/lib/public-data.mjs';
 import { Breadcrumbs, SectionHeader, EmptyState } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
 import { WorkGrid } from '@/components/cards.jsx';
 
-export const dynamic = 'force-static';
-export const dynamicParams = false;
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return genresWithContent().map((g) => ({ key: g.key }));

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import siteConfig from '@/site.config.mjs';
 import { t } from '@/lib/i18n.mjs';
-import { getMovies, getSeries, facets } from '@/lib/content.mjs';
+import { getMovies, getSeries, facets } from '@/lib/public-data.mjs';
 import { DEFAULT_PAGE_SIZE } from '@/lib/filter.mjs';
 import { Breadcrumbs, SectionHeader } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';

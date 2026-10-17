@@ -1,14 +1,14 @@
 import { notFound } from 'next/navigation';
 import { buildMetadata } from '@/lib/seo.mjs';
-import { getMovies, getWork } from '@/lib/content.mjs';
+import { getMovies, getWork } from '@/lib/public-data.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
 
 /**
  * مسار قديم متوافق (/movie/<slug>/). يبقى متاحًا لحفظ الروابط السابقة،
  * لكن canonical يشير دائمًا إلى المسار الأساسي المحدد في بيانات العمل.
  */
-export const dynamic = 'force-static';
-export const dynamicParams = false;
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
 
 export function generateStaticParams() {
   return getMovies().map((m) => ({ slug: m.slug }));
