@@ -4,6 +4,18 @@ import { useState } from 'react';
 import Link from 'next/link';
 import WorkForm from '../../WorkForm.jsx';
 
+async function adminRequest(url, options) {
+  try {
+    const response = await fetch(url, options);
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.error || 'فشلت العملية.');
+    return data;
+  } catch (err) {
+    alert(err.message || 'تعذّر الاتصال بالخادم.');
+    return null;
+  }
+}
+
 export default function SeriesEditor({ series, genres }) {
   const [tab, setTab] = useState('info');
   const [seasons, setSeasons] = useState(series.seasons || []);
@@ -12,13 +24,12 @@ export default function SeriesEditor({ series, genres }) {
 
   async function addSeason(e) {
     e.preventDefault();
-    const res = await fetch(`/api/admin/series/${series.id}/seasons`, {
+    const data = await adminRequest(`/api/admin/series/${series.id}/seasons`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(seasonForm),
     });
-    const data = await res.json();
-    if (!data.ok) { alert(data.error || 'فشل إضافة الموسم.'); return; }
+    if (!data) return;
     setSeasons([...seasons, data.season]);
     setSeasonForm({ number: (seasons.length + 1) + 1, title: '', year: '' });
     setRefreshKey((k) => k + 1);
@@ -26,9 +37,8 @@ export default function SeriesEditor({ series, genres }) {
 
   async function deleteSeason(seasonId) {
     if (!confirm('حذف الموسم وكل حلقاته؟')) return;
-    const res = await fetch(`/api/admin/series/${series.id}/seasons/${seasonId}`, { method: 'DELETE' });
-    const data = await res.json();
-    if (!data.ok) { alert(data.error || 'فشل الحذف.'); return; }
+    const data = await adminRequest(`/api/admin/series/${series.id}/seasons/${seasonId}`, { method: 'DELETE' });
+    if (!data) return;
     setSeasons(seasons.filter((s) => s.id !== seasonId));
     setRefreshKey((k) => k + 1);
   }
@@ -110,13 +120,12 @@ function SeasonBlock({ seriesId, season, onDelete, onChange }) {
 
   async function addEpisode(e) {
     e.preventDefault();
-    const res = await fetch(`/api/admin/series/${seriesId}/seasons/${season.id}/episodes`, {
+    const data = await adminRequest(`/api/admin/series/${seriesId}/seasons/${season.id}/episodes`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(epForm),
     });
-    const data = await res.json();
-    if (!data.ok) { alert(data.error || 'فشل إضافة الحلقة.'); return; }
+    if (!data) return;
     setEpisodes([...episodes, data.episode]);
     setEpForm({
       number: episodes.length + 2,
@@ -141,21 +150,19 @@ function SeasonBlock({ seriesId, season, onDelete, onChange }) {
   async function saveEpisode(epId) {
     const ep = episodes.find((e) => e.id === epId);
     if (!ep) return;
-    const res = await fetch(`/api/admin/series/${seriesId}/seasons/${season.id}/episodes/${epId}`, {
+    const data = await adminRequest(`/api/admin/series/${seriesId}/seasons/${season.id}/episodes/${epId}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(ep),
     });
-    const data = await res.json();
-    if (!data.ok) { alert(data.error || 'فشل الحفظ.'); return; }
+    if (!data) return;
     alert('تم حفظ الحلقة.');
   }
 
   async function deleteEpisode(epId) {
     if (!confirm('حذف هذه الحلقة؟')) return;
-    const res = await fetch(`/api/admin/series/${seriesId}/seasons/${season.id}/episodes/${epId}`, { method: 'DELETE' });
-    const data = await res.json();
-    if (!data.ok) { alert(data.error || 'فشل الحذف.'); return; }
+    const data = await adminRequest(`/api/admin/series/${seriesId}/seasons/${season.id}/episodes/${epId}`, { method: 'DELETE' });
+    if (!data) return;
     setEpisodes(episodes.filter((e) => e.id !== epId));
     onChange();
   }

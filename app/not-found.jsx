@@ -18,9 +18,9 @@ export const metadata = {
   alternates: {},
 };
 
-export default function NotFound() {
-  const genres = genresWithContent().slice(0, 6);
-  const latest = latestAdditions(4);
+export default async function NotFound() {
+  const genres = (await genresWithContent()).slice(0, 6);
+  const latest = await latestAdditions(4);
 
   return (
     <div className="container">

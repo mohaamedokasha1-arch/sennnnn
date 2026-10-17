@@ -13,9 +13,9 @@ import {
  * Sitemap built only from published content and indexable collection pages.
  * No lastmod is emitted because this project has no trustworthy per-page modified date.
  */
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
-export default function sitemap() {
+export default async function sitemap() {
   const siteUrl = new URL(siteConfig.url);
   if (
     siteUrl.protocol !== 'https:' ||
@@ -47,12 +47,12 @@ export default function sitemap() {
     return { url: url.href };
   };
 
-  const movies = getMovies();
-  const series = getSeries();
+  const movies = await getMovies();
+  const series = await getSeries();
   const people = getPeople().filter((person) => person.works.length > 0);
   const reviews = getReviews();
   const lists = getLists();
-  const genres = genresWithContent();
+  const genres = await genresWithContent();
 
   const staticPages = [
     page('/'),

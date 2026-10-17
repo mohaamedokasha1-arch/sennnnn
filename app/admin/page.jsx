@@ -1,18 +1,24 @@
 import Link from 'next/link';
 import { getStats, getAuditLog } from '@/lib/db.mjs';
-import { requireAdmin } from '@/lib/auth.mjs';
+import { adminPageSession, adminPageError } from '@/lib/admin-page.mjs';
+import AdminUnavailable from '@/components/AdminUnavailable.jsx';
 import { redirect } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
 
 export default async function AdminDashboard() {
-  const session = await requireAdmin();
+  const { session, error } = await adminPageSession();
+  if (error) return <AdminUnavailable message={error} />;
   if (!session) redirect('/admin/login');
   // التحقق من إعادة التوجيه
   void session;
 
-  const stats = getStats();
-  const log = getAuditLog({ limit: 15 });
+  let stats, log;
+  try {
+    [stats, log] = await Promise.all([getStats(), getAuditLog({ limit: 15 })]);
+  } catch (err) {
+    return <AdminUnavailable message={adminPageError(err)} />;
+  }
 
   return (
     <div>

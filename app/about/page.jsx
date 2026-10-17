@@ -11,10 +11,10 @@ export const metadata = buildMetadata({
   path: '/about/',
 });
 
-export const dynamic = 'force-static';
+export const dynamic = 'force-dynamic';
 
-export default function AboutPage() {
-  const stats = siteStats();
+export default async function AboutPage() {
+  const stats = await siteStats();
 
   return (
     <div className="container">

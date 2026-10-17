@@ -1,7 +1,7 @@
 import { listMovies, createMovie } from '@/lib/db.mjs';
 import { parseBody, withAdmin, ok, fail } from '@/lib/api-helpers.mjs';
 
-export async function GET(req) {
+export const GET = withAdmin(async (req) => {
   const { searchParams } = new URL(req.url);
   const q = Object.fromEntries(searchParams.entries());
   const opts = {
@@ -17,13 +17,13 @@ export async function GET(req) {
   else if (q.featured === 'false') opts.featured = false;
   if (q.missingEmbed === '1') opts.missingEmbed = true;
   if (q.missingPoster === '1') opts.missingPoster = true;
-  const result = listMovies(opts);
-  return Response.json({ ok: true, ...result });
-}
+  const result = await listMovies(opts);
+  return ok(result);
+});
 
 export const POST = withAdmin(async (req, _, session) => {
   const body = await parseBody(req);
-  const res = createMovie(body, { id: session.user.id, name: session.user.name });
+  const res = await createMovie(body, { id: session.user.id, name: session.user.name });
   if (!res.ok) return fail('فشل الحفظ.', 400, { errors: res.errors });
   return ok({ movie: res.movie });
 });

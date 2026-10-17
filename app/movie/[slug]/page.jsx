@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import { buildMetadata } from '@/lib/seo.mjs';
-import { getMovies, getWork } from '@/lib/public-data.mjs';
+import { getWork, publicDataStatus } from '@/lib/public-data.mjs';
 import WorkDetail from '@/components/WorkDetail.jsx';
+import PublicUnavailable from '@/components/PublicUnavailable.jsx';
 
 /**
  * مسار قديم متوافق (/movie/<slug>/). يبقى متاحًا لحفظ الروابط السابقة،
@@ -10,13 +11,9 @@ import WorkDetail from '@/components/WorkDetail.jsx';
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
 
-export function generateStaticParams() {
-  return getMovies().map((m) => ({ slug: m.slug }));
-}
-
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const work = getWork('movie', slug);
+  const work = await getWork('movie', slug);
   if (!work) {
     return buildMetadata({
       title: 'الصفحة غير موجودة',
@@ -51,7 +48,10 @@ export async function generateMetadata({ params }) {
 
 export default async function MovieAliasPage({ params }) {
   const { slug } = await params;
-  const work = getWork('movie', slug);
-  if (!work) notFound();
+  const work = await getWork('movie', slug);
+  if (!work) {
+    if ((await publicDataStatus()).unavailable) return <PublicUnavailable locale="ar" />;
+    notFound();
+  }
   return <WorkDetail work={work} locale="ar" basePath={work.url} />;
 }

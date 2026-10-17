@@ -9,14 +9,10 @@ import CatalogListing from '@/components/CatalogListing.jsx';
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
 
-export function generateStaticParams() {
-  return paginationPageNumbers(getMovies().length).map((page) => ({ page: String(page) }));
-}
-
 export async function generateMetadata({ params }) {
   const { page: rawPage } = await params;
   const page = Number(rawPage);
-  const pageNumbers = paginationPageNumbers(getMovies().length);
+  const pageNumbers = paginationPageNumbers((await getMovies()).length);
   if (!Number.isInteger(page) || !pageNumbers.includes(page)) {
     return buildMetadata({
       title: 'صفحة أفلام غير موجودة',
@@ -37,6 +33,6 @@ export async function generateMetadata({ params }) {
 export default async function PaginatedMoviesPage({ params }) {
   const { page: rawPage } = await params;
   const page = Number(rawPage);
-  if (!Number.isInteger(page) || !paginationPageNumbers(getMovies().length).includes(page)) notFound();
+  if (!Number.isInteger(page) || !paginationPageNumbers((await getMovies()).length).includes(page)) notFound();
   return <CatalogListing kind="movie" page={page} />;
 }

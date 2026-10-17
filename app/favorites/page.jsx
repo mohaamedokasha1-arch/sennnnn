@@ -15,8 +15,8 @@ export const metadata = buildMetadata({
 
 export const dynamic = 'force-dynamic';
 
-export default function FavoritesPage() {
-  const items = getWorks('all').map((w) => ({
+export default async function FavoritesPage() {
+  const items = (await getWorks('all')).map((w) => ({
     kind: w.kind,
     slug: w.slug,
     url: w.url,

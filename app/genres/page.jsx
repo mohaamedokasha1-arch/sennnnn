@@ -15,8 +15,8 @@ export const metadata = buildMetadata({
 export const dynamic = 'force-dynamic';
 
 /** صفحات التصنيفات: تُبنى فقط للتصنيفات التي تحتوي محتوى منشورًا فعليًا */
-export default function GenresPage() {
-  const genres = genresWithContent();
+export default async function GenresPage() {
+  const genres = await genresWithContent();
 
   return (
     <div className="container">

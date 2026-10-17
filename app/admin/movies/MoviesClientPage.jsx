@@ -9,6 +9,7 @@ export default function MoviesClientPage() {
   const params = useSearchParams();
   const [data, setData] = useState({ data: [], total: 0, page: 1, pages: 1 });
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const [search, setSearch] = useState(params.get('search') || '');
   const [statusFilter, setStatusFilter] = useState(params.get('draft') || '');
   const [featuredFilter, setFeaturedFilter] = useState(params.get('featured') || '');
@@ -24,10 +25,18 @@ export default function MoviesClientPage() {
     if (sort) qs.set('sort', sort);
     qs.set('page', String(page));
     qs.set('perPage', '20');
-    const res = await fetch(`/api/admin/movies?${qs.toString()}`, { cache: 'no-store' });
-    const json = await res.json();
-    setData(json);
-    setLoading(false);
+    try {
+      const res = await fetch(`/api/admin/movies?${qs.toString()}`, { cache: 'no-store' });
+      const json = await res.json();
+      if (!res.ok || !json.ok || !Array.isArray(json.data)) throw new Error(json.error || 'تعذّر تحميل الأفلام.');
+      setData(json);
+      setError('');
+    } catch (err) {
+      setData({ data: [], total: 0, page: 1, pages: 1 });
+      setError(err.message || 'تعذّر الاتصال بالخادم.');
+    } finally {
+      setLoading(false);
+    }
   }, [search, statusFilter, featuredFilter, sort, page]);
 
   useEffect(() => { load(); }, [load]);
@@ -42,28 +51,32 @@ export default function MoviesClientPage() {
     router.push(`/admin/movies?${qs.toString()}`);
   }
 
+  async function requestAction(url, options) {
+    try {
+      const res = await fetch(url, options);
+      const json = await res.json();
+      if (!res.ok || !json.ok) throw new Error(json.error || 'فشلت العملية.');
+      return json;
+    } catch (err) {
+      alert(err.message || 'تعذّر الاتصال بالخادم.');
+      return null;
+    }
+  }
+
   async function del(id, title) {
     if (!confirm(`هل أنت متأكد من حذف «${title}»؟ لا يمكن التراجع عن هذه العملية.`)) return;
-    const res = await fetch(`/api/admin/movies/${id}`, { method: 'DELETE' });
-    const json = await res.json();
-    if (!json.ok) { alert(json.error || 'فشل الحذف.'); return; }
-    load();
+    if (await requestAction(`/api/admin/movies/${id}`, { method: 'DELETE' })) load();
   }
 
   async function toggle(id, field, value) {
-    await fetch(`/api/admin/movies/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
+    if (await requestAction(`/api/admin/movies/${id}`, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ [field]: value }),
-    });
-    load();
+    })) load();
   }
 
   async function duplicate(id) {
-    const res = await fetch(`/api/admin/movies/${id}?action=duplicate`, { method: 'POST' });
-    const json = await res.json();
-    if (!json.ok) { alert(json.error || 'فشل النسخ.'); return; }
-    load();
+    if (await requestAction(`/api/admin/movies/${id}?action=duplicate`, { method: 'POST' })) load();
   }
 
   return (
@@ -72,6 +85,8 @@ export default function MoviesClientPage() {
         <h1 style={{ margin: 0 }}>الأفلام ({data.total})</h1>
         <Link href="/admin/movies/new" className="btn btn-primary">+ إضافة فيلم</Link>
       </div>
+
+      {error ? <div className="alert alert-error" role="alert">{error}</div> : null}
 
       <div className="filters-bar">
         <div className="form-field">

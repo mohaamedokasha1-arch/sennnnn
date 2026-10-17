@@ -1,17 +1,19 @@
 import { buildIndex } from '@/lib/search.mjs';
+import { getWorks } from '@/lib/public-data.mjs';
 
-/**
- * فهرس البحث — ملف ثابت يُولَّد وقت البناء من بيانات المحتوى.
- * يستخدمه البحث الفوري في الشريط العلوي (تحميل في المتصفح فقط، بلا أي خادم أو API).
- */
-export const dynamic = 'force-static';
+/** Keep newly published dashboard entries searchable without redeploying. */
+export const dynamic = 'force-dynamic';
 
-export function GET() {
-  const index = buildIndex();
-  return new Response(JSON.stringify(index), {
-    headers: {
-      'content-type': 'application/json; charset=utf-8',
-      'X-Robots-Tag': 'noindex, nofollow',
-    },
-  });
+export async function GET() {
+  try {
+    const index = buildIndex(await getWorks());
+    return Response.json(index, {
+      headers: { 'X-Robots-Tag': 'noindex, nofollow', 'Cache-Control': 'public, max-age=0, s-maxage=2' },
+    });
+  } catch (err) {
+    console.error('Search index unavailable:', err);
+    return Response.json({ works: [], reviews: [], lists: [], people: [] }, {
+      headers: { 'X-Robots-Tag': 'noindex, nofollow', 'Cache-Control': 'no-store' },
+    });
+  }
 }

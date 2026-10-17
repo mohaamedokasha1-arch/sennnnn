@@ -1,16 +1,13 @@
-import { NextResponse } from 'next/server';
 import { getCurrentUser, hasAdmin } from '@/lib/auth.mjs';
+import { apiError, ok } from '@/lib/api-helpers.mjs';
 
 export async function GET() {
-  const session = await getCurrentUser();
-  const adminExists = hasAdmin();
-  if (!session) {
-    return NextResponse.json({ authenticated: false, needsSetup: !adminExists });
+  try {
+    const session = await getCurrentUser();
+    const adminExists = await hasAdmin();
+    if (!session) return ok({ authenticated: false, needsSetup: !adminExists });
+    return ok({ authenticated: true, needsSetup: false, user: session.user, expiresAt: session.expiresAt });
+  } catch (err) {
+    return apiError(err);
   }
-  return NextResponse.json({
-    authenticated: true,
-    needsSetup: false,
-    user: session.user,
-    expiresAt: session.expiresAt,
-  });
 }

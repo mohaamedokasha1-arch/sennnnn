@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
 
 export const dynamic = 'force-dynamic';
 
-export default function ReviewsPage() {
+export default async function ReviewsPage() {
   const reviews = getReviews();
 
   return (

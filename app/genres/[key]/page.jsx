@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import siteConfig from '@/site.config.mjs';
 import { t, GENRES, genreLabel } from '@/lib/i18n.mjs';
-import { buildMetadata } from '@/lib/seo.mjs';
+import { buildMetadata, noIndex } from '@/lib/seo.mjs';
 import { genresWithContent, worksInGenre } from '@/lib/public-data.mjs';
 import { Breadcrumbs, SectionHeader, EmptyState } from '@/components/ui.jsx';
 import { AdSlot } from '@/components/Ads.jsx';
@@ -11,19 +11,16 @@ import { WorkGrid } from '@/components/cards.jsx';
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
 
-export function generateStaticParams() {
-  return genresWithContent().map((g) => ({ key: g.key }));
-}
-
 export async function generateMetadata({ params }) {
   const { key } = await params;
   if (!GENRES[key]) return { title: 'تصنيف غير معروف' };
   const label = genreLabel(key);
-  const counts = genresWithContent().find((g) => g.key === key);
+  const counts = (await genresWithContent()).find((g) => g.key === key);
   return buildMetadata({
     title: `أفلام ومسلسلات ${label}`,
     description: `تصفّح ${counts?.count ?? 0} عملًا منشورًا في تصنيف ${label} ضمن ${siteConfig.siteName}، مع معلومات الأعمال وطاقمها عند توفره.`,
     path: `/genres/${key}/`,
+    robots: counts?.count ? undefined : noIndex,
   });
 }
 
@@ -31,8 +28,14 @@ export default async function GenrePage({ params }) {
   const { key } = await params;
   if (!GENRES[key]) notFound();
 
-  const all = worksInGenre(key, 'all');
-  if (!all.length) notFound(); // تصنيف بلا محتوى = غير موجود (noindex/404 بدل صفحة فارغة)
+  const all = await worksInGenre(key, 'all');
+  if (!all.length) return (
+    <div className="container mt-6">
+      <EmptyState icon="🗂️" title="لا توجد أعمال متاحة في هذا التصنيف حاليًا"
+        body="جرّب تصنيفًا آخر أو عُد إلى فهرس الأفلام والمسلسلات."
+        actions={[{ href: '/genres/', label: 'كل التصنيفات', primary: true }]} />
+    </div>
+  );
 
   const movies = all.filter((w) => w.kind === 'movie');
   const series = all.filter((w) => w.kind === 'series');
