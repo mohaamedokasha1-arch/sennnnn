@@ -11,11 +11,12 @@
     "test:content": "node lib/test-validation.mjs",
     "test:logic": "node lib/test-logic.mjs",
     "test:storage": "node lib/test-storage.mjs",
+    "test:storage:pg": "node lib/test-storage-postgres.mjs",
     "test:seo": "node lib/test-seo.mjs",
     "test:posters": "node lib/test-posters.mjs",
     "test:ads": "node lib/test-ads.mjs",
     "seo:live": "node tools/verify-live-sitemap.mjs",
-    "test": "npm run validate && npm run test:content && npm run test:logic && npm run test:storage && npm run test:seo && npm run test:posters && npm run test:ads && npm run test:analytics",
+    "test": "npm run validate && npm run test:content && npm run test:logic && npm run test:storage && npm run test:storage:pg && npm run test:seo && npm run test:posters && npm run test:ads && npm run test:analytics",
     "dev": "next dev",
     "prebuild": "node lib/validate.mjs",
     "build": "next build",
@@ -33,6 +34,7 @@
     "js-yaml": "^4.1.0",
     "marked": "^15.0.0",
     "next": "^15.5.0",
+    "pg": "^8.23.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -40,5 +42,8 @@
     "next": {
       "postcss": "^8.5.28"
     }
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.10"
   }
 }

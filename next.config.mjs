@@ -15,6 +15,9 @@ const nextConfig = {
   images: { unoptimized: true },
   reactStrictMode: true,
   poweredByHeader: false,
+  // محرّك تخزين PostgreSQL (Neon / Vercel Postgres) يستخدم حزمة pg الأصلية
+  // كما هي دون تجميع، لتفادي مشاكل التجميع مع ملحقاتها الديناميكية.
+  serverExternalPackages: ['pg'],
   // في وضع التشغيل العادي (مع لوحة التحكم) نحتاج للـAPI routes والخادم.
   // لا نستخدم export في الوضع الافتراضي كي تعمل طرق POST وملفات الـAPI.
   experimental: {
